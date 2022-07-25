@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev -p 4000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "lerna": "^5.2.0",
+    "nuxt": "3.0.0-rc.6"
+  },
+  "name": "youweb",
+  "workspaces": [
+    "packages/*"
+  ]
+}
