@@ -2,11 +2,22 @@
 
 [youweb.cc](https://youweb.cc)
 
-## 模板
+## UI 主题公共资源
 
-- 模板中的图片 - https://source.unsplash.com
-- 模板中的图标 - https://ionic.io/ionicons
+- [color-mode](https://color-mode.nuxtjs.org/)
+- [nuxt tailwindcss](https://tailwindcss.nuxtjs.org/examples/daisyui)
+- [material-icons](https://fonts.google.com/icons)
+- [unsplash](https://source.unsplash.com)
 
-```
-<ion-icon name='xxx'></ion-icon>
+## 目录
+
+```tree
+- components
+    - core                      # 外部架子公用组件
+    - template                  # 模板
+- pages
+    - detail                    # 模板展示
+    - page/[pageIndex]          # 首页分页
+    - tag/[pageIndex]           # 标签分页
+    - index                     # 首页
 ```

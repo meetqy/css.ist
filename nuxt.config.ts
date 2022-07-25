@@ -4,6 +4,8 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
 
+  css: ["~/assets/css/material-icons.css"],
+
   typescript: {
     shim: false,
   },
