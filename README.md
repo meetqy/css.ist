@@ -1,42 +1,12 @@
 # Nuxt 3 Minimal Starter
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+[youweb.cc](https://youweb.cc)
 
-## Setup
+## 模板
 
-Make sure to install the dependencies:
+- 模板中的图片 - https://source.unsplash.com
+- 模板中的图标 - https://ionic.io/ionicons
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
+<ion-icon name='xxx'></ion-icon>
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

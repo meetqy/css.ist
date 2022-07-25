@@ -1,4 +1,5 @@
 {
+  "name": "youweb",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -7,11 +8,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "lerna": "^5.2.0",
+    "@nuxtjs/color-mode": "^3.1.4",
+    "@nuxtjs/tailwindcss": "^5.3.0",
     "nuxt": "3.0.0-rc.6"
   },
-  "name": "youweb",
-  "workspaces": [
-    "packages/*"
-  ]
+  "dependencies": {
+    "daisyui": "^2.20.0"
+  }
 }
