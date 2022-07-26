@@ -9,6 +9,16 @@
 - [material-icons](https://fonts.google.com/icons)
 - [unsplash](https://source.unsplash.com)
 
+### material icons 使用
+
+```html
+<!-- outlined icon -->
+<span class="material-symbols-outlined">settings</span>
+
+<!-- fill icon -->
+<span class="material-symbols-outlined" :style="iconFill">settings</span>
+```
+
 ## 目录
 
 ```tree

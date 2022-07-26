@@ -1,5 +1,5 @@
 /* fallback */
-@font-face {
+/* @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
@@ -7,7 +7,7 @@
     format("woff2");
 }
 
-.material-icons {
+.icon {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -21,4 +21,8 @@
   direction: ltr;
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
+} */
+
+.icon-fill {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 48;
 }
