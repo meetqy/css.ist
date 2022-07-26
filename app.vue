@@ -5,7 +5,9 @@
     rel="stylesheet"
   />
 
-  <NuxtLayout>
-    <NuxtPage></NuxtPage>
-  </NuxtLayout>
+  <div class="font-mono">
+    <NuxtLayout>
+      <NuxtPage></NuxtPage>
+    </NuxtLayout>
+  </div>
 </template>
