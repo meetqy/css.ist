@@ -8,6 +8,7 @@
     "preview": "export PORT=4000 && nuxt preview"
   },
   "devDependencies": {
+    "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxtjs/color-mode": "^3.1.4",
     "@nuxtjs/tailwindcss": "^5.3.0",
     "nuxt": "3.0.0-rc.6"
