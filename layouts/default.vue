@@ -61,11 +61,7 @@
         </div>
 
         <!-- Page content here -->
-        <ul class="menu">
-          <li v-for="item in 100">
-            <a href="#">DDD{{ item }}</a>
-          </li>
-        </ul>
+        <slot></slot>
       </div>
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
@@ -88,10 +84,12 @@
             />
           </div>
 
-          <ul class="menu p-4 overflow-y-auto w-full text-base-content">
+          <ul
+            class="menu p-4 overflow-y-auto w-full text-base-content capitalize"
+          >
             <!-- Sidebar content here -->
-            <li v-for="item in 20">
-              <a>Sidebar Item {{ item * 2 }}</a>
+            <li v-for="item in navs">
+              <NuxtLink to="#">{{ item.name }}</NuxtLink>
             </li>
           </ul>
 
@@ -105,3 +103,9 @@
     </div>
   </main>
 </template>
+
+<script setup>
+const { routes } = useRouter().options;
+
+const navs = routes;
+</script>
