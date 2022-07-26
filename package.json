@@ -5,7 +5,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev -p 4000",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "export PORT=4000 && nuxt preview"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.1.4",

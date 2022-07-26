@@ -1,6 +1,7 @@
-# Nuxt 3 Minimal Starter
+# wcao.cc
 
-[youweb.cc](https://youweb.cc)
+- [youweb.cc](https://youweb.cc)
+- [wcao.cc](https://wcao.cc)
 
 ## UI 主题公共资源
 
@@ -22,12 +23,18 @@
 ## 目录
 
 ```tree
+- layouts
+    - default                           # 默认框架
+    - full                              # 模板全屏
+
 - components
-    - core                      # 外部架子公用组件
-    - template                  # 模板
+    - core                              # 外部架子公用组件
+    - template                          # 模板
+
 - pages
-    - detail                    # 模板展示
-    - page/[pageIndex]          # 首页分页
-    - tag/[pageIndex]           # 标签分页
-    - index                     # 首页
+    - detail/[path]                     # 模板展示
+    - page/[pageIndex]                  # 首页分页
+    - tag/[name]/[pageIndex]            # 标签分页
+    - index                             # 首页
+    - about                             # 关于我
 ```

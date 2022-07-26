@@ -66,7 +66,7 @@
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
 
-        <aside class="w-80 pb-12 bg-base-100 border-r">
+        <aside class="w-80 pb-12">
           <div
             class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
           >
@@ -84,20 +84,22 @@
             />
           </div>
 
-          <ul
-            class="menu p-4 overflow-y-auto w-full text-base-content capitalize"
-          >
-            <!-- Sidebar content here -->
-            <li v-for="item in navs">
-              <NuxtLink to="#">{{ item.name }}</NuxtLink>
-            </li>
-          </ul>
+          <div class="min-h-full border-r lg:bg-transparent bg-base-100">
+            <ul
+              class="menu p-4 overflow-y-auto w-full text-base-content capitalize border-base-200"
+            >
+              <!-- Sidebar content here -->
+              <li v-for="item in navs">
+                <NuxtLink to="#">{{ item.name }}</NuxtLink>
+              </li>
+            </ul>
 
-          <!-- ads -->
-          <img
-            class="w-72 h-72 rounded-box m-auto"
-            :src="useUnsplash('/random/288x0')"
-          />
+            <!-- ads -->
+            <img
+              class="w-72 h-72 rounded-box m-auto"
+              :src="useUnsplash('/random/288x0')"
+            />
+          </div>
         </aside>
       </div>
     </div>
