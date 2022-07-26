@@ -27,15 +27,12 @@
     - default                           # 默认框架
     - full                              # 模板全屏
     - template                          # 模板展示 - 主题切换、语言切换等
-
 - components
     - core                              # 外部架子公用组件
     - template                          # 模板
-
 - introduce                             # 模板介绍 markdown
-
 - pages
-    - detail/[path]                     # 模板展示
+    - template/[path]                   # 模板展示
     - page/[pageIndex]                  # 首页分页
     - tag/[name]/[pageIndex]            # 标签分页
     - index                             # 首页

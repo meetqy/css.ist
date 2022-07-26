@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <ul class="menu">
-      <li><NuxtLink to="/detail/blog-1">blog-1</NuxtLink></li>
-      <li><NuxtLink to="/detail/blog-2">blog-2</NuxtLink></li>
-    </ul>
-
-    <NuxtWelcome />
-  </div>
+  <main>
+    <ContentList path="/introduce" v-slot="{ list }">
+      <div v-for="article in list" :key="article._path">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <img :src="article.light" />
+      </div>
+    </ContentList>
+  </main>
 </template>

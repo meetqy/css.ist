@@ -9,6 +9,15 @@ export const useProduction = () => process.env.NODE_ENV === "producton";
  */
 export const websiteConfig = {
   name: "muzak",
+  asset: "https://strapi.wcao.cc",
+};
+
+/**
+ *
+ */
+
+export const useAsset = (url: string, opts?: string) => {
+  return `${websiteConfig.asset}/uploads/${opts || "f_webp,w_500"}${url}`;
 };
 
 /**
