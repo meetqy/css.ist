@@ -34,27 +34,10 @@
           <div
             class="navbar h-16 bg-base-100 pl-4 hidden lg:flex border-b border-base-200"
           >
-            <div class="flex-1">
-              <input
-                type="text"
-                class="input w-72 input-bordered h-10"
-                placeholder="search here..."
-              />
-            </div>
+            <div class="flex-1"></div>
             <div class="flex-none">
-              <button class="btn btn-square btn-ghost">
-                <label class="swap swap-rotate">
-                  <!-- this hidden checkbox controls the state -->
-                  <input type="checkbox" />
-                  <!-- sun icon -->
-                  <span class="material-symbols-outlined swap-on">
-                    light_mode
-                  </span>
-                  <!-- moon icon -->
-                  <span class="material-symbols-outlined swap-off">
-                    dark_mode
-                  </span>
-                </label>
+              <button class="btn btn-square btn-ghost" @click="openFull">
+                <span class="material-symbols-outlined"> fullscreen_exit </span>
               </button>
             </div>
           </div>
@@ -70,27 +53,19 @@
           <div
             class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
           >
-            <NuxtLink
-              to="/"
-              class="btn btn-ghost hover:bg-transparent hidden lg:flex"
-            >
+            <NuxtLink to="/" class="btn btn-ghost hover:bg-transparent">
               <img src="/logo.png" class="w-10 h-10 mr-2" />
               {{ websiteConfig.name }}
             </NuxtLink>
-
-            <input
-              class="input input-bordered h-10 w-10/12 lg:hidden"
-              placeholder="search here ..."
-            />
           </div>
 
           <div class="min-h-full border-r lg:bg-transparent bg-base-100">
             <ul
-              class="menu p-4 overflow-y-auto w-full text-base-content capitalize border-base-200"
+              class="menu p-4 overflow-y-auto w-full text-base-content border-base-200"
             >
               <!-- Sidebar content here -->
-              <li v-for="item in navs">
-                <NuxtLink :to="item.to">{{ item.name }}</NuxtLink>
+              <li v-for="item in themes">
+                <a>{{ item }}</a>
               </li>
             </ul>
 
@@ -107,18 +82,9 @@
 </template>
 
 <script setup>
-const navs = [
-  {
-    name: "about",
-    to: "/about",
-  },
-  {
-    name: "page-index",
-    to: "/page/2",
-  },
-  {
-    name: "tag-name-index",
-    to: "/tag/blog/1",
-  },
-];
+const themes = ["light", "dark", "cupcake", "bumblebee", "emerald"];
+
+const openFull = () => {
+  window.open(useRoute().fullPath + "?full=true");
+};
 </script>

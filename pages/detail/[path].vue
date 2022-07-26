@@ -10,13 +10,11 @@ const { path } = route.params;
 
 const { full, lang } = route.query;
 
-if (full) {
-  definePageMeta({
-    layout: "full",
-  });
-}
+// route.meta.layout = full ? "full" : "template";
 
-// console.log(full, lang);
+definePageMeta({
+  middleware: ["use-layout"],
+});
 
 const templates = {
   "blog-1": resolveComponent("TemplateBlog1"),
