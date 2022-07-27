@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="drawer drawer-mobile">
+    <div class="drawer">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content">
         <!-- mobile navbar -->
@@ -59,7 +59,9 @@
             </NuxtLink>
           </div>
 
-          <div class="min-h-full border-r lg:bg-transparent bg-base-100">
+          <div
+            class="min-h-full border-r border-base-200 lg:bg-transparent bg-base-100"
+          >
             <ul
               class="menu p-4 overflow-y-auto w-full text-base-content border-base-200"
             >

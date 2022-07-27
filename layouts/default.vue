@@ -84,7 +84,9 @@
             />
           </div>
 
-          <div class="min-h-full border-r lg:bg-transparent bg-base-100">
+          <div
+            class="min-h-full border-r border-base-200 lg:bg-transparent bg-base-100"
+          >
             <ul
               class="menu p-4 overflow-y-auto w-full text-base-content capitalize border-base-200"
             >

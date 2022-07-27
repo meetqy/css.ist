@@ -1,47 +1,130 @@
 <template>
-  <div>
-    <section class="w-12/12 m-auto px-16 py-4">
-      <h3 class="capitalize text-xl font-semibold tracking-widest mt-4">
-        blog
-      </h3>
-      <swiper
-        :slidesPerView="2"
-        :space-between="40"
-        :loop="true"
-        class="w-full mx-auto mt-4"
-      >
-        <swiper-slide v-for="item in blogContent" class="w-1/2">
-          <div>
-            <NuxtLink :to="item._path">
-              <img :src="item.light" class="h-[380px] w-full rounded-box" />
-            </NuxtLink>
-            <p class="text-lg mt-4 mb-2 px-2 font-medium capitalize">
-              {{ item.title }}
-            </p>
-            <p>
-              <span
-                v-for="tag in item.tags"
-                :key="tag"
-                class="btn btn-xs mr-2 font-normal btn-primary"
-              >
-                {{ tag }}
-              </span>
-            </p>
-          </div>
-        </swiper-slide>
-      </swiper>
+  <div class="pb-12">
+    <section class="w-full lg:px-12 px-6 mt-12">
+      <CoreSwiper
+        title="recommend"
+        :data="recommendContent"
+        :breakpoints="{
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          1536: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        }"
+      />
+    </section>
+
+    <section class="w-full lg:px-12 px-6 mt-12">
+      <CoreSwiper
+        title="Blog"
+        :data="blogContent"
+        :cat="{
+          name: 'see all',
+          to: '/tag/blog/1',
+        }"
+        :breakpoints="{
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          1536: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }"
+      />
+    </section>
+
+    <section class="w-full lg:px-12 px-6 mt-12">
+      <CoreSwiper
+        title="fashion"
+        :data="fashionContent"
+        :content-on-image="true"
+        :cat="{
+          name: 'see all',
+          to: '/tag/fashion/1',
+        }"
+        :breakpoints="{
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1536: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }"
+      />
+    </section>
+
+    <section class="w-full lg:px-12 px-6 mt-12">
+      <CoreSwiper
+        title="page"
+        :data="pageContent"
+        :image-circle="true"
+        :cat="{
+          name: 'see all',
+          to: '/tag/page/1',
+        }"
+        :breakpoints="{
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1536: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }"
+      />
     </section>
   </div>
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-
 const blogContent = await queryContent("introduce")
   .where({
     tags: { $contains: "blog" },
   })
   .find();
-console.log(blogContent);
+
+const fashionContent = await queryContent("introduce")
+  .where({
+    tags: { $contains: "fashion" },
+  })
+  .find();
+
+const pageContent = await queryContent("introduce")
+  .where({
+    tags: { $contains: "page" },
+  })
+  .limit(4)
+  .find();
+
+const recommendContent = await queryContent("introduce")
+  .where({
+    recommend: true,
+  })
+  .limit(8)
+  .find();
+console.log(recommendContent);
 </script>
