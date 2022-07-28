@@ -15,6 +15,7 @@
     "nuxt": "3.0.0-rc.6"
   },
   "dependencies": {
+    "@vueuse/core": "^9.0.0",
     "daisyui": "^2.20.0",
     "swiper": "^8.3.1"
   }

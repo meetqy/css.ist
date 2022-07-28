@@ -4,6 +4,7 @@
       <CoreSwiper
         title="recommend"
         :data="recommendContent"
+        :loop="true"
         :breakpoints="{
           1024: {
             slidesPerView: 1,
@@ -27,7 +28,7 @@
         :data="blogContent"
         :cat="{
           name: 'see all',
-          to: '/tag/blog/1',
+          to: '/tag/blog',
         }"
         :breakpoints="{
           1024: {
@@ -51,9 +52,10 @@
         title="fashion"
         :data="fashionContent"
         :content-on-image="true"
+        :image-scale="true"
         :cat="{
           name: 'see all',
-          to: '/tag/fashion/1',
+          to: '/tag/fashion',
         }"
         :breakpoints="{
           1024: {
@@ -79,7 +81,7 @@
         :image-circle="true"
         :cat="{
           name: 'see all',
-          to: '/tag/page/1',
+          to: '/tag/page',
         }"
         :breakpoints="{
           1024: {
@@ -126,5 +128,4 @@ const recommendContent = await queryContent("introduce")
   })
   .limit(8)
   .find();
-console.log(recommendContent);
 </script>

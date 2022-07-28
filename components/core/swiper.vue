@@ -7,6 +7,7 @@
       prevEl: '.cu-swiper-button-prev',
     }"
     :breakpoints="props.breakpoints"
+    :loop="props.loop"
     class="!pt-12"
   >
     <h3
@@ -35,36 +36,40 @@
     </div>
 
     <SwiperSlide v-for="item in props.data">
-      <div
-        class="relative !h-96 w-full overflow-hidden rounded-box flex flex-col items-center"
-        :class="{ 'pt-4': props.imageCircle }"
-      >
-        <img
-          :src="item.light"
-          class="aspect-square object-cover"
-          :class="[
-            props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',
-          ]"
-          :style="`height: ${imgHeight};`"
-        />
+      <NuxtLink :to="item._path">
         <div
-          class="w-full h-24 bottom-0 left-0 z-40 px-4 absolute bg-base-100/80"
-          :class="props.imageCircle ? 'flex flex-col items-center' : ''"
+          class="relative !h-96 w-full overflow-hidden rounded-box flex flex-col items-center"
+          :class="{ 'pt-4': props.imageCircle }"
         >
-          <p class="text-lg mt-4 mb-2 font-medium capitalize">
-            {{ item.title }}
-          </p>
-          <p>
-            <span
-              v-for="tag in item.tags"
-              :key="tag"
-              class="btn btn-xs mr-2 font-normal btn-primary"
-            >
-              {{ tag }}
-            </span>
-          </p>
+          <img
+            :src="item.light"
+            class="aspect-square object-cover transition-transform"
+            :class="[
+              props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',
+              { 'hover:scale-150': props.imageScale },
+            ]"
+            :style="`height: ${imgHeight};`"
+          />
+          <div
+            class="w-full h-24 bottom-0 left-0 z-40 px-4 absolute bg-base-100/80"
+            :class="props.imageCircle ? 'flex flex-col items-center' : ''"
+          >
+            <p class="text-lg mt-4 mb-2 font-medium capitalize">
+              {{ item.title }}
+            </p>
+            <p>
+              <NuxtLink
+                :to="`/tag/${tag}`"
+                v-for="tag in item.tags"
+                :key="tag"
+                class="btn btn-xs mr-2 font-normal btn-primary"
+              >
+                {{ tag }}
+              </NuxtLink>
+            </p>
+          </div>
         </div>
-      </div>
+      </NuxtLink>
     </SwiperSlide>
   </Swiper>
 </template>
@@ -91,8 +96,10 @@ const props = defineProps<{
     name: string;
     to: string;
   };
+  loop?: boolean;
   contentOnImage?: boolean;
   imageCircle?: boolean;
+  imageScale?: boolean;
 }>();
 
 const imgHeight = computed(() => {

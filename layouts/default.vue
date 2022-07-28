@@ -2,7 +2,7 @@
   <main>
     <div class="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content">
+      <div class="drawer-content" id="drawer-content" ref="drawerContent">
         <!-- mobile navbar -->
         <label
           for="my-drawer-2"
@@ -109,6 +109,13 @@
 </template>
 
 <script setup>
+import { useInfiniteScroll } from "@vueuse/core";
+
+const drawerContent = ref(null);
+useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
+  distance: 100,
+});
+
 const navs = [
   {
     name: "about",
