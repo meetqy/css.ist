@@ -62,7 +62,7 @@
                 :to="`/tag/${tag}`"
                 v-for="tag in item.tags"
                 :key="tag"
-                class="btn btn-xs mr-2 font-normal btn-primary"
+                class="btn btn-xs mr-2 font-normal btn-primary relative z-50"
               >
                 {{ tag }}
               </NuxtLink>

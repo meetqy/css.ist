@@ -62,6 +62,8 @@
 
         <!-- Page content here -->
         <slot></slot>
+
+        <CoreFooter />
       </div>
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
