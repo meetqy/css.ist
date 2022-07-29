@@ -49,7 +49,6 @@
 
 <script setup>
 import { useStorage } from "@vueuse/core";
-import { onBeforeRouteLeave } from "vue-router";
 
 const route = useRoute();
 const { params } = route;
@@ -67,15 +66,14 @@ if (storage.value.length > 0) {
 const end = ref(false);
 const list = ref([]);
 
-onBeforeRouteLeave((a) => {
+watch(route, (a) => {
+  console.log(a.name);
   if (a.name === "slug") {
     scrollStorage.value = drawerContentScroll.value.y;
   } else {
     storage.value = [];
     scrollStorage.value = 0;
   }
-
-  console.log(scrollStorage.value, "leave");
 });
 
 const getData = async () =>
@@ -91,10 +89,14 @@ onMounted(async () => {
     if (scrollStorage.value > 0) {
       await nextTick();
       setTimeout(() => {
-        console.log(scrollStorage.value, "mounted");
+        console.log(
+          scrollStorage.value,
+          document.querySelector("#drawer-content"),
+          "mounted"
+        );
         document.querySelector("#drawer-content").scrollTop =
           scrollStorage.value;
-      });
+      }, 20);
     }
 
     return;
