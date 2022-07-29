@@ -67,7 +67,6 @@ const end = ref(false);
 const list = ref([]);
 
 watch(route, (a) => {
-  console.log(a.name);
   if (a.name === "slug") {
     scrollStorage.value = drawerContentScroll.value.y;
   } else {

@@ -49,8 +49,6 @@ export const getContentByTag = (
     tags: { $contains: tagName },
   });
 
-  // console.log(pageIndex);
-
   return d
     .skip((pageIndex - 1) * pageSize)
     .limit(pageSize)
