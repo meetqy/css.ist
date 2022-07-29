@@ -34,7 +34,7 @@
 - pages
     - template/[path]                   # 模板展示
     - page/[pageIndex]                  # 首页分页
-    - tag/[name]/[pageIndex]            # 标签分页
+    - tag/[name]                        # 标签分页
     - index                             # 首页
     - about                             # 关于我
 ```

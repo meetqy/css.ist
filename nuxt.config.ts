@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
 
   content: {
+    documentDriven: true,
     sources: [
       {
         name: "template-introduce",

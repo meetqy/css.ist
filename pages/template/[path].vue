@@ -7,9 +7,9 @@
 <script setup>
 const route = useRoute();
 const { path } = route.params;
+console.log(path);
 
-const { full, lang } = route.query;
-
+// const { full, lang } = route.query;
 // route.meta.layout = full ? "full" : "template";
 
 definePageMeta({
@@ -17,7 +17,8 @@ definePageMeta({
 });
 
 const templates = {
-  "blog-1": resolveComponent("TemplateBlog1"),
-  "blog-2": resolveComponent("TemplateBlog2"),
+  1: resolveComponent("Template1"),
+  2: resolveComponent("Template2"),
+  8: resolveComponent("Template8"),
 };
 </script>

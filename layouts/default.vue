@@ -1,5 +1,6 @@
 <template>
   <main>
+    <slot name="outside"></slot>
     <div class="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content" id="drawer-content" ref="drawerContent">
