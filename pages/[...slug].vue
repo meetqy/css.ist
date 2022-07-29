@@ -4,6 +4,7 @@
       <div
         ref="el"
         class="w-screen h-screen fixed left-0 top-0 bg-black/80 z-[999] overflow-y-scroll"
+        v-if="page"
       >
         <div
           class="btn btn-ghost text-white fixed left-0 top-0 z-[51]"

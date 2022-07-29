@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <main class="p-12">
+    <main class="p-12 min-h-screen" v-if="list">
       <h1
         class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
       >
