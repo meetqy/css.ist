@@ -9,6 +9,7 @@
     :breakpoints="props.breakpoints"
     :loop="props.loop"
     class="!pt-12"
+    @swiper="onSwiper"
   >
     <h3
       class="capitalize text-xl font-semibold tracking-widest absolute left-0 top-0 w-full h-8"
@@ -42,8 +43,8 @@
           :class="{ 'pt-4': props.imageCircle }"
         >
           <img
-            v-lazy="vLazy(item.light)"
-            class="aspect-square object-cover transition-transform cursor-zoom-in"
+            v-lazy="vLazy(item.light || item.previews[0])"
+            class="aspect-square object-cover object-top transition-transform cursor-zoom-in border border-base-300"
             :class="[
               props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',
               { 'hover:scale-150': props.imageScale },
@@ -109,6 +110,13 @@ const imgHeight = computed(() => {
 
   return props.contentOnImage ? "100%" : "calc(100% - 96px)";
 });
+
+const onSwiper = (swiper: any) => {
+  setTimeout(() => {
+    swiper.navigation.init();
+    swiper.navigation.update();
+  }, 100);
+};
 </script>
 
 <style lang="postcss" scoped>

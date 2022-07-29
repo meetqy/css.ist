@@ -95,7 +95,7 @@
             >
               <!-- Sidebar content here -->
               <li v-for="item in navs">
-                <NuxtLink :to="item.to">{{ item.name }}</NuxtLink>
+                <NuxtLink :to="'/tag/' + item">{{ item }}</NuxtLink>
               </li>
             </ul>
 
@@ -121,18 +121,5 @@ useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
 
 drawerContentScroll.value = useScroll(drawerContent);
 
-const navs = [
-  {
-    name: "about",
-    to: "/about",
-  },
-  {
-    name: "page-index",
-    to: "/page/2",
-  },
-  {
-    name: "tag-name-index",
-    to: "/tag/blog/1",
-  },
-];
+const navs = ["page", "section", "blog", "homepage", "profile", "card"];
 </script>

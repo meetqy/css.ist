@@ -55,10 +55,13 @@
             <div class="relative mt-4" v-if="page.previews">
               <img
                 v-lazy="vLazy(page.previews[activePreviewIndex])"
-                class="m-auto object-cover object-top transition-all"
-                :class="full ? 'w-full cursor-zoom-out' : 'w-96 cursor-zoom-in'"
+                class="m-auto object-top object-cover transition-all"
+                :class="
+                  full
+                    ? 'w-full cursor-zoom-out'
+                    : 'w-1/2 cursor-zoom-in aspect-square'
+                "
                 @click="full = !full"
-                :style="`height: ${full ? 'auto' : 'calc(100vh - 300px)'}`"
               />
             </div>
           </article>

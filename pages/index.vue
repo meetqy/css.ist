@@ -113,7 +113,7 @@ const blogContent = await queryContent("introduce")
 
 const fashionContent = await queryContent("introduce")
   .where({
-    tags: { $contains: "fashion" },
+    tags: { $contains: "card" },
   })
   .find();
 
