@@ -1,5 +1,3 @@
-import { ParsedContent } from "@nuxt/content/dist/runtime/types";
-
 /**
  * 生产环境?
  * @returns boolean
@@ -51,7 +49,7 @@ export const getContentByTag = (
     tags: { $contains: tagName },
   });
 
-  console.log(pageIndex);
+  // console.log(pageIndex);
 
   return d
     .skip((pageIndex - 1) * pageSize)
@@ -61,6 +59,8 @@ export const getContentByTag = (
 
 // drawer-content 触底
 export const drawerContentPullUpEnd = ref<number>(0);
+
+export const drawerContentScroll = ref();
 
 export const vLazy = (src: string) => {
   return {

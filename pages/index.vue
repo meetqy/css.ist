@@ -130,8 +130,4 @@ const recommendContent = await queryContent("introduce")
   })
   .limit(8)
   .find();
-
-definePageMeta({
-  keepalive: true,
-});
 </script>

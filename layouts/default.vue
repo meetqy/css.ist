@@ -112,12 +112,14 @@
 </template>
 
 <script setup>
-import { useInfiniteScroll } from "@vueuse/core";
+import { useInfiniteScroll, useScroll } from "@vueuse/core";
 
 const drawerContent = ref(null);
 useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
   distance: 100,
 });
+
+drawerContentScroll.value = useScroll(drawerContent);
 
 const navs = [
   {

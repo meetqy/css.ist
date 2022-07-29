@@ -48,30 +48,70 @@
 </template>
 
 <script setup>
-const { params } = useRoute();
-const { name } = params;
+import { useStorage } from "@vueuse/core";
+import { onBeforeRouteLeave } from "vue-router";
 
-definePageMeta({
-  keepalive: true,
-});
+const route = useRoute();
+const { params } = route;
+
+const { name } = params;
+const storage = useStorage("tag-list-data", []);
+const scrollStorage = useStorage("tag-scroll", 0);
+const pageSize = 15;
 
 const pageIndex = ref(1);
+if (storage.value.length > 0) {
+  pageIndex.value = Math.ceil(storage.value.length / pageSize);
+}
+
 const end = ref(false);
 const list = ref([]);
+
+onBeforeRouteLeave((a) => {
+  if (a.name === "slug") {
+    scrollStorage.value = drawerContentScroll.value.y;
+  } else {
+    storage.value = [];
+    scrollStorage.value = 0;
+  }
+
+  console.log(scrollStorage.value, "leave");
+});
 
 const getData = async () =>
   await getContentByTag(name, {
     pageIndex: pageIndex.value,
-    pageSize: 15,
+    pageSize,
   });
-list.value = await getData();
+
+onMounted(async () => {
+  if (storage.value.length > 0) {
+    list.value = storage.value;
+
+    if (scrollStorage.value > 0) {
+      await nextTick();
+      setTimeout(() => {
+        console.log(scrollStorage.value, "mounted");
+        document.querySelector("#drawer-content").scrollTop =
+          scrollStorage.value;
+      });
+    }
+
+    return;
+  }
+
+  list.value = await getData();
+  storage.value = list.value;
+});
 
 watch(drawerContentPullUpEnd, async (val) => {
+  if (end.value) return;
   pageIndex.value++;
   const res = await getData();
 
   if (res.length > 0) {
     list.value = list.value.concat(res);
+    storage.value = list.value;
   } else {
     end.value = true;
   }

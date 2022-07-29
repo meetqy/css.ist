@@ -43,7 +43,7 @@
         >
           <img
             v-lazy="vLazy(item.light)"
-            class="aspect-square object-cover transition-transform"
+            class="aspect-square object-cover transition-transform cursor-zoom-in"
             :class="[
               props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',
               { 'hover:scale-150': props.imageScale },
