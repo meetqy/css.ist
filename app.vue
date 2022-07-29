@@ -6,9 +6,7 @@
   />
 
   <div class="font-mono">
-    <NuxtLayout>
-      <NuxtPage></NuxtPage>
-    </NuxtLayout>
+    <NuxtPage></NuxtPage>
   </div>
 </template>
 

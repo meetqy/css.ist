@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="default">
+  <NuxtLayout>
     <template v-slot:outside>
       <div
         ref="el"
@@ -69,10 +69,6 @@
 
 <script setup>
 import { useScroll } from "@vueuse/core";
-
-definePageMeta({
-  layout: "full",
-});
 
 const { page } = useContent();
 

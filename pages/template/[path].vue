@@ -1,20 +1,15 @@
 <template>
-  <div>
+  <component :is="templates[path]" v-if="full"></component>
+  <NuxtLayout name="template" v-else>
     <component :is="templates[path]"></component>
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup>
 const route = useRoute();
 const { path } = route.params;
-console.log(path);
 
-// const { full, lang } = route.query;
-// route.meta.layout = full ? "full" : "template";
-
-definePageMeta({
-  middleware: ["use-layout"],
-});
+const { full, lang } = route.query;
 
 const templates = {
   1: resolveComponent("Template1"),
