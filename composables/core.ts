@@ -59,7 +59,12 @@ export const getContentByTag = (
     .find();
 };
 
-/**
- * drawer-content 触底
- */
+// drawer-content 触底
 export const drawerContentPullUpEnd = ref<number>(0);
+
+export const vLazy = (src: string) => {
+  return {
+    src,
+    loading: "/loading.svg",
+  };
+};

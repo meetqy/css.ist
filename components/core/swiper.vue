@@ -42,7 +42,7 @@
           :class="{ 'pt-4': props.imageCircle }"
         >
           <img
-            :src="item.light"
+            v-lazy="vLazy(item.light)"
             class="aspect-square object-cover transition-transform"
             :class="[
               props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',

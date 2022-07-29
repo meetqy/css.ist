@@ -17,6 +17,7 @@
   "dependencies": {
     "@vueuse/core": "^9.0.0",
     "daisyui": "^2.20.0",
-    "swiper": "^8.3.1"
+    "swiper": "^8.3.1",
+    "vue3-lazyload": "^0.3.6"
   }
 }
