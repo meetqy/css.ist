@@ -51,7 +51,7 @@
       <section class="w-full lg:px-12 px-6 mt-12">
         <CoreSwiper
           title="fashion"
-          :data="fashionContent"
+          :data="cardContent"
           :content-on-image="true"
           :image-scale="true"
           :cat="{
@@ -105,24 +105,20 @@
 </template>
 
 <script setup>
-const blogContent = await queryContent("introduce")
-  .where({
-    tags: { $contains: "blog" },
-  })
-  .find();
+const blogContent = await getContentByTag("blog", {
+  pageIndex: 1,
+  pageSize: 12,
+});
 
-const fashionContent = await queryContent("introduce")
-  .where({
-    tags: { $contains: "card" },
-  })
-  .find();
+const cardContent = await getContentByTag("card", {
+  pageIndex: 1,
+  pageSize: 12,
+});
 
-const pageContent = await queryContent("introduce")
-  .where({
-    tags: { $contains: "page" },
-  })
-  .limit(4)
-  .find();
+const pageContent = await getContentByTag("page", {
+  pageIndex: 1,
+  pageSize: 12,
+});
 
 const recommendContent = await queryContent("introduce")
   .where({

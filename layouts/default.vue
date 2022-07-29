@@ -121,5 +121,5 @@ useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
 
 drawerContentScroll.value = useScroll(drawerContent);
 
-const navs = ["page", "section", "blog", "homepage", "profile", "card"];
+const navs = ["page", "section", "blog", "homepage", "profile", "card", "form"];
 </script>
