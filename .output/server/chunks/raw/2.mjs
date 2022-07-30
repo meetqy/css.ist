@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _2 = "{\"parsed\":{\"_path\":\"/introduce/2\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Section Part 1\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"section-part-1\"},\"children\":[{\"type\":\"text\",\"value\":\"Section Part 1\"}]}]},\"recommend\":true,\"tags\":[\"section\"],\"previews\":[\"https://strapi.wcao.cc/uploads/wcao_cc_beauty_template_en_Section_1_full_true_1aade9225e.jpg\",\"https://strapi.wcao.cc/uploads/wcao_cc_beauty_template_ja_Section_1_full_true_292fcf6634.jpg\"],\"source\":\"https://merakiui.com/components/#\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"section-part-1\"},\"children\":[{\"type\":\"text\",\"value\":\"Section Part 1\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:2.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/2.md\",\"_extension\":\"md\"},\"hash\":\"bmemq8FDHR\"}";
+
+export { _2 as default };
+//# sourceMappingURL=2.mjs.map

@@ -1,4 +1,4 @@
-{
+const client_manifest = {
   "node_modules/nuxt/dist/app/entry.mjs": {
     "file": "entry-066116d1.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
@@ -629,4 +629,7 @@
       "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.vue"
     ]
   }
-}
+};
+
+export { client_manifest as default };
+//# sourceMappingURL=client.manifest.mjs.map

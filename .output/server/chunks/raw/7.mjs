@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _7 = "{\"parsed\":{\"_path\":\"/introduce/7\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Blog Part 2\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-2\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 2\"}]}]},\"tags\":[\"blog\",\"page\"],\"previews\":[\"https://strapi.wcao.cc/uploads/wcao_cc_beauty_template_en_Blog_2_full_true_Nest_Hub_Max_1_c450fe591d.jpg\",\"https://strapi.wcao.cc/uploads/wcao_cc_beauty_template_en_Blog_2_full_true_Nest_Hub_Max_956d204c9c.jpg\"],\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-2\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 2\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:7.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/7.md\",\"_extension\":\"md\"},\"hash\":\"jwGjZLpi1h\"}";
+
+export { _7 as default };
+//# sourceMappingURL=7.mjs.map

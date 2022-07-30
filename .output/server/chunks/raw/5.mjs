@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _5 = "{\"parsed\":{\"_path\":\"/introduce/5\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Blog Part 4\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-4\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 4\"}]}]},\"recommend\":true,\"tags\":[\"blog\",\"page\"],\"previews\":[\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_en_blog_4_full_true_Nest_Hub_Max_a0211dba52.jpg\"],\"source\":\"https://www.tailwindtoolbox.com/templates/ghostwind-home\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-4\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 4\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:5.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/5.md\",\"_extension\":\"md\"},\"hash\":\"3hSUG1BU8i\"}";
+
+export { _5 as default };
+//# sourceMappingURL=5.mjs.map
