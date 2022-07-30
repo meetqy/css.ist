@@ -7,8 +7,17 @@
     />
   </Body>
 
-  <NuxtPage></NuxtPage>
+  <main class="font-mono wcao">
+    <NuxtPage></NuxtPage>
+  </main>
 </template>
+
+<script setup>
+onMounted(() => {
+  const wel = document.querySelectorAll(".wcao");
+  console.log(wel);
+});
+</script>
 
 <style lang="postcss">
 img[lazy="loading"] {
