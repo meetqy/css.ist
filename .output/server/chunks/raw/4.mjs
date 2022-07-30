@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _4 = "{\"parsed\":{\"_path\":\"/introduce/4\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Blog Part 5\",\"description\":\"meta description of the page\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-5\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 5\"}]}]},\"tags\":[\"blog\",\"page\"],\"previews\":[\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_blog_5_full_true_Nest_Hub_Max_f40935a2f0.png\"],\"source\":\"https://github.com/iozcelik/SarissaPersonalBlog\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-5\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 5\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:4.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/4.md\",\"_extension\":\"md\"},\"hash\":\"kUNTcG41Md\"}";
+
+export { _4 as default };
+//# sourceMappingURL=4.mjs.map

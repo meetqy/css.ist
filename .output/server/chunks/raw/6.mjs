@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _6 = "{\"parsed\":{\"_path\":\"/introduce/6\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Profile Part 1\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"profile-part-1\"},\"children\":[{\"type\":\"text\",\"value\":\"Profile Part 1\"}]}]},\"tags\":[\"card\",\"profile\"],\"previews\":[\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_profile_1_full_true_Nest_Hub_Max_21396c0add.jpg\"],\"source\":\"https://www.tailwindtoolbox.com/templates/profile-card\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"profile-part-1\"},\"children\":[{\"type\":\"text\",\"value\":\"Profile Part 1\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:6.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/6.md\",\"_extension\":\"md\"},\"hash\":\"o91LkGXqpl\"}";
+
+export { _6 as default };
+//# sourceMappingURL=6.mjs.map

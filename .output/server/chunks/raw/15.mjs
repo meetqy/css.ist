@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _15 = "{\"parsed\":{\"_path\":\"/introduce/15\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Hero Part 1\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"hero-part-1\"},\"children\":[{\"type\":\"text\",\"value\":\"Hero Part 1\"}]}]},\"tags\":[\"hero\",\"section\"],\"previews\":[\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_hero_1_full_true_Nest_Hub_Max_73b6bda5a6.jpg\",\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_hero_1_full_true_Nest_Hub_Max_1_e22ea44d58.jpg\"],\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"hero-part-1\"},\"children\":[{\"type\":\"text\",\"value\":\"Hero Part 1\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:15.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/15.md\",\"_extension\":\"md\"},\"hash\":\"h6wkaMRhlu\"}";
+
+export { _15 as default };
+//# sourceMappingURL=15.mjs.map

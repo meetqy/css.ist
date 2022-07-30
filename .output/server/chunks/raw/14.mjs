@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _14 = "{\"parsed\":{\"_path\":\"/introduce/14\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Card Part 9\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"card-part-9\"},\"children\":[{\"type\":\"text\",\"value\":\"Card Part 9\"}]}]},\"tags\":[\"card\"],\"previews\":[\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_en_Card_9_full_true_254a81c495.jpg\"],\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"card-part-9\"},\"children\":[{\"type\":\"text\",\"value\":\"Card Part 9\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:14.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/14.md\",\"_extension\":\"md\"},\"hash\":\"H2SAb2FFcF\"}";
+
+export { _14 as default };
+//# sourceMappingURL=14.mjs.map

@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const _24 = "{\"parsed\":{\"_path\":\"/introduce/24\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Card Part 4\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"card-part-4\"},\"children\":[{\"type\":\"text\",\"value\":\"Card Part 4\"}]}]},\"tags\":[\"card\"],\"previews\":[\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_ja_card_4_i_Phone_12_Pro_f75ff24a0c.jpg\",\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_ja_card_4_i_Phone_12_Pro_1_29dbb82a33.jpg\"],\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"card-part-4\"},\"children\":[{\"type\":\"text\",\"value\":\"Card Part 4\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:24.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/24.md\",\"_extension\":\"md\"},\"hash\":\"1gsgKZpcGU\"}";
+
+export { _24 as default };
+//# sourceMappingURL=24.mjs.map
