@@ -1,52 +1,50 @@
 <template>
-  <NuxtLayout>
-    <main class="p-12 min-h-screen" v-if="list">
-      <h1
-        class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
+  <main class="p-12 min-h-screen" v-if="list">
+    <h1
+      class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
+    >
+      {{ name }}
+    </h1>
+
+    <div class="columns-3 gap-8 mt-8">
+      <div
+        class="mb-8 w-full overflow-hidden"
+        v-for="item in list"
+        :key="item._id"
       >
-        {{ name }}
-      </h1>
+        <NuxtLink :to="item._path">
+          <img
+            class="object-cover max-h-96 border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
+            v-lazy="vLazy(item.light || item.previews[0])"
+          />
+        </NuxtLink>
 
-      <div class="columns-3 gap-8 mt-8">
-        <div
-          class="mb-8 w-full overflow-hidden"
-          v-for="item in list"
-          :key="item._id"
-        >
-          <NuxtLink :to="item._path">
-            <img
-              class="object-cover max-h-96 border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
-              v-lazy="vLazy(item.light || item.previews[0])"
-            />
-          </NuxtLink>
-
-          <div class="px-2">
-            <h3 class="text-lg mt-4 mb-2 font-medium capitalize">
-              {{ item.title }}
-            </h3>
-            <p>
-              <NuxtLink
-                :to="`/tag/${tag}`"
-                v-for="tag in item.tags"
-                :key="tag"
-                class="btn btn-xs mr-2 font-normal btn-primary"
-              >
-                {{ tag }}
-              </NuxtLink>
-            </p>
-          </div>
+        <div class="px-2">
+          <h3 class="text-lg mt-4 mb-2 font-medium capitalize">
+            {{ item.title }}
+          </h3>
+          <p>
+            <NuxtLink
+              :to="`/tag/${tag}`"
+              v-for="tag in item.tags"
+              :key="tag"
+              class="btn btn-xs mr-2 font-normal btn-primary"
+            >
+              {{ tag }}
+            </NuxtLink>
+          </p>
         </div>
       </div>
+    </div>
 
-      <div class="flex justify-between items-center mt-24">
-        <div class="flex-1 border-t border-dotted border-base-content/20"></div>
-        <span class="px-12 text-base-content/50 font-medium font-sans">
-          end
-        </span>
-        <div class="flex-1 border-t border-dotted border-base-content/20"></div>
-      </div>
-    </main>
-  </NuxtLayout>
+    <div class="flex justify-between items-center mt-24">
+      <div class="flex-1 border-t border-dotted border-base-content/20"></div>
+      <span class="px-12 text-base-content/50 font-medium font-sans">
+        end
+      </span>
+      <div class="flex-1 border-t border-dotted border-base-content/20"></div>
+    </div>
+  </main>
 </template>
 
 <script setup>

@@ -8,7 +8,9 @@
   </Body>
 
   <main class="font-mono wcao">
-    <NuxtPage></NuxtPage>
+    <NuxtLayout>
+      <NuxtPage></NuxtPage>
+    </NuxtLayout>
   </main>
 </template>
 
