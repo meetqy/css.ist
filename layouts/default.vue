@@ -95,7 +95,9 @@
             >
               <!-- Sidebar content here -->
               <li v-for="item in navs">
-                <NuxtLink :to="'/tag/' + item">{{ item }}</NuxtLink>
+                <NuxtLink :to="'/tag/' + item" @click="storage = []">{{
+                  item
+                }}</NuxtLink>
               </li>
             </ul>
 
@@ -112,7 +114,8 @@
 </template>
 
 <script setup>
-import { useInfiniteScroll, useScroll } from "@vueuse/core";
+import { useInfiniteScroll, useScroll, useStorage } from "@vueuse/core";
+const storage = useStorage("tag-list-data", []);
 
 const drawerContent = ref(null);
 useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {

@@ -38,14 +38,14 @@ export const useUnsplash = (path: string) =>
  */
 
 export const getContentByTag = (
-  tagName: string,
+  tagName: string | string[],
   page?: { pageIndex: number; pageSize: number }
 ) => {
   const pageIndex = page?.pageIndex || 1;
   const pageSize = page?.pageSize || 12;
 
   const d = queryContent("introduce").where({
-    tags: { $contains: tagName },
+    tags: { $in: typeof tagName === "string" ? [tagName] : tagName },
   });
 
   return d

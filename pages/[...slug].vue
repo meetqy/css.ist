@@ -55,10 +55,21 @@
             />
           </div>
 
-          <div class="flex items-center mt-8">
+          <p class="mt-8">
             <span>tags:</span>
-            <div class="btn btn-primary btn-xs ml-2" v-for="item in page.tags">
+            <span class="btn btn-primary btn-xs ml-2" v-for="item in page.tags">
               {{ item }}
+            </span>
+          </p>
+
+          <h2 class="capitalize">more</h2>
+          <div class="grid grid-cols-4 gap-x-4">
+            <div v-for="item in moreContent" :key="item._id">
+              <img
+                v-lazy="vLazy(item.previews[0])"
+                class="w-full aspect-square object-cover object-top rounded-box"
+              />
+              <p class="px-2">{{ item.title }}</p>
             </div>
           </div>
         </article>
@@ -73,4 +84,9 @@ const { page } = useContent();
 // 当前选中的预览图
 const activePreviewIndex = ref(0);
 const full = ref(false);
+
+const moreContent = await getContentByTag(page.value.tags, {
+  pageIndex: 1,
+  pageSize: 12,
+});
 </script>

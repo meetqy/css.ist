@@ -39,9 +39,11 @@
       </div>
 
       <div class="flex justify-between items-center mt-24">
-        <div class="flex-1 border-t border-dotted"></div>
-        <span class="px-12 text-base-300 font-thin font-sans">end</span>
-        <div class="flex-1 border-t border-dotted"></div>
+        <div class="flex-1 border-t border-dotted border-base-content/20"></div>
+        <span class="px-12 text-base-content/50 font-medium font-sans">
+          end
+        </span>
+        <div class="flex-1 border-t border-dotted border-base-content/20"></div>
       </div>
     </main>
   </NuxtLayout>
@@ -81,6 +83,10 @@ const getData = async () =>
     pageSize,
   });
 
+if (!storage.value || !storage.value.length) {
+  list.value = await getData();
+}
+
 onMounted(async () => {
   if (storage.value.length > 0) {
     list.value = storage.value;
@@ -88,11 +94,11 @@ onMounted(async () => {
     if (scrollStorage.value > 0) {
       await nextTick();
       setTimeout(() => {
-        console.log(
-          scrollStorage.value,
-          document.querySelector("#drawer-content"),
-          "mounted"
-        );
+        // console.log(
+        //   scrollStorage.value,
+        //   document.querySelector("#drawer-content"),
+        //   "mounted"
+        // );
         document.querySelector("#drawer-content").scrollTop =
           scrollStorage.value;
       }, 20);
@@ -101,7 +107,6 @@ onMounted(async () => {
     return;
   }
 
-  list.value = await getData();
   storage.value = list.value;
 });
 

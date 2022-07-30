@@ -1,5 +1,0 @@
-// ROLLUP_NO_REPLACE 
- const _10 = "{\"parsed\":{\"_path\":\"/introduce/10\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Section Part 2\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"section-part-2\"},\"children\":[{\"type\":\"text\",\"value\":\"Section Part 2\"}]}]},\"tags\":[\"section\"],\"source\":\"https://tailblocks.cc/\",\"previews\":[\"https://strapi.wcao.cc/uploads/2_0da621ac67.png\",\"https://strapi.wcao.cc/uploads/localhost_3008_beauty_template_section_2_full_true_Nest_Hub_Max_2_316dd29703.jpg\"],\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"section-part-2\"},\"children\":[{\"type\":\"text\",\"value\":\"Section Part 2\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:10.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/10.md\",\"_extension\":\"md\"},\"hash\":\"qQTp0WLrPu\"}";
-
-export { _10 as default };
-//# sourceMappingURL=10.mjs.map
