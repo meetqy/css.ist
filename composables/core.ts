@@ -11,14 +11,13 @@ export const websiteConfig: {
   name: string;
   asset: string;
 } = {
-  name: "muzak",
+  name: "wcao.cc",
   asset: "https://strapi.wcao.cc",
 };
 
 /**
- *
+ * strapi assets
  */
-
 export const useAsset = (url: string, opts?: string) => {
   return `${websiteConfig.asset}/uploads/${opts || "f_webp,w_500"}${url}`;
 };

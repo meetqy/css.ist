@@ -1,83 +1,74 @@
 <template>
   <NuxtLayout>
-    <template v-slot:outside>
+    <div class="w-full" v-if="page">
       <div
-        ref="el"
-        class="w-screen h-screen fixed left-0 top-0 bg-black/80 z-[999] overflow-y-scroll"
-        v-if="page"
+        class="bg-base-100 p-2 shadow rounded fixed right-4 top-20 z-50 opacity-80"
+        v-if="page.previews"
       >
         <div
-          class="btn btn-ghost text-white fixed left-0 top-0 z-[51]"
-          @click="$router.go(-1)"
-        >
-          <span class="material-symbols-outlined"> close </span>
-        </div>
-
-        <div
-          class="sticky w-full z-50 transition-all"
-          :class="y > 50 ? 'top-0' : 'top-4'"
+          v-for="(item, i) in page.previews"
+          :key="i"
+          @click="activePreviewIndex = i"
         >
           <div
-            class="m-auto rounded px-4 py-2 flex items-center justify-between bg-base-100 prose !container transition-all"
-            :class="y > 50 ? ' shadow-lg' : 'shadow-none'"
+            class="p-1 border-2 border-base-200 overflow-hidden rounded"
+            :class="{
+              'border-primary !border-solid': activePreviewIndex === i,
+            }"
           >
-            <h1 class="m-0 flex-1">{{ page.title }}</h1>
-            <div class="flex flex-shrink-0" v-if="page.previews">
-              <div
-                v-for="(item, i) in page.previews"
-                :key="i"
-                class="p-1 border-dashed border-2 w-20 h-20 overflow-hidden mr-2"
-                :class="{
-                  'border-primary !border-solid': activePreviewIndex === i,
-                }"
-                @click="activePreviewIndex = i"
-              >
-                <img
-                  class="object-cover w-full h-full object-top m-0 p-0"
-                  v-lazy="vLazy(item)"
-                />
-              </div>
-            </div>
-            <div class="flex-1 flex justify-end">
-              <NuxtLink
-                class="btn btn-ghost text-primary capitalize"
-                target="_blank"
-                :to="`${page._path.replace('introduce', 'template')}`"
-              >
-                <span class="material-symbols-outlined"> visibility </span>
-              </NuxtLink>
-            </div>
+            <img
+              class="object-cover w-24 h-24 object-top m-0 p-0"
+              v-lazy="vLazy(item)"
+            />
           </div>
-        </div>
-
-        <div class="container bg-base-100 m-auto rounded-b p-4 relative">
-          <article class="prose max-w-full">
-            <div class="relative mt-4" v-if="page.previews">
-              <img
-                v-lazy="vLazy(page.previews[activePreviewIndex])"
-                class="m-auto object-top object-cover transition-all"
-                :class="
-                  full
-                    ? 'w-full cursor-zoom-out'
-                    : 'w-1/2 cursor-zoom-in aspect-square'
-                "
-                @click="full = !full"
-              />
-            </div>
-          </article>
+          <p class="text-center text-base-content/50 font-serif">
+            0{{ i + 1 }}
+          </p>
         </div>
       </div>
-    </template>
+
+      <div class="fixed right-4 bottom-8">
+        <div
+          class="btn btn-primary btn-square btn-sm mr-2"
+          @click="$router.back()"
+        >
+          <span class="material-symbols-outlined"> chevron_left </span>
+        </div>
+        <div class="btn btn-primary btn-circle btn-sm">
+          <span class="material-symbols-outlined"> expand_less </span>
+        </div>
+      </div>
+
+      <div class="container m-auto bg-info/5 pb-8 rounded-b relative">
+        <article class="prose max-w-full px-4 pt-8">
+          <h1>{{ page.title }}</h1>
+          <div v-if="page.previews">
+            <img
+              v-lazy="vLazy(page.previews[activePreviewIndex])"
+              class="m-auto object-top object-cover transition-all"
+              :class="
+                full
+                  ? 'w-full cursor-zoom-out'
+                  : 'w-1/2 cursor-zoom-in aspect-square'
+              "
+              @click="full = !full"
+            />
+          </div>
+
+          <div class="flex items-center mt-8">
+            <span>tags:</span>
+            <div class="btn btn-primary btn-xs ml-2" v-for="item in page.tags">
+              {{ item }}
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </NuxtLayout>
 </template>
 
 <script setup>
-import { useScroll } from "@vueuse/core";
-
 const { page } = useContent();
-
-const el = ref(null);
-const { y } = useScroll(el);
 
 // 当前选中的预览图
 const activePreviewIndex = ref(0);
