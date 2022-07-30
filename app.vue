@@ -15,7 +15,9 @@
 <script setup>
 onMounted(() => {
   const wel = document.querySelectorAll(".wcao");
-  console.log(wel);
+  if (wel[1]) {
+    wel[1].remove();
+  }
 });
 </script>
 
