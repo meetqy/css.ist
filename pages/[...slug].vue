@@ -68,6 +68,8 @@
 </template>
 
 <script setup>
+console.log("slug...");
+
 const { page } = useContent();
 
 // 当前选中的预览图

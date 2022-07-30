@@ -10,8 +10,6 @@
   </div>
 </template>
 
-<script setup></script>
-
 <style lang="postcss">
 img[lazy="loading"] {
   @apply opacity-30 bg-base-100;

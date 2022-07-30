@@ -105,6 +105,7 @@
 </template>
 
 <script setup>
+console.log(123, "index");
 const blogContent = await getContentByTag("blog", {
   pageIndex: 1,
   pageSize: 12,
