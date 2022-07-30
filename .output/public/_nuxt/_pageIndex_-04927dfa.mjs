@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-84c1d017.mjs";import{V as a}from"./entry-066116d1.mjs";const t={};function n(r,o){return a(r.$route.params.pageIndex)}var p=e(t,[["render",n]]);export{p as default};
