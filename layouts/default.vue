@@ -75,7 +75,7 @@
           >
             <NuxtLink
               to="/"
-              class="btn btn-ghost hover:bg-transparent hidden lg:flex"
+              class="btn btn-ghost text-xl normal-case hover:bg-transparent hidden lg:flex"
             >
               <img src="/logo.png" class="w-10 h-10 mr-2" />
               {{ websiteConfig.name }}

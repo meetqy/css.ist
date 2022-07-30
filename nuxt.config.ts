@@ -21,4 +21,26 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
+
+  app: {
+    head: {
+      title: "wcao.cc 分享响应式、多主题模板和组件,基于tailwind、daisyui",
+      meta: [
+        {
+          name: "keywords",
+          content:
+            "web,tailwind,daisyui,模板,template,blog,响应式网站,responsive sites",
+        },
+        {
+          name: "description",
+          content: "wcao.cc 分享响应式、多主题模板和组件,基于tailwind、daisyui",
+        },
+        {
+          name: "viewport",
+          content:
+            "width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0",
+        },
+      ],
+    },
+  },
 });

@@ -1,7 +1,9 @@
 # wcao.cc
 
-- [youweb.cc](https://youweb.cc)
+**wcao.cc** 分享**响应式**、**多主题**模板和组件,基于 tailwind、daisyui
+
 - [wcao.cc](https://wcao.cc)
+- 备用网站: [youweb.cc](https://youweb.cc)
 
 ## UI 主题公共资源
 
@@ -36,4 +38,6 @@
     - tag/[name]                        # 标签分页
     - index                             # 首页
     - about                             # 关于我
+    - [...slug].vue                     # 介绍详情
+
 ```

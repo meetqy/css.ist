@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="fixed right-4 bottom-8">
+      <div class="fixed right-4 bottom-8 z-50">
         <div
           class="btn btn-primary btn-square btn-sm mr-2"
           @click="$router.back()"
@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <div class="container m-auto bg-info/5 pb-8 rounded-b relative">
+      <div class="container m-auto bg-info/5 pb-8 rounded-b">
         <article class="prose max-w-full px-4 pt-8">
           <h1>{{ page.title }}</h1>
           <div v-if="page.previews">
