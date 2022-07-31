@@ -15,7 +15,7 @@
         <NuxtLink :to="item._path">
           <img
             class="object-cover max-h-96 border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
-            v-lazy="vLazy(item.light || item.previews[0])"
+            v-lazy="vLazy(item.light || useAsset(item.previews[0]))"
           />
         </NuxtLink>
 

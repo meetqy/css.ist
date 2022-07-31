@@ -19,7 +19,7 @@ export const websiteConfig: {
  * strapi assets
  */
 export const useAsset = (url: string, opts?: string) => {
-  return `${websiteConfig.asset}/uploads/${opts || "f_webp,w_500"}${url}`;
+  return url.replace("/uploads/", `/uploads/${opts || "f_webp,w_500"}/`);
 };
 
 /**
@@ -36,7 +36,6 @@ export const useUnsplash = (path: string) =>
 /**
  * 根据tag获取数据
  */
-
 export const getContentByTag = (
   tagName: string | string[],
   page?: { pageIndex: number; pageSize: number }
@@ -57,8 +56,17 @@ export const getContentByTag = (
 // drawer-content 触底
 export const drawerContentPullUpEnd = ref<number>(0);
 
+// drawer-content 滚动距离
 export const drawerContentScroll = ref();
 
+// drawer-content 元素
+export const drawerContentElement = ref(null);
+
+/**
+ * 懒加载
+ * @param src
+ * @returns
+ */
 export const vLazy = (src: string) => {
   return {
     src,

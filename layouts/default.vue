@@ -69,7 +69,7 @@
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
 
-        <aside class="w-80 pb-12">
+        <aside class="w-80 bg-base-100">
           <div
             class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
           >
@@ -88,22 +88,29 @@
           </div>
 
           <div
-            class="min-h-full border-r border-base-200 lg:bg-transparent bg-base-100"
+            class="bg-base-100 border-r border-base-200 p-4"
+            style="height: calc(100% - 64px)"
           >
-            <ul
-              class="menu p-4 overflow-y-auto w-full text-base-content capitalize border-base-200"
+            <div
+              class="collapse collapse-arrow min-h-[40px] bg-base-200 rounded-box"
             >
-              <!-- Sidebar content here -->
-              <li v-for="item in navs">
-                <NuxtLink :to="'/tag/' + item" @click="storage = []">{{
-                  item
-                }}</NuxtLink>
-              </li>
-            </ul>
+              <input type="checkbox" checked class="peer" />
+              <div class="collapse-title capitalize">tag</div>
+              <div class="collapse-content !p-0">
+                <ul class="menu text-base-content capitalize border-base-200">
+                  <!-- Sidebar content here -->
+                  <li v-for="item in navs">
+                    <NuxtLink :to="'/tag/' + item" @click="storage = []">
+                      {{ item }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
             <!-- ads -->
             <img
-              class="w-72 h-72 rounded-box m-auto"
+              class="w-72 h-72 rounded-box mx-auto mt-4"
               :src="useUnsplash('/random/288x0')"
             />
           </div>
