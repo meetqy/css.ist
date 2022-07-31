@@ -4,6 +4,15 @@
       class="bg-base-100 p-2 shadow rounded fixed right-4 top-20 z-50 opacity-80"
       v-if="page.previews"
     >
+      <div class="flex justify-center mb-2">
+        <NuxtLink
+          :to="`${page._path.replace('introduce', 'template')}`"
+          class="btn btn-primary btn-ghost btn-sm btn-square"
+        >
+          <span class="material-symbols-outlined"> settings </span>
+        </NuxtLink>
+      </div>
+
       <div
         v-for="(item, i) in page.previews"
         :key="i"
@@ -87,6 +96,8 @@
 
 <script setup>
 const { page } = useContent();
+
+console.log(page);
 
 // 当前选中的预览图
 const activePreviewIndex = ref(0);

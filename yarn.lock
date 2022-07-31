@@ -751,6 +751,11 @@
   resolved "https://registry.npmjs.org/@types/mdurl/-/mdurl-1.0.2.tgz#e2ce9d83a613bacf284c7be7d491945e39e1f8e9"
   integrity sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==
 
+"@types/mockjs@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/@types/mockjs/-/mockjs-1.0.6.tgz#dafdd5de65156f7aa63eab4e29fa3d532cd95609"
+  integrity sha512-Yu5YlqbYZyqsd6LjO4e8ONJDN9pTSnciHDcRP4teNOh/au2b8helFhgRx+3w8xsTFEnwr9jtfTVJbAx+eYmlHA==
+
 "@types/ms@*":
   version "0.7.31"
   resolved "https://registry.npmjs.org/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
@@ -1540,6 +1545,11 @@ comma-separated-tokens@^2.0.0:
   version "2.0.2"
   resolved "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.2.tgz#d4c25abb679b7751c880be623c1179780fe1dd98"
   integrity sha512-G5yTt3KQN4Yn7Yk4ed73hlZ1evrFKXeUW3086p3PRFNp7m2vIjI6Pg+Kgb+oyzhd9F2qdcoj67+y3SdxL5XWsg==
+
+commander@*:
+  version "9.4.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
+  integrity sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==
 
 commander@^2.20.0:
   version "2.20.3"
@@ -3980,6 +3990,13 @@ mlly@^0.5.2, mlly@^0.5.3, mlly@^0.5.4, mlly@^0.5.5:
   dependencies:
     pathe "^0.3.2"
     pkg-types "^0.3.3"
+
+mockjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/mockjs/-/mockjs-1.1.0.tgz#e6a0c378e91906dbaff20911cc0273b3c7d75b06"
+  integrity sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==
+  dependencies:
+    commander "*"
 
 mri@^1.1.0, mri@^1.2.0:
   version "1.2.0"

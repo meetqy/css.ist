@@ -1,18 +1,19 @@
 <template>
-  <component :is="templates[path]" v-if="full"></component>
-  <NuxtLayout name="template" v-else>
-    <component :is="templates[path]"></component>
-  </NuxtLayout>
+  <component :is="templates[path]"></component>
 </template>
 
 <script setup>
 const route = useRoute();
 const { path } = route.params;
 
-const { full, lang } = route.query;
+definePageMeta({
+  layout: "template",
+});
+
+const { lang } = route.query;
 
 const templates = {
-  1: resolveComponent("Template1"),
+  4: resolveComponent("Template4"),
   2: resolveComponent("Template2"),
   8: resolveComponent("Template8"),
 };

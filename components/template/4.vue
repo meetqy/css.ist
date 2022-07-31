@@ -107,107 +107,38 @@
         </div>
         <div class="flex-1 p-3 md:py-[35]">
           <div class="space-y-2 md:space-y-6">
-            <div class="card card-side bg-base-200 shadow-xl">
-              <figure>
+            <div
+              class="card card-side bg-base-200 shadow-xl"
+              v-for="item in data"
+              :key="item.id"
+            >
+              <figure v-if="item.image.length > 0">
                 <img
-                  src="https://api.lorem.space/image/movie?w=200&amp;h=280"
-                  alt="Movie"
+                  v-lazy="vLazy(item.image[0])"
+                  :alt="item.title"
+                  class="h-full"
                 />
               </figure>
               <div class="card-body">
-                <h2 class="card-title">Lorem ipsum dolor sit amet</h2>
+                <h2 class="card-title">{{ item.title }}</h2>
                 <div class="justify-start">
-                  <button class="btn btn-xs btn-primary">Movies</button>
-                  <button class="btn btn-xs btn-secondary">Watched</button>
+                  <button
+                    class="btn btn-xs btn-primary mr-1"
+                    v-for="tag in item.tags"
+                    :key="tag"
+                  >
+                    {{ tag }}
+                  </button>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {{ item.paragraph }}
                 </p>
               </div>
             </div>
-            <div class="card card-side bg-base-200 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title">
-                  Fringilla est ullamcorper eget nulla facilisi etiam dignissim.
-                </h2>
-                <div class="justify-start">
-                  <button class="btn btn-xs btn-accent">Article</button>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Rhoncus dolor purus non enim. Purus viverra accumsan in nisl.
-                  Aliquam faucibus purus in massa. In vitae turpis massa sed
-                  elementum tempus egestas. Nisl purus in mollis nunc sed.
-                  Ullamcorper morbi tincidunt ornare massa eget. Enim nulla
-                  aliquet porttitor lacus luctus accumsan. Id neque aliquam
-                  vestibulum morbi blandit cursus. Pellentesque eu tincidunt
-                  tortor aliquam nulla facilisi cras. Sed augue lacus viverra
-                  vitae.
-                </p>
-              </div>
-            </div>
-            <div class="card card-side bg-base-200 shadow-xl">
-              <figure>
-                <img
-                  src="https://api.lorem.space/image/book?w=200&amp;h=280"
-                  alt="Book"
-                />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Rhoncus dolor purus non enim.</h2>
-                <div class="justify-start">
-                  <button class="btn btn-xs btn-error">Books</button>
-                  <button class="btn btn-xs btn-success">Author</button>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Rhoncus dolor purus non enim.
-                </p>
-              </div>
-            </div>
-            <div class="card card-side bg-base-200 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title">
-                  Elementum pulvinar etiam non quam lacus suspendisse
-                </h2>
-                <div class="justify-start">
-                  <button class="btn btn-xs btn-warning">Note</button>
-                </div>
-                <p>
-                  Sagittis id consectetur purus ut faucibus pulvinar elementum
-                  integer. Massa sed elementum tempus egestas sed. Proin
-                  sagittis nisl rhoncus mattis rhoncus urna. Amet volutpat
-                  consequat mauris nunc congue nisi vitae suscipit tellus.
-                  Posuere urna nec tincidunt praesent semper. Elementum pulvinar
-                  etiam non quam lacus suspendisse.
-                </p>
-              </div>
-            </div>
-            <div class="card card-side bg-base-200 shadow-xl">
-              <figure>
-                <img
-                  src="https://api.lorem.space/image/game?w=200&amp;h=280"
-                  alt="Game"
-                />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Sed augue lacus viverra vitae.</h2>
-                <div class="justify-start">
-                  <button class="btn btn-xs btn-primary">Game</button>
-                </div>
-                <p>
-                  Sodales ut etiam sit amet nisl purus in mollis nunc.
-                  Suspendisse potenti nullam ac tortor vitae purus. Eu mi
-                  bibendum neque egestas congue quisque egestas diam.
-                </p>
-              </div>
-            </div>
+
             <div class="flex justify-center">
               <div class="btn-group">
-                <button class="btn">1</button>
+                <button class="btn btn-active">1</button>
                 <button class="btn">2</button>
                 <button class="btn btn-disabled">...</button>
                 <button class="btn">99</button>
@@ -491,3 +422,23 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import Mock from "mockjs";
+
+const { lang = "en" } = useRoute().query;
+
+const data = Mock.mock({
+  "en|4-15": [
+    {
+      "id|+1": 1,
+      title: "@title",
+      paragraph: "@paragraph(1,5)",
+      "tags|1-5": ["@word"],
+      "image|0-1": [useUnsplash("/random/800x600")],
+    },
+  ],
+})[lang];
+
+console.log(data);
+</script>

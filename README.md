@@ -11,8 +11,36 @@
 - [nuxt tailwindcss](https://tailwindcss.nuxtjs.org/examples/daisyui)
 - [material-icons](https://fonts.google.com/icons)
 - [unsplash](https://source.unsplash.com)
+- [mockjs](http://mockjs.com)
 
-### material icons 使用
+### 多语言
+
+```js
+const { lang = "en" } = useRoute().query;
+
+const data = Mock.mock({
+  "en|4-15": [
+    {
+      "id|+1": 1,
+      title: "@title",
+      paragraph: "@paragraph(1,5)",
+      "tags|1-5": ["@word"],
+      "image|0-1": [useUnsplash("/random/800x600")],
+    },
+  ],
+  zh: [
+    {
+      "id|+1": 1,
+      title: "@ctitle",
+      paragraph: "@cparagraph(1,5)",
+      "tags|1-5": ["@cword"],
+      "image|0-1": [useUnsplash("/random/800x600")],
+    },
+  ],
+})[lang];
+```
+
+### Material Icons 使用
 
 ```html
 <!-- outlined icon -->
@@ -34,10 +62,8 @@
 - introduce                             # 模板介绍 markdown
 - pages
     - template/[path]                   # 模板展示
-    - page/[pageIndex]                  # 首页分页
     - tag/[name]                        # 标签分页
     - index                             # 首页
     - about                             # 关于我
     - [...slug].vue                     # 介绍详情
-
 ```

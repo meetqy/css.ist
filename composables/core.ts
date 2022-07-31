@@ -29,9 +29,15 @@ export const iconFill = `font-variation-settings: "FILL" 1, "wght" 100, "GRAD" 0
 
 /**
  * unsplash.com
+ * https://source.unsplash.com/random/800x600
  */
-export const useUnsplash = (path: string) =>
-  `https://source.unsplash.com${path}`;
+export const useUnsplash = (path: string, query?: string) => {
+  if (query) {
+    return `https://source.unsplash.com${path}${query}&id=${Date.now()}`;
+  } else {
+    return `https://source.unsplash.com${path}?id=${Date.now()}`;
+  }
+};
 
 /**
  * 根据tag获取数据
