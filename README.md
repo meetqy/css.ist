@@ -5,15 +5,21 @@
 - [wcao.cc](https://wcao.cc)
 - 备用网站: [youweb.cc](https://youweb.cc)
 
-## UI 主题公共资源
+## 模板中公用资源、方法
 
 - [color-mode](https://color-mode.nuxtjs.org/)
 - [nuxt tailwindcss](https://tailwindcss.nuxtjs.org/examples/daisyui)
 - [material-icons](https://fonts.google.com/icons)
-- [unsplash](https://source.unsplash.com)
+- [picsum.photos](https://picsum.photos/)
 - [mockjs](http://mockjs.com)
 
-### 多语言
+### 随机图片
+
+```js
+useMockPic("/width/height");
+```
+
+### Mock Data/多语言
 
 ```js
 const { lang = "en" } = useRoute().query;
@@ -25,7 +31,7 @@ const data = Mock.mock({
       title: "@title",
       paragraph: "@paragraph(1,5)",
       "tags|1-5": ["@word"],
-      "image|0-1": [useUnsplash("/random/800x600")],
+      "image|0-1": [useMockPic("/random/800x600")],
     },
   ],
   zh: [
@@ -34,7 +40,7 @@ const data = Mock.mock({
       title: "@ctitle",
       paragraph: "@cparagraph(1,5)",
       "tags|1-5": ["@cword"],
-      "image|0-1": [useUnsplash("/random/800x600")],
+      "image|0-1": [useMockPic("/random/800x600")],
     },
   ],
 })[lang];
