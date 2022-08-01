@@ -14,20 +14,7 @@
             {{ websiteConfig.name }}
           </div>
 
-          <button class="btn btn-square btn-ghost hover:bg-transparent">
-            <label class="swap swap-rotate">
-              <!-- this hidden checkbox controls the state -->
-              <input type="checkbox" />
-              <!-- sun icon -->
-              <span class="material-symbols-outlined swap-on">
-                light_mode
-              </span>
-              <!-- moon icon -->
-              <span class="material-symbols-outlined swap-off">
-                dark_mode
-              </span>
-            </label>
-          </button>
+          <CoreDark />
         </label>
 
         <div class="sticky top-0 z-30 bg-base-100 text-base-content">
@@ -43,20 +30,7 @@
               />
             </div>
             <div class="flex-none">
-              <button class="btn btn-square btn-ghost">
-                <label class="swap swap-rotate">
-                  <!-- this hidden checkbox controls the state -->
-                  <input type="checkbox" />
-                  <!-- sun icon -->
-                  <span class="material-symbols-outlined swap-on">
-                    light_mode
-                  </span>
-                  <!-- moon icon -->
-                  <span class="material-symbols-outlined swap-off">
-                    dark_mode
-                  </span>
-                </label>
-              </button>
+              <CoreDark />
             </div>
           </div>
         </div>

@@ -112,13 +112,12 @@
               v-for="item in data"
               :key="item.id"
             >
-              <figure v-if="item.image.length > 0">
-                <img
-                  v-lazy="vLazy(item.image[0])"
-                  :alt="item.title"
-                  class="h-full"
-                />
-              </figure>
+              <img
+                v-if="item.image.length > 0"
+                v-lazy="vLazy(item.image[0])"
+                :alt="item.title"
+                class="max-w-sm"
+              />
               <div class="card-body">
                 <h2 class="card-title">{{ item.title }}</h2>
                 <div class="justify-start">
@@ -164,7 +163,7 @@
           <!-- avatar start -->
           <div class="avatar w-60">
             <div class="w-16 lg:w-32 rounded-full mx-auto">
-              <img src="https://api.lorem.space/image/face?hash=92310" />
+              <img v-lazy="vLazy(useMockPic('/128/128'))" />
             </div>
           </div>
           <!-- avatar end -->
@@ -424,21 +423,25 @@
 </template>
 
 <script setup>
-import Mock from "mockjs";
-
 const { lang = "en" } = useRoute().query;
+const { $Mock } = useNuxtApp();
 
-const data = Mock.mock({
-  "en|4-15": [
-    {
-      "id|+1": 1,
-      title: "@title",
-      paragraph: "@paragraph(1,5)",
-      "tags|1-5": ["@word"],
-      "image|0-1": [useUnsplash("/random/800x600")],
-    },
-  ],
-})[lang];
+const data = ref();
 
-console.log(data);
+onMounted(() => {
+  data.value = $Mock.mock({
+    "en|4-15": [
+      {
+        "id|+1": 1,
+        title: "@title",
+        paragraph: "@paragraph(1,5)",
+        "tags|1-5": ["@word"],
+        "image|0-1": () =>
+          $Mock.Random.boolean()
+            ? [`${useMockPic("/400/300")}?t=${$Mock.Random.natural(0, 1000)}`]
+            : [],
+      },
+    ],
+  })[lang];
+});
 </script>
