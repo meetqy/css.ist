@@ -74,7 +74,7 @@
             <!-- ads -->
             <img
               class="w-72 h-72 rounded-box m-auto"
-              :src="useUnsplash('/random/288x0')"
+              :src="useMockPic('/288/288')"
             />
           </div>
         </aside>

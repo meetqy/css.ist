@@ -111,7 +111,7 @@
             <!-- ads -->
             <img
               class="w-72 h-72 rounded-box mx-auto mt-4"
-              :src="useUnsplash('/random/288x0')"
+              :src="useMockPic('/288/288')"
             />
           </div>
         </aside>
