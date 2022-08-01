@@ -31,12 +31,10 @@ export const iconFill = `font-variation-settings: "FILL" 1, "wght" 100, "GRAD" 0
  * unsplash.com
  * https://source.unsplash.com/random/800x600
  */
-export const useUnsplash = (path: string, query?: string) => {
-  if (query) {
-    return `https://source.unsplash.com${path}${query}&id=${Date.now()}`;
-  } else {
-    return `https://source.unsplash.com${path}?id=${Date.now()}`;
-  }
+export const useMockPic = (path: string, query?: string) => {
+  // console.log((Math.random() * 1000).toFixed(0));
+  return "https://picsum.photos" + path;
+  // return `https://source.unsplash.com${path}${query}`;
 };
 
 /**
