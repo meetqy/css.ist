@@ -13,10 +13,7 @@
         >
           <span class="material-symbols-outlined"> chevron_left </span>
         </div>
-        <label
-          for="my-drawer"
-          class="btn btn-primary btn-square drawer-button shadow-md"
-        >
+        <label for="my-drawer" class="btn btn-square drawer-button shadow-md">
           <span class="material-symbols-outlined"> flaky </span>
         </label>
       </div>

@@ -33,15 +33,15 @@
       </div>
     </div>
 
-    <div class="fixed right-4 bottom-8 z-50">
+    <div class="fixed right-4 bottom-8 z-50 flex justify-center items-center">
       <div
         class="btn btn-primary btn-square btn-sm mr-2"
         @click="$router.back()"
       >
         <span class="material-symbols-outlined"> chevron_left </span>
       </div>
-      <div class="btn btn-primary btn-circle btn-sm" @click="toTop">
-        <span class="material-symbols-outlined"> expand_less </span>
+      <div class="btn btn-circle btn-sm" @click="toTop">
+        <span class="material-symbols-outlined !text-lg"> rocket </span>
       </div>
     </div>
 
@@ -67,12 +67,28 @@
           </div>
         </div>
 
-        <p class="mt-8">
-          <span>tags:</span>
+        <p class="mt-8 flex items-center">
+          <span class="material-symbols-outlined"> sell </span>
+          <span class="ml-1 uppercase">tags:</span>
           <span class="btn btn-primary btn-xs ml-2" v-for="item in page.tags">
             {{ item }}
           </span>
         </p>
+
+        <div class="mt-4 flex items-center" v-if="page.source">
+          <span class="material-symbols-outlined"> my_location </span>
+          <span class="ml-1 uppercase">source:</span>
+          <span>
+            《<a
+              :href="page.source"
+              target="_blank"
+              class="text-primary ml-2 uppercase"
+            >
+              {{ page.source }}
+            </a>
+            》
+          </span>
+        </div>
 
         <h2 class="capitalize">more</h2>
         <div class="grid grid-cols-4 gap-x-4">
