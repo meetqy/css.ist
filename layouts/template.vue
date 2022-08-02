@@ -2,7 +2,11 @@
   <div class="drawer">
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
-      <div class="fixed left-0 w-full top-0" :data-theme="mode">
+      <div
+        id="template-priview"
+        class="fixed left-0 w-full top-0"
+        :data-theme="mode"
+      >
         <slot></slot>
       </div>
 

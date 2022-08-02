@@ -1,35 +1,39 @@
 <template>
   <div class="w-full" v-if="page">
     <div
-      class="bg-base-100 p-2 shadow rounded fixed right-4 top-20 z-50 opacity-80"
+      class="bg-base-100 p-2 shadow rounded fixed right-4 top-20 z-50"
       v-if="page.previews"
     >
       <div class="flex justify-center mb-2">
         <NuxtLink
           :to="`${page._path.replace('introduce', 'template')}`"
-          class="btn btn-primary btn-ghost btn-sm btn-square"
+          class="btn btn-ghost text-primary btn-sm btn-square"
         >
           <span class="material-symbols-outlined"> settings </span>
         </NuxtLink>
       </div>
 
-      <div
-        v-for="(item, i) in page.previews"
-        :key="i"
-        @click="activePreviewIndex = i"
-      >
+      <div class="max-h-96 overflow-y-auto">
         <div
-          class="p-1 border-2 border-base-200 overflow-hidden rounded"
-          :class="{
-            'border-primary !border-solid': activePreviewIndex === i,
-          }"
+          v-for="(item, i) in page.previews"
+          :key="i"
+          @click="activePreviewIndex = i"
         >
-          <img
-            class="object-cover w-24 h-24 object-top m-0 p-0"
-            v-lazy="vLazy(useAsset(item, 'embed,f_webp,s_300x300'))"
-          />
+          <div
+            class="p-1 border-2 border-base-200 overflow-hidden rounded"
+            :class="{
+              'border-primary !border-solid': activePreviewIndex === i,
+            }"
+          >
+            <img
+              class="object-cover w-24 h-24 object-top m-0 p-0"
+              v-lazy="vLazy(useAsset(item, 'embed,f_webp,s_300x300'))"
+            />
+          </div>
+          <p class="text-center text-base-content/50 font-serif">
+            0{{ i + 1 }}
+          </p>
         </div>
-        <p class="text-center text-base-content/50 font-serif">0{{ i + 1 }}</p>
       </div>
     </div>
 
@@ -48,20 +52,16 @@
     <div class="container m-auto bg-info/5 pb-8 rounded-b">
       <article class="prose max-w-full px-4 pt-8">
         <h1>{{ page.title }}</h1>
-        <div v-if="page.previews" class="flex overflow-hidden">
+        <div v-if="page.previews" class="flex">
           <div
-            class="w-full flex-shrink-0"
+            class="w-full flex-shrink-0 bg-neutral rounded-box max-h-[80vh] overflow-y-auto"
             v-for="(item, i) in page.previews"
             v-show="activePreviewIndex === i"
           >
             <img
-              v-lazy="vLazy(useAsset(item, 'f_web,w_1920'))"
-              class="m-auto object-left-top object-cover transition-all"
-              :class="
-                full
-                  ? 'w-full cursor-zoom-out'
-                  : 'w-1/2 cursor-zoom-in aspect-square'
-              "
+              v-lazy="vLazy(useAsset(item, 'f_web'))"
+              class="m-auto transition-all shadow-2xl"
+              :class="full ? ' w-4/5 cursor-zoom-out' : 'h-full cursor-zoom-in'"
               @click="full = !full"
             />
           </div>

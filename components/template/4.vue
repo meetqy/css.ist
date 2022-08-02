@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="px-4 lg:pr-4">
           <div class="space-y-6 mt-4">
             <div
               class="card bg-base-200 shadow flex-col md:flex-row w-full"
