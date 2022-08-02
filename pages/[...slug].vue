@@ -1,42 +1,5 @@
 <template>
   <div class="w-full" v-if="page">
-    <div
-      class="bg-base-100 p-2 shadow rounded fixed right-4 top-20 z-50"
-      v-if="page.previews"
-    >
-      <div class="flex justify-center mb-2">
-        <NuxtLink
-          :to="`${page._path.replace('introduce', 'template')}`"
-          class="btn btn-ghost text-primary btn-sm btn-square"
-        >
-          <span class="material-symbols-outlined"> settings </span>
-        </NuxtLink>
-      </div>
-
-      <div class="max-h-96 overflow-y-auto">
-        <div
-          v-for="(item, i) in page.previews"
-          :key="i"
-          @click="activePreviewIndex = i"
-        >
-          <div
-            class="p-1 border-2 border-base-200 overflow-hidden rounded"
-            :class="{
-              'border-primary !border-solid': activePreviewIndex === i,
-            }"
-          >
-            <img
-              class="object-cover w-24 h-24 object-top m-0 p-0"
-              v-lazy="vLazy(useAsset(item, 'embed,f_webp,s_300x300'))"
-            />
-          </div>
-          <p class="text-center text-base-content/50 font-serif">
-            0{{ i + 1 }}
-          </p>
-        </div>
-      </div>
-    </div>
-
     <div class="fixed right-4 bottom-8 z-50 flex justify-center items-center">
       <div
         class="btn btn-primary btn-square btn-sm mr-2"
@@ -49,22 +12,58 @@
       </div>
     </div>
 
-    <div class="container m-auto bg-info/5 pb-8 rounded-b">
-      <article class="prose max-w-full px-4 pt-8">
-        <h1>{{ page.title }}</h1>
-        <div v-if="page.previews" class="flex">
+    <div class="lg:container w-full bg-info/5 pb-8 rounded-b">
+      <article
+        class="md:prose prose-sm prose-p:mb-0 prose-h2:mb-0 !max-w-full px-4 pt-4"
+      >
+        <div
+          class="pl-0 md:pl-4 shadow bg-base-100 overflow-hidden rounded-box mb-4 flex items-center justify-between flex-col md:flex-row"
+          v-if="page.previews"
+        >
+          <h1 class="!m-0 py-4 md:py-0">{{ page.title }}</h1>
+
           <div
-            class="w-full flex-shrink-0 bg-neutral rounded-box max-h-[80vh] overflow-y-auto"
-            v-for="(item, i) in page.previews"
-            v-show="activePreviewIndex === i"
+            class="flex justify-end max-h-24 flex-1 md:flex-none items-center bg-primary md:rounded-r-box rounded-b-box"
           >
-            <img
-              v-lazy="vLazy(useAsset(item, 'f_web'))"
-              class="m-auto transition-all shadow-2xl"
-              :class="full ? ' w-4/5 cursor-zoom-out' : 'h-full cursor-zoom-in'"
-              @click="full = !full"
-            />
+            <div
+              class="flex bg-base-300 items-center md:max-w-md w-full overflow-x-scroll"
+            >
+              <div
+                v-for="(item, i) in page.previews"
+                :key="i"
+                @click="activePreviewIndex = i"
+                class="p-1 border-2 border-transparent flex-shrink-0"
+                :class="{
+                  '!border-primary ': activePreviewIndex === i,
+                }"
+              >
+                <img
+                  class="object-cover w-24 h-24 object-top m-0 p-0"
+                  v-lazy="vLazy(useAsset(item, 'embed,f_webp,s_300x300'))"
+                />
+              </div>
+            </div>
+            <NuxtLink
+              :to="`${page._path.replace('introduce', 'template')}`"
+              class="px-4 !h-full bg-primary text-primary-content flex justify-center items-center !no-underline"
+            >
+              <span class="material-symbols-outlined"> fullscreen </span>
+            </NuxtLink>
           </div>
+        </div>
+
+        <div
+          v-if="page.previews"
+          class="w-full flex-shrink-0 rounded-box bg-neutral max-h-[80vh] overflow-y-auto transition-all"
+          v-for="(item, i) in page.previews"
+          v-show="activePreviewIndex === i"
+        >
+          <img
+            v-lazy="vLazy(useAsset(item, 'f_web'))"
+            class="m-auto !my-0 transition-all object-center"
+            :class="full ? 'object-contain' : 'w-96 object-fill'"
+            @click="full = !full"
+          />
         </div>
 
         <p class="mt-8 flex items-center">
@@ -78,20 +77,20 @@
         <div class="mt-4 flex items-center" v-if="page.source">
           <span class="material-symbols-outlined"> my_location </span>
           <span class="ml-1 uppercase">source:</span>
-          <span>
-            《<a
+          《<span class="line-clamp-1">
+            <a
               :href="page.source"
               target="_blank"
-              class="text-primary ml-2 uppercase"
-            >
-              {{ page.source }}
-            </a>
-            》
-          </span>
+              class="text-primary uppercase"
+              >{{ page.source }}</a
+            > </span
+          >》
         </div>
 
         <h2 class="capitalize">more</h2>
-        <div class="grid grid-cols-4 gap-x-4">
+        <div
+          class="grid transition-all xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4"
+        >
           <div
             v-for="item in moreContent"
             :key="item._id"

@@ -1,12 +1,12 @@
 <template>
-  <main class="p-12 min-h-screen" v-if="list">
+  <main class="lg:p-12 p-4 min-h-screen" v-if="list">
     <h1
       class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
     >
       {{ name }}
     </h1>
 
-    <div class="columns-3 gap-8 mt-8">
+    <div class="lg:columns-3 lg:gap-8 columns-1 gap-2 mt-8">
       <div
         class="mb-8 w-full overflow-hidden"
         v-for="item in list"
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="flex justify-between items-center mt-24">
+    <div class="flex justify-between items-center lg:mt-24 mt-12">
       <div class="flex-1 border-t border-dotted border-base-content/20"></div>
       <span class="px-12 text-base-content/50 font-medium font-sans">
         end
