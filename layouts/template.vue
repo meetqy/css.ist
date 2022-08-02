@@ -25,7 +25,7 @@
       <label for="my-drawer" class="drawer-overlay"></label>
 
       <ul class="menu w-80 bg-base-100 p-4">
-        <li class="menu-title"><a>Themes</a></li>
+        <li class="menu-title"><a>Choose Theme</a></li>
         <div class="dropdown mt-2">
           <label tabindex="1">
             <input
@@ -69,6 +69,37 @@
             </div>
           </div>
         </div>
+
+        <li class="menu-title mt-4"><a>Choose Language</a></li>
+        <div class="dropdown mt-2">
+          <label tabindex="2">
+            <input
+              type="text"
+              class="input input-bordered w-72 focus:outline-none focus:border-primary focus:border-2"
+              placeholder="Choose a Theme"
+              :value="langs[lang]"
+            />
+          </label>
+          <div
+            tabindex="2"
+            class="dropdown-content max-h-96 grid-cols-1 w-72 p-4 pt-0 bg-base-300 rounded-box overflow-y-scroll"
+          >
+            <div
+              v-for="(v, k) in langs"
+              class="mt-4 overflow-hidden w-full rounded-lg outline-primary"
+              :class="{ outline: k === lang }"
+              :key="k"
+              @click="setLang(k)"
+            >
+              <div
+                class="bg-base-100 text-base-content w-full cursor-pointer font-sans px-4 py-3 flex justify-between"
+              >
+                <span>{{ k }} </span>
+                <span class="capitalize"> {{ v }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </ul>
     </div>
   </div>
@@ -76,6 +107,18 @@
 
 <script setup>
 import { useColorMode } from "@vueuse/core";
+const { path, query } = useRoute();
+
+const langs = {
+  en: "english",
+  zh: "中文",
+};
+const lang = ref(query.lang || "en");
+
+const setLang = (k) => {
+  lang.value = k;
+  useRouter().push(`${path}?lang=${k}`);
+};
 
 const mode = useColorMode({
   modes: allThemes,
