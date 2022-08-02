@@ -56,7 +56,7 @@
           >
             <img
               v-lazy="vLazy(useAsset(item, 'f_web,w_1920'))"
-              class="m-auto object-top object-cover transition-all"
+              class="m-auto object-left-top object-cover transition-all"
               :class="
                 full
                   ? 'w-full cursor-zoom-out'
@@ -113,7 +113,7 @@
 <script setup>
 const { page } = useContent();
 
-console.log(page);
+// console.log(page);
 
 // 当前选中的预览图
 const activePreviewIndex = ref(0);

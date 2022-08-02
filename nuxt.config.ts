@@ -28,8 +28,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "keywords",
-          content:
-            "web,tailwind,daisyui,模板,template,blog,响应式网站,responsive sites",
+          content: "web,tailwindcss,daisyui,template,blog,responsive sites",
         },
         {
           name: "description",

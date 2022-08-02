@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     `components/**/*.{vue,js,ts}`,
+    `composables/**/*.ts`,
     `layouts/**/*.vue`,
     `pages/**/*.vue`,
     `app.{js,ts,vue}`,
@@ -9,5 +10,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+    require("daisyui"),
+  ],
 };

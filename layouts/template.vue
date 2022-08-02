@@ -6,14 +6,17 @@
         <slot></slot>
       </div>
 
-      <div class="fixed left-2 top-2 z-50 flex flex-col">
+      <div class="fixed left-0 md:left-2 top-1/3 z-50 flex flex-col">
         <div
-          class="btn btn-primary btn-square drawer-button shadow-md mb-2"
+          class="btn btn-primary btn-md btn-square md:scale-100 scale-75 drawer-button shadow-md md:mb-2"
           @click="$router.back()"
         >
           <span class="material-symbols-outlined"> chevron_left </span>
         </div>
-        <label for="my-drawer" class="btn btn-square drawer-button shadow-md">
+        <label
+          for="my-drawer"
+          class="btn btn-square btn-md md:scale-100 scale-75 drawer-button shadow-md"
+        >
           <span class="material-symbols-outlined"> flaky </span>
         </label>
       </div>
@@ -37,7 +40,7 @@
             class="dropdown-content max-h-96 grid-cols-1 w-72 p-4 pt-0 bg-base-300 rounded-box overflow-y-scroll"
           >
             <div
-              v-for="item in themes"
+              v-for="item in allThemes"
               class="outline-base-content mt-4 overflow-hidden w-full rounded-lg outline-2 outline-offset-2"
               :data-set-theme="item"
               :class="{ outline: item === mode }"
@@ -74,69 +77,7 @@
 <script setup>
 import { useColorMode } from "@vueuse/core";
 
-const themes = [
-  "light",
-  "dark",
-  "cupcake",
-  "bumblebee",
-  "emerald",
-  "corporate",
-  "synthwave",
-  "retro",
-  "cyberpunk",
-  "valentine",
-  "halloween",
-  "garden",
-  "forest",
-  "aqua",
-  "lofi",
-  "pastel",
-  "fantasy",
-  "wireframe",
-  "black",
-  "luxury",
-  "dracula",
-  "cmyk",
-  "autumn",
-  "business",
-  "acid",
-  "lemonade",
-  "night",
-  "coffee",
-  "winter",
-];
-
 const mode = useColorMode({
-  modes: {
-    light: "light",
-    dark: "dark",
-    cupcake: "cupcake",
-    bumblebee: "bumblebee",
-    emerald: "emerald",
-    corporate: "corporate",
-    synthwave: "synthwave",
-    retro: "retro",
-    cyberpunk: "cyberpunk",
-    valentine: "valentine",
-    halloween: "halloween",
-    garden: "garden",
-    forest: "forest",
-    aqua: "aqua",
-    lofi: "lofi",
-    pastel: "pastel",
-    fantasy: "fantasy",
-    wireframe: "wireframe",
-    black: "black",
-    luxury: "luxury",
-    dracula: "dracula",
-    cmyk: "cmyk",
-    autumn: "autumn",
-    business: "business",
-    acid: "acid",
-    lemonade: "lemonade",
-    night: "night",
-    coffee: "coffee",
-    winter: "winter",
-  },
+  modes: allThemes,
 });
 </script>
