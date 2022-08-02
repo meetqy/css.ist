@@ -69,9 +69,14 @@
         <p class="mt-8 flex items-center">
           <span class="material-symbols-outlined"> sell </span>
           <span class="ml-1 uppercase">tags:</span>
-          <span class="btn btn-primary btn-xs ml-2" v-for="item in page.tags">
+          <NuxtLink
+            :to="`/tag/${item}`"
+            class="btn btn-primary btn-xs ml-2 !no-underline !text-primary-content"
+            @click="cleanStorage"
+            v-for="item in page.tags"
+          >
             {{ item }}
-          </span>
+          </NuxtLink>
         </p>
 
         <div class="mt-4 flex items-center" v-if="page.source">
@@ -110,6 +115,7 @@
 </template>
 
 <script setup>
+import { useStorage } from "@vueuse/core";
 const { page } = useContent();
 
 // console.log(page);
@@ -118,10 +124,14 @@ const { page } = useContent();
 const activePreviewIndex = ref(0);
 const full = ref(false);
 
-const moreContent = await getContentByTag(page.value.tags, {
-  pageIndex: 1,
-  pageSize: 12,
-});
+const moreContent = await getContentByTag(
+  page.value.tags,
+  {
+    pageIndex: 1,
+    pageSize: 12,
+  },
+  "$in"
+);
 
 try {
   const el = document.querySelector("#drawer-content");
@@ -132,5 +142,13 @@ try {
 
 const toTop = () => {
   document.querySelector("#drawer-content").scrollTop = 0;
+};
+
+const cleanStorage = () => {
+  const storage = useStorage("tag-list-data");
+  const scrollStorage = useStorage("tag-scroll");
+
+  storage.value = [];
+  scrollStorage.value = 0;
 };
 </script>

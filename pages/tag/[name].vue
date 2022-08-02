@@ -59,7 +59,7 @@ const scrollStorage = useStorage("tag-scroll", 0);
 const pageSize = 15;
 
 const pageIndex = ref(1);
-if (storage.value.length > 0) {
+if (storage.value && storage.value.length > 0) {
   pageIndex.value = Math.ceil(storage.value.length / pageSize);
 }
 

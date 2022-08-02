@@ -61,7 +61,7 @@
             <p>
               <NuxtLink
                 :to="`/tag/${tag}`"
-                v-for="tag in item.tags"
+                v-for="tag in item.tags.slice(0, 3)"
                 :key="tag"
                 class="btn btn-xs mr-2 font-normal btn-primary relative z-50"
               >

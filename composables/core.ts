@@ -40,18 +40,21 @@ export const useMockPic = (path: string, query?: string) => {
 /**
  * 根据tag获取数据
  */
-export const getContentByTag = (
+export const getContentByTag = async (
   tagName: string | string[],
-  page?: { pageIndex: number; pageSize: number }
+  page?: { pageIndex: number; pageSize: number },
+  type?: "$contains" | "$in"
 ) => {
   const pageIndex = page?.pageIndex || 1;
   const pageSize = page?.pageSize || 12;
 
-  const d = queryContent("introduce").where({
-    tags: { $in: typeof tagName === "string" ? [tagName] : tagName },
-  });
+  const tags: { [key: string]: string | string[] } = {};
+  tags[type || "$contains"] = tagName;
 
-  return d
+  return await queryContent("introduce")
+    .where({
+      tags,
+    })
     .skip((pageIndex - 1) * pageSize)
     .limit(pageSize)
     .find();

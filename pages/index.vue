@@ -2,8 +2,8 @@
   <div class="pb-12">
     <section class="w-full lg:px-12 px-6 mt-12">
       <CoreSwiper
-        title="recommend"
-        :data="recommendContent"
+        title="firstStage"
+        :data="firstStage"
         :loop="true"
         :breakpoints="{
           1024: {
@@ -122,10 +122,5 @@ const pageContent = await getContentByTag("page", {
   pageSize: 12,
 });
 
-const recommendContent = await queryContent("introduce")
-  .where({
-    recommend: true,
-  })
-  .limit(8)
-  .find();
+const firstStage = await getContentByTag("firstStage");
 </script>
