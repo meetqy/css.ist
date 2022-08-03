@@ -9,7 +9,7 @@
           for="my-drawer-2"
           class="drawer-button lg:hidden flex justify-between pl-4 border-b border-base-200/50 sticky top-0 bg-base-100 z-20"
         >
-          <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center font-seri">
             <img src="/logo.png" class="w-8 h-8 mr-2" />
             {{ websiteConfig.name }}
           </div>
@@ -49,7 +49,7 @@
           >
             <NuxtLink
               to="/"
-              class="btn btn-ghost text-xl normal-case hover:bg-transparent hidden lg:flex"
+              class="btn btn-ghost text-2xl normal-case hover:bg-transparent hidden lg:flex font-serif"
             >
               <img src="/logo.png" class="w-10 h-10 mr-2" />
               {{ websiteConfig.name }}
@@ -62,25 +62,29 @@
           </div>
 
           <div
-            class="bg-base-100 border-r border-base-200 p-4"
+            class="bg-base-100 border-r border-base-200 p-4 font-serif"
             style="height: calc(100% - 64px)"
           >
-            <div
-              class="collapse collapse-arrow min-h-[40px] bg-base-200 rounded-box"
-            >
-              <input type="checkbox" checked class="peer" />
-              <div class="collapse-title capitalize">tag</div>
-              <div class="collapse-content !p-0">
-                <ul class="menu text-base-content capitalize border-base-200">
-                  <!-- Sidebar content here -->
-                  <li v-for="item in navs">
-                    <NuxtLink :to="'/tag/' + item" @click="storage = []">
-                      {{ item }}
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ul class="menu rounded-box p-2 capitalize">
+              <li class="border-b border-base-200 pb-2">
+                <NuxtLink to="/">
+                  <span class="material-symbols-outlined"> home </span>
+                  home
+                </NuxtLink>
+                <NuxtLink to="/about">
+                  <span class="material-symbols-outlined"> person </span>
+                  about
+                </NuxtLink>
+              </li>
+              <li class="menu-title mt-2">
+                <a>tags</a>
+              </li>
+              <li v-for="item in navs">
+                <NuxtLink :to="'/tag/' + item" @click="storage = []">
+                  {{ item }}
+                </NuxtLink>
+              </li>
+            </ul>
 
             <!-- ads -->
             <img

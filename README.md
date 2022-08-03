@@ -65,6 +65,9 @@ const data = Mock.mock({
 - components
     - core                              # 外部架子公用组件
     - template                          # 模板
+- composables
+    - core                              # 核心 hooks
+    - template                          # 模板 mock类 hooks
 - introduce                             # 模板介绍 markdown
 - pages
     - template/[path]                   # 模板展示

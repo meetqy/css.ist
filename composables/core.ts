@@ -55,6 +55,7 @@ export const getContentByTag = async (
     .where({
       tags,
     })
+    .only(["_id", "_path", "title", "tags", "previews", "light", "dark"])
     .skip((pageIndex - 1) * pageSize)
     .limit(pageSize)
     .find();

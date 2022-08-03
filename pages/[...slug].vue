@@ -45,7 +45,7 @@
             </div>
             <NuxtLink
               :to="`${page._path.replace('introduce', 'template')}`"
-              class="px-4 !h-full bg-primary text-primary-content flex justify-center items-center !no-underline"
+              class="px-4 !h-full bg-primary !text-primary-content flex justify-center items-center !no-underline"
             >
               <span class="material-symbols-outlined"> fullscreen </span>
             </NuxtLink>
@@ -61,7 +61,11 @@
           <img
             v-lazy="vLazy(useAsset(item, 'f_web'))"
             class="m-auto !my-0 transition-all object-center"
-            :class="full ? 'object-contain' : 'w-96 object-fill'"
+            :class="
+              full
+                ? 'object-contain cursor-zoom-out'
+                : 'w-96 object-fill cursor-zoom-in'
+            "
             @click="full = !full"
           />
         </div>
