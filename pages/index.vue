@@ -3,7 +3,7 @@
     <section class="w-full lg:px-12 px-6 mt-12">
       <CoreSwiper
         title="firstStage"
-        :data="firstStage"
+        :data="data.firstStage"
         :loop="true"
         :breakpoints="{
           1024: {
@@ -25,7 +25,7 @@
     <section class="w-full lg:px-12 px-6 mt-12">
       <CoreSwiper
         title="Blog"
-        :data="blogContent"
+        :data="data.blogContent"
         :cat="{
           name: 'see all',
           to: '/tag/blog',
@@ -50,7 +50,7 @@
     <section class="w-full lg:px-12 px-6 mt-12">
       <CoreSwiper
         title="fashion"
-        :data="cardContent"
+        :data="data.cardContent"
         :content-on-image="true"
         :image-scale="true"
         :cat="{
@@ -77,7 +77,7 @@
     <section class="w-full lg:px-12 px-6 mt-12">
       <CoreSwiper
         title="page"
-        :data="pageContent"
+        :data="data.pageContent"
         :image-circle="true"
         :cat="{
           name: 'see all',
@@ -107,20 +107,35 @@ definePageMeta({
   layout: "default",
 });
 
-const blogContent = await getContentByTag("blog", {
-  pageIndex: 1,
-  pageSize: 12,
+const data = reactive({
+  blogContent: null,
+  cardContent: null,
+  pageContent: null,
+  firstStage: null,
 });
 
-const cardContent = await getContentByTag("card", {
+getContentByTag("blog", {
   pageIndex: 1,
   pageSize: 12,
+}).then((res) => {
+  data.blogContent = res;
 });
 
-const pageContent = await getContentByTag("page", {
+getContentByTag("card", {
   pageIndex: 1,
   pageSize: 12,
+}).then((res) => {
+  data.cardContent = res;
 });
 
-const firstStage = await getContentByTag("firstStage");
+getContentByTag("page", {
+  pageIndex: 1,
+  pageSize: 12,
+}).then((res) => {
+  data.pageContent = res;
+});
+
+getContentByTag("firstStage").then((res) => {
+  data.firstStage = res;
+});
 </script>
