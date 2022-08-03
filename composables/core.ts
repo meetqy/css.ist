@@ -25,7 +25,7 @@ export const useAsset = (url: string, opts?: string) => {
 /**
  * material icon fill
  */
-export const iconFill = `font-variation-settings: "FILL" 1, "wght" 100, "GRAD" 0, "opsz" 48;`;
+export const iconFill = `font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;`;
 
 /**
  * unsplash.com

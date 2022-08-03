@@ -13,6 +13,7 @@ definePageMeta({
 const { lang } = route.query;
 
 const templates = {
+  3: resolveComponent("Template3"),
   4: resolveComponent("Template4"),
   2: resolveComponent("Template2"),
   8: resolveComponent("Template8"),
