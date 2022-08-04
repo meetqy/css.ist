@@ -6,14 +6,11 @@
     "dev": "nuxt dev -p 4000",
     "generate": "nuxt generate",
     "preview": "export PORT=4000 && nuxt preview",
-    "lint": "eslint --ext .js,.ts --ignore-path .eslintignore .",
+    "lint": "eslint .",
     "line:fix": "prettier . --write",
-    "cz": "cz",
-    "prepare": "husky install"
+    "cz": "cz"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "@nuxtjs/tailwindcss": "^5.3.0",
@@ -28,8 +25,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
     "nuxt": "3.0.0-rc.6",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
@@ -42,17 +37,9 @@
     "swiper": "^8.3.1",
     "vue3-lazyload": "^0.3.6"
   },
-  "lint-staged": {
-    "*": "yarn lint"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
-    }
-  },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
