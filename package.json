@@ -1,5 +1,6 @@
 {
   "name": "youweb",
+  "version": "2.0.0-beta",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -9,7 +10,9 @@
     "lint": "eslint",
     "line:fix": "prettier . --write",
     "cz": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-version",
+    "dry-run": "yarn release -- --dry-run"
   },
   "devDependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
@@ -30,6 +33,7 @@
     "lint-staged": "^13.0.3",
     "nuxt": "3.0.0-rc.6",
     "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
     "typescript": "^4.7.4",
     "vite-plugin-eslint": "^1.7.0"
   },
