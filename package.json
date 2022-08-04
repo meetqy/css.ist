@@ -6,9 +6,10 @@
     "dev": "nuxt dev -p 4000",
     "generate": "nuxt generate",
     "preview": "export PORT=4000 && nuxt preview",
-    "lint": "eslint .",
+    "lint": "eslint",
     "line:fix": "prettier . --write",
-    "cz": "cz"
+    "cz": "cz",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
@@ -25,6 +26,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "nuxt": "3.0.0-rc.6",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
@@ -41,5 +44,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*": "yarn lint"
   }
 }
