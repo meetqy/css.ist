@@ -13,6 +13,7 @@
   </Body>
 
   <main class="font-mono wcao">
+    <NuxtLoadingBar :duration="1000" />
     <NuxtLayout>
       <NuxtPage></NuxtPage>
     </NuxtLayout>
@@ -31,21 +32,5 @@ onMounted(() => {
 <style lang="postcss">
 img[lazy="loading"] {
   @apply opacity-30 bg-base-100;
-}
-
-.material-symbols-rouned {
-  font-family: "Material Symbols Outlined";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
 }
 </style>

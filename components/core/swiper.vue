@@ -10,6 +10,7 @@
     :loop="props.loop"
     class="!pt-12"
     @swiper="onSwiper"
+    @click="onClick"
   >
     <h3
       class="capitalize text-xl font-semibold tracking-widest absolute left-0 top-0 w-full h-8"
@@ -117,11 +118,18 @@ const onSwiper = (swiper: any) => {
     swiper.navigation.update();
   }, 100);
 };
+
+const onClick = (swiper: any) => {
+  // console.log(swiper);
+};
 </script>
 
 <style lang="postcss" scoped>
 .cu-swiper-button-next,
 .cu-swiper-button-prev {
+  &.swiper-button-disabled {
+    @apply text-base-300;
+  }
   @apply btn btn-xs btn-ghost hover:bg-transparent;
 }
 </style>
