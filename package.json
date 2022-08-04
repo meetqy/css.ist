@@ -46,6 +46,6 @@
     }
   },
   "lint-staged": {
-    "*": "yarn lint"
+    "*.{js,ts,vue}": "yarn lint"
   }
 }

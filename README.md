@@ -2,6 +2,8 @@
 
 **wcao.cc** 分享**响应式**、**多主题**模板和组件，基于 tailwind、daisyui
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 - [wcao.cc](https://wcao.cc)
 - 备用网站: [youweb.cc](https://youweb.cc)
 
