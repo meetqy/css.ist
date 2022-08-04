@@ -1,9 +1,9 @@
 <template>
   <main>
-    <slot name="outside"></slot>
+    <slot name="outside" />
     <div class="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content" id="drawer-content" ref="drawerContent">
+      <div id="drawer-content" ref="drawerContent" class="drawer-content">
         <!-- mobile navbar -->
         <label
           for="my-drawer-2"
@@ -36,12 +36,12 @@
         </div>
 
         <!-- Page content here -->
-        <slot></slot>
+        <slot />
 
         <CoreFooter />
       </div>
       <div class="drawer-side">
-        <label for="my-drawer-2" class="drawer-overlay"></label>
+        <label for="my-drawer-2" class="drawer-overlay" />
 
         <aside class="w-80 bg-base-100">
           <div
@@ -79,7 +79,7 @@
               <li class="menu-title mt-2">
                 <a>tags</a>
               </li>
-              <li v-for="item in navs">
+              <li v-for="item in navs" :key="item">
                 <NuxtLink :to="'/tag/' + item" @click="storage = []">
                   {{ item }}
                 </NuxtLink>

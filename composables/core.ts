@@ -25,13 +25,14 @@ export const useAsset = (url: string, opts?: string) => {
 /**
  * material icon fill
  */
-export const iconFill = `font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;`;
+export const iconFill =
+  'font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;';
 
 /**
  * unsplash.com
  * https://source.unsplash.com/random/800x600
  */
-export const useMockPic = (path: string, query?: string) => {
+export const useMockPic = (path: string) => {
   // console.log((Math.random() * 1000).toFixed(0));
   return "https://picsum.photos" + path;
   // return `https://source.unsplash.com${path}${query}`;

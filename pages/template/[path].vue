@@ -1,5 +1,5 @@
 <template>
-  <component :is="templates[path]"></component>
+  <component :is="templates[path]" />
 </template>
 
 <script setup>
@@ -9,8 +9,6 @@ const { path } = route.params;
 definePageMeta({
   layout: "template",
 });
-
-const { lang } = route.query;
 
 const templates = {
   3: resolveComponent("Template3"),

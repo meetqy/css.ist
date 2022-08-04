@@ -14,7 +14,7 @@
           <ul
             class="menu lg:menu-horizontal menu-vertical bg-base-100 w-56 lg:w-full rounded-box shadow lg:shadow-none"
           >
-            <li v-for="item in templateMenu[lang]">
+            <li v-for="item in templateMenu[lang]" :key="item">
               <a class="hover:bg-transparent hover:underline">{{
                 item.text
               }}</a>
@@ -84,9 +84,9 @@
           </div>
         </div>
         <div
-          class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col"
           v-for="item in store"
           :key="item.id"
+          class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col"
         >
           <a href="#">
             <img

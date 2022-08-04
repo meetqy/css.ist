@@ -41,19 +41,19 @@ const start = () => {
     startTimer();
   }
 };
-const set = (num) => {
-  data.show = true;
-  data.canSucceed = true;
-  data.percent = Math.min(100, Math.max(0, Math.floor(num)));
-};
-const increase = (num) => {
-  data.percent = Math.min(100, Math.floor(data.percent + num));
-};
-const decrease = (num) => {
-  data.percent = Math.max(0, Math.floor(data.percent - num));
-};
-const pause = () => clearInterval(_timer);
-const resume = () => startTimer();
+// const set = (num) => {
+//   data.show = true;
+//   data.canSucceed = true;
+//   data.percent = Math.min(100, Math.max(0, Math.floor(num)));
+// };
+// const increase = (num) => {
+//   data.percent = Math.min(100, Math.floor(data.percent + num));
+// };
+// const decrease = (num) => {
+//   data.percent = Math.max(0, Math.floor(data.percent - num));
+// };
+// const pause = () => clearInterval(_timer);
+// const resume = () => startTimer();
 const finish = () => {
   data.percent = 100;
   hide();

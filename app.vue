@@ -15,7 +15,7 @@
   <main class="font-mono wcao">
     <NuxtLoadingBar :duration="1000" />
     <NuxtLayout>
-      <NuxtPage></NuxtPage>
+      <NuxtPage />
     </NuxtLayout>
   </main>
 </template>
