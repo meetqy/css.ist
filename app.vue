@@ -13,7 +13,6 @@
   </Body>
 
   <main class="font-mono wcao">
-    <a1dwa v-for="" />
     <NuxtLoadingBar :duration="1000" />
     <NuxtLayout>
       <NuxtPage />
