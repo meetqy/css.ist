@@ -19,7 +19,7 @@
     </h3>
 
     <div class="absolute right-0 top-0 flex justify-center items-center h-8">
-      <div class="btn btn-xs normal-case btn-link pt-1 pr-0" v-if="cat">
+      <div v-if="cat" class="btn btn-xs normal-case btn-link pt-1 pr-0">
         <NuxtLink :to="cat.to">{{ cat.name }}</NuxtLink>
       </div>
       <div class="btn-group">
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <SwiperSlide v-for="item in props.data">
+    <SwiperSlide v-for="item in props.data" :key="item._id">
       <NuxtLink :to="item._path">
         <div
           class="relative !h-96 w-full overflow-hidden rounded-box flex flex-col items-center"
@@ -61,9 +61,9 @@
             </p>
             <p>
               <NuxtLink
-                :to="`/tag/${tag}`"
                 v-for="tag in item.tags.slice(0, 3)"
                 :key="tag"
+                :to="`/tag/${tag}`"
                 class="btn btn-xs mr-2 font-normal btn-primary relative z-50"
               >
                 {{ tag }}
@@ -78,15 +78,15 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, SwiperOptions } from "swiper";
 import { ParsedContent } from "@nuxt/content/dist/runtime/types";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Navigation, SwiperOptions, Swiper as SwiperType } from "swiper";
 
 const modules = [Navigation];
 
 const props = defineProps<{
-  data: ParsedContent[];
+  data: ParsedContent[] | null;
   title: string;
   breakpoints:
     | {
@@ -112,14 +112,14 @@ const imgHeight = computed(() => {
   return props.contentOnImage ? "100%" : "calc(100% - 96px)";
 });
 
-const onSwiper = (swiper: any) => {
+const onSwiper = (swiper: SwiperType) => {
   setTimeout(() => {
     swiper.navigation.init();
     swiper.navigation.update();
   }, 100);
 };
 
-const onClick = (swiper: any) => {
+const onClick = (_swiper: SwiperType) => {
   // console.log(swiper);
 };
 </script>

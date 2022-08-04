@@ -18,10 +18,11 @@
 
           <div class="flex-none">
             <button
+              v-for="item in ['dark_mode', 'menu_book', 'light_mode']"
+              :key="item"
               data-set-theme="winter"
               class="btn btn-sm btn-ghost btn-square"
               data-act-class="btn-active"
-              v-for="item in ['dark_mode', 'menu_book', 'light_mode']"
             >
               <span
                 class="material-symbols-outlined !text-xl"
@@ -36,9 +37,9 @@
         <div class="px-4 lg:pr-4">
           <div class="space-y-6 mt-4">
             <div
-              class="card bg-base-200 shadow flex-col md:flex-row w-full"
               v-for="item in data"
               :key="item.id"
+              class="card bg-base-200 shadow flex-col md:flex-row w-full"
             >
               <img
                 v-if="item.image.length > 0"
@@ -52,14 +53,14 @@
                 </h2>
                 <div class="justify-start">
                   <button
+                    v-for="tag in item.tags"
+                    :key="tag"
                     class="btn btn-xs mr-1"
                     :class="
                       $Mock.mock({
                         'array|1': allBtnType,
                       }).array
                     "
-                    v-for="tag in item.tags"
-                    :key="tag"
                   >
                     {{ tag }}
                   </button>
@@ -115,8 +116,9 @@
 
           <div class="flex gap-1 justify-center pt-4">
             <a
-              class="btn btn-sm btn-ghost btn-square"
               v-for="item in templateContacts"
+              :key="item"
+              class="btn btn-sm btn-ghost btn-square"
               v-html="item"
             >
             </a>
@@ -125,7 +127,7 @@
           <!-- menu start -->
           <div class="pt-4">
             <ul class="menu bg-base-100 rounded-box">
-              <li v-for="item in menu">
+              <li v-for="item in menu" :key="item">
                 <a class="capitalize">
                   <span class="material-symbols-outlined" v-html="item.icon">
                   </span>
@@ -137,10 +139,11 @@
               <li class="hidden lg:block">
                 <div class="flex gap-1 justify-center">
                   <button
+                    v-for="item in ['dark_mode', 'menu_book', 'light_mode']"
+                    :key="item"
                     data-set-theme="winter"
                     class="btn btn-sm btn-ghost btn-square"
                     data-act-class="btn-active"
-                    v-for="item in ['dark_mode', 'menu_book', 'light_mode']"
                   >
                     <span
                       class="material-symbols-outlined !text-xl"

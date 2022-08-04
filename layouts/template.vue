@@ -7,7 +7,7 @@
         class="fixed left-0 w-full top-0"
         :data-theme="mode"
       >
-        <slot></slot>
+        <slot />
       </div>
 
       <div class="fixed left-0 md:left-2 top-1/3 z-50 flex flex-col">
@@ -26,10 +26,12 @@
       </div>
     </div>
     <div class="drawer-side">
-      <label for="my-drawer" class="drawer-overlay"></label>
+      <label for="my-drawer" class="drawer-overlay" />
 
       <ul class="menu w-80 bg-base-100 p-4">
-        <li class="menu-title"><a>Choose Theme</a></li>
+        <li class="menu-title">
+          <a>Choose Theme</a>
+        </li>
         <div class="dropdown mt-2">
           <label tabindex="1">
             <input
@@ -45,12 +47,12 @@
           >
             <div
               v-for="item in allThemes"
+              :key="item"
               class="outline-base-content mt-4 overflow-hidden w-full rounded-lg outline-2 outline-offset-2"
               :data-set-theme="item"
               :class="{ outline: item === mode }"
-              :key="item"
-              @click="mode = item"
               data-act-class="outline"
+              @click="mode = item"
             >
               <div
                 :data-theme="item"
@@ -60,12 +62,14 @@
                   <div
                     class="col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4"
                   >
-                    <div class="flex-grow text-sm font-bold">{{ item }}</div>
+                    <div class="flex-grow text-sm font-bold">
+                      {{ item }}
+                    </div>
                     <div class="flex flex-shrink-0 flex-wrap gap-1">
-                      <div class="bg-primary w-2 rounded"></div>
-                      <div class="bg-secondary w-2 rounded"></div>
-                      <div class="bg-accent w-2 rounded"></div>
-                      <div class="bg-neutral w-2 rounded"></div>
+                      <div class="bg-primary w-2 rounded" />
+                      <div class="bg-secondary w-2 rounded" />
+                      <div class="bg-accent w-2 rounded" />
+                      <div class="bg-neutral w-2 rounded" />
                     </div>
                   </div>
                 </div>
@@ -74,7 +78,9 @@
           </div>
         </div>
 
-        <li class="menu-title mt-4"><a>Choose Language</a></li>
+        <li class="menu-title mt-4">
+          <a>Choose Language</a>
+        </li>
         <div class="dropdown mt-2">
           <label tabindex="2">
             <input
@@ -90,9 +96,9 @@
           >
             <div
               v-for="(v, k) in langs"
+              :key="k"
               class="mt-4 overflow-hidden w-full rounded-lg outline-primary"
               :class="{ outline: k === lang }"
-              :key="k"
               @click="setLang(k)"
             >
               <div
