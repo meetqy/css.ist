@@ -45,11 +45,6 @@
     "swiper": "^8.3.1",
     "vue3-lazyload": "^0.3.6"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,vue}": "yarn lint"
   }
