@@ -38,16 +38,6 @@ export const iconFill =
   'font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;';
 
 /**
- * unsplash.com
- * https://source.unsplash.com/random/800x600
- */
-export const useMockPic = (path: string) => {
-  // console.log((Math.random() * 1000).toFixed(0));
-  return "https://picsum.photos" + path;
-  // return `https://source.unsplash.com${path}${query}`;
-};
-
-/**
  * 根据tag获取数据
  */
 export const getContentByTag = async (
@@ -79,15 +69,3 @@ export const drawerContentScroll = ref();
 
 // drawer-content 元素
 export const drawerContentElement = ref(null);
-
-/**
- * 懒加载
- * @param src
- * @returns
- */
-export const vLazy = (src: string) => {
-  return {
-    src,
-    loading: "/loading.svg",
-  };
-};

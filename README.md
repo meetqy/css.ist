@@ -31,7 +31,7 @@ const data = Mock.mock({
       title: "@title",
       paragraph: "@paragraph(1,5)",
       "tags|1-5": ["@word"],
-      "image|0-1": [useMockPic("/random/800x600")],
+      "image|0-1": [useSplash("/random/800x600")],
     },
   ],
   zh: [
@@ -40,7 +40,7 @@ const data = Mock.mock({
       title: "@ctitle",
       paragraph: "@cparagraph(1,5)",
       "tags|1-5": ["@cword"],
-      "image|0-1": [useMockPic("/random/800x600")],
+      "image|0-1": [useSplash("/random/800x600")],
     },
   ],
 })[lang];
@@ -68,6 +68,7 @@ const data = Mock.mock({
 - composables
     - core                              # 核心 hooks
     - template                          # 模板 mock类 hooks
+    - common                            # 公用hooks
 - introduce                             # 模板介绍 markdown
 - pages
     - template/[path]                   # 模板展示
