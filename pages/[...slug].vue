@@ -34,7 +34,14 @@
               >
                 <SwiperSlide v-for="(item, i) in page.previews" :key="i">
                   <img
-                    v-lazy="vLazy(useAsset(item, 'embed,f_webp,s_300x300'))"
+                    v-lazy="
+                      vLazy(
+                        useAsset(item, 'embed,f_webp,s_300x300', page._path, {
+                          format: 'webp',
+                          s: '300x300',
+                        })
+                      )
+                    "
                     class="w-full max-h-24 object-cover object-top !m-1 outline-4 outline"
                     :class="
                       activePreviewIndex === i
@@ -64,7 +71,11 @@
               class="w-full flex-shrink-0 rounded-box bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 shadow"
             >
               <img
-                v-lazy="vLazy(useAsset(item, 'f_web'))"
+                v-lazy="
+                  vLazy(
+                    useAsset(item, 'f_webp', page._path, { format: 'webp' })
+                  )
+                "
                 class="m-auto !my-0 transition-all object-center"
                 :class="
                   full
@@ -114,12 +125,17 @@
               @click="$router.push(item._path)"
             >
               <img
-                v-lazy="vLazy(useAsset(item.previews[0], 'f_webp,s_500x500'))"
+                v-lazy="
+                  vLazy(
+                    useAsset(item.previews[0], 'f_webp,500x500', item._path, {
+                      format: 'webp',
+                      s: '500x500',
+                    })
+                  )
+                "
                 class="w-full aspect-square object-cover object-top rounded-box border border-base-200 shadow"
               />
-              <p class="px-2">
-                {{ item.title }}
-              </p>
+              <p class="px-2">{{ item.title }}</p>
             </div>
           </div>
         </article>
@@ -134,8 +150,6 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 const { page } = useContent();
-
-// console.log(page);
 
 // 当前选中的预览图
 const activePreviewIndex = ref(0);

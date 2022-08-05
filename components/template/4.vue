@@ -103,7 +103,7 @@
         <div class="w-72 p-3 lg:m-6 bg-base-100">
           <div class="avatar w-full">
             <div class="w-16 lg:w-32 rounded-full mx-auto">
-              <img v-lazy="vLazy(useMockPic('/128/128'))" />
+              <img v-lazy="vLazy(usePicsum('/128/128'))" />
             </div>
           </div>
 
@@ -200,9 +200,7 @@ const init = (lang) => {
         paragraph: "@paragraph(1,5)",
         "tags|1-5": ["@word"],
         "image|0-1": () =>
-          $Mock.Random.boolean()
-            ? [`${useMockPic("/400/300")}?t=${$Mock.Random.natural(0, 1000)}`]
-            : [],
+          $Mock.Random.boolean() ? [`${usePicsum("/400/300")}`] : [],
       },
     ],
     "zh|4-15": [
@@ -212,9 +210,7 @@ const init = (lang) => {
         paragraph: "@cparagraph(3, 20)",
         "tags|1-5": ["@cword(2,5)"],
         "image|0-1": () =>
-          $Mock.Random.boolean()
-            ? [`${useMockPic("/400/300")}?t=${$Mock.Random.natural(0, 1000)}`]
-            : [],
+          $Mock.Random.boolean() ? [`${usePicsum("/400/300")}`] : [],
       },
     ],
   })[lang];

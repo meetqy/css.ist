@@ -89,7 +89,7 @@
             <!-- ads -->
             <img
               class="w-72 h-72 rounded-box mx-auto mt-4"
-              :src="useMockPic('/288/288')"
+              :src="usePicsum('/288/288')"
             />
           </div>
         </aside>
