@@ -16,10 +16,19 @@ export const websiteConfig: {
 };
 
 /**
- * strapi assets
+ * 获取资源
  */
-export const useAsset = (url: string, opts?: string) => {
-  return url.replace("/uploads/", `/uploads/${opts || "f_webp,w_500"}/`);
+export const useAsset = (
+  url: string,
+  opts?: string,
+  path?: string,
+  modifiers?: { [key: string]: string }
+) => {
+  const src = url.includes("http")
+    ? url.replace("/uploads/", `/uploads/${opts || "f_webp,w_500"}/`)
+    : path + "/" + url;
+
+  return useNuxtApp().$img(src, modifiers);
 };
 
 /**

@@ -1,9 +1,9 @@
-import { mock } from "mockjs";
+import * as Mock from "mockjs";
 
 export default defineNuxtPlugin(() => {
   return {
     provide: {
-      mock,
+      Mock,
     },
   };
 });

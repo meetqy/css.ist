@@ -44,7 +44,14 @@
           :class="{ 'pt-4': props.imageCircle }"
         >
           <img
-            v-lazy="vLazy(item.light || item.previews[0])"
+            v-lazy="
+              vLazy(
+                useAsset(item.previews[0], 'f_webp,800x500', item._path, {
+                  format: 'webp',
+                  s: '800x500',
+                })
+              )
+            "
             class="aspect-square object-cover object-top transition-transform cursor-zoom-in border border-base-300"
             :class="[
               props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',
