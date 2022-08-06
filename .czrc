@@ -11,6 +11,11 @@
       "title": "Templates",
       "emoji": "🏠"
     },
+    "fix": {
+      "description": "Bug fix",
+      "title": "Bug Fixes",
+      "emoji": "✨"
+    },
     "docs": {
       "description": "Documentation only changes",
       "title": "Documentation",
