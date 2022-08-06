@@ -40,8 +40,8 @@
     <SwiperSlide v-for="item in props.data" :key="item._id">
       <NuxtLink :to="item._path">
         <div
-          class="relative !h-96 w-full overflow-hidden rounded-box flex flex-col items-center"
-          :class="{ 'pt-4': props.imageCircle }"
+          class="relative !h-96 w-full overflow-hidden flex flex-col items-center"
+          :class="[{ 'pt-4': props.imageCircle }]"
         >
           <img
             v-lazy="
@@ -52,13 +52,16 @@
                 })
               )
             "
-            class="aspect-square object-cover object-top transition-transform cursor-zoom-in border border-base-300"
+            class="aspect-square max-h-72 transition-transform cursor-zoom-in rounded-box border hover:scale-150 bg-neutral"
             :class="[
-              props.imageCircle ? 'rounded-full w-4/5' : 'rounded-box w-full',
-              { 'hover:scale-150': props.imageScale },
+              props.imageCircle
+                ? 'rounded-full w-4/5 object-scale-down border-transparent'
+                : 'rounded-box w-full object-cover border-base-300 ',
+              { 'bg-base-100': props.imageCircle },
             ]"
             :style="`height: ${imgHeight};`"
           />
+
           <div
             class="w-full h-24 bottom-0 left-0 z-40 px-4 absolute bg-base-100/80"
             :class="props.imageCircle ? 'flex flex-col items-center' : ''"
