@@ -21,12 +21,12 @@
 </template>
 
 <script setup>
-onMounted(() => {
-  const wel = document.querySelectorAll(".wcao");
-  if (wel[1]) {
-    wel[1].remove();
-  }
-});
+// onMounted(() => {
+//   const wel = document.querySelectorAll(".wcao");
+//   if (wel[1]) {
+//     wel[1].remove();
+//   }
+// });
 </script>
 
 <style lang="postcss">
