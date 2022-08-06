@@ -84,7 +84,7 @@ nuxtApp.hook("page:start", () => {
 });
 nuxtApp.hook("page:finish", finish);
 
-onBeforeMount(start);
+// onBeforeMount(start);
 </script>
 
 <template>

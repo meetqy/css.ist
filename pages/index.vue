@@ -103,15 +103,14 @@
 </template>
 
 <script setup>
-definePageMeta({
-  layout: "default",
+const { data } = await useAsyncData("firstStage", () => {
+  return Promise.all([
+    getContentByTag("firstStage"),
+    getContentByTag("blog"),
+    getContentByTag("card"),
+    getContentByTag("page"),
+  ]);
 });
 
-const { data: firstStage } = useAsyncData("firstStage", () =>
-  getContentByTag("firstStage")
-);
-
-const { data: blog } = useAsyncData("blog", () => getContentByTag("blog"));
-const { data: card } = useAsyncData("card", () => getContentByTag("card"));
-const { data: page } = useAsyncData("page", () => getContentByTag("page"));
+const [firstStage, blog, card, page] = data.value;
 </script>

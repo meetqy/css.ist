@@ -40,7 +40,7 @@ export const iconFill =
 /**
  * 根据tag获取数据
  */
-export const getContentByTag = async (
+export const getContentByTag = (
   tagName: string | string[],
   page?: { pageIndex: number; pageSize: number },
   type?: "$contains" | "$in"
@@ -51,7 +51,7 @@ export const getContentByTag = async (
   const tags: { [key: string]: string | string[] } = {};
   tags[type || "$contains"] = tagName;
 
-  return await queryContent("introduce")
+  return queryContent("introduce")
     .where({
       tags,
     })
