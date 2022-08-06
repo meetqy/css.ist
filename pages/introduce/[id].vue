@@ -95,7 +95,6 @@
               :key="item"
               :to="`/tag/${item}`"
               class="btn btn-primary btn-xs ml-2 !no-underline !text-primary-content"
-              @click="cleanStorage"
             >
               {{ item }}
             </NuxtLink>
@@ -145,7 +144,6 @@
 </template>
 
 <script setup>
-import { useStorage } from "@vueuse/core";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
@@ -169,22 +167,7 @@ const moreContent = await getContentByTag(
   "$in"
 );
 
-try {
-  const el = document.querySelector("#drawer-content");
-  if (el) {
-    el.scrollTop = 0;
-  }
-} catch (e) {}
-
 const toTop = () => {
   document.querySelector("#drawer-content").scrollTop = 0;
-};
-
-const cleanStorage = () => {
-  const storage = useStorage("tag-list-data");
-  const scrollStorage = useStorage("tag-scroll");
-
-  storage.value = [];
-  scrollStorage.value = 0;
 };
 </script>
