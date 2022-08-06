@@ -114,28 +114,28 @@ const data = reactive({
   firstStage: null,
 });
 
-getContentByTag("blog", {
+await getContentByTag("firstStage").then((res) => {
+  data.firstStage = res;
+});
+
+await getContentByTag("blog", {
   pageIndex: 1,
   pageSize: 12,
 }).then((res) => {
   data.blogContent = res;
 });
 
-getContentByTag("card", {
+await getContentByTag("card", {
   pageIndex: 1,
   pageSize: 12,
 }).then((res) => {
   data.cardContent = res;
 });
 
-getContentByTag("page", {
+await getContentByTag("page", {
   pageIndex: 1,
   pageSize: 12,
 }).then((res) => {
   data.pageContent = res;
-});
-
-getContentByTag("firstStage").then((res) => {
-  data.firstStage = res;
 });
 </script>
