@@ -1,5 +1,5 @@
 <template>
-  <main v-if="list" class="lg:p-12 p-4 min-h-screen">
+  <main class="lg:p-12 p-4 min-h-screen">
     <h1
       class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
     >
@@ -55,78 +55,9 @@
 </template>
 
 <script setup>
-import { useStorage } from "@vueuse/core";
-
 const route = useRoute();
 const { params } = route;
-
 const { name } = params;
-const storage = useStorage("tag-list-data", []);
-const scrollStorage = useStorage("tag-scroll", 0);
-const pageSize = 15;
 
-const pageIndex = ref(1);
-if (storage.value && storage.value.length > 0) {
-  pageIndex.value = Math.ceil(storage.value.length / pageSize);
-}
-
-const end = ref(false);
-const list = ref([]);
-
-watch(route, (a) => {
-  if (a.name === "slug") {
-    scrollStorage.value = drawerContentScroll.value.y;
-  } else {
-    storage.value = [];
-    scrollStorage.value = 0;
-  }
-});
-
-const getData = async () =>
-  await getContentByTag(name, {
-    pageIndex: pageIndex.value,
-    pageSize,
-  });
-
-if (!storage.value || !storage.value.length) {
-  list.value = await getData();
-}
-
-onMounted(async () => {
-  if (storage.value.length > 0) {
-    list.value = storage.value;
-
-    if (scrollStorage.value > 0) {
-      await nextTick();
-      setTimeout(() => {
-        // console.log(
-        //   scrollStorage.value,
-        //   document.querySelector("#drawer-content"),
-        //   "mounted"
-        // );
-        document.querySelector("#drawer-content").scrollTop =
-          scrollStorage.value;
-      }, 20);
-    }
-
-    return;
-  }
-
-  storage.value = list.value;
-});
-
-watch(drawerContentPullUpEnd, async () => {
-  if (end.value) {
-    return;
-  }
-  pageIndex.value++;
-  const res = await getData();
-
-  if (res.length > 0) {
-    list.value = list.value.concat(res);
-    storage.value = list.value;
-  } else {
-    end.value = true;
-  }
-});
+const { data: list } = useAsyncData(`tag/${name}`, () => getContentByTag(name));
 </script>
