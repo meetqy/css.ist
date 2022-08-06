@@ -30,6 +30,7 @@ const clear = () => {
   _throttle && clearTimeout(_throttle);
   _timer = null;
 };
+
 const start = () => {
   clear();
   data.percent = 0;
@@ -46,9 +47,9 @@ const start = () => {
 //   data.canSucceed = true;
 //   data.percent = Math.min(100, Math.max(0, Math.floor(num)));
 // };
-// const increase = (num) => {
-//   data.percent = Math.min(100, Math.floor(data.percent + num));
-// };
+const increase = (num) => {
+  data.percent = Math.min(100, Math.floor(data.percent + num));
+};
 // const decrease = (num) => {
 //   data.percent = Math.max(0, Math.floor(data.percent - num));
 // };
@@ -75,13 +76,15 @@ const startTimer = () => {
   }, 100);
 };
 
-// Hooks
+// // Hooks
 const nuxtApp = useNuxtApp();
 
-nuxtApp.hook("page:start", start);
+nuxtApp.hook("page:start", () => {
+  start();
+});
 nuxtApp.hook("page:finish", finish);
 
-onBeforeUnmount(() => clear);
+onBeforeMount(start);
 </script>
 
 <template>
