@@ -153,19 +153,19 @@
                 v-for="item in [
                   {
                     lang: 'javascript',
-                    progress: $Mock.Random.natural(1, 100),
+                    progress: 1,
                   },
                   {
                     lang: 'html & css',
-                    progress: $Mock.Random.natural(1, 100),
+                    progress: 1,
                   },
                   {
                     lang: 'vue',
-                    progress: $Mock.Random.natural(1, 100),
+                    progress: 1,
                   },
                   {
                     lang: 'react',
-                    progress: $Mock.Random.natural(1, 100),
+                    progress: 1,
                   },
                 ]"
                 :key="item.lang"
