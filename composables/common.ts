@@ -18,13 +18,9 @@ export const vLazy = (src: string) => {
  * unsplash 图片
  */
 export const useUnsplash = (src: string, opts?: string) => {
-  return (
-    "https://source.unsplash.com" +
-    src +
-    opts +
-    "?" +
-    useNuxtApp().$Mock.Random.natural(0, 1000)
-  );
+  const url = "https://source.unsplash.com" + src + opts;
+
+  return url + "?" + Math.random();
 };
 
 /**
@@ -33,7 +29,5 @@ export const useUnsplash = (src: string, opts?: string) => {
 export const usePicsum = (opts: string) => {
   const url = `https://picsum.photos${opts}`;
 
-  return useNuxtApp().$Mock
-    ? `${url}?t=${useNuxtApp().$Mock.Random.natural(0, 1000)}`
-    : url;
+  return `${url}?t=${Math.random()}`;
 };
