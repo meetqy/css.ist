@@ -11,6 +11,7 @@ definePageMeta({
 });
 
 const templates = {
+  1: resolveComponent("Template1"),
   3: resolveComponent("Template3"),
   4: resolveComponent("Template4"),
   5: resolveComponent("Template5"),
