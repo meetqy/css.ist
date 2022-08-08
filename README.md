@@ -80,3 +80,9 @@ const data = Mock.mock({
     - about                             # 关于我
     - [...slug].vue                     # 介绍详情
 ```
+
+## 命名
+
+模板太多，命名就有点困难，所以用以下游戏角色名字，代替。
+
+- [League of Legends Wiki](https://leagueoflegends.fandom.com/wiki/List_of_champions)
