@@ -1,4 +1,4 @@
-name = "playground"
+name = "wcao"
 type = "javascript"
 account_id = "ddcde54ee68c05bfdfbdbf093299be09"
 workers_dev = true
@@ -11,5 +11,5 @@ bucket = ".output/public"
 entry-point = ".output"
 
 [build]
-command = "yarn build:cloudflare"
+command = ""
 upload.format = "service-worker"

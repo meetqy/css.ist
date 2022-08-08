@@ -18,6 +18,8 @@ export default defineNuxtConfig({
     ],
   },
 
+  css: ["~/assets/css/material.css"],
+
   typescript: {
     shim: false,
     strict: true,
