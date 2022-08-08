@@ -1,3 +1,6 @@
 <template>
-  <div>About</div>
+  <main class="prose m-auto py-12">
+    <h1>wcao.cc</h1>
+    <p>完善中...</p>
+  </main>
 </template>

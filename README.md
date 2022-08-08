@@ -73,6 +73,7 @@ const data = Mock.mock({
     - template                          # 模板 mock类 hooks
     - common                            # 公用hooks
 - introduce                             # 模板介绍 markdown
+- content                               # 默认@nuxt/content 存放模板外的其他md页面
 - pages
     - template/[path]                   # 模板展示
     - tag/[name]                        # 标签分页
