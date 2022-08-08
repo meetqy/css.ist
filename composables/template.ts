@@ -1,3 +1,7 @@
+/**
+ * 模板 静态常量数据
+ */
+
 // 联系方式 svg
 export const templateContacts = {
   facebook: `<svg
@@ -159,4 +163,33 @@ export const baseInfo = {
     title: "卧槽 - 表示惊讶、赞美",
     subtitle: "分享响应式、多主题模板和组件，基于 tailwind、daisyui",
   },
+};
+
+// icons
+export const templateIcons = (
+  num: number,
+  style?: string,
+  className?: string
+) => {
+  return [
+    `<span class="material-symbols-outlined">add_to_drive</span>`,
+    `<span class="material-symbols-outlined">android</span>`,
+    `<span class="material-symbols-outlined">atr</span>`,
+    `<span class="material-symbols-outlined">clear_night</span>`,
+    `<span class="material-symbols-outlined">cloudy_snowing</span>`,
+    `<span class="material-symbols-outlined">g_translate</span>`,
+    `<span class="material-symbols-outlined">home_app_logo</span>`,
+    `<span class="material-symbols-outlined">macro_off</span>`,
+    `<span class="material-symbols-outlined">matter</span>`,
+    `<span class="material-symbols-outlined">mode_heat</span>`,
+    `<span class="material-symbols-outlined">polymer</span>`,
+    `<span class="material-symbols-outlined">quick_phrases</span>`,
+    `<span class="material-symbols-outlined">translate</span>`,
+    `<span class="material-symbols-outlined">view_in_ar_new</span>`,
+    `<span class="material-symbols-outlined">webhook</span>`,
+    `<span class="material-symbols-outlined">youtube_activity</span>`,
+  ][num].replace(
+    `class="material-symbols-outlined"`,
+    `class="material-symbols-outlined ${className}" style="${style}"`
+  );
 };

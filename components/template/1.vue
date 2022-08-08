@@ -27,10 +27,10 @@
               </label>
               <ul
                 tabindex="0"
-                class="dropdown-content xl:menu-horizontal menu uppercase shadow bg-base-100 xl:bg-transparent xl:shadow-none rounded-box xl:w-auto md:w-96 w-72 text-primary-content/80"
+                class="dropdown-content xl:menu-horizontal xl:w-auto xl:min-w-max menu uppercase shadow xl:bg-transparent xl:shadow-none rounded-box md:w-96 w-72 xl:text-primary-content/80 md:bg-base-100"
               >
                 <li v-for="item in templateMenu[lang]" :key="item.text">
-                  <a :href="`#${item.text}`">{{ item.text }}</a>
+                  <a>{{ item.text }}</a>
                 </li>
               </ul>
             </div>
@@ -64,7 +64,7 @@
                 />
               </div>
               <div
-                class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0 text-primary-content/90"
+                class="pt-8 sm:pt-10 lg:ml-8 lg:pt-0 text-primary-content/90 px-4"
               >
                 <h1
                   class="text-center text-4xl sm:text-left sm:text-5xl md:text-6xl line-clamp-2"
@@ -104,12 +104,12 @@
           </div>
         </div>
 
-        <!-- about me -->
+        <!-- section1 -->
         <div id="about" class="bg-base-200/50">
           <div
             class="container m-auto flex flex-col items-center py-16 md:py-20 lg:flex-row px-4"
           >
-            <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+            <div class="w-full text-center lg:w-3/5 lg:text-left">
               <h2
                 class="text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
               >
@@ -147,25 +147,25 @@
                 </div>
               </div>
             </div>
-            <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+            <div class="w-full pl-0 pt-10 lg:w-2/5 lg:pl-12 lg:pt-0">
               <!-- language -->
               <div
                 v-for="item in [
                   {
                     lang: 'javascript',
-                    progress: 1,
+                    progress: $Mock.Random.natural(1, 99),
                   },
                   {
                     lang: 'html & css',
-                    progress: 1,
+                    progress: $Mock.Random.natural(1, 99),
                   },
                   {
                     lang: 'vue',
-                    progress: 1,
+                    progress: $Mock.Random.natural(1, 99),
                   },
                   {
                     lang: 'react',
-                    progress: 1,
+                    progress: $Mock.Random.natural(1, 99),
                   },
                 ]"
                 :key="item.lang"
@@ -189,232 +189,77 @@
           </div>
         </div>
 
+        <!-- section2 -->
         <div id="services" class="container mx-auto px-4 py-16 md:py-20">
           <h2
             class="text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
           >
-            Here's what I'm good at
+            {{ $MockTitle()[lang] }}
           </h2>
           <h3
             class="pt-6 text-center text-xl font-medium text-base-content sm:text-2xl lg:text-3xl"
           >
-            These are the services Ioffer
+            {{ $MockTitle()[lang] }}
           </h3>
           <div
             class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
           >
             <div
+              v-for="(item, i) in $MockList(6)[lang]"
+              :key="i"
               class="group rounded px-8 py-12 shadow hover:bg-primary flex justify-center flex-col items-center transition-all"
             >
               <span
                 class="text-8xl group-hover:text-base-100 text-base-content"
               >
-                <!-- <i
-                  name="accessibility"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="accessibility"
-                >
-                </i> -->
+                <img v-lazy="vLazy(item.authorAvatar)" class="rounded-full" />
               </span>
               <div class="text-center">
                 <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-info lg:text-xl"
+                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-primary-content lg:text-xl line-clamp-1"
                 >
-                  Towels
+                  {{ item.title }}
                 </h3>
                 <p
                   class="text-grey pt-4 text-sm group-hover:text-base-100 md:text-base"
                 >
-                  Boston's most advanced compression wear technology increases
-                  muscle oxygenation, stabilizes active muscles
-                </p>
-              </div>
-            </div>
-            <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary flex justify-center flex-col items-center transition-all"
-            >
-              <span
-                class="text-8xl group-hover:text-base-100 text-base-content"
-              >
-                <!-- <i
-                  name="american-football"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="american football"
-                ></i> -->
-              </span>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-info lg:text-xl"
-                >
-                  Fish
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-base-100 md:text-base"
-                >
-                  Andy shoes are designed to keeping in mind durability as well
-                  as trends, the most stylish range of shoes &amp; sandals
-                </p>
-              </div>
-            </div>
-            <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary flex justify-center flex-col items-center transition-all"
-            >
-              <span
-                class="text-8xl group-hover:text-base-100 text-base-content"
-              >
-                <!-- <i
-                  name="boat"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="boat"
-                ></i> -->
-              </span>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-info lg:text-xl"
-                >
-                  Soap
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-base-100 md:text-base"
-                >
-                  Boston's most advanced compression wear technology increases
-                  muscle oxygenation, stabilizes active muscles
-                </p>
-              </div>
-            </div>
-            <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary flex justify-center flex-col items-center transition-all"
-            >
-              <span
-                class="text-8xl group-hover:text-base-100 text-base-content"
-              >
-                <!-- <i
-                  name="bicycle"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="bicycle"
-                ></i> -->
-              </span>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-info lg:text-xl"
-                >
-                  Keyboard
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-base-100 md:text-base"
-                >
-                  Andy shoes are designed to keeping in mind durability as well
-                  as trends, the most stylish range of shoes &amp; sandals
-                </p>
-              </div>
-            </div>
-            <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary flex justify-center flex-col items-center transition-all"
-            >
-              <span
-                class="text-8xl group-hover:text-base-100 text-base-content"
-              >
-                <!-- <i
-                  name="beer"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="beer"
-                ></i> -->
-              </span>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-info lg:text-xl"
-                >
-                  Fish
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-base-100 md:text-base"
-                >
-                  Carbonite web goalkeeper gloves are ergonomically designed to
-                  give easy fit
-                </p>
-              </div>
-            </div>
-            <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary flex justify-center flex-col items-center transition-all"
-            >
-              <span
-                class="text-8xl group-hover:text-base-100 text-base-content"
-              >
-                <!-- <i
-                  name="skull"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="skull"
-                ></i> -->
-              </span>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-info lg:text-xl"
-                >
-                  Pizza
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-base-100 md:text-base"
-                >
-                  New range of formal shirts are designed keeping you in mind.
-                  With fits and styling that will make you stand apart
+                  {{ item.desc }}
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- section3 -->
         <div id="portfolio" class="container m-auto py-16 md:py-20 px-4">
           <h2
             class="text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
           >
-            Check out my Portfolio
+            {{ $MockTitle()[lang] }}
           </h2>
           <h3
             class="pt-6 text-center text-xl font-medium text-base-content sm:text-2xl lg:text-3xl"
           >
-            Here's what I have done with the past
+            {{ $MockTitle()[lang] }}
           </h3>
           <div
-            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
+            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 md:gap-10 lg:w-full lg:grid-cols-2"
           >
             <a
-              href="/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-              ><img
-                src="https://source.unsplash.com/1920x1080?work&amp;1"
-                class="w-full shadow"
-                alt="portfolio image" /></a
-            ><a
-              href="/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-              ><img
-                src="https://source.unsplash.com/1920x1080?work&amp;2"
-                class="w-full shadow"
-                alt="portfolio image" /></a
-            ><a
-              href="/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-              ><img
-                src="https://source.unsplash.com/1920x1080?work&amp;3"
-                class="w-full shadow"
-                alt="portfolio image" /></a
-            ><a
-              href="/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-              ><img
-                src="https://source.unsplash.com/1920x1080?work&amp;4"
-                class="w-full shadow"
+              v-for="(item, i) in $MockList(4, ['/1000x568', '?work'])[lang]"
+              :key="i"
+              class="mx-auto transform transition-all hover:scale-105 md:mx-0 max-h-[568px]"
+            >
+              <img
+                v-lazy="vLazy(item.image)"
+                class="w-full shadow h-full"
                 alt="portfolio image"
-            /></a>
+              />
+            </a>
           </div>
         </div>
 
+        <!-- section4 -->
         <div id="clients" class="bg-base-200/50">
           <div class="container m-auto py-16 md:py-20">
             <div
@@ -423,251 +268,92 @@
               <h2
                 class="text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
               >
-                My latest clients
+                {{ $MockTitle()[lang] }}
               </h2>
               <div class="grid lg:grid-cols-6 grid-cols-2 mt-12">
-                <span
-                  class="mx-8 block text-8xl text-base-content/60 mt-4 lg:mt-0"
-                >
-                  <i
-                    name="accessibility-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="accessibility outline"
-                  ></i> </span
-                ><span
-                  class="mx-8 block text-8xl text-base-content/60 mt-4 lg:mt-0"
-                >
-                  <i
-                    name="american-football-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="american football outline"
-                  ></i> </span
-                ><span
-                  class="mx-8 block text-8xl text-base-content/60 mt-4 lg:mt-0"
-                >
-                  <i
-                    name="boat-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="boat outline"
-                  >
-                  </i> </span
-                ><span
-                  class="mx-8 block text-8xl text-base-content/60 mt-4 lg:mt-0"
-                >
-                  <i
-                    name="bicycle-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="bicycle outline"
-                  ></i> </span
-                ><span
-                  class="mx-8 block text-8xl text-base-content/60 mt-4 lg:mt-0"
-                >
-                  <i
-                    name="beer-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="beer outline"
-                  >
-                  </i> </span
-                ><span
-                  class="mx-8 block text-8xl text-base-content/60 mt-4 lg:mt-0"
-                >
-                  <i
-                    name="skull-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="skull outline"
-                  ></i>
-                </span>
+                <div
+                  v-for="item in $Mock.Random.range(6)"
+                  :key="item"
+                  class="mx-8 block w-24 mt-4 lg:mt-0"
+                  v-html="
+                    templateIcons(
+                      item,
+                      'font-size: 96px',
+                      '!text-base-content/60'
+                    )
+                  "
+                ></div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- section5 -->
         <div id="work" class="container px-4 py-16 m-auto md:py-20">
           <h2
             class="text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
           >
-            My work experience
+            {{ $MockTitle()[lang] }}
           </h2>
           <h3
             class="pt-6 text-center text-xl font-medium text-base-content sm:text-2xl lg:text-3xl"
           >
-            Here's what I did before freelancing
+            {{ $MockTitle()[lang] }}
           </h3>
           <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
             <span
-              class="left-1/3 absolute inset-y-0 ml-10 hidden w-0.5 bg-base-content/60 md:block"
-            ></span>
+              class="left-1/3 absolute inset-y-0 ml-10 hidden w-0.5 bg-base-300 md:block"
+            />
+
             <div
+              v-for="item in 3"
+              :key="item"
               class="mt-8 flex flex-col text-center md:flex-row md:text-left"
             >
-              <div class="md:w-1/3">
+              <div class="md:w-1/3 relative -top-2.5">
                 <div class="flex justify-center md:justify-start">
                   <span
-                    class="shrink-0 text-base-content/60 flex justify-center items-center"
-                    ><span class="text-3xl mr-2">
-                      <i
-                        name="accessibility-outline"
-                        role="img"
-                        class="md hydrated"
-                        aria-label="accessibility outline"
-                      ></i>
-                    </span>
-                    Car</span
+                    class="shrink-0 text-base-content/60 flex justify-center items-center capitalize"
                   >
+                    <span
+                      class="text-3xl mr-2"
+                      v-html="templateIcons(item, 'font-size:36px;')"
+                    >
+                    </span>
+
+                    {{ $MockWord()[lang] }}
+                  </span>
                   <div class="relative ml-3 hidden w-full md:block">
                     <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-primary"
-                    ></span>
+                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-primary/50"
+                    />
                   </div>
                 </div>
               </div>
               <div class="md:w-2/3">
                 <div class="relative flex md:pl-24">
                   <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
+                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-base-100 md:block"
+                  />
                   <div class="mt-1 flex">
-                    <span class="text-primary text-xl">
-                      <i
-                        name="caret-forward-outline"
-                        role="img"
-                        class="md hydrated"
-                        aria-label="caret forward outline"
-                      ></i>
-                    </span>
-                    <div class="md:-mt-1 md:pl-12">
-                      <span class="block font-bold text-grey-40"
-                        >Apr 2015 - Mar 2018</span
-                      ><span
-                        class="block pt-2 text-xl font-bold uppercase text-primary"
-                        >Frontend Developer</span
-                      >
-                      <div class="pt-2">
-                        <span class="block text-base-content"
-                          >Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Vestibulum mattis felis vitae risus pulvinar
-                          tincidunt. Nam ac venenatis enim.</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="mt-8 flex flex-col text-center md:flex-row md:text-left"
-            >
-              <div class="md:w-1/3">
-                <div class="flex justify-center md:justify-start">
-                  <span
-                    class="shrink-0 text-base-content/60 flex justify-center items-center"
-                    ><span class="text-3xl mr-2">
-                      <i
-                        name="american-football-outline"
-                        role="img"
-                        class="md hydrated"
-                        aria-label="american football outline"
-                      ></i>
-                    </span>
-                    Shoes</span
-                  >
-                  <div class="relative ml-3 hidden w-full md:block">
                     <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-primary"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-2/3">
-                <div class="relative flex md:pl-24">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-                  <div class="mt-1 flex">
-                    <span class="text-primary text-xl">
-                      <i
-                        name="caret-forward-outline"
-                        role="img"
-                        class="md hydrated"
-                        aria-label="caret forward outline"
-                      ></i>
+                      class="material-symbols-outlined text-primary relative -top-1"
+                    >
+                      arrow_right
                     </span>
                     <div class="md:-mt-1 md:pl-12">
-                      <span class="block font-bold text-grey-40"
-                        >Apr 2015 - Mar 2018</span
-                      ><span
+                      <span class="block font-bold text-grey-40">
+                        {{ $MockTitle()[lang] }}
+                      </span>
+                      <span
                         class="block pt-2 text-xl font-bold uppercase text-primary"
-                        >Frontend Developer</span
                       >
+                        {{ $MockTitle()[lang] }}
+                      </span>
                       <div class="pt-2">
-                        <span class="block text-base-content"
-                          >Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Vestibulum mattis felis vitae risus pulvinar
-                          tincidunt. Nam ac venenatis enim.</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="mt-8 flex flex-col text-center md:flex-row md:text-left"
-            >
-              <div class="md:w-1/3">
-                <div class="flex justify-center md:justify-start">
-                  <span
-                    class="shrink-0 text-base-content/60 flex justify-center items-center"
-                    ><span class="text-3xl mr-2">
-                      <i
-                        name="boat-outline"
-                        role="img"
-                        class="md hydrated"
-                        aria-label="boat outline"
-                      ></i>
-                    </span>
-                    Bacon</span
-                  >
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-primary"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-2/3">
-                <div class="relative flex md:pl-24">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-                  <div class="mt-1 flex">
-                    <span class="text-primary text-xl">
-                      <i
-                        name="caret-forward-outline"
-                        role="img"
-                        class="md hydrated"
-                        aria-label="caret forward outline"
-                      ></i>
-                    </span>
-                    <div class="md:-mt-1 md:pl-12">
-                      <span class="block font-bold text-grey-40"
-                        >Apr 2015 - Mar 2018</span
-                      ><span
-                        class="block pt-2 text-xl font-bold uppercase text-primary"
-                        >Frontend Developer</span
-                      >
-                      <div class="pt-2">
-                        <span class="block text-base-content"
-                          >Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Vestibulum mattis felis vitae risus pulvinar
-                          tincidunt. Nam ac venenatis enim.</span
-                        >
+                        <span class="block text-base-content line-clamp-5">
+                          {{ $MockContent()[lang] }}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -677,12 +363,11 @@
           </div>
         </div>
 
+        <!-- section6 -->
         <div
           id="statistics"
           class="bg-cover bg-top bg-no-repeat py-16 lg:py-24"
-          style="
-            background-image: url('https://source.unsplash.com/random/1080x0');
-          "
+          :style="`background-image: url('${usePicsum('/1080/400')}')`"
         >
           <div class="container m-auto">
             <div
@@ -692,82 +377,23 @@
                 class="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-4 xl:gap-5"
               >
                 <div
+                  v-for="item in 4"
+                  :key="item"
                   class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
                 >
-                  <span class="text-6xl mr-2">
-                    <i
-                      name="accessibility-outline"
-                      role="img"
-                      class="md hydrated"
-                      aria-label="accessibility outline"
-                    ></i>
+                  <span
+                    class="text-6xl xl:mr-2 mr-0"
+                    v-html="templateIcons(item, 'font-size:48px')"
+                  >
                   </span>
-                  <div class="pt-5 md:pl-5 md:pt-0">
+                  <div class="pt-5 md:pl-5 md:pt-0 text-center">
                     <h1 class="text-2xl font-bold text-primary md:text-4xl">
-                      89
+                      {{ $Mock.Random.natural(10, 99) }}
                     </h1>
-                    <h4 class="text-base font-medium leading-loose md:text-xl">
-                      Gloves
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-                >
-                  <span class="text-6xl mr-2">
-                    <i
-                      name="american-football-outline"
-                      role="img"
-                      class="md hydrated"
-                      aria-label="american football outline"
-                    ></i>
-                  </span>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1 class="text-2xl font-bold text-primary md:text-4xl">
-                      1
-                    </h1>
-                    <h4 class="text-base font-medium leading-loose md:text-xl">
-                      Fish
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-                >
-                  <span class="text-6xl mr-2">
-                    <i
-                      name="boat-outline"
-                      role="img"
-                      class="md hydrated"
-                      aria-label="boat outline"
-                    ></i>
-                  </span>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1 class="text-2xl font-bold text-primary md:text-4xl">
-                      19
-                    </h1>
-                    <h4 class="text-base font-medium leading-loose md:text-xl">
-                      Soap
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-                >
-                  <span class="text-6xl mr-2">
-                    <i
-                      name="bicycle-outline"
-                      role="img"
-                      class="md hydrated"
-                      aria-label="bicycle outline"
-                    ></i>
-                  </span>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1 class="text-2xl font-bold text-primary md:text-4xl">
-                      90
-                    </h1>
-                    <h4 class="text-base font-medium leading-loose md:text-xl">
-                      Keyboard
+                    <h4
+                      class="text-base font-medium leading-loose md:text-xl uppercase"
+                    >
+                      {{ $MockWord()[lang] }}
                     </h4>
                   </div>
                 </div>
@@ -776,86 +402,44 @@
           </div>
         </div>
 
+        <!-- section7 -->
         <div id="blog" class="bg-grey-50">
           <div class="container px-4 py-16 m-auto md:py-20">
             <h2
               class="text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
             >
-              I also like to write
+              {{ $MockTitle()[lang] }}
             </h2>
             <h4
               class="pt-6 text-center text-xl font-medium text-base-content sm:text-2xl lg:text-3xl"
             >
-              Check out my latest posts!
+              {{ $MockTitle()[lang] }}
             </h4>
             <div
-              class="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10"
+              class="mx-auto grid w-full grid-cols-1 gap-6 pt-12 lg:w-full lg:grid-cols-3 xl:gap-10"
             >
-              <a href="/post" class="shadow bg-base-300">
+              <a
+                v-for="(item, i) in $MockList(3)[lang]"
+                :key="i"
+                class="shadow bg-base-300 flex flex-col"
+              >
                 <div
-                  class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-                  style="
-                    background-image: url('https://source.unsplash.com/0x576?1');
-                  "
+                  class="group flex-shrink-0 w-full relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
+                  :style="`background-image: url('${item.image}');`"
                 >
                   <span
-                    class="absolute right-2 bottom-2 btn btn-outline rounded-box"
+                    class="absolute right-2 bottom-2 btn btn-primary rounded-box"
                   >
-                    Read More
+                    {{ $MockWord()[lang] }}
                   </span>
                 </div>
-                <div class="bg-base-100 py-6 px-5 xl:py-8">
+                <div class="bg-base-100 py-6 px-5 xl:py-8 flex-1">
                   <span class="block text-lg font-semibold text-base-content">
-                    How to become a frontend developer </span
-                  ><span class="block pt-2 text-base-content"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</span
-                  >
-                </div> </a
-              ><a href="/post" class="shadow bg-base-300">
-                <div
-                  class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-                  style="
-                    background-image: url('https://source.unsplash.com/0x576?2');
-                  "
-                >
-                  <span
-                    class="absolute right-2 bottom-2 btn btn-outline rounded-box"
-                  >
-                    Read More
+                    {{ item.title }}
                   </span>
-                </div>
-                <div class="bg-base-100 py-6 px-5 xl:py-8">
-                  <span class="block text-lg font-semibold text-base-content">
-                    How to become a frontend developer </span
-                  ><span class="block pt-2 text-base-content"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</span
-                  >
-                </div> </a
-              ><a href="/post" class="shadow bg-base-300">
-                <div
-                  class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-                  style="
-                    background-image: url('https://source.unsplash.com/0x576?3');
-                  "
-                >
-                  <span
-                    class="absolute right-2 bottom-2 btn btn-outline rounded-box"
-                  >
-                    Read More
+                  <span class="block pt-2 text-base-content">
+                    {{ item.desc }}
                   </span>
-                </div>
-                <div class="bg-base-100 py-6 px-5 xl:py-8">
-                  <span class="block text-lg font-semibold text-base-content">
-                    How to become a frontend developer </span
-                  ><span class="block pt-2 text-base-content"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</span
-                  >
                 </div>
               </a>
             </div>
@@ -879,7 +463,7 @@
               {{ page.contactDesc }}
             </p>
           </div>
-          <form class="mx-auto w-full pt-6 sm:w-3/4">
+          <form class="mx-auto w-full md:w-3/4 pt-6">
             <div class="flex flex-col md:flex-row">
               <input
                 id="name"
@@ -976,26 +560,26 @@
 
         <!-- join us -->
         <div
-          class="relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24"
+          class="relative bg-primary bg-blend-darken bg-cover bg-center bg-no-repeat py-16 lg:py-24"
           :style="`
             background-image: url(${usePicsum('/1920/1080')})`"
         >
           <div class="container m-auto relative z-30">
             <h3
-              class="text-center text-3xl uppercase text-white/90 leading-tight tracking-wide text-base-100 sm:text-4xl lg:text-5xl"
+              class="text-center text-3xl uppercase leading-tight tracking-wide text-primary-content sm:text-4xl lg:text-5xl"
             >
               {{ baseInfo[lang].subtitle }}
             </h3>
             <form
-              class="mt-6 flex flex-col justify-center sm:flex-row px-4 lg:px-0"
+              class="mt-6 flex flex-col items-center justify-center sm:flex-row px-4 lg:px-0"
             >
               <input
                 id="email"
-                class="w-full rounded input bg-white sm:w-2/5 sm:py-4 lg:w-1/3"
+                class="w-full rounded-md input bg-base-100 sm:w-2/5 sm:py-4 lg:w-1/3"
                 type="text"
                 :placeholder="page.joinInput"
               />
-              <button class="btn btn-warning lg:ml-6 mt-4 lg:mt-0 normal-case">
+              <button class="btn btn-warning mt-4 lg:ml-6 md:mt-0 normal-case">
                 {{ page.joinBtn }}
               </button>
             </form>
