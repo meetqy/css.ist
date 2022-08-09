@@ -28,7 +28,6 @@ export const useAsset = (
   }
 
   return useNuxtApp().$img(`wcao${path}/${url}`.replace("//", "/"), modifiers, {
-    provider: "ipx",
     baseURL: "https://p.wcao.cc/_ipx",
   });
 };
