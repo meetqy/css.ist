@@ -27,9 +27,17 @@ export const useAsset = (
     return url;
   }
 
-  return useNuxtApp().$img(`wcao${path}/${url}`.replace("//", "/"), modifiers, {
-    baseURL: "https://p.wcao.cc/_ipx",
-  });
+  const arr = [];
+  for (const k in modifiers) {
+    const v = modifiers[k];
+
+    arr.push(k.substring(0, 1) + "_" + v);
+  }
+
+  return `https://p.wcao.cc/_ipx/${arr.join(",")}/wcao/${path}/${url}`.replace(
+    "//",
+    "/"
+  );
 };
 
 /**

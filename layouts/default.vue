@@ -10,7 +10,7 @@
           class="drawer-button lg:hidden flex justify-between pl-4 border-b border-base-200/50 sticky top-0 bg-base-100 z-20"
         >
           <div class="flex justify-center items-center font-seri">
-            <img :src="useAsset('/logo.png')" class="w-8 h-8 mr-2" />
+            <img src="/logo.png" class="w-8 h-8 mr-2" />
             {{ websiteConfig.name }}
           </div>
 
@@ -51,7 +51,7 @@
               to="/"
               class="btn btn-ghost text-2xl normal-case hover:bg-transparent hidden lg:flex font-serif"
             >
-              <img :src="useAsset('/logo.png')" class="w-10 h-10 mr-2" />
+              <img src="/logo.png" class="w-10 h-10 mr-2" />
               {{ websiteConfig.name }}
             </NuxtLink>
 
