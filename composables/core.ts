@@ -19,16 +19,14 @@ export const websiteConfig: {
  * 获取资源
  */
 export const useAsset = (
-  url: string,
-  opts?: string,
-  path?: string,
+  url = "",
+  path = "",
   modifiers?: { [key: string]: string }
 ) => {
-  const src = url.includes("http")
-    ? url.replace("/uploads/", `/uploads/${opts || "f_webp,w_500"}/`)
-    : path + "/" + url;
-
-  return useNuxtApp().$img(src, modifiers);
+  return useNuxtApp().$img(`wcao${path}/${url}`.replace("//", "/"), modifiers, {
+    provider: "ipx",
+    baseURL: "https://p.wcao.cc/_ipx",
+  });
 };
 
 /**

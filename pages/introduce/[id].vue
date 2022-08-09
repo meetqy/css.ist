@@ -36,7 +36,7 @@
                   <img
                     v-lazy="
                       vLazy(
-                        useAsset(item, 'embed,f_webp,s_300x300', page._path, {
+                        useAsset(item, page._path, {
                           format: 'webp',
                           s: '300x300',
                         })
@@ -71,11 +71,7 @@
               class="w-full flex-shrink-0 rounded-box bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 shadow"
             >
               <img
-                v-lazy="
-                  vLazy(
-                    useAsset(item, 'f_webp', page._path, { format: 'webp' })
-                  )
-                "
+                v-lazy="vLazy(useAsset(item, page._path, { format: 'webp' }))"
                 class="m-auto !my-0 transition-all object-center"
                 :class="
                   full
@@ -126,7 +122,7 @@
               <img
                 v-lazy="
                   vLazy(
-                    useAsset(item.previews[0], 'f_webp,500x500', item._path, {
+                    useAsset(item.previews[0], item._path, {
                       format: 'webp',
                       s: '500x500',
                     })
