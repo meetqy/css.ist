@@ -1,5 +1,0 @@
-// ROLLUP_NO_REPLACE 
- const _2 = "{\"parsed\":{\"_path\":\"/introduce/2\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Alistar the Minotaur\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"alistar-the-minotaur\"},\"children\":[{\"type\":\"text\",\"value\":\"Alistar the Minotaur\"}]}]},\"tags\":[\"firstStage\",\"form\",\"component\",\"leagueoflegends\"],\"previews\":[\"5.png\",\"3.png\",\"4.png\",\"1.png\",\"2.png\"],\"source\":null,\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"alistar-the-minotaur\"},\"children\":[{\"type\":\"text\",\"value\":\"Alistar the Minotaur\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:2.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/2.md\",\"_extension\":\"md\"},\"hash\":\"MTUL9mYZhR\"}";
-
-export { _2 as default };
-//# sourceMappingURL=2.mjs.map

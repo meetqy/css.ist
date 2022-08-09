@@ -1,5 +1,0 @@
-// ROLLUP_NO_REPLACE 
- const _5 = "{\"parsed\":{\"_path\":\"/introduce/5\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Akshan the Rogue Sentinel\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-5\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 5\"}]}]},\"recommend\":true,\"tags\":[\"blog\",\"page\",\"firstStage\",\"leagueoflegends\"],\"previews\":[\"3.png\",\"4.png\",\"5.png\",\"1.png\",\"2.png\",\"6.png\",\"7.png\",\"8.png\"],\"source\":\"https://www.tailwindtoolbox.com/templates/ghostwind-home\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-5\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 5\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:5.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/5.md\",\"_extension\":\"md\"},\"hash\":\"7mH6pedJ1J\"}";
-
-export { _5 as default };
-//# sourceMappingURL=5.mjs.map

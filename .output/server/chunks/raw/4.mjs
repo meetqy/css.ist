@@ -1,5 +1,0 @@
-// ROLLUP_NO_REPLACE 
- const _4 = "{\"parsed\":{\"_path\":\"/introduce/4\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Akali the Rogue Assassin\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-4\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 4\"}]}]},\"tags\":[\"firstStage\",\"blog\",\"page\",\"homepage\",\"leagueoflegends\"],\"previews\":[\"6.png\",\"1.png\",\"2.png\",\"3.png\",\"4.png\",\"5.png\",\"7.png\",\"8.png\"],\"source\":\"https://github.com/iozcelik/SarissaPersonalBlog\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"blog-part-4\"},\"children\":[{\"type\":\"text\",\"value\":\"Blog Part 4\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:4.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/4.md\",\"_extension\":\"md\"},\"hash\":\"vBaqq4Td57\"}";
-
-export { _4 as default };
-//# sourceMappingURL=4.mjs.map

@@ -1,5 +1,0 @@
-// ROLLUP_NO_REPLACE 
- const _1 = "{\"parsed\":{\"_path\":\"/introduce/1\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Aatrox the Darkin Blade\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"aatrox-the-darkin-blade\"},\"children\":[{\"type\":\"text\",\"value\":\"Aatrox the Darkin Blade\"}]}]},\"tags\":[\"homepage\",\"page\",\"firstStage\",\"leagueoflegends\"],\"previews\":[\"/1.png\",\"/2.png\",\"/3.png\",\"/4.png\",\"/5.png\"],\"source\":\"https://atom.redpixelthemes.com/?\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"aatrox-the-darkin-blade\"},\"children\":[{\"type\":\"text\",\"value\":\"Aatrox the Darkin Blade\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:1.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/1.md\",\"_extension\":\"md\"},\"hash\":\"42SSNqmVKR\"}";
-
-export { _1 as default };
-//# sourceMappingURL=1.mjs.map

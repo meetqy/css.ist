@@ -1,5 +1,0 @@
-// ROLLUP_NO_REPLACE 
- const _3 = "{\"parsed\":{\"_path\":\"/introduce/3\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":false,\"title\":\"Ahri the Nine-Tailed Fox\",\"description\":\"\",\"excerpt\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"page-part-3\"},\"children\":[{\"type\":\"text\",\"value\":\"Page Part 3\"}]}]},\"tags\":[\"shop\",\"page\",\"firstStage\",\"leagueoflegends\"],\"previews\":[\"1.png\",\"iShot_2022-08-03_21.47.45.png\",\"iShot_2022-08-03_21.46.26.png\",\"iShot_2022-08-03_22.07.03.png\",\"iShot_2022-08-03_22.41.31.png\"],\"source\":\"https://www.tailwindtoolbox.com/templates/nordic-store\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"h1\",\"props\":{\"id\":\"page-part-3\"},\"children\":[{\"type\":\"text\",\"value\":\"Page Part 3\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"template-introduce:introduce:3.md\",\"_source\":\"template-introduce\",\"_file\":\"introduce/3.md\",\"_extension\":\"md\"},\"hash\":\"vr3Z2ftTMq\"}";
-
-export { _3 as default };
-//# sourceMappingURL=3.mjs.map
