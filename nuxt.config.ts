@@ -6,6 +6,10 @@ import eslintPlugin from "vite-plugin-eslint";
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
 
+  images: {
+    domains: ["p.wcao.cc"],
+  },
+
   content: {
     documentDriven: true,
     sources: [
