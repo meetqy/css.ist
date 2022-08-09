@@ -16,7 +16,7 @@
           <img
             v-lazy="
               vLazy(
-                useAsset(item.previews[0], 'f_webp,500x500', item._path, {
+                useAsset(item.previews[0], item._path, {
                   format: 'webp',
                   s: '500x500',
                 })

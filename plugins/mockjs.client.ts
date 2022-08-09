@@ -2,7 +2,7 @@ import * as Mock from "mockjs";
 
 type language = "zh" | "en";
 
-type Template = { [key in language]: any };
+type Template = { [key in language]: object | string };
 
 export default defineNuxtPlugin(() => {
   return {
