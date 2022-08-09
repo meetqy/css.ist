@@ -22,7 +22,7 @@
                 })
               )
             "
-            class="object-cover bg-neutral border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
+            class="object-cover bg-base-200/20 border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
           />
         </NuxtLink>
 

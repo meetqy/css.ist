@@ -127,11 +127,11 @@
                   vLazy(
                     useAsset(item.previews[0], item._path, {
                       format: 'webp',
-                      s: '500x500',
+                      w: 480,
                     })
                   )
                 "
-                class="w-full aspect-square object-cover object-top rounded-box border border-base-200 shadow"
+                class="w-full aspect-video object-contain rounded-box border border-base-200 shadow bg-base-200/20"
               />
               <p class="px-2">{{ item.title }}</p>
             </div>
@@ -157,7 +157,7 @@ const onTap = (swiper) => {
   swiper.slideTo(swiper.clickedIndex);
 };
 
-const moreContent = await getContentByTag(
+const res = await getContentByTag(
   page.value.tags,
   {
     pageIndex: 1,
@@ -165,6 +165,8 @@ const moreContent = await getContentByTag(
   },
   "$in"
 );
+
+const moreContent = res.filter((item) => item._id !== page.value._id);
 
 const toTop = () => {
   document.querySelector("#drawer-content").scrollTop = 0;

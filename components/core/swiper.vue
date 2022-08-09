@@ -49,7 +49,7 @@
                 })
               )
             "
-            class="aspect-square transition-transform cursor-zoom-in rounded-box border bg-neutral md:group-hover:scale-125"
+            class="aspect-square transition-transform cursor-zoom-in rounded-box border bg-base-200/20 md:group-hover:scale-125"
             :class="[
               'rounded-box w-full max-w-screen-md  aspect-video  object-contain border-base-300 ',
             ]"
