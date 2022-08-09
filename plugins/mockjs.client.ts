@@ -26,7 +26,7 @@ export default defineNuxtPlugin(() => {
 
       // 列表
       MockList: (num: number, unsplash?: string[]) => {
-        const template: { [key: string]: any } = {};
+        const template: { [key: string]: object | string } = {};
 
         template[`en|${num}`] = [
           {
