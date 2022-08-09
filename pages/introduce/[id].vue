@@ -42,7 +42,7 @@
                         })
                       )
                     "
-                    class="w-full max-h-24 object-cover object-top !m-1 outline-4 outline"
+                    class="w-full h-24 object-cover object-top !m-1 outline-4 outline"
                     :class="
                       activePreviewIndex === i
                         ? 'outline-primary'
@@ -68,16 +68,19 @@
               v-if="page.previews"
               v-show="activePreviewIndex === i"
               :key="i"
-              class="w-full flex-shrink-0 rounded-box bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 shadow"
+              class="w-full relative flex-shrink-0 rounded-box bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 shadow"
             >
               <img
-                v-lazy="vLazy(useAsset(item, page._path, { format: 'webp' }))"
-                class="m-auto !my-0 transition-all object-center"
-                :class="
-                  full
-                    ? 'object-contain cursor-zoom-out'
-                    : 'w-96 object-fill cursor-zoom-in'
+                v-lazy="
+                  vLazy(
+                    useAsset(item, page._path, {
+                      format: 'webp',
+                      w: '1920',
+                    })
+                  )
                 "
+                class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
+                :class="full ? 'w-full' : 'w-1/3'"
                 @click="full = !full"
               />
             </div>

@@ -8,7 +8,7 @@
     }"
     :breakpoints="props.breakpoints"
     :loop="props.loop"
-    class="!pt-12"
+    class="!pt-16"
     @swiper="onSwiper"
     @click="onClick"
   >
@@ -51,15 +51,11 @@
             "
             class="aspect-square transition-transform cursor-zoom-in rounded-box border bg-neutral md:group-hover:scale-125"
             :class="[
-              props.imageCircle
-                ? 'rounded-full w-4/5  object-scale-down border-transparent'
-                : 'rounded-box aspect-video object-contain border-base-300 ',
-              { 'bg-base-100': props.imageCircle },
+              'rounded-box w-full max-w-screen-md  aspect-video  object-contain border-base-300 ',
             ]"
           />
           <div
             class="w-full h-24 bottom-0 transition-colors duration-300 left-0 z-40 px-4 absolute bg-base-100/20 md:group-hover:bg-base-100/80"
-            :class="props.imageCircle ? 'flex flex-col items-center' : ''"
           >
             <p class="text-lg mt-4 mb-2 font-medium capitalize">
               {{ item.title }}
@@ -105,9 +101,6 @@ const props = defineProps<{
     to: string;
   };
   loop?: boolean;
-  contentOnImage?: boolean;
-  imageCircle?: boolean;
-  imageScale?: boolean;
   allowTouchMove?: boolean;
 }>();
 
