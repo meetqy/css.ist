@@ -23,6 +23,10 @@ export const useAsset = (
   path = "",
   modifiers?: { [key: string]: string }
 ) => {
+  if (url.includes("http")) {
+    return url;
+  }
+
   return useNuxtApp().$img(`wcao${path}/${url}`.replace("//", "/"), modifiers, {
     provider: "ipx",
     baseURL: "https://p.wcao.cc/_ipx",
