@@ -21,7 +21,7 @@ export const websiteConfig: {
 export const useAsset = (
   url = "",
   path = "",
-  modifiers?: { [key: string]: string }
+  modifiers?: { [key: string]: string | number }
 ) => {
   if (url.includes("http")) {
     return url;

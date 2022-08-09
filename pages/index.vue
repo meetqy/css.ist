@@ -4,7 +4,8 @@
       <CoreSwiper
         title="firstStage"
         :data="firstStage"
-        :loop="true"
+        :allow-touch-move="true"
+        :cat="{ to: '/tag/firstStage', name: 'see all' }"
         :breakpoints="{
           1024: {
             slidesPerView: 1,

@@ -1,6 +1,6 @@
 <template>
   <Swiper
-    :allow-touch-move="false"
+    :allow-touch-move="props.allowTouchMove"
     :modules="modules"
     :navigation="{
       nextEl: '.cu-swiper-button-next',
@@ -38,32 +38,27 @@
     </div>
 
     <SwiperSlide v-for="item in props.data" :key="item._id">
-      <NuxtLink :to="item._path">
-        <div
-          class="relative !h-96 w-full overflow-hidden flex flex-col items-center"
-          :class="[{ 'pt-4': props.imageCircle }]"
-        >
+      <div class="group overflow-hidden rounded-box">
+        <NuxtLink :to="item._path">
           <img
             v-lazy="
               vLazy(
                 useAsset(item.previews[0], item._path, {
                   format: 'webp',
-                  s: '800x500',
+                  w: 960,
                 })
               )
             "
-            class="aspect-square max-h-72 transition-transform cursor-zoom-in rounded-box border hover:scale-150 bg-neutral"
+            class="aspect-square transition-transform cursor-zoom-in rounded-box border bg-neutral md:group-hover:scale-125"
             :class="[
               props.imageCircle
-                ? 'rounded-full w-4/5 object-scale-down border-transparent'
-                : 'rounded-box w-full object-cover border-base-300 ',
+                ? 'rounded-full w-4/5  object-scale-down border-transparent'
+                : 'rounded-box aspect-video object-contain border-base-300 ',
               { 'bg-base-100': props.imageCircle },
             ]"
-            :style="`height: ${imgHeight};`"
           />
-
           <div
-            class="w-full h-24 bottom-0 left-0 z-40 px-4 absolute bg-base-100/80"
+            class="w-full h-24 bottom-0 transition-colors duration-300 left-0 z-40 px-4 absolute bg-base-100/20 md:group-hover:bg-base-100/80"
             :class="props.imageCircle ? 'flex flex-col items-center' : ''"
           >
             <p class="text-lg mt-4 mb-2 font-medium capitalize">
@@ -80,8 +75,9 @@
               </NuxtLink>
             </p>
           </div>
-        </div>
-      </NuxtLink>
+          <!-- </div> -->
+        </NuxtLink>
+      </div>
     </SwiperSlide>
   </Swiper>
 </template>
@@ -112,15 +108,8 @@ const props = defineProps<{
   contentOnImage?: boolean;
   imageCircle?: boolean;
   imageScale?: boolean;
+  allowTouchMove?: boolean;
 }>();
-
-const imgHeight = computed(() => {
-  if (props.imageCircle) {
-    return "auto";
-  }
-
-  return props.contentOnImage ? "100%" : "calc(100% - 96px)";
-});
 
 const onSwiper = (swiper: SwiperType) => {
   setTimeout(() => {

@@ -6,7 +6,7 @@
       {{ name }}
     </h1>
 
-    <div class="lg:columns-3 lg:gap-8 columns-1 gap-2 mt-8">
+    <div class="2xl:columns-3 lg:columns-2 lg:gap-8 columns-1 gap-2 mt-8">
       <div
         v-for="item in list"
         :key="item._id"
@@ -18,11 +18,11 @@
               vLazy(
                 useAsset(item.previews[0], item._path, {
                   format: 'webp',
-                  s: '500x500',
+                  w: 960,
                 })
               )
             "
-            class="object-cover max-h-96 border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
+            class="object-cover bg-neutral border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
           />
         </NuxtLink>
 
