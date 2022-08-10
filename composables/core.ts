@@ -15,29 +15,15 @@ export const websiteConfig: {
   asset: "https://strapi.wcao.cc",
 };
 
-/**
- * 获取资源
- */
-export const useAsset = (
-  url = "",
-  path = "",
-  modifiers?: { [key: string]: string | number }
-) => {
-  if (url.includes("http")) {
-    return url;
-  }
+// image cloudflare
+export const useCF = (path = "", url = "", type: "public" | "sm" | "2xl") => {
+  const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
+  const id = `wcao${path}/${url}`
+    .replaceAll("//", "/")
+    .replaceAll("/", "-")
+    .replace(/\.(jpg|png|jpeg|gif)/g, "");
 
-  const arr = [];
-  for (const k in modifiers) {
-    const v = modifiers[k];
-
-    arr.push(k.substring(0, 1) + "_" + v);
-  }
-
-  return (
-    "https://p.wcao.cc/_ipx/" +
-    `${arr.join(",")}/wcao/${path}/${url}`.replaceAll("//", "/")
-  );
+  return `${baseURL}/${id}/${type}`;
 };
 
 /**
