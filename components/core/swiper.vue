@@ -41,14 +41,7 @@
       <div class="group overflow-hidden rounded-box">
         <NuxtLink :to="item._path">
           <img
-            v-lazy="
-              vLazy(
-                useAsset(item.previews[0], item._path, {
-                  format: 'webp',
-                  w: 960,
-                })
-              )
-            "
+            v-lazy="vLazy(useCF(item._path, item.previews[0], 'public'))"
             class="aspect-square transition-transform cursor-zoom-in rounded-box border bg-base-200/20 md:group-hover:scale-125"
             :class="[
               'rounded-box w-full max-w-screen-md  aspect-video  object-contain border-base-300 ',

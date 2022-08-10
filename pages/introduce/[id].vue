@@ -34,14 +34,7 @@
               >
                 <SwiperSlide v-for="(item, i) in page.previews" :key="i">
                   <img
-                    v-lazy="
-                      vLazy(
-                        useAsset(item, page._path, {
-                          format: 'webp',
-                          s: '300x300',
-                        })
-                      )
-                    "
+                    v-lazy="vLazy(useCF(page._path, item, 'sm'))"
                     class="w-full h-24 object-cover object-top !m-1 outline-4 outline"
                     :class="
                       activePreviewIndex === i
@@ -71,14 +64,7 @@
               class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
             >
               <img
-                v-lazy="
-                  vLazy(
-                    useAsset(item, page._path, {
-                      format: 'webp',
-                      w: '1920',
-                    })
-                  )
-                "
+                v-lazy="vLazy(useCF(page._path, item, '2xl'))"
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
                 :class="full ? 'w-full' : 'lg:w-1/3 w-full'"
                 @click="full = !full"
@@ -123,14 +109,7 @@
               @click="$router.push(item._path)"
             >
               <img
-                v-lazy="
-                  vLazy(
-                    useAsset(item.previews[0], item._path, {
-                      format: 'webp',
-                      w: 480,
-                    })
-                  )
-                "
+                v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
                 class="w-full aspect-video object-contain rounded-box border border-base-200 shadow bg-base-200/20"
               />
               <p class="px-2">{{ item.title }}</p>
