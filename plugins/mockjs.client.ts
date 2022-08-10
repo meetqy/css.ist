@@ -35,6 +35,7 @@ export default defineNuxtPlugin(() => {
             content: "@paragraph(1, 12)",
             fav: "@natural(1,999)",
             author: "@name",
+            date: "@date('yyyy-MM-dd')",
             image: () =>
               useUnsplash(
                 (unsplash && unsplash[0]) || "/user/feeypflanzen/",
@@ -50,6 +51,7 @@ export default defineNuxtPlugin(() => {
             content: "@cparagraph(1, 12)",
             fav: "@natural(1,999)",
             author: "@cname",
+            date: "@date('yyyy-MM-dd')",
             image: () =>
               useUnsplash(
                 (unsplash && unsplash[0]) || "/user/feeypflanzen/",
