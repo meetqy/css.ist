@@ -86,14 +86,14 @@
             </div>
           </template>
 
-          <p class="mt-8 flex items-center">
-            <span class="material-symbols-outlined"> sell </span>
-            <span class="ml-1 uppercase">tags:</span>
+          <p class="flex items-center flex-wrap mt-6">
+            <span class="material-symbols-outlined mt-2"> sell </span>
+            <span class="ml-1 mt-2 uppercase">tags:</span>
             <NuxtLink
               v-for="item in page.tags"
               :key="item"
               :to="`/tag/${item}`"
-              class="btn btn-primary btn-xs ml-2 !no-underline !text-primary-content"
+              class="btn mt-2 btn-primary btn-xs ml-2 !no-underline !text-primary-content"
             >
               {{ item }}
             </NuxtLink>
