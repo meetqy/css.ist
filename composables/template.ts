@@ -193,3 +193,14 @@ export const templateIcons = (
     `class="material-symbols-outlined ${className}" style="${style}"`
   );
 };
+
+// 模板 页面能公用
+// 登录、注册 等类似
+export const templatePage = {
+  en: {
+    read: "read more",
+  },
+  zh: {
+    read: "查看更多",
+  },
+};
