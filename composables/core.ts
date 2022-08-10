@@ -15,8 +15,18 @@ export const websiteConfig: {
   asset: "https://strapi.wcao.cc",
 };
 
-// image cloudflare
-export const useCF = (path = "", url = "", type: "public" | "sm" | "2xl") => {
+/**
+ * image cloudflare
+ * @param path      nuxt-content path
+ * @param filename  previews中的名称
+ * @param type      string 灵活变体   https://developers.cloudflare.com/images/cloudflare-images/transform/flexible-variants/
+ * @returns
+ */
+export const useCF = (
+  path = "",
+  url = "",
+  type: "public" | "sm" | "2xl" | string
+) => {
   const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
   const id = `wcao${path}/${url}`
     .replaceAll("//", "/")

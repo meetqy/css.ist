@@ -64,7 +64,7 @@
               class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
             >
               <img
-                v-lazy="vLazy(useCF(page._path, item, '2xl'))"
+                v-lazy="vLazy(useCF(page._path, item, 'w=1560'))"
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
                 :class="full ? 'w-full' : 'lg:w-1/3 w-full'"
                 @click="full = !full"

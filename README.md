@@ -87,3 +87,7 @@ const data = Mock.mock({
 模板太多，命名就有点困难，所以用以下游戏角色名字，代替。
 
 - [League of Legends Wiki](https://leagueoflegends.fandom.com/wiki/List_of_champions)
+
+## 封面图、预览图
+
+ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac light`、`iphone dark`、`iphone light`
