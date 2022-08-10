@@ -21,7 +21,7 @@
             v-if="page.previews"
             class="shadow flex items-center justify-between bg-base-100 overflow-hidden rounded-box flex-col lg:flex-row lg:pl-4 pt-4 lg:pt-0"
           >
-            <h1 class="!m-0">
+            <h1 class="!m-0 px-4 text-lg font-semibold">
               {{ page.title }}
             </h1>
 
