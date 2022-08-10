@@ -9,6 +9,6 @@
 
 <style lang="postcss">
 img[lazy="loading"] {
-  @apply opacity-30 bg-base-100;
+  @apply opacity-50;
 }
 </style>
