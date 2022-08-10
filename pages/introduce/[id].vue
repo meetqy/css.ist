@@ -68,7 +68,7 @@
               v-if="page.previews"
               v-show="activePreviewIndex === i"
               :key="i"
-              class="w-full relative flex-shrink-0 rounded-box bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 shadow"
+              class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
             >
               <img
                 v-lazy="
@@ -80,7 +80,7 @@
                   )
                 "
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
-                :class="full ? 'w-full' : 'w-1/3'"
+                :class="full ? 'w-full' : 'lg:w-1/3 w-full'"
                 @click="full = !full"
               />
             </div>
