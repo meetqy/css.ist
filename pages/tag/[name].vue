@@ -15,7 +15,7 @@
         <NuxtLink :to="item._path">
           <img
             v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
-            class="object-cover bg-base-200/20 border border-base-300 object-top w-full h-full rounded-box cursor-zoom-in"
+            class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
           />
         </NuxtLink>
 
@@ -23,7 +23,7 @@
           <h3 class="text-lg mt-4 mb-2 font-medium capitalize">
             {{ item.title }}
           </h3>
-          <p>
+          <p class="line-clamp-1">
             <NuxtLink
               v-for="tag in item.tags"
               :key="tag"
