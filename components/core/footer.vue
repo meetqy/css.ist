@@ -16,13 +16,22 @@
       </svg>
 
       <p class="mt-4">Copyright © 2022</p>
-      <p>All right reserved by wcao.cc</p>
+      <p>
+        All right reserved by
+        <a
+          href="https://wcao.cc"
+          target="_blank"
+          class="text-primary font-bold hover:underline"
+        >
+          wcao.cc
+        </a>
+      </p>
       <p>
         other website:
         <a
           href="https://youweb.cc"
           target="_blank"
-          class="text-primary font-bold hover:underline"
+          class="text-secondary font-bold hover:underline"
         >
           youweb.cc
         </a>
