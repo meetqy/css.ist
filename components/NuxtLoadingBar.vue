@@ -32,6 +32,7 @@ const clear = () => {
 };
 
 const start = () => {
+  // console.log("loading start");
   clear();
   data.percent = 0;
   data.canSucceed = true;
@@ -42,6 +43,8 @@ const start = () => {
     startTimer();
   }
 };
+
+defineExpose({ start });
 // const set = (num) => {
 //   data.show = true;
 //   data.canSucceed = true;
@@ -79,9 +82,9 @@ const startTimer = () => {
 // // Hooks
 const nuxtApp = useNuxtApp();
 
-nuxtApp.hook("page:start", () => {
-  start();
-});
+// nuxtApp.hook("page:start", () => {
+//   start();
+// });
 nuxtApp.hook("page:finish", finish);
 
 // onBeforeMount(start);
