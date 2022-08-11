@@ -4,7 +4,8 @@
 
 <div align='center'>
   
-# wcao.cc
+# wcao.cc 
+*卧槽 - 表示一种惊讶，赞美*
   
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![MIT](https://img.shields.io/github/license/meetqy/wcao.cc)
   
