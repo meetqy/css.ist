@@ -1,13 +1,11 @@
 {
   "types": [
-    { "type": "feat", "section": "Features" },
-    { "type": "fix", "section": "Bug Fixes" },
-    { "type": "template", "section": "New Temapltes" },
-    { "type": "chore", "hidden": true },
-    { "type": "docs", "hidden": true },
-    { "type": "style", "hidden": true },
-    { "type": "refactor", "hidden": true },
-    { "type": "perf", "hidden": true },
-    { "type": "test", "hidden": true }
+    { "type": "feat", "section": "💡 Features" },
+    { "type": "fix", "section": "🐛 Bug Fixes" },
+    { "type": "template", "section": "📜 Temapltes" },
+    { "type": "perf", "section": "🚀 Prefs" },
+    { "type": "build", "section": "⚒️ Builds" },
+    { "type": "docs", "section": "📃 Documents" },
+    { "type": "chore", "hidden": true }
   ]
 }

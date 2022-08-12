@@ -16,50 +16,25 @@
       "title": "Bug Fixes",
       "emoji": "✨"
     },
+    "perf": {
+      "description": "A code change that improves performance(用户界面表现不符合预期，功能优化)",
+      "title": "Performance Improvements",
+      "emoji": "🚀"
+    },
+    "build": {
+      "description": "涉及项目管理，比如自动化配置等",
+      "title": "Builds",
+      "emoji": "🛠"
+    },
     "docs": {
       "description": "Documentation only changes",
       "title": "Documentation",
       "emoji": "📚"
     },
-    "style": {
-      "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
-      "title": "Styles",
-      "emoji": "💎"
-    },
-    "refactor": {
-      "description": "A code change that neither fixes a bug nor adds a feature",
-      "title": "Code Refactoring",
-      "emoji": "📦"
-    },
-    "perf": {
-      "description": "A code change that improves performance",
-      "title": "Performance Improvements",
-      "emoji": "🚀"
-    },
-    "test": {
-      "description": "Adding missing tests or correcting existing tests",
-      "title": "Tests",
-      "emoji": "🚨"
-    },
-    "build": {
-      "description": "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)",
-      "title": "Builds",
-      "emoji": "🛠"
-    },
-    "ci": {
-      "description": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
-      "title": "Continuous Integrations",
-      "emoji": "⚙️"
-    },
     "chore": {
       "description": "Other changes that don't modify src or test files",
       "title": "Chores",
       "emoji": "♻️"
-    },
-    "revert": {
-      "description": "Reverts a previous commit",
-      "title": "Reverts",
-      "emoji": "🗑"
     }
   }
 }

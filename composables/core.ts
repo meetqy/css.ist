@@ -2,7 +2,7 @@
  * 生产环境?
  * @returns boolean
  */
-export const useProduction = () => process.env.NODE_ENV === "producton";
+export const useProduction = () => process.env.NODE_ENV === "production";
 
 /**
  * 网站基础配置
@@ -27,13 +27,17 @@ export const useCF = (
   url = "",
   type: "public" | "sm" | "2xl" | string
 ) => {
-  const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
-  const id = `wcao${path}/${url}`
-    .replaceAll("//", "/")
-    .replaceAll("/", "-")
-    .replace(/\.(jpg|png|jpeg|gif)/g, "");
+  if (useProduction()) {
+    const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
+    const id = `wcao${path}/${url}`
+      .replaceAll("//", "/")
+      .replaceAll("/", "-")
+      .replace(/\.(jpg|png|jpeg|gif)/g, "");
 
-  return `${baseURL}/${id}/${type}`;
+    return `${baseURL}/${id}/${type}`;
+  } else {
+    return `/introduce/${url}`.replaceAll("//", "/");
+  }
 };
 
 /**
