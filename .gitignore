@@ -6,3 +6,7 @@ node_modules
 .env
 dist
 .output
+
+public/introduce/*.png
+public/1.js
+public/a.sh

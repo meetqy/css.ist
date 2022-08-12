@@ -2,7 +2,7 @@
  * 生产环境?
  * @returns boolean
  */
-export const useProduction = () => process.env.NODE_ENV === "producton";
+export const useProduction = () => process.env.NODE_ENV === "production";
 
 /**
  * 网站基础配置

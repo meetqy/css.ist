@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="w-screen h-screen flex items-center bg-base-100 overflow-y-scroll"
-  >
+  <div class="w-screen h-screen flex items-center bg-base-100 overflow-y-auto">
     <section
       class="container lg:p-10 p-5 m-auto grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]"
     >
@@ -9,30 +7,27 @@
         class="text-primary-content bg-primary/60 rounded-box lg:p-10 p-5 flex flex-col justify-center"
       >
         <h1 class="lg:text-6xl text-4xl font-bold font-serif mb-5">
-          Contact Us
+          {{ baseInfo[lang].title }}
         </h1>
         <p class="text-lg mb-5">
-          This is a contact form using Odyssey's form components to create a
-          contact form component. The contact form is setup to use Netlify's
-          form detection; however, it can easily be translated to other popular
-          form services such as Formspree, Getform, Formspark, etc.
+          {{ baseInfo[lang].subtitle }}
         </p>
         <div class="grid lg:inline-block">
           <em>
-            <a class="underline"> (800) 867-5309 </a>
+            <a class="underline"> {{ $Mock.Random.guid() }} </a>
           </em>
           •
           <em>
-            <a class="underline"> hello@ourcompany.com </a>
+            <a class="underline"> {{ $Mock.Random.email() }} </a>
           </em>
         </div>
       </div>
 
       <!-- form -->
       <div class="lg:px-10 lg:mt-0 mt-10">
-        <form class="w-full grid gap-5">
+        <div class="w-full grid gap-5">
           <div class="w-full flex flex-col">
-            <label for="Name">Name</label>
+            <label for="Name">{{ page.name }}</label>
             <input
               type="text"
               name="Name"
@@ -42,7 +37,7 @@
           </div>
 
           <div class="w-full flex flex-col">
-            <label for="Email">Email</label>
+            <label for="Email">{{ page.email }}</label>
             <input
               type="email"
               name="Email"
@@ -52,7 +47,7 @@
           </div>
 
           <div class="w-full flex flex-col">
-            <label>How Did You Hear About Us?</label>
+            <label>{{ page.how }}</label>
             <select class="select select-bordered mt-1">
               <option value="" disabled>==SELECT AN OPTION==</option>
               <option value="Google Search">Google Search</option>
@@ -62,7 +57,7 @@
           </div>
 
           <div class="w-full flex flex-col">
-            <label for="Message" class="astro-2UVR42E5">Message</label>
+            <label for="Message">{{ page.message }}</label>
             <textarea
               name="Message"
               placeholder="Your message here..."
@@ -72,10 +67,50 @@
           </div>
 
           <div>
-            <button class="btn btn-primary capitalize">Submit</button>
+            <button class="btn btn-primary capitalize">
+              {{ page.submit }}
+            </button>
           </div>
-        </form>
+        </div>
       </div>
     </section>
   </div>
 </template>
+
+<script setup>
+const { $Mock } = useNuxtApp();
+
+const lang = ref("en");
+const route = useRoute();
+lang.value = route.query.lang || "en";
+
+watch(route, (v) => {
+  lang.value = v.query.lang || "en";
+  init();
+});
+
+const page = ref({});
+
+const init = () => {
+  page.value = {
+    en: {
+      name: "Name",
+      namePl: "John Doe",
+      email: "Email",
+      how: "How Did You Hear About Us?",
+      message: "Message",
+      submit: "submit",
+    },
+    zh: {
+      name: "昵称",
+      namePl: "John Doe",
+      email: "邮箱",
+      how: "你是怎么知道我们的?",
+      message: "备注",
+      submit: "提交",
+    },
+  }[lang.value];
+};
+
+onMounted(() => init());
+</script>
