@@ -7,13 +7,16 @@
           style="will-change: opacity"
           :style="{
             opacity:
-              scrollTop >= 0 && scrollTop < 200
-                ? Math.abs((scrollTop - 200) / 200)
+              scrollTop >= 0 && scrollTop < temp
+                ? Math.abs((scrollTop - temp) / temp)
                 : 0,
           }"
         >
           <div class="margin-top is-home-header">
-            <h1 class="home-header_h1">The Database<br />of Tomorrow</h1>
+            <h1 class="home-header_h1">
+              wcao, it's <br />
+              praise, surprise
+            </h1>
           </div>
           <div class="home-header_arrow-wrapper">
             <div class="scroll-to-continue">Scroll to continue</div>
@@ -141,14 +144,20 @@
         </div>
 
         <div
-          class="home-header_introducing-glaredb-component"
+          class="home-header_introducing-glaredb-component !z-[99999]"
           style="will-change: opacity"
-          :style="{ opacity: scrollTop > 200 ? (scrollTop - 200) / 743 : 0 }"
+          :style="{
+            opacity:
+              scrollTop > temp ? (scrollTop - temp) / (clientHeight - temp) : 0,
+          }"
         >
           <div class="introducing-glaredb_component">
-            <div class="margin-bottom margin-small">
-              <div class="text-style-overline-1 text-align-center">
-                introducing
+            <div class="margin-bottom margin-small !cursor-pointer">
+              <div
+                class="text-style-overline-1 text-align-center underline"
+                @click="show = true"
+              >
+                Ready go. 🚀
               </div>
             </div>
             <div class="introducing-glaredb_glaredb-text-wrapper">
@@ -156,7 +165,6 @@
                 <div
                   class="introducing-glaredb_glaredb-text outline-heading"
                   style="color: #faf8e2"
-                  @click="show = true"
                 >
                   wcao.cc
                 </div>
@@ -186,7 +194,7 @@
           style="will-change: transform; transform-style: preserve-3d"
           :style="{
             transform: `translate3d(0px, ${
-              -200 + scrollTop / 1.5
+              -temp + scrollTop / 1.5
             }px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
           }"
         ></div>
@@ -276,15 +284,30 @@
 <script setup>
 const router = useRouter();
 const show = ref(false);
+const clientHeight = ref(0);
+
+const scrollTop = ref(0);
+const temp = ref(0);
 
 onMounted(() => {
-  // console.log("----- onMounted -----");
+  const el = document.documentElement;
+  clientHeight.value = el.clientHeight;
+  temp.value = clientHeight.value / 2.5;
+  document.body.style = "overflow:hidden";
+  setTimeout(() => {
+    const T = setInterval(() => {
+      scrollTop.value += 3;
+      if (scrollTop.value >= clientHeight.value) {
+        document.body.style = "overflow:auto";
+        clearInterval(T);
+      }
+    }, 10);
+  }, 500);
+
   window.addEventListener("scroll", () => {
     scrollTop.value = document.documentElement.scrollTop;
   });
 });
-
-const scrollTop = ref(0);
 
 const loadingRef = ref(null);
 
