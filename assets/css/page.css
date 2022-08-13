@@ -1,0 +1,278 @@
+.home-header-sticky-container {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  height: 100vh;
+  backface-visibility: hidden;
+}
+.margin-bottom {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.margin-small {
+  margin: 1rem;
+}
+.text-style-overline-1 {
+  font-family: Barlow, sans-serif;
+  color: #55a59c;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.introducing-glaredb_glaredb-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.margin-bottom.is-introducing-glaredb {
+  padding-bottom: 3rem;
+}
+.margin-bottom {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.text-align-center {
+  text-align: center;
+}
+.max-width-medium {
+  width: 100%;
+  max-width: 40rem;
+}
+.introducing-glaredb_glaredb-text.outline-heading {
+  max-width: 100%;
+  font-family: "Big caslon", sans-serif;
+  font-size: 14rem;
+  font-weight: 400;
+}
+.text-size-large {
+  font-size: 1.5rem;
+}
+.introducing-glaredb_glaredb-text {
+  font-family: Ibmplexserif;
+  color: hsla(0, 0%, 96.1%, 0);
+  font-size: 12rem;
+  line-height: 1;
+  text-align: center;
+}
+.home-header_introducing-glaredb-component {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #30030a;
+  opacity: 0;
+  text-align: center;
+}
+.home-header-desktop_sky-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, #2f030a, #55a59c 28%, #ffdeba 67%);
+}
+
+.home-header-desktop_close-planets {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  overflow: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628e6171e87c24a6f2612833_planets-close.png");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-header-desktop_sun-glow.absolute-center {
+  z-index: 5;
+  overflow: hidden;
+  max-width: 112.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628a90aa90f1890add1a5648_sun-glow%20(2)%20(1).svg");
+}
+.home-header-mobile_illustration {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none;
+}
+.home-header-desktop_server-buildings {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: block;
+  overflow: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628aab2d2cc6d568f2361110_servers%20(2).svg");
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-header-desktop_close-buildings {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  overflow: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/62b47b193b1880342a4c8e19_far-buildings-2%20(2)%20(1).png");
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-header-desktop_far-buildings {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  overflow: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628e5da8554806747bc7115f_far-buildings%20(8)%20(1).png");
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-header-desktop_sun-glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628a90aa90f1890add1a5648_sun-glow%20(2)%20(1).svg");
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: 1;
+}
+.home-header-desktop_sky-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, #2f030a, #55a59c 28%, #ffdeba 67%);
+}
+.home-header-desktop_stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  overflow: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628e6189156dc703bd7e225d_stars.png");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.5;
+}
+.home-header-desktop_far-planets {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  overflow: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628e617ee30eb3d761fe0204_planets-far.png");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.home-header_text-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 100;
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.margin-top.is-home-header {
+  margin-top: 3rem;
+}
+
+.margin-top {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+h1 {
+  margin: 0;
+  font-family: "Big caslon", sans-serif;
+  color: #faf8e2;
+  font-size: 4.5rem;
+  line-height: 4.25rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+.home-header_arrow-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.scroll-to-continue {
+  width: 14rem;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  background-image: url("https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628a8bd4afeee66ef52cdfad_Rectangle%20365%20(2).svg");
+  background-position: 50% 100%;
+  background-size: 240px 22px;
+  background-repeat: no-repeat;
+  font-family: Barlow, sans-serif;
+  color: #faf8e2;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.home-header_lottie-arrow-wrapper {
+  width: 5rem;
+  margin-top: -0.75rem;
+}

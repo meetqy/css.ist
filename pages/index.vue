@@ -31,4 +31,5 @@ const { data } = await useAsyncData("firstStage", () => {
 });
 
 const [firstStage] = data.value;
+// console.log(firstStage);
 </script>
