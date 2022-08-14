@@ -1,8 +1,8 @@
 <template>
-  <button class="btn btn-square btn-ghost">
+  <button class="btn btn-square btn-ghost" @click="toggleDark()">
     <label class="swap swap-rotate">
       <!-- this hidden checkbox controls the state -->
-      <input type="checkbox" :checked="isDark" @click="toggleDark()" />
+      <input type="checkbox" :checked="isDark" />
       <!-- sun icon -->
       <span class="material-symbols-outlined swap-on"> light_mode </span>
       <!-- moon icon -->
