@@ -63,6 +63,15 @@
               :key="i"
               class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
             >
+              <div class="sticky left-0 top-0 pt-2 pl-2">
+                <a
+                  :href="github"
+                  target="_blank"
+                  class="btn btn-square btn-ghost !no-underline"
+                >
+                  <span class="material-symbols-outlined"> code </span>
+                </a>
+              </div>
               <img
                 v-lazy="vLazy(useCF(page._path, item, 'w=1560'))"
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
@@ -98,6 +107,20 @@
             >》
           </div>
 
+          <p class="mt-4 flex items-center">
+            <span class="material-symbols-outlined text-info"> code </span>
+            <span class="ml-1 uppercase">code:</span>
+            <span>
+              <a
+                :href="github"
+                target="_blank"
+                class="ml-1 capitalize text-info"
+              >
+                github
+              </a>
+            </span>
+          </p>
+
           <h2 class="capitalize">more</h2>
           <div
             class="grid transition-all xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4"
@@ -127,6 +150,15 @@ import "swiper/css";
 
 const { page } = useContent();
 
+const github = computed(() => {
+  return page
+    ? `https://github.com/meetqy/wcao.cc/blob/dev/components/template/${page.value._path.replace(
+        "/introduce/",
+        ""
+      )}.vue`
+    : "";
+});
+
 // 当前选中的预览图
 const activePreviewIndex = ref(0);
 const full = ref(false);
@@ -136,16 +168,20 @@ const onTap = (swiper) => {
   swiper.slideTo(swiper.clickedIndex);
 };
 
-const res = await getContentByTag(
-  page.value.tags,
-  {
-    pageIndex: 1,
-    pageSize: 12,
-  },
-  "$in"
-);
+const moreContent = ref([]);
 
-const moreContent = res.filter((item) => item._id !== page.value._id);
+onMounted(async () => {
+  const res = await getContentByTag(
+    page.value.tags,
+    {
+      pageIndex: 1,
+      pageSize: 12,
+    },
+    "$in"
+  );
+
+  moreContent.value = res.filter((item) => item._id !== page.value._id);
+});
 
 const toTop = () => {
   document.querySelector("#drawer-content").scrollTop = 0;
