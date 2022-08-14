@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/meetqy/wcao.cc/compare/v2.0.1...v2.0.2) (2022-08-14)
+
+
+### ⚒️ 管理与维护
+
+* 自动生成版本 文案调整 ([fede35d](https://github.com/meetqy/wcao.cc/commit/fede35d04647500cdca705bddc0bbc6595bf1545))
+
+
+### 🚀 优化现有功能和UI
+
+* 返回顶部增加动画 ([cd2178a](https://github.com/meetqy/wcao.cc/commit/cd2178a5d27ccbf6f7f1da4f88a99ba3684a99eb))
+
 ### [2.0.1](https://github.com/meetqy/wcao.cc/compare/v2.0.0...v2.0.1) (2022-08-12)
 
 
