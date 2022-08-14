@@ -3,7 +3,11 @@
     <slot name="outside" />
     <div class="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div id="drawer-content" ref="drawerContent" class="drawer-content">
+      <div
+        id="drawer-content"
+        ref="drawerContent"
+        class="drawer-content scroll-smooth"
+      >
         <!-- mobile navbar -->
         <label
           for="my-drawer-2"

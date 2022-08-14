@@ -299,14 +299,13 @@ onMounted(() => {
       scrollTop.value += 3;
       if (scrollTop.value >= clientHeight.value) {
         document.body.style = "overflow:auto";
+        window.addEventListener("scroll", () => {
+          scrollTop.value = document.documentElement.scrollTop;
+        });
         clearInterval(T);
       }
     }, 10);
   }, 500);
-
-  window.addEventListener("scroll", () => {
-    scrollTop.value = document.documentElement.scrollTop;
-  });
 });
 
 const loadingRef = ref(null);
