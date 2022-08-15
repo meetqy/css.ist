@@ -19,11 +19,10 @@
 
 ## 🐹 模板特点
 
-- 使用`mockjs`生成随机数据，可以覆盖80%的场景，比如段落过长、过短等
+- 使用`mockjs`生成随机数据，可以覆盖 80%的场景，比如段落过长、过短等
 - 支持中/英文展示，有些网页因为语言问题，可能会导致偏差很大
 - 支持响应式，所有模板至少能够适配 `mac`、`ipad`、`iphone`
-- 基于daisyui，所以支持大量主题，后期也能根据自己的喜欢自定义主题
-
+- 基于 daisyui，所以支持大量主题，后期也能根据自己的喜欢自定义主题
 
 ## 🐶 模板中公用资源、方法
 
@@ -33,7 +32,6 @@
 - [picsum.photos](https://picsum.photos/)
 - [mockjs](http://mockjs.com)
 - [unsplash](https://unsplash.com)
-
 
 ## 🐭 目录
 
@@ -58,22 +56,19 @@
     - [...slug].vue                     # 介绍详情
 ```
 
-
-
 ## 🐱 截图
 
-*home* 
+_home_
 ![home](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/3bf43943-b161-4f84-6300-950b46570100/public)
 
-*introduce*
+_introduce_
 ![introduce](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/95087266-b9b7-4261-58c6-6f88f2172a00/public)
 
-*preview template - theme*
+_preview template - theme_
 ![preview template - theme](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/2c3be84f-d76a-4db3-a350-9de16463bd00/public)
 
-*preview template - language*
+_preview template - language_
 ![preview template - language](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/9001aa78-95ab-4ede-66ea-1f42ab2dcc00/public)
-
 
 ### 🐰 Mock Data/多语言
 
@@ -129,3 +124,13 @@ const data = Mock.mock({
 ## 🐨 封面图、预览图
 
 ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac light`、`iphone dark`、`iphone light`
+
+## 版本管理及维护
+
+1. iusses 中创建分支
+2. 完成之后合并到 dev
+3. 触发 vercel 发布 dev 版本
+4. [dev 分支] `yarn dry-run` 查看自动生成 version
+5. [dev 分支] `yarn release` 升级版本
+6. 合并到 main 分支
+7. 触发 vercel 发布稳定版
