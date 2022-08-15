@@ -7,6 +7,6 @@ node_modules
 dist
 .output
 
-public/introduce/*.png
+public/introduce/*
 public/1.js
 public/a.sh

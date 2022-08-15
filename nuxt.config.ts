@@ -6,6 +6,12 @@ import eslintPlugin from "vite-plugin-eslint";
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
 
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml"],
+    },
+  },
+
   images: {
     domains: ["p.wcao.cc"],
   },
