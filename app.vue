@@ -12,170 +12,54 @@
                 : 0,
           }"
         >
-          <div class="margin-top is-home-header">
-            <h1 class="home-header_h1">
-              wcao, it's <br />
-              praise, surprise
+          <div class="pt-40">
+            <h1 class="md:text-7xl text-4xl text-neutral-content/70 font-serif">
+              wcao, it's <br />praise, surprise
             </h1>
           </div>
-          <div class="home-header_arrow-wrapper">
-            <div class="scroll-to-continue">Scroll to continue</div>
-            <div class="home-header_lottie-arrow-wrapper">
+          <div class="mt-8 flex justify-center items-center flex-col">
+            <div
+              class="text-neutral-content/70 relative uppercase md:text-xl font-serif tracking-widest"
+            >
+              SCROLL TO CONTINUE
               <div
-                data-w-id="6c182e9f-7fbd-e1c6-49ea-0c0076d46f90"
-                data-animation-type="lottie"
-                data-src="https://uploads-ssl.webflow.com/628a8bd4afeee681662cdf4b/628a8bd4afeee621e02cdf93_lf30_editor_kkiaa7zz.json"
-                data-loop="1"
-                data-direction="1"
-                data-autoplay="1"
-                data-is-ix2-target="0"
-                data-renderer="svg"
-                data-default-duration="2"
-                data-duration="3"
+                class="bg-error md:h-4 h-2 w-full absolute md:top-4 top-3 -z-10"
+              ></div>
+            </div>
+            <div class="md:mt-12 mt-6">
+              <span
+                class="material-symbols-outlined animate-bounce text-neutral-content/70"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1080 1080"
-                  width="1080"
-                  height="1080"
-                  preserveAspectRatio="xMidYMid meet"
-                  style="
-                    width: 100%;
-                    height: 100%;
-                    transform: translate3d(0px, 0px, 0px);
-                  "
-                >
-                  <defs>
-                    <clipPath id="__lottie_element_234">
-                      <rect width="1080" height="1080" x="0" y="0"></rect>
-                    </clipPath>
-                    <clipPath id="__lottie_element_236">
-                      <path d="M0,0 L1080,0 L1080,1080 L0,1080z"></path>
-                    </clipPath>
-                  </defs>
-                  <g clip-path="url(#__lottie_element_234)">
-                    <g
-                      clip-path="url(#__lottie_element_236)"
-                      transform="matrix(0,1,-1,0,1080,61.75433349609375)"
-                      opacity="1"
-                      style="display: block"
-                    >
-                      <g
-                        transform="matrix(1,0,0,1,540,540)"
-                        opacity="1"
-                        style="display: block"
-                      >
-                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                          <path
-                            fill="rgb(251,247,245)"
-                            fill-opacity="1"
-                            d=" M200,0 C200,0 200,0 200,0 C200,5.519000053405762 195.5189971923828,10 190,10 C190,10 -190,10 -190,10 C-195.5189971923828,10 -200,5.519000053405762 -200,0 C-200,0 -200,0 -200,0 C-200,-5.519000053405762 -195.5189971923828,-10 -190,-10 C-190,-10 190,-10 190,-10 C195.5189971923828,-10 200,-5.519000053405762 200,0z"
-                          ></path>
-                          <path
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                            fill-opacity="0"
-                            stroke-miterlimit="4"
-                            stroke="rgb(0,0,0)"
-                            stroke-opacity="1"
-                            stroke-width="0"
-                            d=" M200,0 C200,0 200,0 200,0 C200,5.519000053405762 195.5189971923828,10 190,10 C190,10 -190,10 -190,10 C-195.5189971923828,10 -200,5.519000053405762 -200,0 C-200,0 -200,0 -200,0 C-200,-5.519000053405762 -195.5189971923828,-10 -190,-10 C-190,-10 190,-10 190,-10 C195.5189971923828,-10 200,-5.519000053405762 200,0z"
-                          ></path>
-                        </g>
-                      </g>
-                      <g
-                        transform="matrix(1,0,0,1,750,402)"
-                        opacity="1"
-                        style="display: block"
-                      >
-                        <g
-                          opacity="1"
-                          transform="matrix(0.7071067690849304,0.7071067690849304,-0.7071067690849304,0.7071067690849304,-80,74.5)"
-                        >
-                          <path
-                            fill="rgb(251,247,245)"
-                            fill-opacity="1"
-                            d=" M100,0 C100,0 100,0 100,0 C100,5.519000053405762 95.51899719238281,10 90,10 C90,10 -90,10 -90,10 C-95.51899719238281,10 -100,5.519000053405762 -100,0 C-100,0 -100,0 -100,0 C-100,-5.519000053405762 -95.51899719238281,-10 -90,-10 C-90,-10 90,-10 90,-10 C95.51899719238281,-10 100,-5.519000053405762 100,0z"
-                          ></path>
-                          <path
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                            fill-opacity="0"
-                            stroke-miterlimit="4"
-                            stroke="rgb(0,0,0)"
-                            stroke-opacity="1"
-                            stroke-width="0"
-                            d=" M100,0 C100,0 100,0 100,0 C100,5.519000053405762 95.51899719238281,10 90,10 C90,10 -90,10 -90,10 C-95.51899719238281,10 -100,5.519000053405762 -100,0 C-100,0 -100,0 -100,0 C-100,-5.519000053405762 -95.51899719238281,-10 -90,-10 C-90,-10 90,-10 90,-10 C95.51899719238281,-10 100,-5.519000053405762 100,0z"
-                          ></path>
-                        </g>
-                      </g>
-                      <g
-                        transform="matrix(1,0,0,1,749.5,529)"
-                        opacity="1"
-                        style="display: block"
-                      >
-                        <g
-                          opacity="1"
-                          transform="matrix(0.7071067690849304,-0.7071067690849304,0.7071067690849304,0.7071067690849304,-80,74.5)"
-                        >
-                          <path
-                            fill="rgb(251,247,245)"
-                            fill-opacity="1"
-                            d=" M100,0 C100,0 100,0 100,0 C100,5.519000053405762 95.51899719238281,10 90,10 C90,10 -90,10 -90,10 C-95.51899719238281,10 -100,5.519000053405762 -100,0 C-100,0 -100,0 -100,0 C-100,-5.519000053405762 -95.51899719238281,-10 -90,-10 C-90,-10 90,-10 90,-10 C95.51899719238281,-10 100,-5.519000053405762 100,0z"
-                          ></path>
-                          <path
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                            fill-opacity="0"
-                            stroke-miterlimit="4"
-                            stroke="rgb(0,0,0)"
-                            stroke-opacity="1"
-                            stroke-width="0"
-                            d=" M100,0 C100,0 100,0 100,0 C100,5.519000053405762 95.51899719238281,10 90,10 C90,10 -90,10 -90,10 C-95.51899719238281,10 -100,5.519000053405762 -100,0 C-100,0 -100,0 -100,0 C-100,-5.519000053405762 -95.51899719238281,-10 -90,-10 C-90,-10 90,-10 90,-10 C95.51899719238281,-10 100,-5.519000053405762 100,0z"
-                          ></path>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              </div>
+                south
+              </span>
             </div>
           </div>
         </div>
 
         <div
-          class="home-header_introducing-glaredb-component !z-[99999]"
+          class="home-header_introducing-glaredb-component"
           style="will-change: opacity"
           :style="{
             opacity:
               scrollTop > temp ? (scrollTop - temp) / (clientHeight - temp) : 0,
           }"
         >
-          <div class="introducing-glaredb_component">
-            <div class="margin-bottom margin-small !cursor-pointer">
-              <div
-                class="text-style-overline-1 text-align-center underline"
-                @click="show = true"
-              >
-                Ready go. 🚀
-              </div>
-            </div>
-            <div class="introducing-glaredb_glaredb-text-wrapper">
-              <div class="margin-bottom is-introducing-glaredb">
-                <div
-                  class="introducing-glaredb_glaredb-text outline-heading"
-                  style="color: #faf8e2"
-                >
-                  wcao.cc
-                </div>
-              </div>
-              <div class="max-width-medium">
-                <p class="text-size-large">
-                  Share reactive, multi-theme templates and components based on
-                  TailwindCSS, DaisyUI.
-                </p>
-              </div>
-            </div>
+          <div
+            class="text-center underline uppercase text-neutral-content md:text-base text-sm cursor-pointer"
+            @click="show = true"
+          >
+            🚀 ready go.
+          </div>
+          <div
+            class="md:text-[12rem] text-6xl my-8 text-neutral-content font-serif tracking-wider"
+          >
+            wcao.cc
+          </div>
+          <div class="max-w-xl mx-auto">
+            <p class="text-neutral-content/50 md:text-xl text-sm">
+              Share reactive, multi-theme templates and components based on
+              TailwindCSS, DaisyUI.
+            </p>
           </div>
         </div>
 
@@ -267,8 +151,6 @@
             }) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
           }"
         ></div>
-
-        <div class="home-header-mobile_illustration"></div>
       </div>
     </div>
 
