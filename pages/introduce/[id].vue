@@ -150,6 +150,11 @@ import "swiper/css";
 
 const { page } = useContent();
 
+useHead({
+  title: `${page.value.title} template,on tailwindcss,daisyui.`,
+  meta: {},
+});
+
 const github = computed(() => {
   return page
     ? `https://github.com/meetqy/wcao.cc/blob/dev/components/template/${page.value._path.replace(

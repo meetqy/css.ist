@@ -53,4 +53,8 @@ const { params } = route;
 const { name } = params;
 
 const { data: list } = useAsyncData(`tag/${name}`, () => getContentByTag(name));
+
+useHead({
+  title: `wcao.cc > tag > ${name}`,
+});
 </script>
