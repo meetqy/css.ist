@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/meetqy/wcao.cc/compare/v2.0.2...v2.1.0) (2022-08-16)
+
+
+### 🚀 优化现有功能和UI
+
+* 首页主题切换点击区域扩大 ([bd55a93](https://github.com/meetqy/wcao.cc/commit/bd55a9315a582b0abd225c092be0dfe6f59b95ea))
+
+
+### 📃 文档
+
+* 完善readme ([7ac96b5](https://github.com/meetqy/wcao.cc/commit/7ac96b5ec5a6bda7fc7a3031cfd412631404ce69))
+
+
+### 📜 新模板
+
+* add Aphelios the Weapon of the Faithful ([a8877ea](https://github.com/meetqy/wcao.cc/commit/a8877ea92d5680a78b0a23bba05770669c2e01aa))
+
+
+### 💡 新功能
+
+* 更新每个页面meta标签([#36](https://github.com/meetqy/wcao.cc/issues/36)) ([8beaf8e](https://github.com/meetqy/wcao.cc/commit/8beaf8ebf9ea6c3a27b4593228cdad8aa0bad1a0))
+* 快速复制每一个页面 [#5](https://github.com/meetqy/wcao.cc/issues/5) ([0e80551](https://github.com/meetqy/wcao.cc/commit/0e8055168c29d8dfa00356207f3a046625c3be4b))
+* sitemap ([0934ea8](https://github.com/meetqy/wcao.cc/commit/0934ea8540a4bec888c73c05a40981851e55c7c1))
+* sitemap([#34](https://github.com/meetqy/wcao.cc/issues/34)) ([2025929](https://github.com/meetqy/wcao.cc/commit/2025929705c525495fe30ea1833469f3270baa1e))
+
 ### [2.0.2](https://github.com/meetqy/wcao.cc/compare/v2.0.1...v2.0.2) (2022-08-14)
 
 
