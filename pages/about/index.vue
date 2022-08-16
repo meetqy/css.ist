@@ -4,3 +4,9 @@
     <p>完善中...</p>
   </main>
 </template>
+
+<script setup>
+useHead({
+  title: "wcao.cc > about",
+});
+</script>

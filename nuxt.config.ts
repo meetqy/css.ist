@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "wcao.cc 分享响应式、多主题模板和组件,基于tailwind、daisyui",
+      title: "wcao.cc 分享响应式、多主题模板和组件,基于tailwindcss、daisyui",
       meta: [
         {
           name: "keywords",
@@ -45,7 +45,8 @@ export default defineNuxtConfig({
         },
         {
           name: "description",
-          content: "wcao.cc 分享响应式、多主题模板和组件,基于tailwind、daisyui",
+          content:
+            "wcao.cc 分享响应式、多主题模板和组件,基于tailwindcss、daisyui",
         },
         {
           name: "viewport",

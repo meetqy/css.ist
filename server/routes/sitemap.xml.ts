@@ -26,6 +26,11 @@ export default defineEventHandler(async (event) => {
       url: doc._path,
       changefreq: "monthly",
     });
+
+    sitemap.write({
+      url: doc._path?.replace("introduce", "template"),
+      changefreq: "monthly",
+    });
   }
 
   sitemap.end();
