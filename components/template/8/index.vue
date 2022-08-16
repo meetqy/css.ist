@@ -38,32 +38,28 @@
         </div>
 
         <div
-          class="home-header_introducing-glaredb-component z-50"
+          class="home-header_introducing-glaredb-component"
           style="will-change: opacity"
           :style="{
             opacity:
               scrollTop > temp ? (scrollTop - temp) / (clientHeight - temp) : 0,
           }"
         >
-          <div class="introducing-glaredb_component">
-            <div class="relative z-50">
-              <div
-                class="text-center underline uppercase text-neutral-content md:text-base text-sm"
-              >
-                {{ page.c }}
-              </div>
+          <div
+            class="text-center underline uppercase text-neutral-content md:text-base text-sm"
+          >
+            {{ page.c }}
+          </div>
+          <div>
+            <div
+              class="md:text-[12rem] text-6xl my-8 text-neutral-content font-serif tracking-wider"
+            >
+              wcao.cc
             </div>
-            <div>
-              <div
-                class="md:text-[12rem] text-6xl my-8 text-neutral-content font-serif tracking-wider"
-              >
-                wcao.cc
-              </div>
-              <div class="max-w-xl mx-auto">
-                <p class="text-neutral-content/50 md:text-xl text-sm">
-                  {{ baseInfo[lang].subtitle }}
-                </p>
-              </div>
+            <div class="max-w-xl mx-auto">
+              <p class="text-neutral-content/50 md:text-xl text-sm">
+                {{ baseInfo[lang].subtitle }}
+              </p>
             </div>
           </div>
         </div>
@@ -210,7 +206,7 @@ onMounted(() => {
 }
 
 .home-header_introducing-glaredb-component {
-  @apply absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0 text-center bg-gradient-to-b from-accent-content  via-neutral-focus to-accent;
+  @apply absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center flex-col opacity-0 text-center bg-gradient-to-b from-accent-content  via-neutral-focus to-accent z-[50];
 }
 .home-header-desktop_sky-gradient {
   @apply absolute inset-0 z-[1] block overflow-hidden bg-gradient-to-b from-neutral-focus via-accent-focus to-warning/40;
@@ -219,6 +215,7 @@ onMounted(() => {
 .home-header-desktop_close-planets {
   @apply absolute inset-0 block overflow-hidden z-[10];
   background-image: url("./1.png");
+  background-position: 50% 0%;
 }
 
 .home-header-desktop_sun-glow {
@@ -259,6 +256,6 @@ onMounted(() => {
   background-position: 50% 0;
 }
 .home-header_text-wrapper {
-  @apply absolute inset-0 bottom-auto z-[100] flex h-[40vh] flex-col justify-center items-center text-center;
+  @apply absolute inset-0 bottom-auto z-[49] flex h-[40vh] flex-col justify-center items-center text-center;
 }
 </style>
