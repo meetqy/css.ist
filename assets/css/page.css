@@ -12,45 +12,45 @@
 
 .home-header-desktop_close-planets {
   @apply absolute inset-0 block overflow-hidden z-[10];
-  background-image: url("~/page/1.png");
+  background-image: url("/page/1.png");
   background-position: 50% 0%;
 }
 
 .home-header-desktop_sun-glow {
   @apply absolute inset-0 z-[3] bg-cover bg-no-repeat bg-scroll opacity-100;
-  background-image: url("~/page/6.svg");
+  background-image: url("/page/6.svg");
   background-position: 50% 100%;
 }
 
 .home-header-desktop_sun-glow.absolute-center {
   @apply z-[5] overflow-hidden max-w-[112.5rem] mx-auto;
-  background-image: url("~/page/2.svg");
+  background-image: url("/page/2.svg");
 }
 
 .home-header-desktop_server-buildings {
   @apply absolute inset-0 z-[9] overflow-hidden block bg-cover bg-no-repeat;
-  background-image: url("~/page/3.svg");
+  background-image: url("/page/3.svg");
   background-position: 50% 100%;
 }
 .home-header-desktop_close-buildings {
   @apply absolute inset-0 z-[7] overflow-hidden bg-cover bg-no-repeat;
-  background-image: url("~/page/4.png");
+  background-image: url("/page/4.png");
   background-position: 50% 100%;
 }
 .home-header-desktop_far-buildings {
   @apply absolute inset-0 z-[6] overflow-hidden bg-cover bg-no-repeat;
-  background-image: url("~/page/5.png");
+  background-image: url("/page/5.png");
   background-position: 50% 100%;
 }
 
 .home-header-desktop_stars {
   @apply absolute inset-0 overflow-hidden bg-cover bg-no-repeat bg-fixed opacity-50 z-[7];
-  background-image: url("~/page/7.png");
+  background-image: url("/page/7.png");
   background-position: 50% 0;
 }
 .home-header-desktop_far-planets {
   @apply absolute inset-0 overflow-hidden z-[3] bg-cover bg-no-repeat bg-fixed;
-  background-image: url("~/page/8.png");
+  background-image: url("/page/8.png");
   background-position: 50% 0;
 }
 .home-header_text-wrapper {
