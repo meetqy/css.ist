@@ -12,15 +12,23 @@
     <div class="star star5"></div>
 
     <div class="error">
-      <div class="text-base-content/90 text-9xl mb-8 tracking-widest">404</div>
-      <div class="text-base-content/80 font-medium text-2xl tracking-widest">
+      <div class="text-base-content/90 text-9xl mb-8 tracking-widest font-mono">
+        404
+      </div>
+      <div
+        class="text-base-content/80 font-medium text-2xl tracking-widest font-serif"
+      >
         Hmmm...
       </div>
-      <div class="text-base-content/40 text-sm mb-4">
+      <div class="text-base-content/40 text-sm mb-4 font-serif">
         It looks like one of the developers fell asleep.
       </div>
-      <button class="btn btn-primary rounded-full btn-sm">LOGIN</button>
-      <button class="btn btn-primary btn-outline btn-sm rounded-full ml-2">
+      <button class="btn btn-primary rounded-full btn-sm font-thin">
+        LOGIN
+      </button>
+      <button
+        class="btn btn-primary btn-outline btn-sm rounded-full font-thin ml-2"
+      >
         CONTACT
       </button>
     </div>
@@ -47,7 +55,13 @@
       </div>
 
       <div class="astronaut__head">
-        <canvas id="visor" width="60px" height="60px"></canvas>
+        <canvas
+          id="visor"
+          fillStyle="#2f3640"
+          strokeStyle="#f5f6fa"
+          width="60px"
+          height="60px"
+        ></canvas>
         <div class="astronaut__head-visor-flare1"></div>
         <div class="astronaut__head-visor-flare2"></div>
       </div>
@@ -73,8 +87,8 @@ onMounted(() => {
     ctx.bezierCurveTo(15, 10, 5, 10, 5, 20);
     ctx.lineTo(5, 45);
 
-    ctx.fillStyle = "#2f3640";
-    ctx.strokeStyle = "#f5f6fa";
+    // ctx.fillStyle = "#2f3640";
+    // ctx.strokeStyle = "#f5f6fa";
     ctx.fill();
     ctx.stroke();
   }
@@ -98,7 +112,7 @@ onMounted(() => {
     ctx.moveTo(130, 170);
     ctx.bezierCurveTo(250, y1, 345, y2, 400, y3);
 
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = "rgba(255,255,255,.75)";
     ctx.lineWidth = 8;
     ctx.stroke();
 
@@ -142,24 +156,17 @@ onMounted(() => {
 }
 
 .moon {
-  @apply bg-gradient-to-r from-base-200 to-base-300 shadow-xl;
+  @apply bg-gradient-to-r from-base-200 to-base-300 shadow-xl absolute rounded-full;
   /* background: linear-gradient(to right, #d0d0d0 48%, #919191 100%); */
-  position: absolute;
   top: -100px;
   left: -300px;
   width: 900px;
   height: 900px;
-  content: "";
-  border-radius: 100%;
 }
 
 .moon__crater {
-  @apply bg-gradient-to-r from-base-content/30 to-base-100;
-  position: absolute;
-  content: "";
-  border-radius: 100%;
+  @apply bg-gradient-to-r from-base-content/30 to-base-100 absolute rounded-full opacity-60;
   /* background: linear-gradient(90deg, #7a7a7a 38%, #c3c3c3 100%); */
-  opacity: 0.6;
 }
 
 .moon__crater1 {
@@ -170,30 +177,17 @@ onMounted(() => {
 }
 
 .moon__crater2 {
+  @apply rotate-45 w-10 h-20;
   top: 650px;
   left: 340px;
-  width: 40px;
-  height: 80px;
-  transform: rotate(55deg);
 }
 
 .moon__crater3 {
-  top: -20px;
-  left: 40px;
-  width: 65px;
-  height: 120px;
-  transform: rotate(250deg);
+  @apply rotate-90 left-20 w-16 h-32;
 }
 
 .star {
-  @apply bg-base-300;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  content: "";
-  border-radius: 100%;
-  transform: rotate(250deg);
-  opacity: 0.4;
+  @apply bg-base-300 absolute w-2 h-2 rounded-full rotate-45 opacity-40;
   animation-name: shimmer;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -239,13 +233,12 @@ onMounted(() => {
 }
 
 .error {
-  @apply md:w-auto w-full z-50 md:top-1/3 lg:top-1/2 top-1/2 pl-12 md:pl-24 bg-base-300/20;
-  position: absolute;
+  @apply absolute md:w-auto w-full z-50 md:top-1/3 lg:top-1/2 top-1/3 pl-12 md:pl-24 bg-base-300/20;
   transform: translateY(-60%);
 }
 
 .astronaut {
-  @apply absolute md:top-1/2 top-1/2 md:left-2/3 left-1/2;
+  @apply absolute lg:top-1/2 top-2/3 md:left-2/3 left-1/2;
   width: 185px;
   height: 300px;
   transform: translate(-50%, -50%) rotate(20deg) scale(1.2);
@@ -253,8 +246,7 @@ onMounted(() => {
 
 .astronaut__head {
   /* background-color: white; */
-  @apply bg-base-100;
-  position: absolute;
+  @apply bg-base-100 absolute;
   top: 60px;
   left: 60px;
   width: 60px;
@@ -459,7 +451,7 @@ onMounted(() => {
 
 .astronaut__foot-left {
   /* background-color: white; */
-  @apply bg-base-100;
+  @apply bg-base-100 border-primary border-b-4 border-solid;
   position: absolute;
   top: 240px;
   left: 43px;
@@ -470,13 +462,11 @@ onMounted(() => {
   border-radius: 3px;
   border-top-left-radius: 8em;
   border-top-right-radius: 8em;
-  border-bottom: 4px solid #e67e22;
-  @apply border-primary;
 }
 
 .astronaut__foot-right {
   /* background-color: white; */
-  @apply bg-base-100;
+  @apply bg-base-100 border-primary border-b-4 border-solid;
   position: absolute;
   top: 240px;
   left: 111px;
@@ -487,7 +477,5 @@ onMounted(() => {
   border-radius: 3px;
   border-top-left-radius: 8em;
   border-top-right-radius: 8em;
-  border-bottom: 4px solid #e67e22;
-  @apply border-primary;
 }
 </style>
