@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/meetqy/wcao.cc/compare/v2.1.0...v2.1.1) (2022-08-18)
+
+
+### 🚀 优化现有功能和UI
+
+* template/8 删除不必要div ([f076f22](https://github.com/meetqy/wcao.cc/commit/f076f2257fceebd75a44cea6b61c85bb1536fee4))
+
+
+### 🐛 修复bug
+
+* loading page 样式冲突 ([#39](https://github.com/meetqy/wcao.cc/issues/39)) ([45a27cb](https://github.com/meetqy/wcao.cc/commit/45a27cbaea7e2c2840d064f770260554fbd274bf))
+
+
+### 📜 新模板
+
+* 新增模板 - 404 page 纯css实现 ([#46](https://github.com/meetqy/wcao.cc/issues/46)) ([0d9d80b](https://github.com/meetqy/wcao.cc/commit/0d9d80bc94330a10a6ae8c1a4291980648940fea))
+
 ## [2.1.0](https://github.com/meetqy/wcao.cc/compare/v2.0.2...v2.1.0) (2022-08-16)
 
 ### 🚀 优化现有功能和 UI
