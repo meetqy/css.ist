@@ -11,7 +11,7 @@
   
 **wcao.cc** 分享**响应式**、**多主题**模板和组件，基于 tailwind、daisyui
   
-   ☀️[wcao.cc](https://wcao.cc) · ☔ [youweb.cc](https://youweb.cc)
+   ☀️[wcao.cc](https://wcao.cc) · ☔ [youweb.cc](https://youweb.cc) · 💡[dev.wcao.cc](https://dev.wcao.cc)
   
 </div>
 
@@ -125,7 +125,7 @@ const data = Mock.mock({
 
 ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac light`、`iphone dark`、`iphone light`
 
-## 版本管理及维护
+## 🐻‍❄️ 版本管理及维护
 
 1. iusses 中创建分支
 2. 完成之后合并到 dev
@@ -134,3 +134,9 @@ ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac
 5. [dev 分支] `yarn release` 升级版本
 6. 合并到 main 分支
 7. 触发 vercel 发布稳定版
+
+### 🐮 域名
+
+- _vps_: [wcao.cc](https://wcao.cc)
+- _vercel_: [youweb.cc](https://youweb.cc)
+- _vercel_development_: [dev.wcao.cc](https://dev.wcao.cc)
