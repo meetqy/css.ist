@@ -507,9 +507,9 @@
     fastq "^1.6.0"
 
 "@nuxt/content@npm:@nuxt/content-edge@latest":
-  version "2.1.0-27661776.91d257e"
-  resolved "https://registry.npmjs.org/@nuxt/content-edge/-/content-edge-2.1.0-27661776.91d257e.tgz#c2b8a089870a14a56fc889e55fc100d043d0c04c"
-  integrity sha512-4He/82ZK2T0GGtcAxYhWUwgTi8vRl9thsBZvBZD6cCs7aufjVGz9CJV1mZmhuDhr2Pp0b+eXlKzripvgACr6cg==
+  version "2.1.0-27680354.5a64f46"
+  resolved "https://registry.npmjs.org/@nuxt/content-edge/-/content-edge-2.1.0-27680354.5a64f46.tgz#72caab10439a653968fde8311ecacd501bc58fe1"
+  integrity sha512-pxgKoLS5sgzT8Q7AQCDzabyXgeT4L8M+MHNtEPugWq0CSip2QQsW2X8OtEW1ljKN2LcTbBbLK44xgN0uow9Qhw==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.6"
     consola "^2.15.3"
@@ -519,7 +519,8 @@
     detab "^3.0.1"
     html-tags "^3.2.0"
     json5 "^2.2.1"
-    listhen "^0.2.13"
+    knitwork "^0.1.2"
+    listhen "^0.2.15"
     mdast-util-to-hast "^12.2.0"
     mdurl "^1.0.1"
     ohash "^0.1.5"
