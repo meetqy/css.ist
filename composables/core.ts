@@ -64,7 +64,8 @@ export const getContentByTag = (
     .where({
       tags,
     })
-    .only(["_id", "_path", "title", "tags", "previews", "light", "dark"])
+    .only(["_id", "_path", "title", "tags", "previews"])
+    .sort({ _path: -1 })
     .skip((pageIndex - 1) * pageSize)
     .limit(pageSize)
     .find();
