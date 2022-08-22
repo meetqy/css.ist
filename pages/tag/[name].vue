@@ -1,5 +1,5 @@
 <template>
-  <main class="lg:p-12 p-4 min-h-screen">
+  <main class="lg:p-12 p-4 min-h-screen relative">
     <h1
       class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
     >
@@ -12,12 +12,13 @@
         :key="item._id"
         class="mb-8 w-full overflow-hidden"
       >
-        <NuxtLink :to="item._path">
-          <img
-            v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
-            class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
-          />
-        </NuxtLink>
+        <!-- <NuxtLink :to="item._path"> -->
+        <img
+          v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
+          class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
+          @click="(e) => imgClick(e, item._path)"
+        />
+        <!-- </NuxtLink> -->
 
         <div class="px-2">
           <h3 class="text-lg mt-4 mb-2 font-medium capitalize">
@@ -57,4 +58,9 @@ const { data: list } = useAsyncData(`tag/${name}`, () => getContentByTag(name));
 useHead({
   title: `wcao.cc > tag > ${name}`,
 });
+
+const imgClick = (e, _path) => {
+  navigateTo(_path);
+  nextImgTarget.value = e.target;
+};
 </script>

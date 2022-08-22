@@ -150,6 +150,10 @@ import "swiper/css";
 
 const { page } = useContent();
 
+if (nextImgWrapper.value) {
+  nextImgWrapper.value.scrollTop = 0;
+}
+
 useHead({
   title: `${page.value.title} template,on tailwindcss,daisyui.`,
   meta: {},
@@ -186,6 +190,14 @@ onMounted(async () => {
   );
 
   moreContent.value = res.filter((item) => item._id !== page.value._id);
+
+  setTimeout(() => {
+    nextImgReverse.value = true;
+    setTimeout(() => {
+      nextImgTarget.value = null;
+      nextImgReverse.value = false;
+    }, 1000);
+  }, 1000);
 });
 
 const toTop = () => {

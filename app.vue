@@ -159,13 +159,16 @@
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
+
+      <NextImg />
     </main>
   </div>
 </template>
 
 <script setup>
+import NextImg from "./components/core/next-img.vue";
 const router = useRouter();
-const show = ref(false);
+const show = ref(true);
 const clientHeight = ref(0);
 
 const scrollTop = ref(0);
@@ -188,6 +191,8 @@ onMounted(() => {
       }
     }, 10);
   }, 500);
+
+  nextImgWrapper.value = document.getElementById("drawer-content");
 });
 
 const loadingRef = ref(null);

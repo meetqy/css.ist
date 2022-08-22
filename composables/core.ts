@@ -79,3 +79,7 @@ export const drawerContentScroll = ref();
 
 // drawer-content 元素
 export const drawerContentElement = ref(null);
+
+export const nextImgTarget = ref<HTMLImageElement | null>(null);
+export const nextImgWrapper = ref<HTMLElement | null>(null);
+export const nextImgReverse = ref<boolean>(false);
