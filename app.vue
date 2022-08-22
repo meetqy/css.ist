@@ -168,7 +168,7 @@
 <script setup>
 import NextImg from "./components/core/next-img.vue";
 const router = useRouter();
-const show = ref(true);
+const show = ref(false);
 const clientHeight = ref(0);
 
 const scrollTop = ref(0);
