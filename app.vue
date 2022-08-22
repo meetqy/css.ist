@@ -192,7 +192,7 @@ onMounted(() => {
     }, 10);
   }, 500);
 
-  nextImgWrapper.value = document.getElementById("drawer-content");
+  drawerContentElement.value = document.getElementById("drawer-content");
 });
 
 const loadingRef = ref(null);
