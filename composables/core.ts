@@ -78,8 +78,18 @@ export const drawerContentPullUpEnd = ref<number>(0);
 export const drawerContentScroll = ref();
 
 // drawer-content 元素
-export const drawerContentElement = ref(null);
+export const drawerContentElement = ref<HTMLImageElement | null>(null);
 
-export const nextImgTarget = ref<HTMLImageElement | null>(null);
-export const nextImgWrapper = ref<HTMLElement | null>(null);
-export const nextImgReverse = ref<boolean>(false);
+export type Position = {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+};
+
+export const nextImgProps = ref<{
+  start: Position;
+  end: Position;
+  src: string;
+  status: "target-to-full" | "full-to-target" | "waiting";
+}>();

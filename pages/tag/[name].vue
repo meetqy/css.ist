@@ -60,7 +60,24 @@ useHead({
 });
 
 const imgClick = (e, _path) => {
+  const { target } = e;
   navigateTo(_path);
-  nextImgTarget.value = e.target;
+
+  nextImgProps.value = {
+    start: {
+      left: target.offsetLeft - drawerContentElement.value.scrollLeft + "px",
+      top: target.offsetTop - drawerContentElement.value.scrollTop + "px",
+      width: target.clientWidth + "px",
+      height: target.clientHeight + "px",
+    },
+    end: {
+      left: 0,
+      top: 0,
+      width: "calc(100% - 320px)",
+      height: "calc(100% - 64px)",
+    },
+    src: target.src,
+    status: "target-to-full",
+  };
 };
 </script>

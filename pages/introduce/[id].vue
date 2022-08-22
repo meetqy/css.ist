@@ -1,5 +1,5 @@
 <template>
-  <div v-if="page" class="w-full">
+  <div class="w-full">
     <div class="fixed right-4 bottom-8 z-50 flex justify-center items-center">
       <div
         class="btn btn-primary btn-square btn-sm mr-2"
@@ -73,9 +73,13 @@
                 </a>
               </div>
               <img
+                id="img-preview"
                 v-lazy="vLazy(useCF(page._path, item, 'w=1560'))"
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
-                :class="full ? 'w-full' : 'lg:w-1/3 w-full'"
+                :class="[
+                  full ? 'w-full' : 'lg:w-1/3 w-full',
+                  showImgPreview ? ' opacity-100' : ' opacity-0',
+                ]"
                 @click="full = !full"
               />
             </div>
@@ -150,10 +154,6 @@ import "swiper/css";
 
 const { page } = useContent();
 
-if (nextImgWrapper.value) {
-  nextImgWrapper.value.scrollTop = 0;
-}
-
 useHead({
   title: `${page.value.title} template,on tailwindcss,daisyui.`,
   meta: {},
@@ -171,6 +171,7 @@ const github = computed(() => {
 // 当前选中的预览图
 const activePreviewIndex = ref(0);
 const full = ref(false);
+const showImgPreview = ref(false);
 
 const onTap = (swiper) => {
   activePreviewIndex.value = swiper.clickedIndex;
@@ -191,11 +192,36 @@ onMounted(async () => {
 
   moreContent.value = res.filter((item) => item._id !== page.value._id);
 
+  const imgPreview = document.getElementById("img-preview");
+
   setTimeout(() => {
-    nextImgReverse.value = true;
+    nextImgProps.value = {
+      start: {
+        left: 0,
+        top: 0,
+        width: "calc(100% - 320px)",
+        height: "calc(100% - 64px)",
+      },
+      end: {
+        left:
+          imgPreview.offsetLeft -
+          drawerContentElement.value.scrollLeft +
+          16 +
+          "px",
+        top:
+          imgPreview.offsetTop -
+          drawerContentElement.value.scrollTop +
+          152 +
+          "px",
+        width: imgPreview.clientWidth + "px",
+        height: imgPreview.clientHeight + "px",
+      },
+      status: "full-to-target",
+      src: nextImgProps.value.src,
+    };
+
     setTimeout(() => {
-      nextImgTarget.value = null;
-      nextImgReverse.value = false;
+      showImgPreview.value = true;
     }, 1000);
   }, 1000);
 });
