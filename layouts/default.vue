@@ -44,7 +44,7 @@
 
         <CoreFooter />
       </div>
-      <div class="drawer-side">
+      <div id="drawer-side" class="drawer-side overflow-x-hidden">
         <label for="my-drawer-2" class="drawer-overlay" />
 
         <aside class="w-80 bg-base-100">

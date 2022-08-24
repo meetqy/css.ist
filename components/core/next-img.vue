@@ -1,6 +1,7 @@
 <template>
   <div
-    class="fixed top-16 left-80 w-screen h-screen"
+    class="fixed top-16 w-screen h-screen"
+    :style="{ left: styleLeft + 'px' }"
     :class="[
       {
         'z-[100] bg-base-100': position.status === 'target-to-full',
@@ -50,7 +51,12 @@ const position = reactive<{
   status: "waiting",
 });
 
+const styleLeft = ref(320);
+
 watch(nextImgProps, (props) => {
+  const ele = drawerSideElement.value;
+  styleLeft.value = ele?.offsetWidth || 0 - (ele?.clientWidth || 0);
+
   if (props?.start) {
     position.left = props.start.left;
     position.top = props.start.top;

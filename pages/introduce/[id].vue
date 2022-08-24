@@ -194,7 +194,13 @@ onMounted(async () => {
 
   const imgPreview = document.getElementById("img-preview");
 
+  toTop();
+
   setTimeout(() => {
+    const scrollWidth =
+      drawerContentElement.value.offsetWidth -
+      drawerContentElement.value.clientWidth;
+
     nextImgProps.value = {
       start: {
         left: 0,
@@ -204,9 +210,9 @@ onMounted(async () => {
       },
       end: {
         left:
-          imgPreview.offsetLeft -
+          imgPreview.offsetLeft +
           drawerContentElement.value.scrollLeft +
-          16 +
+          scrollWidth +
           "px",
         top:
           imgPreview.offsetTop -

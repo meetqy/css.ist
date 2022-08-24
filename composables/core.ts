@@ -79,6 +79,8 @@ export const drawerContentScroll = ref();
 
 // drawer-content 元素
 export const drawerContentElement = ref<HTMLImageElement | null>(null);
+// drawer-side 元素
+export const drawerSideElement = ref<HTMLImageElement | null>(null);
 
 export type Position = {
   left: number;

@@ -183,7 +183,6 @@ onMounted(() => {
     const T = setInterval(() => {
       scrollTop.value += 3;
       if (scrollTop.value >= clientHeight.value) {
-        document.body.style = "overflow:auto";
         window.addEventListener("scroll", () => {
           scrollTop.value = document.documentElement.scrollTop;
         });
@@ -193,6 +192,7 @@ onMounted(() => {
   }, 500);
 
   drawerContentElement.value = document.getElementById("drawer-content");
+  drawerSideElement.value = document.getElementById("drawer-side");
 });
 
 const loadingRef = ref(null);
