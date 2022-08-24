@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/meetqy/wcao.cc/compare/v2.1.1...v2.1.2) (2022-08-24)
+
+
+### ⚒️ 管理与维护
+
+* 升级 nuxt-rc.8 ([e656266](https://github.com/meetqy/wcao.cc/commit/e656266a52843bb05746b35bfcde37c6c146c3fb))
+
+
+### 📃 文档
+
+* readme ([f93d48e](https://github.com/meetqy/wcao.cc/commit/f93d48ecb37f4f0c7409784d38e834e742dc51c2))
+
+
+### 🚀 优化现有功能和UI
+
+* 404 页面 ([#38](https://github.com/meetqy/wcao.cc/issues/38)) ([b2c5fbe](https://github.com/meetqy/wcao.cc/commit/b2c5fbe0f98f64a31cbe0020536ee9244324bbf7))
+* 经常加载不出来，改为整数，300/300 ([#53](https://github.com/meetqy/wcao.cc/issues/53)) ([188fae6](https://github.com/meetqy/wcao.cc/commit/188fae6edeeb70adb519f7df7c8713404e73bf69))
+* 优化进入详情动画 ([141a848](https://github.com/meetqy/wcao.cc/commit/141a8486de7fab99369fe430c4c11a86143c3e9f))
+* 优化首页显示排序 按时间倒叙 ([#49](https://github.com/meetqy/wcao.cc/issues/49)) ([84ecd84](https://github.com/meetqy/wcao.cc/commit/84ecd844f27828f898d8866cc9083cf5e2e641a1))
+* tag 页面动画 ([2574b37](https://github.com/meetqy/wcao.cc/commit/2574b3753980257279abe07b768c0b6931c33343))
+
 ### [2.1.1](https://github.com/meetqy/wcao.cc/compare/v2.1.0...v2.1.1) (2022-08-18)
 
 
