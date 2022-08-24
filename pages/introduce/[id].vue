@@ -196,40 +196,44 @@ onMounted(async () => {
 
   toTop();
 
-  setTimeout(() => {
-    const scrollWidth =
-      drawerContentElement.value.offsetWidth -
-      drawerContentElement.value.clientWidth;
-
-    nextImgProps.value = {
-      start: {
-        left: 0,
-        top: 0,
-        width: "calc(100% - 320px)",
-        height: "calc(100% - 64px)",
-      },
-      end: {
-        left:
-          imgPreview.offsetLeft +
-          drawerContentElement.value.scrollLeft +
-          scrollWidth +
-          "px",
-        top:
-          imgPreview.offsetTop -
-          drawerContentElement.value.scrollTop +
-          152 +
-          "px",
-        width: imgPreview.clientWidth + "px",
-        height: imgPreview.clientHeight + "px",
-      },
-      status: "full-to-target",
-      src: nextImgProps.value.src,
-    };
-
+  if (nextImgProps.value) {
     setTimeout(() => {
-      showImgPreview.value = true;
+      const scrollWidth =
+        drawerContentElement.value.offsetWidth -
+        drawerContentElement.value.clientWidth;
+
+      nextImgProps.value = {
+        start: {
+          left: 0,
+          top: 0,
+          width: "calc(100% - 320px)",
+          height: "calc(100% - 64px)",
+        },
+        end: {
+          left:
+            imgPreview.offsetLeft +
+            drawerContentElement.value.scrollLeft +
+            scrollWidth +
+            "px",
+          top:
+            imgPreview.offsetTop -
+            drawerContentElement.value.scrollTop +
+            152 +
+            "px",
+          width: imgPreview.clientWidth + "px",
+          height: imgPreview.clientHeight + "px",
+        },
+        status: "full-to-target",
+        src: nextImgProps.value.src,
+      };
+
+      setTimeout(() => {
+        showImgPreview.value = true;
+      }, 1000);
     }, 1000);
-  }, 1000);
+  } else {
+    showImgPreview.value = true;
+  }
 });
 
 const toTop = () => {
