@@ -229,6 +229,7 @@ onMounted(async () => {
 
       setTimeout(() => {
         showImgPreview.value = true;
+        nextImgProps.value = undefined;
       }, 1000);
     }, 1000);
   } else {

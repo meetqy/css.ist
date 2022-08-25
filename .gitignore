@@ -3,10 +3,9 @@ node_modules
 .nuxt
 .nitro
 .cache
-.env
+.env-local
 dist
 .output
 
-public/introduce/*
 public/1.js
 public/a.sh

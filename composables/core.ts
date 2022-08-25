@@ -27,17 +27,17 @@ export const useCF = (
   url = "",
   type: "public" | "sm" | "2xl" | string
 ) => {
-  if (useProduction()) {
-    const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
-    const id = `wcao${path}/${url}`
-      .replaceAll("//", "/")
-      .replaceAll("/", "-")
-      .replace(/\.(jpg|png|jpeg|gif)/g, "");
-
-    return `${baseURL}/${id}/${type}`;
-  } else {
+  if (path === useRuntimeConfig().public.dev_template_path) {
     return `/introduce/${url}`.replaceAll("//", "/");
   }
+
+  const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
+  const id = `wcao${path}/${url}`
+    .replaceAll("//", "/")
+    .replaceAll("/", "-")
+    .replace(/\.(jpg|png|jpeg|gif)/g, "");
+
+  return `${baseURL}/${id}/${type}`;
 };
 
 /**

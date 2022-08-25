@@ -6,6 +6,13 @@ import eslintPlugin from "vite-plugin-eslint";
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
 
+  runtimeConfig: {
+    public: {
+      // 当前调试的模板路径 /introduce/:number
+      dev_template_path: process.env.DEV_TEMPLATE_PATH,
+    },
+  },
+
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"],
