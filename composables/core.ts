@@ -99,21 +99,26 @@ export const nextImgProps = ref<{
 }>();
 
 // 跳转介绍界面动画
-export const toIntroduce = (e: Event, _path: string) => {
+//
+export const toIntroduce = (
+  e: Event,
+  query?: { _path: string; offsetLeft: number }
+) => {
   const target = e.target as HTMLImageElement;
   const contentTarget = drawerContentElement.value;
   if (!contentTarget) return;
 
-  if (_path) {
-    navigateTo(_path);
+  if (query?._path) {
+    navigateTo(query?._path);
   }
-
-  const offsetLeft =
-    target.offsetLeft > 320 ? target.offsetLeft - 320 : target.offsetLeft;
 
   nextImgProps.value = {
     start: {
-      left: offsetLeft - contentTarget.scrollLeft + "px",
+      left:
+        target.offsetLeft -
+        (query?.offsetLeft || 0) -
+        contentTarget.scrollLeft +
+        "px",
       top: target.offsetTop - contentTarget.scrollTop + 96 + "px",
       width: target.clientWidth + "px",
       height: target.clientHeight + "px",

@@ -133,7 +133,13 @@
               v-for="item in moreContent"
               :key="item._id"
               class="cursor-zoom-in"
-              @click="(e) => toIntroduce(e, item._path)"
+              @click="
+                (e) =>
+                  toIntroduce(e, {
+                    _path: item._path,
+                    offsetLeft: 320,
+                  })
+              "
             >
               <img
                 v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
