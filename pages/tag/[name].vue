@@ -12,13 +12,12 @@
         :key="item._id"
         class="mb-8 w-full overflow-hidden"
       >
-        <!-- <NuxtLink :to="item._path"> -->
-        <img
-          v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
-          class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
-          @click="(e) => imgClick(e, item._path)"
-        />
-        <!-- </NuxtLink> -->
+        <NuxtLink :to="item._path" @click="(e) => toIntroduce(e)">
+          <img
+            v-lazy="vLazy(useCF(item._path, item.previews[0], 'sm'))"
+            class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
+          />
+        </NuxtLink>
 
         <div class="px-2">
           <h3 class="text-lg mt-4 mb-2 font-medium capitalize">
@@ -58,26 +57,4 @@ const { data: list } = useAsyncData(`tag/${name}`, () => getContentByTag(name));
 useHead({
   title: `wcao.cc > tag > ${name}`,
 });
-
-const imgClick = (e, _path) => {
-  const { target } = e;
-  navigateTo(_path);
-
-  nextImgProps.value = {
-    start: {
-      left: target.offsetLeft - drawerContentElement.value.scrollLeft + "px",
-      top: target.offsetTop - drawerContentElement.value.scrollTop + "px",
-      width: target.clientWidth + "px",
-      height: target.clientHeight + "px",
-    },
-    end: {
-      left: 0,
-      top: 0,
-      width: "calc(100% - 320px)",
-      height: "calc(100% - 64px)",
-    },
-    src: target.src,
-    status: "target-to-full",
-  };
-};
 </script>

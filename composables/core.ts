@@ -81,20 +81,46 @@ export const drawerContentPullUpEnd = ref<number>(0);
 export const drawerContentScroll = ref();
 
 // drawer-content 元素
-export const drawerContentElement = ref<HTMLImageElement | null>(null);
+export const drawerContentElement = ref<HTMLInputElement | null>(null);
 // drawer-side 元素
 export const drawerSideElement = ref<HTMLImageElement | null>(null);
 
 export type Position = {
-  left: number;
-  top: number;
-  width: number;
-  height: number;
+  left: number | string;
+  top: number | string;
+  width: number | string;
+  height: number | string;
 };
-
 export const nextImgProps = ref<{
   start: Position;
   end: Position;
   src: string;
   status: "target-to-full" | "full-to-target" | "waiting";
 }>();
+
+export const toIntroduce = (e: Event, _path: string) => {
+  const target = e.target as HTMLImageElement;
+  const contentTarget = drawerContentElement.value;
+  if (!contentTarget) return;
+
+  if (_path) {
+    navigateTo(_path);
+  }
+
+  nextImgProps.value = {
+    start: {
+      left: target.offsetLeft - contentTarget.scrollLeft + "px",
+      top: target.offsetTop - contentTarget.scrollTop + "px",
+      width: target.clientWidth + "px",
+      height: target.clientHeight + "px",
+    },
+    end: {
+      left: 0,
+      top: 0,
+      width: "calc(100% - 320px)",
+      height: "calc(100% - 64px)",
+    },
+    src: target.src,
+    status: "target-to-full",
+  };
+};
