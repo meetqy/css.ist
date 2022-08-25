@@ -27,7 +27,10 @@ export const useCF = (
   url = "",
   type: "public" | "sm" | "2xl" | string
 ) => {
-  if (path === useRuntimeConfig().public.dev_template_path) {
+  if (
+    path === useRuntimeConfig().public.dev_template_path &&
+    !useProduction()
+  ) {
     return `/introduce/${url}`.replaceAll("//", "/");
   }
 
