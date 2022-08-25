@@ -218,6 +218,7 @@ onMounted(async () => {
           top:
             imgPreview.offsetTop -
             drawerContentElement.value.scrollTop +
+            32 +
             152 +
             "px",
           width: imgPreview.clientWidth + "px",

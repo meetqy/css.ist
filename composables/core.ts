@@ -98,6 +98,7 @@ export const nextImgProps = ref<{
   status: "target-to-full" | "full-to-target" | "waiting";
 }>();
 
+// 跳转介绍界面动画
 export const toIntroduce = (e: Event, _path: string) => {
   const target = e.target as HTMLImageElement;
   const contentTarget = drawerContentElement.value;
@@ -107,10 +108,13 @@ export const toIntroduce = (e: Event, _path: string) => {
     navigateTo(_path);
   }
 
+  const offsetLeft =
+    target.offsetLeft > 320 ? target.offsetLeft - 320 : target.offsetLeft;
+
   nextImgProps.value = {
     start: {
-      left: target.offsetLeft - contentTarget.scrollLeft + "px",
-      top: target.offsetTop - contentTarget.scrollTop + "px",
+      left: offsetLeft - contentTarget.scrollLeft + "px",
+      top: target.offsetTop - contentTarget.scrollTop + 96 + "px",
       width: target.clientWidth + "px",
       height: target.clientHeight + "px",
     },

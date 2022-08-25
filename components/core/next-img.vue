@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-16 w-screen h-screen"
+    class="fixed top-0 w-screen h-screen"
     :style="{ left: styleLeft + 'px' }"
     :class="[
       {
@@ -15,7 +15,7 @@
     ]"
   >
     <div
-      class="absolute"
+      class="absolute pt-16"
       :class="[
         {
           'transition-all ease-in duration-1000':
@@ -38,10 +38,10 @@
 
 <script setup lang="ts">
 const position = reactive<{
-  left: number;
-  top: number;
-  width: number;
-  height: number;
+  left: number | string;
+  top: number | string;
+  width: number | string;
+  height: number | string;
   status: "target-to-full" | "full-to-target" | "waiting";
 }>({
   left: 0,
