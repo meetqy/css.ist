@@ -46,7 +46,9 @@
               </Swiper>
 
               <NuxtLink
-                :to="`${page._path.replace('introduce', 'template')}`"
+                :to="`${page._path.replace('introduce', 'template')}?title=${
+                  page.title
+                }&tags=${page.tags.join(',')}`"
                 class="w-12 shrink-0 bg-primary flex justify-center items-center !no-underline"
               >
                 <span class="material-symbols-outlined text-primary-content">
@@ -129,14 +131,14 @@
           <div
             class="grid transition-all xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4"
           >
-            <div
+            <nuxt-link
               v-for="item in moreContent"
               :key="item._id"
+              :to="item._path"
               class="cursor-zoom-in"
               @click="
                 (e) =>
                   toIntroduce(e, {
-                    _path: item._path,
                     offsetLeft: 320,
                   })
               "
@@ -146,7 +148,7 @@
                 class="w-full aspect-video object-contain rounded-box border border-base-200 shadow bg-base-200/20"
               />
               <p class="px-2">{{ item.title }}</p>
-            </div>
+            </nuxt-link>
           </div>
         </article>
       </div>
@@ -161,8 +163,9 @@ import "swiper/css";
 const { page } = useContent();
 
 useHead({
-  title: `${page.value.title} template,on tailwindcss,daisyui.`,
-  meta: {},
+  title: `【INTRODUCE】${page.value.title},${page.value.tags.join(
+    ","
+  )} - wcao.cc`,
 });
 
 const github = computed(() => {
