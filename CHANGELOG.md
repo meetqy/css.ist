@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.3](https://github.com/meetqy/wcao.cc/compare/v2.1.2...v2.1.3) (2022-08-29)
+
+
+### 📜 新模板
+
+* add template 10 close ([#42](https://github.com/meetqy/wcao.cc/issues/42)) ([327f282](https://github.com/meetqy/wcao.cc/commit/327f28209f8c7b1400f11cb75f27082995378ec0))
+
+
+### ⚒️ 管理与维护
+
+* 开发环境本地模板完善 ([9960587](https://github.com/meetqy/wcao.cc/commit/9960587f898fa3425a110255e8f3049a41dabcc6))
+
+
+### 🚀 优化现有功能和UI
+
+* introduce more跳转增加动画 ([8c11d04](https://github.com/meetqy/wcao.cc/commit/8c11d04cbbb92fd0fbfa769fdae6454b714c115d))
+* title seo 优化 ([#51](https://github.com/meetqy/wcao.cc/issues/51)) ([4db5e74](https://github.com/meetqy/wcao.cc/commit/4db5e74a7e4958f7d58a99728cc46f3cfa745645))
+
 ### [2.1.2](https://github.com/meetqy/wcao.cc/compare/v2.1.1...v2.1.2) (2022-08-24)
 
 
