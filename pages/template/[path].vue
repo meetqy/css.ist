@@ -5,6 +5,11 @@
 <script setup>
 const route = useRoute();
 const { path } = route.params;
+const { title, tags } = route.query;
+
+useHead({
+  title: `【TEMPLATE】${title},${tags} - wcao.cc`,
+});
 
 definePageMeta({
   layout: "template",

@@ -7,6 +7,6 @@
 
 <script setup>
 useHead({
-  title: "wcao.cc > about",
+  title: "about - wcao.cc",
 });
 </script>
