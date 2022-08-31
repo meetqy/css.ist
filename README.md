@@ -108,6 +108,11 @@ const data = Mock.mock({
 <span class="material-symbols-outlined" :style="iconFill">settings</span>
 ```
 
+## 图片资源尺寸
+
+- 使用常用的 整数 `100x100` `200x200` `300x300`
+- 不要使用 `193x193` `290x290` 这种不常用的资源宽高，会导致图片加载变得非常慢
+
 ## 🐸 规范
 
 - 每个模板预览图使用**dark**模式 pc 端**全屏图 1920x1080**
