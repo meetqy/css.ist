@@ -58,7 +58,7 @@
                 class="rounded-full flex-shrink-0 border-8 border-primary/30 shadow-xl"
               >
                 <img
-                  v-lazy="vLazy(usePicsum('/192/192'))"
+                  v-lazy="vLazy(usePicsum('/300/300'))"
                   class="h-48 rounded-full sm:h-56"
                   alt="author"
                 />

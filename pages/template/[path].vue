@@ -26,5 +26,6 @@ const templates = {
   8: resolveComponent("Template8"),
   9: resolveComponent("Template9"),
   10: resolveComponent("Template10"),
+  11: resolveComponent("Template11"),
 };
 </script>
