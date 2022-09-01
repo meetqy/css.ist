@@ -12,6 +12,9 @@ export default defineEventHandler(async (event) => {
 
   // introduce
   for (const doc of docs) {
+    if (!doc.tags) {
+      continue;
+    }
     (doc.tags as string[]).forEach((item) => {
       if (!allTags.includes(item)) {
         allTags.push(item);
