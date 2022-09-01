@@ -9,7 +9,7 @@
 
 [
 ![version](https://img.shields.io/github/package-json/v/meetqy/wcao.cc)
-![all templates](https://img.shields.io/github/directory-file-count/meetqy/wcao.cc/introduce?color=red&label=all%20templates)
+![all templates](https://img.shields.io/github/directory-file-count/meetqy/wcao.cc/components/template?color=red&label=all%20templates)
 ![commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 ![MIT](https://img.shields.io/github/license/meetqy/wcao.cc)
