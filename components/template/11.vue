@@ -42,7 +42,7 @@
 
           <div class="md:pt-12 md:pb-8 py-6">
             <button class="btn rounded-full btn-sm md:btn-md">
-              Get In Touch
+              {{ page.a }}
             </button>
           </div>
 
@@ -91,10 +91,12 @@ watch(route, (v) => {
 const init = () => {
   page.value = {
     en: {
+      a: "Get In Touch",
       b: "Your Location - 25.0000° N, 71.0000° W",
     },
     zh: {
       b: `${$Mock.mock("@county(true)")}`,
+      a: "联系我",
     },
   }[lang.value];
 };
