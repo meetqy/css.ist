@@ -16,6 +16,9 @@ export const vLazy = (src: string) => {
 
 /**
  * unsplash 图片
+ *
+ * /user/raaminka/
+ * /user/mahdi_chf/
  */
 export const useUnsplash = (src: string, opts?: string) => {
   const url = "https://source.unsplash.com" + src + opts;
