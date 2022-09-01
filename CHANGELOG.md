@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.4](https://github.com/meetqy/wcao.cc/compare/v2.1.3...v2.1.4) (2022-09-01)
+
+
+### 📜 新模板
+
+* azir the Emperor of the Sands ([1c5dbe9](https://github.com/meetqy/wcao.cc/commit/1c5dbe959fcb9bebc8614d0d29382a7881243489)), closes [#60](https://github.com/meetqy/wcao.cc/issues/60)
+
+
+### 📃 文档
+
+* readme ([f141591](https://github.com/meetqy/wcao.cc/commit/f1415919dd958303ec7dfb342eb50a65adbccfdc))
+
 ### [2.1.3](https://github.com/meetqy/wcao.cc/compare/v2.1.2...v2.1.3) (2022-08-29)
 
 
