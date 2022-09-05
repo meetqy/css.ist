@@ -44,7 +44,11 @@
 
         <CoreFooter />
       </div>
-      <div id="drawer-side" class="drawer-side overflow-x-hidden">
+      <div
+        id="drawer-side"
+        ref="drawerSide"
+        class="drawer-side overflow-x-hidden"
+      >
         <label for="my-drawer-2" class="drawer-overlay" />
 
         <aside class="w-80 bg-base-100">
@@ -107,11 +111,21 @@ import { useInfiniteScroll, useScroll, useStorage } from "@vueuse/core";
 const storage = useStorage("tag-list-data", []);
 
 const drawerContent = ref(null);
-useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
+const drawerSide = ref(null);
+
+watch(drawerContent, (e) => {
+  drawerContentElement.value = e;
+});
+
+watch(drawerSide, (e) => {
+  drawerSideElement.value = e;
+});
+
+useInfiniteScroll(drawerContentElement, () => drawerContentPullUpEnd.value++, {
   distance: 100,
 });
 
-drawerContentScroll.value = useScroll(drawerContent);
+drawerContentScroll.value = useScroll(drawerContentElement);
 
 const res = await queryContent("introduce").only(["tags"]).find();
 

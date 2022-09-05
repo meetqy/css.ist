@@ -246,6 +246,6 @@ onMounted(async () => {
 });
 
 const toTop = () => {
-  document.querySelector("#drawer-content").scrollTop = 0;
+  drawerContentElement.value.scrollTop = 0;
 };
 </script>

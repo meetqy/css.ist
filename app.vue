@@ -190,9 +190,6 @@ onMounted(() => {
       }
     }, 10);
   }, 500);
-
-  drawerContentElement.value = document.getElementById("drawer-content");
-  drawerSideElement.value = document.getElementById("drawer-side");
 });
 
 const loadingRef = ref(null);
