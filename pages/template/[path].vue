@@ -5,7 +5,8 @@
 <script setup>
 const route = useRoute();
 const { path } = route.params;
-const { title, tags } = route.query;
+
+const { title, tags } = await queryContent("introduce", path).findOne();
 
 useHead({
   title: `【TEMPLATE】${title},${tags} - wcao.cc`,

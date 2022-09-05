@@ -46,9 +46,7 @@
               </Swiper>
 
               <NuxtLink
-                :to="`${page._path.replace('introduce', 'template')}?title=${
-                  page.title
-                }&tags=${page.tags.join(',')}`"
+                :to="`${page._path.replace('introduce', 'template')}`"
                 class="w-12 shrink-0 bg-primary flex justify-center items-center !no-underline"
               >
                 <span class="material-symbols-outlined text-primary-content">
