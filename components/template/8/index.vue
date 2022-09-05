@@ -1,5 +1,5 @@
 <template>
-  <div id="screen" class="h-screen overflow-y-scroll">
+  <div ref="element" class="h-screen overflow-y-scroll">
     <div class="h-[200vh] w-full">
       <div class="home-header-sticky-container">
         <div
@@ -167,6 +167,7 @@ const route = useRoute();
 lang.value = route.query.lang || "en";
 
 const page = ref({});
+const element = ref(null);
 
 const init = () => {
   page.value = {
@@ -190,7 +191,7 @@ watch(route, (v) => {
 
 onMounted(() => {
   init();
-  const el = document.getElementById("screen");
+  const el = element.value;
   clientHeight.value = el.clientHeight;
   temp.value = clientHeight.value / 2.5;
   el.addEventListener("scroll", () => {
