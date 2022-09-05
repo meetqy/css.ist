@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.5](https://github.com/meetqy/wcao.cc/compare/v2.1.4...v2.1.5) (2022-09-05)
+
+
+### 🚀 优化现有功能和UI
+
+* template 标题获取方式 ([6e4ca64](https://github.com/meetqy/wcao.cc/commit/6e4ca64c823f22715652fc169dd363705d99b722))
+
+
+### 🐛 修复bug
+
+* 修复跳转到template页面之后,动画失效的bug ([3e8f4ba](https://github.com/meetqy/wcao.cc/commit/3e8f4baa59750348c94da2c2ac39d15b633a1a0a))
+
+
+### 📜 新模板
+
+* bard the Wandering Caretaker (close [#61](https://github.com/meetqy/wcao.cc/issues/61)) ([38510f0](https://github.com/meetqy/wcao.cc/commit/38510f02fef5f3fbd74139afdf3ae9e5fdddb9d3))
+* template-8 bug ([775d1ca](https://github.com/meetqy/wcao.cc/commit/775d1ca944643ebf26525896cf6afad75f2d77cc))
+
+
+### 📃 文档
+
+* 完善规范 ([4075f03](https://github.com/meetqy/wcao.cc/commit/4075f03d33e6f4cb99d027cbee3b20e5d4dcb289))
+* 完善about page ([12fcc53](https://github.com/meetqy/wcao.cc/commit/12fcc534d0d53fda1cadb251fd5fb06673fe0be6))
+
 ### [2.1.4](https://github.com/meetqy/wcao.cc/compare/v2.1.3...v2.1.4) (2022-09-01)
 
 
