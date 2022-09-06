@@ -1,5 +1,7 @@
 <template>
-  <component :is="templates[path]" />
+  <main v-if="$Mock">
+    <component :is="templates[path]" />
+  </main>
 </template>
 
 <script setup>
@@ -29,5 +31,6 @@ const templates = {
   10: resolveComponent("Template10"),
   11: resolveComponent("Template11"),
   12: resolveComponent("Template12"),
+  13: resolveComponent("Template13"),
 };
 </script>
