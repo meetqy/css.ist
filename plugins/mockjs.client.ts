@@ -181,6 +181,32 @@ export default defineNuxtPlugin(() => {
           ]),
         };
       },
+
+      // daisyui colors types
+      MockDaisyColorType: (min?: number, max?: number) => {
+        const _colors = [
+          "primary",
+          "secondary",
+          "accent",
+          "info",
+          "success",
+          "warning",
+          "error",
+        ];
+
+        if (!min) {
+          return _colors;
+        }
+        const json: { [key: string]: string[] } = {};
+        let key = `array|${min}`;
+        if (max) {
+          key += `-${max}`;
+        }
+
+        json[key] = _colors;
+
+        return Mock.mock(json).array;
+      },
     },
   };
 });
