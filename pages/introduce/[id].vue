@@ -161,9 +161,19 @@ import "swiper/css";
 const { page } = useContent();
 
 useHead({
-  title: `【INTRODUCE】${page.value.title},${page.value.tags.join(
-    ","
-  )} - wcao.cc`,
+  title: `【INTRODUCE】${page.value.title} - wcao.cc`,
+  meta: [
+    {
+      name: "description",
+      content: `【INTRODUCE】${page.value.title} on ${page.value.tags.join(
+        ","
+      )} - wcao.cc`,
+    },
+    {
+      name: "keywords",
+      content: page.value.tags.join(","),
+    },
+  ],
 });
 
 const github = computed(() => {

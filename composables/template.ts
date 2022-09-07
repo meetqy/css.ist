@@ -181,19 +181,6 @@ export const allBtnType = [
   "btn-error",
 ];
 
-// 基本信息
-export const baseInfo = {
-  en: {
-    title: "wcao.cc",
-    subtitle:
-      "Share reactive, multi-theme templates and components based on TailwindCSS, DaisyUI.",
-  },
-  zh: {
-    title: "卧槽 - 表示惊讶、赞美",
-    subtitle: "分享响应式、多主题模板和组件，基于 tailwind、daisyui",
-  },
-};
-
 // 模板 页面能公用
 // 登录、注册 等类似
 export const templatePage = {
