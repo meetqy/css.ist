@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.6](https://github.com/meetqy/wcao.cc/compare/v2.1.5...v2.1.6) (2022-09-07)
+
+
+### 🚀 优化现有功能和UI
+
+* add method MockDaisyColorType ([120a9bb](https://github.com/meetqy/wcao.cc/commit/120a9bb17d45f598bfb583343a698b18916c0169))
+
+
+### 🐛 修复bug
+
+* 直接打开template页面,MockJs报错 ([a979a12](https://github.com/meetqy/wcao.cc/commit/a979a12357ff5d1ffcfc2c7696a37db05d69388d))
+
+
+### 📜 新模板
+
+* bard the Wandering Caretaker ([37a9645](https://github.com/meetqy/wcao.cc/commit/37a964597ffd777e719fd9b244a9b91b466ffe62)), closes [#59](https://github.com/meetqy/wcao.cc/issues/59)
+
 ### [2.1.5](https://github.com/meetqy/wcao.cc/compare/v2.1.4...v2.1.5) (2022-09-05)
 
 
