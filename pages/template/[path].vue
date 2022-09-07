@@ -11,7 +11,17 @@ const { path } = route.params;
 const { title, tags } = await queryContent("introduce", path).findOne();
 
 useHead({
-  title: `【TEMPLATE】${title},${tags} - wcao.cc`,
+  title: `【TEMPLATE】${title} wcao.cc`,
+  meta: [
+    {
+      name: "description",
+      content: `【TEMPLATE】${title} on ${tags} - wcao.cc`,
+    },
+    {
+      name: "keywords",
+      content: tags.join(","),
+    },
+  ],
 });
 
 definePageMeta({
