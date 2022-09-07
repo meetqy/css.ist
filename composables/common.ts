@@ -34,3 +34,21 @@ export const usePicsum = (opts: string) => {
 
   return `${url}?t=${Math.random()}`;
 };
+
+export const getWebConfig = (lang?: "en" | "zh") => {
+  if (!lang) lang = "en";
+  return baseInfo[lang];
+};
+
+// 基本信息
+export const baseInfo = {
+  en: {
+    title: "wcao.cc",
+    subtitle:
+      "Share reactive, multi-theme templates and components based on tailwindcss, daisyui.",
+  },
+  zh: {
+    title: "卧槽 - 表示惊讶、赞美",
+    subtitle: "分享响应式、多主题模板和组件，基于 tailwindcss、daisyui。",
+  },
+};

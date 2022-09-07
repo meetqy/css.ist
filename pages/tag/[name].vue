@@ -56,5 +56,11 @@ const { data: list } = useAsyncData(`tag/${name}`, () => getContentByTag(name));
 
 useHead({
   title: `【TAG】${name} - wcao.cc`,
+  meta: [
+    {
+      name: "description",
+      content: `【TAG】${name} - wcao.cc ${getWebConfig().subtitle}`,
+    },
+  ],
 });
 </script>
