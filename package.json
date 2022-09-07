@@ -32,7 +32,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "nuxt": "^3.0.0-rc.8",
+    "nuxt": "^3.0.0-rc.9",
     "prettier": "^2.7.1",
     "sitemap": "^7.1.1",
     "standard-version": "^9.5.0",
