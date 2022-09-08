@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.7](https://github.com/meetqy/wcao.cc/compare/v2.1.6...v2.1.7) (2022-09-08)
+
+
+### 🚀 优化现有功能和UI
+
+* seo描述 ([5800503](https://github.com/meetqy/wcao.cc/commit/5800503f1e8c014d6c85ba181fb5684cbd22e704)), closes [#54](https://github.com/meetqy/wcao.cc/issues/54)
+
+
+### ⚒️ 管理与维护
+
+* upgrade nuxt rc.9 ([7ac3385](https://github.com/meetqy/wcao.cc/commit/7ac3385f4d7430a63d989a23c273b8215bcab896))
+
 ### [2.1.6](https://github.com/meetqy/wcao.cc/compare/v2.1.5...v2.1.6) (2022-09-07)
 
 
