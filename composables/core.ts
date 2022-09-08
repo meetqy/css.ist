@@ -11,7 +11,7 @@ export const websiteConfig: {
   name: string;
   asset: string;
 } = {
-  name: "wcao.cc",
+  name: "css.ist",
   asset: "https://strapi.wcao.cc",
 };
 

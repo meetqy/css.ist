@@ -14,7 +14,8 @@
         >
           <div class="pt-40">
             <h1 class="md:text-7xl text-4xl text-neutral-content/70 font-serif">
-              wcao, it's <br />praise, surprise
+              css.ist, on <br />
+              tailwindcss daisyui.
             </h1>
           </div>
           <div class="mt-8 flex justify-center items-center flex-col">
@@ -53,7 +54,7 @@
           <div
             class="md:text-[12rem] text-6xl my-8 text-neutral-content font-serif tracking-wider"
           >
-            wcao.cc
+            css.ist
           </div>
           <div class="max-w-xl mx-auto">
             <p class="text-neutral-content/50 md:text-xl text-sm">

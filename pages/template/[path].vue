@@ -11,11 +11,11 @@ const { path } = route.params;
 const { title, tags } = await queryContent("introduce", path).findOne();
 
 useHead({
-  title: `【TEMPLATE】${title} wcao.cc`,
+  title: `【TEMPLATE】${title} css.ist`,
   meta: [
     {
       name: "description",
-      content: `【TEMPLATE】${title} on ${tags} - wcao.cc`,
+      content: `【TEMPLATE】${title} on ${tags} - css.ist`,
     },
     {
       name: "keywords",

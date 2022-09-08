@@ -4,15 +4,14 @@
 
 <div align='center'>
   
-# wcao.cc 
-*卧槽 - 表示一种惊讶，赞美*
+# css.ist
   
  ![version](https://img.shields.io/github/package-json/v/meetqy/wcao.cc) ![all templates](https://img.shields.io/github/directory-file-count/meetqy/wcao.cc/components/template?color=red&label=all%20templates) 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![MIT](https://img.shields.io/github/license/meetqy/wcao.cc) ![Vercel](https://vercelbadge.vercel.app/api/meetqy/wcao.cc) 
   
-**wcao.cc** 分享**响应式**、**多主题**模板和组件，基于 tailwindcss、daisyui
+**css.ist** 分享**响应式**、**多主题**模板和组件，基于 tailwindcss、daisyui
   
-   ☀️[wcao.cc](https://wcao.cc) · ☔ [youweb.cc](https://youweb.cc) · 💡[dev.wcao.cc](https://dev.wcao.cc)
+🦇 [css.ist ](https://css.ist) · 🐺 [wcao.cc](https://wcao.cc)
   
 </div>
 
@@ -145,6 +144,5 @@ ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac
 
 ### 🐮 域名
 
-- _vps_: [wcao.cc](https://wcao.cc)
-- _vercel_: [youweb.cc](https://youweb.cc)
-- _vercel_development_: [dev.wcao.cc](https://dev.wcao.cc)
+- _vercel_development_: [dev.wcao.cc](https://dev.wcao.cc), [dev.css.ist](https://dev.css.ist)
+- _vps_: [wcao.cc](https://wcao.cc), [css.ist](https://css.ist)

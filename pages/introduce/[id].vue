@@ -161,13 +161,13 @@ import "swiper/css";
 const { page } = useContent();
 
 useHead({
-  title: `【INTRODUCE】${page.value.title} - wcao.cc`,
+  title: `【INTRODUCE】${page.value.title} - css.ist`,
   meta: [
     {
       name: "description",
       content: `【INTRODUCE】${page.value.title} on ${page.value.tags.join(
         ","
-      )} - wcao.cc`,
+      )} - css.ist`,
     },
     {
       name: "keywords",

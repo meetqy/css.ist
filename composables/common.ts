@@ -43,12 +43,12 @@ export const getWebConfig = (lang?: "en" | "zh") => {
 // 基本信息
 export const baseInfo = {
   en: {
-    title: "wcao.cc",
+    title: "css.ist",
     subtitle:
-      "Share reactive, multi-theme templates and components based on tailwindcss, daisyui.",
+      "share reactive, multi-theme templates and components based on tailwindcss, daisyui.",
   },
   zh: {
-    title: "卧槽 - 表示惊讶、赞美",
+    title: "css.ist",
     subtitle: "分享响应式、多主题模板和组件，基于 tailwindcss、daisyui。",
   },
 };

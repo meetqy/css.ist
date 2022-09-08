@@ -4,8 +4,7 @@
 
 <div align='center'>
   
-# wcao.cc 
-*卧槽 - 表示一种惊讶，赞美*
+# css.ist
 
 [
 ![version](https://img.shields.io/github/package-json/v/meetqy/wcao.cc)
@@ -16,9 +15,9 @@
 ![Vercel](https://vercelbadge.vercel.app/api/meetqy/wcao.cc)
 ]{.flex.justify-center}
 
-**wcao.cc** 分享**响应式**、**多主题**模板和组件，基于 tailwind、daisyui
+**css.ist** 分享**响应式**、**多主题**模板和组件，基于 tailwindcss、daisyui。
 
-🐵 [wcao.cc](https://wcao.cc) · 🙈 [youweb.cc](https://youweb.cc) · 🙉 [dev.wcao.cc](https://dev.wcao.cc)
+🦇 [css.ist ](https://css.ist) · 🐺 [wcao.cc](https://wcao.cc)
 
 </div>
 

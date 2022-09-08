@@ -31,5 +31,16 @@ const { data } = await useAsyncData("firstStage", () => {
 });
 
 const [firstStage] = data.value;
+
 // console.log(firstStage);
+
+useHead({
+  title: getWebConfig().title + " - " + getWebConfig().subtitle,
+  meta: [
+    {
+      name: "description",
+      content: getWebConfig().subtitle,
+    },
+  ],
+});
 </script>

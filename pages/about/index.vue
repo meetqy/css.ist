@@ -8,6 +8,11 @@
 
 <script setup>
 useHead({
-  title: "about - wcao.cc",
+  meta: [
+    {
+      name: "description",
+      content: getWebConfig().subtitle,
+    },
+  ],
 });
 </script>
