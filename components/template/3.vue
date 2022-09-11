@@ -183,7 +183,7 @@ const init = (lang) => {
         "money|1-100": 1,
         prefix: "$",
         image: () => {
-          return useUnsplash("/user/feeypflanzen/", "500x500");
+          return usePicsum("/500/500");
         },
       },
     ],
@@ -195,7 +195,7 @@ const init = (lang) => {
         "money|1-100": 1,
         prefix: "￥",
         image: () => {
-          return useUnsplash("/user/feeypflanzen/", "500x500");
+          return usePicsum("/500/500");
         },
       },
     ],

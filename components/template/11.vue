@@ -1,7 +1,7 @@
 <template>
   <div
     class="font-sans antialiased text-base-content leading-normal tracking-wider bg-cover"
-    :style="`background-image: url('${useUnsplash('/1L71sPT5XKc', '')}')`"
+    :style="`background-image: url('${usePicsum('/1920/1080')}')`"
   >
     <div class="max-w-4xl flex items-center h-screen flex-wrap mx-auto">
       <!--Main Col-->
@@ -14,10 +14,7 @@
           <div
             class="block lg:hidden rounded-full shadow-xl mx-auto -mt-20 md:-mt-32 md:h-48 md:w-48 w-36 h-36 bg-cover bg-center"
             :style="`
-              background-image: url(${useUnsplash(
-                '/user/mahdi_chf/',
-                '300x300'
-              )});
+              background-image: url(${usePicsum('/300/300')});
             `"
           ></div>
 
@@ -67,7 +64,7 @@
       <!--Img Col-->
       <div class="w-full lg:w-2/5 h-[540px] hidden lg:block">
         <img
-          v-lazy="vLazy(useUnsplash('/user/mahdi_chf/', '500x0'))"
+          v-lazy="vLazy(usePicsum('/500'))"
           class="rounded-none lg:rounded-lg shadow-2xl h-full object-cover"
         />
       </div>

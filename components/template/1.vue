@@ -42,10 +42,7 @@
         <!-- banner -->
         <div
           class="relative bg-cover bg-center bg-no-repeat py-8"
-          :style="`background-image: url(${useUnsplash(
-            '/1920x1080',
-            '?fashion'
-          )})`"
+          :style="`background-image: url(${usePicsum('/1920/1080')})`"
         >
           <div
             class="absolute inset-0 z-20 bg-gradient-to-r from-primary/10 to-primary/90 bg-cover bg-center bg-no-repeat"
@@ -246,7 +243,7 @@
             class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 md:gap-10 lg:w-full lg:grid-cols-2"
           >
             <a
-              v-for="(item, i) in $MockList(4, ['/1000x568', '?work'])[lang]"
+              v-for="(item, i) in $MockList(4, '/1000/600')[lang]"
               :key="i"
               class="mx-auto transform transition-all hover:scale-105 md:mx-0 max-h-[568px]"
             >

@@ -14,21 +14,7 @@ export const vLazy = (src: string) => {
   };
 };
 
-/**
- * unsplash 图片
- *
- * /user/raaminka/
- * /user/mahdi_chf/
- */
-export const useUnsplash = (src: string, opts?: string) => {
-  const url = "https://source.unsplash.com" + src + opts;
-
-  return url + "?" + Math.random();
-};
-
-/**
- * 随机图片 不完全测试，好像比unsplash 随机图快一些，不容易出现404
- */
+// 使用图片
 export const usePicsum = (opts: string) => {
   const url = `https://picsum.photos${opts}`;
 

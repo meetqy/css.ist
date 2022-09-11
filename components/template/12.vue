@@ -5,7 +5,7 @@
     >
       <div class="w-40 hidden md:flex">
         <img
-          v-lazy="vLazy(useUnsplash('/user/raaminka/200x600', ''))"
+          v-lazy="vLazy(usePicsum('/200/600'))"
           alt="Double room"
           class="rounded-l"
         />
@@ -15,7 +15,7 @@
         class="h-56 w-full overflow-hidden border-b-4 border-primary rounded-t md:hidden"
       >
         <img
-          v-lazy="vLazy(useUnsplash('/user/mahdi_chf/', '400x300'))"
+          v-lazy="vLazy(usePicsum('/400/300'))"
           alt="Double room"
           class="w-full rounded-l shadow"
         />
@@ -92,7 +92,6 @@
 </template>
 
 <script setup>
-const { $MockList } = useNuxtApp();
 const route = useRoute();
 
 const lang = ref("en");

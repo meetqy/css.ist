@@ -110,7 +110,7 @@ const data = Mock.mock({
 ## 🐸 规范
 
 - 每个模板预览图使用**dark**模式 pc 端**全屏图 1920x1080**
-- 模板中图片资源 `useUnsplash`/`usePicsum`
+- 模板中图片资源 `usePicsum`
 - 基本信息使用 `baseInfo`
 - 菜单、导航 `templateMenu`
 - 联系方式 svg `templateContacts`

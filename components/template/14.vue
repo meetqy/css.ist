@@ -3,7 +3,7 @@
     <div class="m-auto max-w-5xl py-16 px-2 flex">
       <div class="w-2/3">
         <div
-          v-for="(item, i) in $MockList(3, ['/random', '/600/200'])[lang]"
+          v-for="(item, i) in $MockList(3, '/600/200')[lang]"
           :key="i"
           class="post"
         >

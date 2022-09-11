@@ -25,7 +25,7 @@ export default defineNuxtPlugin(() => {
       },
 
       // 列表
-      MockList: (num: number, unsplash?: string[]) => {
+      MockList: (num: number, resize?: string) => {
         const template: { [key: string]: object | string } = {};
 
         template[`en|${num}`] = [
@@ -36,11 +36,7 @@ export default defineNuxtPlugin(() => {
             fav: "@natural(1,999)",
             author: "@name",
             date: "@date('yyyy-MM-dd')",
-            image: () =>
-              useUnsplash(
-                (unsplash && unsplash[0]) || "/user/feeypflanzen/",
-                (unsplash && unsplash[1]) || "500x500"
-              ),
+            image: () => usePicsum(resize || "/500/500"),
             authorAvatar: () => usePicsum("/200/200"),
           },
         ];
@@ -52,11 +48,7 @@ export default defineNuxtPlugin(() => {
             fav: "@natural(1,999)",
             author: "@cname",
             date: "@date('yyyy-MM-dd')",
-            image: () =>
-              useUnsplash(
-                (unsplash && unsplash[0]) || "/user/feeypflanzen/",
-                (unsplash && unsplash[1]) || "500x500"
-              ),
+            image: () => usePicsum(resize || "/500/500"),
             authorAvatar: () => usePicsum("/200/200"),
           },
         ];

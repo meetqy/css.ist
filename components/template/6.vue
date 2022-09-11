@@ -121,8 +121,8 @@ const data = ref(null);
 
 const init = () => {
   data.value = [
-    $MockList(5, ["/user/timromanov/", "500x400"])[lang.value],
-    $MockList(5, ["/user/alichoubin/", "500x400"])[lang.value],
+    $MockList(5, "/500/400")[lang.value],
+    $MockList(5, "/500/400")[lang.value],
   ];
 };
 
