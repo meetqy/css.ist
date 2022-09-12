@@ -39,27 +39,56 @@
 
     <div class="flex justify-between items-center lg:mt-24 mt-12">
       <div class="flex-1 border-t border-dotted border-base-content/20" />
-      <span class="px-12 text-base-content/50 font-medium font-sans">
-        end
-      </span>
+
+      <div>
+        <nuxt-link
+          :class="{ 'btn-disabled bg-transparent': pageIndex <= 1 }"
+          :to="`/tag/${name}/${pageIndex - 1}`"
+          class="ml-2 font-serif capitalize btn btn-sm btn-ghost"
+        >
+          prev
+        </nuxt-link>
+
+        <span class="px-6 text-primary/50 text-sm capitalize">
+          {{ pageIndex }}
+        </span>
+
+        <nuxt-link
+          :class="{ 'btn-disabled bg-transparent': nextList.length < 1 }"
+          :to="`/tag/${name}/${pageIndex + 1}`"
+          class="font-serif capitalize btn btn-sm btn-ghost mr-2"
+        >
+          next
+        </nuxt-link>
+      </div>
       <div class="flex-1 border-t border-dotted border-base-content/20" />
     </div>
   </main>
 </template>
 
 <script setup>
-const route = useRoute();
-const { params } = route;
-const { name } = params;
+const pageIndex = computed(() => +useRoute().params.pageIndex);
+const name = computed(() => useRoute().params.name);
 
-const { data: list } = useAsyncData(`tag/${name}`, () => getContentByTag(name));
+const { data: list } = useAsyncData(
+  `tag/${name.value}/${pageIndex.value}`,
+  () =>
+    getContentByTag(name.value, {
+      pageIndex: pageIndex.value,
+    })
+);
+
+const nextList = ref([]);
+nextList.value = await getContentByTag(name.value, {
+  pageIndex: pageIndex.value + 1,
+});
 
 useHead({
-  title: `【TAG】${name} - css.ist`,
+  title: `【TAG】${name.value} - css.ist`,
   meta: [
     {
       name: "description",
-      content: `【TAG】${name} - css.ist ${getWebConfig().subtitle}`,
+      content: `【TAG】${name.value} - css.ist ${getWebConfig().subtitle}`,
     },
   ],
 });
