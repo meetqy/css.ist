@@ -199,6 +199,21 @@ export default defineNuxtPlugin(() => {
 
         return Mock.mock(json).array;
       },
+
+      MockKeywords: () => {
+        return {
+          en: {
+            readMore: "read more",
+            previous: "previous",
+            next: "next",
+          },
+          zh: {
+            readMore: "查看更多",
+            previous: "上一页",
+            next: "下一页",
+          },
+        };
+      },
     },
   };
 });
