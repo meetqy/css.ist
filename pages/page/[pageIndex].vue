@@ -86,8 +86,9 @@ const getData = async (index) => {
     .find();
 };
 
-const list = ref([]);
-list.value = await getData(pageIndex.value);
+const { data: list } = useAsyncData(`page/${pageIndex.value}`, () =>
+  getData(pageIndex.value)
+);
 
 const nextList = ref([]);
 nextList.value = await getData(pageIndex.value + 1);

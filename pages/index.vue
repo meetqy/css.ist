@@ -85,7 +85,9 @@ const getData = async (index) => {
     .find();
 };
 
-const list = await getData(pageIndex.value);
+const { data: list } = useAsyncData(`page/${pageIndex.value}`, () =>
+  getData(pageIndex.value)
+);
 const nextList = await getData(pageIndex.value + 1);
 
 useHead({
