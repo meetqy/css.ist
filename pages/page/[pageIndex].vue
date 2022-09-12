@@ -92,10 +92,8 @@ list.value = await getData(pageIndex.value);
 const nextList = ref([]);
 nextList.value = await getData(pageIndex.value + 1);
 
-console.log(list.value, nextList.value, pageIndex.value);
-
 useHead({
-  title: getWebConfig().title + " - " + getWebConfig().subtitle,
+  title: `【PAGE ${pageIndex.value}】 - ${getWebConfig().title}`,
   meta: [
     {
       name: "description",
