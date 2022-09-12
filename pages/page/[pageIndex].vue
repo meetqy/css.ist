@@ -8,7 +8,6 @@
       </span>
       news
     </h1>
-
     <div class="2xl:columns-3 lg:columns-2 lg:gap-8 columns-1 gap-2 mt-8">
       <div
         v-for="item in list"
@@ -52,7 +51,7 @@
           prev
         </nuxt-link>
 
-        <span class="px-6 text-primary/50 text-sm capitalize font-mono">
+        <span class="px-6 text-primary/50 text-sm capitalize">
           {{ pageIndex }}
         </span>
 
@@ -70,7 +69,9 @@
 </template>
 
 <script setup>
-const pageIndex = ref(1);
+const route = useRoute();
+
+const pageIndex = computed(() => +route.params.pageIndex);
 const pageSize = 12;
 
 const getData = async (index) => {
@@ -85,8 +86,13 @@ const getData = async (index) => {
     .find();
 };
 
-const list = await getData(pageIndex.value);
-const nextList = await getData(pageIndex.value + 1);
+const list = ref([]);
+list.value = await getData(pageIndex.value);
+
+const nextList = ref([]);
+nextList.value = await getData(pageIndex.value + 1);
+
+console.log(list.value, nextList.value, pageIndex.value);
 
 useHead({
   title: getWebConfig().title + " - " + getWebConfig().subtitle,
