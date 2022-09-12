@@ -1,6 +1,25 @@
 <template>
   <div>
-    <div v-show="!show" class="h-[200vh] w-full">
+    <main
+      class="font-mono wcao bg-base-100"
+      :style="{
+        opacity:
+          scrollTop >= 0 &&
+          1 - (scrollTop < temp ? Math.abs((scrollTop - temp) / temp) : 0),
+      }"
+    >
+      <NuxtLoadingBar ref="loadingRef" />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+
+      <NextImg />
+    </main>
+
+    <div
+      class="h-[200vh] w-full fixed top-0 left-0"
+      :style="{ zIndex: !show ? 999 : -999 }"
+    >
       <div class="home-header-sticky-container">
         <div
           class="home-header_text-wrapper"
@@ -154,15 +173,6 @@
         ></div>
       </div>
     </div>
-
-    <main v-show="show" class="font-mono wcao">
-      <NuxtLoadingBar ref="loadingRef" />
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-
-      <NextImg />
-    </main>
   </div>
 </template>
 

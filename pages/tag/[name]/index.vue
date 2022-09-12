@@ -84,7 +84,7 @@ nextList.value = await getContentByTag(name.value, {
 });
 
 useHead({
-  title: `【TAG ${pageIndex}】${name.value} - css.ist`,
+  title: `【TAG ${pageIndex.value}】${name.value} - css.ist`,
   meta: [
     {
       name: "description",

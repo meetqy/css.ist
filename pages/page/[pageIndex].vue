@@ -94,7 +94,7 @@ const nextList = ref([]);
 nextList.value = await getData(pageIndex.value + 1);
 
 useHead({
-  title: `【PAGE ${pageIndex.value}】 - ${getWebConfig().title}`,
+  title: `【PAGE ${pageIndex.value}】news - ${getWebConfig().title}`,
   meta: [
     {
       name: "description",
