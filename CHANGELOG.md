@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.8](https://github.com/meetqy/wcao.cc/compare/v2.1.7...v2.1.8) (2022-09-12)
+
+
+### 📜 新模板
+
+* 14 - Bel'Veth The Empress of the Void ([c0a95d5](https://github.com/meetqy/wcao.cc/commit/c0a95d518408e639293360a523288827d2e0ed53))
+
+
+### 🚀 优化现有功能和UI
+
+* 调整开屏动画位置,便于seo收录描述 ([479240d](https://github.com/meetqy/wcao.cc/commit/479240d623ff103c29740571c4128598ddf5149b))
+* 模板预览页面，返回应该返回到 介绍页面 close [#69](https://github.com/meetqy/wcao.cc/issues/69) ([015c2e6](https://github.com/meetqy/wcao.cc/commit/015c2e6c33e7d7cb8633999dabeb6248f13faf7e))
+* 首页分页 ([457096c](https://github.com/meetqy/wcao.cc/commit/457096c2490da9c9f88f9b8d484a833ae1122281))
+* 移除 unplash-js ([2821dcb](https://github.com/meetqy/wcao.cc/commit/2821dcb95a5dc6281b3622856db41ee3a59d8098))
+* 移除firststage标签 ([fcd71fa](https://github.com/meetqy/wcao.cc/commit/fcd71fad15cba9ebea03f70030e0c2ce7d986aa0))
+* 优化搜索条件&排序方式 ([4161809](https://github.com/meetqy/wcao.cc/commit/4161809864cd1ffab12f15a021384992b7f443d6))
+* tag 分页 close [#68](https://github.com/meetqy/wcao.cc/issues/68) ([dc49843](https://github.com/meetqy/wcao.cc/commit/dc49843bb051c2c2148d1c20ee65af5761bf22f4))
+
 ### [2.1.7](https://github.com/meetqy/wcao.cc/compare/v2.1.6...v2.1.7) (2022-09-08)
 
 
