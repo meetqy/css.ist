@@ -66,9 +66,10 @@ export const getContentByTag = (
   return queryContent("introduce")
     .where({
       tags,
+      _extension: "yml",
     })
     .only(["_id", "_path", "title", "tags", "previews"])
-    .sort({ _path: -1 })
+    .sort({ _path: -1, $numeric: 1 })
     .skip((pageIndex - 1) * pageSize)
     .limit(pageSize)
     .find();
