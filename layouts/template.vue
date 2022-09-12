@@ -13,7 +13,11 @@
       <div class="fixed left-0 md:left-2 top-1/3 z-50 flex flex-col">
         <div
           class="btn btn-primary btn-md btn-square md:scale-100 scale-75 drawer-button shadow-md md:mb-2"
-          @click="$router.back()"
+          @click="
+            navigateTo(path.replace('template', 'introduce'), {
+              replace: true,
+            })
+          "
         >
           <span class="material-symbols-outlined"> chevron_left </span>
         </div>
@@ -117,16 +121,16 @@
 
 <script setup>
 import { useColorMode } from "@vueuse/core";
-const { path, query } = useRoute();
+const { path } = useRoute();
 
 const langs = {
   en: "english",
   zh: "中文",
 };
-const lang = ref(query.lang || "en");
+
+const lang = computed(() => useRoute().query.lang || "en");
 
 const setLang = (k) => {
-  lang.value = k;
   useRouter().push(`${path}?lang=${k}`);
 };
 
