@@ -1,5 +1,3 @@
-# Algolia-Crawler-Verif: 53841A5E9F00C5F4
-
 User-agent: *
 Allow: /
 Sitemap: https://css.ist/sitemap.xml

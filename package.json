@@ -40,8 +40,6 @@
     "vite-plugin-eslint": "^1.7.0"
   },
   "dependencies": {
-    "@docsearch/css": "^3.2.1",
-    "@docsearch/js": "3",
     "@vueuse/core": "^9.0.0",
     "daisyui": "^2.20.0",
     "mockjs": "^1.1.0",
