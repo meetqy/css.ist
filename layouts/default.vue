@@ -27,11 +27,12 @@
             class="navbar h-16 bg-base-100 pl-4 hidden lg:flex border-b border-base-200"
           >
             <div class="flex-1">
-              <input
+              <div id="docsearch"></div>
+              <!-- <input
                 type="text"
                 class="input w-72 input-bordered h-10"
                 placeholder="search here..."
-              />
+              /> -->
             </div>
             <div class="flex-none">
               <CoreDark />
@@ -107,8 +108,20 @@
 </template>
 
 <script setup>
+import docsearch from "@docsearch/js";
+import "@docsearch/css";
+
 import { useInfiniteScroll, useScroll, useStorage } from "@vueuse/core";
 const storage = useStorage("tag-list-data", []);
+
+onMounted(() => {
+  docsearch({
+    container: "#docsearch",
+    appId: "FN4EK86GY5",
+    indexName: "css.ist",
+    apiKey: "7f28926d6e4658b56a62650326655394",
+  });
+});
 
 const drawerContent = ref(null);
 const drawerSide = ref(null);
