@@ -168,6 +168,7 @@ export const allThemes = {
   night: "night",
   coffee: "coffee",
   winter: "winter",
+  pro_aurora: "pro_aurora",
 };
 
 // 所有按钮类型
