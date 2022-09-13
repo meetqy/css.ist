@@ -49,7 +49,7 @@
           prev
         </nuxt-link>
 
-        <span class="px-6 text-primary/50 text-sm capitalize">
+        <span class="px-6 text-neutral-focus/70 text-sm capitalize">
           {{ pageIndex }}
         </span>
 

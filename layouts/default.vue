@@ -27,11 +27,25 @@
             class="navbar h-16 bg-base-100 pl-4 hidden lg:flex border-b border-base-200"
           >
             <div class="flex-1">
-              <input
-                type="text"
-                class="input w-72 input-bordered h-10"
-                placeholder="search here..."
-              />
+              <div class="dropdown w-72">
+                <label tabindex="0" class="block my-2 bg-transparent">
+                  <input
+                    type="text"
+                    class="input w-full input-bordered h-10"
+                    placeholder="search here..."
+                  />
+                </label>
+                <div
+                  tabindex="0"
+                  class="dropdown-content card w-full shadow border bg-base-100"
+                >
+                  <ul class="menu w-full rounded-box">
+                    <li><a class="active">Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="flex-none">
               <CoreDark />
