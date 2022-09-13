@@ -2,37 +2,42 @@
   "path": "cz-conventional-changelog",
   "types": {
     "feat": {
-      "description": "A new feature",
+      "description": "新功能",
       "title": "Features",
       "emoji": "✨"
     },
     "template": {
-      "description": "A new template",
+      "description": "一个新的模板",
       "title": "Templates",
       "emoji": "🏠"
     },
     "fix": {
-      "description": "Bug fix",
+      "description": "修复BUG",
       "title": "Bug Fixes",
       "emoji": "✨"
     },
     "perf": {
-      "description": "A code change that improves performance(用户界面表现不符合预期，功能优化)",
+      "description": "现有功能升级，优化体验等",
       "title": "Performance Improvements",
       "emoji": "🚀"
     },
     "build": {
-      "description": "涉及项目管理，比如自动化配置等",
+      "description": "项目管理，维护等",
       "title": "Builds",
       "emoji": "🛠"
     },
     "docs": {
-      "description": "Documentation only changes",
+      "description": "文档、内容管理",
       "title": "Documentation",
       "emoji": "📚"
     },
+    "theme": {
+      "description": "一个新的主题配色",
+      "title": "Theme",
+      "emoji": "👁"
+    },
     "chore": {
-      "description": "Other changes that don't modify src or test files",
+      "description": "其他一些修改",
       "title": "Chores",
       "emoji": "♻️"
     }

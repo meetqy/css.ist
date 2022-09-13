@@ -3,6 +3,7 @@
     { "type": "feat", "section": "💡 新功能" },
     { "type": "fix", "section": "🐛 修复bug" },
     { "type": "template", "section": "📜 新模板" },
+    { "type": "theme", "section": "👁 主题色" },
     { "type": "perf", "section": "🚀 优化现有功能和UI" },
     { "type": "build", "section": "⚒️ 管理与维护" },
     { "type": "docs", "section": "📃 文档" },
