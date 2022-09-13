@@ -45,29 +45,26 @@
           <p class="mb-5 text-sm font-sans">
             {{ item.desc }}
           </p>
-          <a href="javascript:;" class="text-error text-sm capitalize">
+          <a href="javascript:;" class="text-primary text-sm capitalize">
             {{ $MockKeywords()[lang].readMore }}...
           </a>
         </div>
 
-        <ul class="flex">
-          <li>
-            <a href="javascript:;" class="page capitalize">{{
-              $MockKeywords()[lang].previous
-            }}</a>
-          </li>
-          <li v-for="item in 5" :key="item">
-            <a href="javascript:;" class="page" :class="{ active: item === 1 }">
-              {{ item }}
-            </a>
-          </li>
-
-          <li>
-            <a href="javascript:;" class="page capitalize">
-              {{ $MockKeywords()[lang].next }}
-            </a>
-          </li>
-        </ul>
+        <div class="btn-group">
+          <button class="btn btn-sm btn-outline capitalize mr-4 font-normal">
+            {{ $MockKeywords()[lang].previous }}
+          </button>
+          <button
+            v-for="item in 5"
+            :key="item"
+            class="btn btn-sm btn-outline mx-4 text-base-content/70 font-normal"
+          >
+            {{ item }}
+          </button>
+          <button class="btn btn-sm btn-outline capitalize ml-4 font-normal">
+            {{ $MockKeywords()[lang].next }}
+          </button>
+        </div>
       </div>
       <!-- END of content -->
 
@@ -89,7 +86,7 @@
             :key="i"
             class="mb-7 text-sm font-serif"
           >
-            <a href="#" class="text-warning">{{ item.title }}</a>
+            <a href="#" class="text-primary">{{ item.title }}</a>
             <p class="line-clamp-2">
               {{ item.desc }}
             </p>
@@ -116,18 +113,18 @@ const lang = computed(() => useRoute().query.lang || "en");
 
 <style scoped lang="postcss">
 .date {
-  @apply absolute w-28 h-12 top-2 -left-2 font-bold text-xs flex items-center justify-center text-error-content opacity-70;
+  @apply absolute w-28 h-12 top-2 -left-2 font-bold text-xs flex items-center justify-center text-base-100/70;
   background: url(./date.png) no-repeat 100% 100%;
 }
 
 .page {
   @apply py-1.5 px-2.5 border-base-300 border bg-base-100 mr-2 text-sm;
   &:hover {
-    @apply bg-warning text-warning-content border-warning border;
+    @apply bg-warning text-warning-content;
   }
 
   &.active {
-    @apply bg-error text-error-content;
+    @apply bg-primary text-primary-content;
   }
 }
 
