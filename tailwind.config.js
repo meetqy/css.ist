@@ -18,7 +18,20 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        pro_aurora: {
+        polar_dark_frost: {
+          primary: "#8fbcbb",
+          secondary: "#88c0d0",
+          accent: "#81a1c1",
+          neutral: "#5e81ac",
+          "base-100": "#2e3440",
+          info: "#3ABFF8",
+          success: "#36D399",
+          warning: "#FBBD23",
+          error: "#F87272",
+        },
+      },
+      {
+        snow_night_frost: {
           primary: "#8fbcbb",
           secondary: "#88c0d0",
           accent: "#81a1c1",

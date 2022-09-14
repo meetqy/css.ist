@@ -139,6 +139,8 @@ export const templateMenu = {
 
 // 所有可使用主题
 export const allThemes = {
+  polar_dark_frost: "polar_dark_frost",
+  snow_night_frost: "snow_night_frost",
   light: "light",
   dark: "dark",
   cupcake: "cupcake",
@@ -168,7 +170,6 @@ export const allThemes = {
   night: "night",
   coffee: "coffee",
   winter: "winter",
-  pro_aurora: "pro_aurora",
 };
 
 // 所有按钮类型
