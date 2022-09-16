@@ -11,7 +11,7 @@ const { path } = route.params;
 const { title, tags } = await queryContent("introduce", path).findOne();
 
 useHead({
-  title: `【TEMPLATE】${title} css.ist`,
+  title: `【TEMPLATE】${title} - css.ist`,
   meta: [
     {
       name: "description",
@@ -43,5 +43,6 @@ const templates = {
   12: resolveComponent("Template12"),
   13: resolveComponent("Template13"),
   14: resolveComponent("Template14"),
+  15: resolveComponent("Template15"),
 };
 </script>
