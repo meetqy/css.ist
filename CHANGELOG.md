@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.9](https://github.com/meetqy/wcao.cc/compare/v2.1.8...v2.1.9) (2022-09-16)
+
+
+### 📃 文档
+
+* less ([a401fde](https://github.com/meetqy/wcao.cc/commit/a401fde8739abd243246fd02f14f403749cc7080))
+
+
+### ⚒️ 管理与维护
+
+* git commit 新增主题记录 ([f2754cd](https://github.com/meetqy/wcao.cc/commit/f2754cd6cfed100938422c4e74acbc8a292da047))
+
+
+### 👁 主题色
+
+* 新增主题 nord close [#37](https://github.com/meetqy/wcao.cc/issues/37) ([0e7bd68](https://github.com/meetqy/wcao.cc/commit/0e7bd68173473b0cba68799adaf02a01fa4977fa))
+* add pro_aurora theme ([552f162](https://github.com/meetqy/wcao.cc/commit/552f16214c4c75fd26d1c6832de4549f67bfca92))
+
+
+### 📜 新模板
+
+* 15 Blitzcrank the Great Steam Golem ([50379fc](https://github.com/meetqy/wcao.cc/commit/50379fc30f792018bbfb1dbb9c2edc3dc87a06ae))
+
 ### [2.1.8](https://github.com/meetqy/wcao.cc/compare/v2.1.7...v2.1.8) (2022-09-12)
 
 
