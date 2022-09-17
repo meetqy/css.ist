@@ -5,17 +5,31 @@
 export const useProduction = () => process.env.NODE_ENV === "production";
 
 /**
- * image cloudflare
- * @param path      nuxt-content path
- * @param filename  previews中的名称
- * @param type      string 灵活变体   https://developers.cloudflare.com/images/cloudflare-images/transform/flexible-variants/
- * @returns
+ * cloudflare image
+ * @param id      cloudflare image id
+ * @param type    变体 灵活变体(暂时不支持) => https://developers.cloudflare.com/images/cloudflare-images/transform/flexible-variants/
+ * @param format  format https://developers.cloudflare.com/images/cloudflare-images/transform/flexible-variants/#format
  */
 export const useCF = (
-  path = "",
-  url = "",
-  type: "public" | "sm" | "2xl" | string
-) => {
+  id: string,
+  type: "public" | "sm" | "2xl" | string,
+  format?: "webp" | "avif" | "json"
+): string => {
+  const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
+  return `${baseURL}/${id}/${type}?format=${format || "webp"}`;
+};
+
+/**
+ * 模板预览图专用
+ * @param path      nuxt-content path
+ * @param filename  .yml previews 中的名称
+ * @param type      变体
+ */
+export const useCFContent = (
+  path: string,
+  url: string,
+  type: "public" | "sm" | "2xl"
+): string => {
   if (
     path === useRuntimeConfig().public.dev_template_path &&
     !useProduction()
@@ -23,13 +37,12 @@ export const useCF = (
     return `/introduce/${url}`.replaceAll("//", "/");
   }
 
-  const baseURL = "https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ";
   const id = `wcao${path}/${url}`
     .replaceAll("//", "/")
     .replaceAll("/", "-")
     .replace(/\.(jpg|png|jpeg|gif)/g, "");
 
-  return `${baseURL}/${id}/${type}`;
+  return useCF(id, type, "webp");
 };
 
 /**
