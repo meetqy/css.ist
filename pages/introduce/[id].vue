@@ -77,6 +77,7 @@
                 ]"
                 @click="full = !full"
               />
+              <div class="w-full h-14"></div>
             </div>
           </template>
 
