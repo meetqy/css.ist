@@ -21,9 +21,9 @@
       "title": "Performance Improvements",
       "emoji": "🚀"
     },
-    "build": {
+    "project": {
       "description": "项目管理，维护等",
-      "title": "Builds",
+      "title": "Projects",
       "emoji": "🛠"
     },
     "docs": {
