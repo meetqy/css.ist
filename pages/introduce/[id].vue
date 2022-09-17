@@ -69,7 +69,7 @@
               </div>
               <img
                 id="img-preview"
-                v-lazy="useCFContentVLazy(page._path, item, 'w=1560')"
+                v-lazy="useCFContentVLazy(page._path, item, '2xl')"
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
                 :class="[
                   full ? 'w-full' : 'lg:w-1/3 w-full',
