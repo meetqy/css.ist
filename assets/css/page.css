@@ -12,7 +12,7 @@
 
 .home-header-desktop_close-planets {
   @apply absolute inset-0 block overflow-hidden z-[10];
-  background-image: url("/page/1.png");
+  background-image: url(https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/06582a2d-ca78-413c-3d42-9fe947a63900/2xl?format=webp);
   background-position: 50% 0%;
 }
 
@@ -34,23 +34,23 @@
 }
 .home-header-desktop_close-buildings {
   @apply absolute inset-0 z-[7] overflow-hidden bg-cover bg-no-repeat;
-  background-image: url("/page/4.png");
+  background-image: url(https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/0cdf0fa4-7969-4006-e42a-7828acb52700/2xl?format=webp);
   background-position: 50% 100%;
 }
 .home-header-desktop_far-buildings {
   @apply absolute inset-0 z-[6] overflow-hidden bg-cover bg-no-repeat;
-  background-image: url("/page/5.png");
+  background-image: url(https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/06f0dd91-e92f-4bde-47dc-a2757bb7c000/2xl?format=webp);
   background-position: 50% 100%;
 }
 
 .home-header-desktop_stars {
   @apply absolute inset-0 overflow-hidden bg-cover bg-no-repeat bg-fixed opacity-50 z-[7];
-  background-image: url("/page/7.png");
+  background-image: url(https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/bf7bf383-92cb-4ea3-fe7b-be1a95f33600/2xl?format=webp);
   background-position: 50% 0;
 }
 .home-header-desktop_far-planets {
   @apply absolute inset-0 overflow-hidden z-[3] bg-cover bg-no-repeat bg-fixed;
-  background-image: url("/page/8.png");
+  background-image: url(https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/a5f955e1-9984-4730-0532-956df3737300/2xl?format=webp);
   background-position: 50% 0;
 }
 .home-header_text-wrapper {
