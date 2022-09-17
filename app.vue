@@ -212,7 +212,16 @@ router.beforeEach((_to, _from, next) => {
 </script>
 
 <style lang="postcss">
-img[lazy="loading"] {
-  @apply opacity-50;
+img[lazy="loaded"] {
+  animation: imgLoaded 1s;
+}
+
+@keyframes imgLoaded {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

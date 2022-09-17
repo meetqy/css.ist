@@ -19,6 +19,17 @@ export const useCF = (
   return `${baseURL}/${id}/${type}?format=${format || "webp"}`;
 };
 
+export const useCFContentVLazy = (
+  path: string,
+  url: string,
+  type: "public" | "sm" | "2xl"
+) => {
+  return {
+    src: useCFContent(path, url, type),
+    loading: useCFContent(path, url, "smplaceholder"),
+  };
+};
+
 /**
  * 模板预览图专用
  * @param path      nuxt-content path
@@ -28,7 +39,7 @@ export const useCF = (
 export const useCFContent = (
   path: string,
   url: string,
-  type: "public" | "sm" | "2xl"
+  type: "public" | "sm" | "2xl" | "smplaceholder"
 ): string => {
   if (
     path === useRuntimeConfig().public.dev_template_path &&

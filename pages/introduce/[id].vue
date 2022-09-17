@@ -34,7 +34,7 @@
                   @click="activePreviewIndex = i"
                 >
                   <img
-                    v-lazy="vLazy(useCFContent(page._path, item, 'sm'))"
+                    v-lazy="useCFContentVLazy(page._path, item, 'sm')"
                     class="object-contain object-center !my-0"
                   />
                 </div>
@@ -69,7 +69,7 @@
               </div>
               <img
                 id="img-preview"
-                v-lazy="vLazy(useCFContent(page._path, item, 'w=1560'))"
+                v-lazy="useCFContentVLazy(page._path, item, 'w=1560')"
                 class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
                 :class="[
                   full ? 'w-full' : 'lg:w-1/3 w-full',
@@ -138,7 +138,7 @@
               "
             >
               <img
-                v-lazy="vLazy(useCFContent(item._path, item.previews[0], 'sm'))"
+                v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
                 class="w-full aspect-video object-contain rounded-box border border-base-200 shadow bg-base-200/20"
               />
               <p class="px-2">{{ item.title }}</p>
