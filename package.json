@@ -1,6 +1,6 @@
 {
   "name": "wcao.cc",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -12,7 +12,7 @@
     "line:fix": "prettier . --write",
     "cz": "cz",
     "prepare": "husky install",
-    "release": "standard-version",
+    "release": "standard-version --no-verify",
     "dry-run": "yarn release -- --dry-run"
   },
   "devDependencies": {

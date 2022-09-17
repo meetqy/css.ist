@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.10](https://github.com/meetqy/wcao.cc/compare/v2.1.9...v2.1.10) (2022-09-17)
+
+
+### 🐛 修复bug
+
+* 修复首页入场动画颜色乱跳 ([b3742af](https://github.com/meetqy/wcao.cc/commit/b3742afdf4337eb520f00039ed58115bbbee0748))
+
+
+### ⚒️ 管理与维护
+
+* 删除swiper.vue ([2cd8d23](https://github.com/meetqy/wcao.cc/commit/2cd8d23eff3f927ab027be68251930f6510ef502))
+* czrc ([7464033](https://github.com/meetqy/wcao.cc/commit/7464033de4436995a20f5710db99dc00d0a1c405))
+
+
+### 🚀 优化现有功能和UI
+
+* 模板介绍页面预览图ui调整 ([d97cd79](https://github.com/meetqy/wcao.cc/commit/d97cd79dc0085a3a3c1831b0ae96efe4a5efe38c))
+* 首页动画图片改为 cdn webp 格式 ([14e8752](https://github.com/meetqy/wcao.cc/commit/14e8752c455a1053f2ad9433424dab19674f715d))
+* 以前的useCF 改为 useCFContent 专供 模板使用 ([eb7777f](https://github.com/meetqy/wcao.cc/commit/eb7777f6450c166e3e4311f69d3d7841828288a0))
+* logo cdn webp ([fb3b0aa](https://github.com/meetqy/wcao.cc/commit/fb3b0aa3768a4d243b3ce60c0127e394bdf5f8bc))
+
 ### [2.1.9](https://github.com/meetqy/wcao.cc/compare/v2.1.8...v2.1.9) (2022-09-16)
 
 
