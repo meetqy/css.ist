@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.11](https://github.com/meetqy/wcao.cc/compare/v2.1.10...v2.1.11) (2022-09-17)
+
+
+### 🚀 优化现有功能和UI
+
+* 1560 使用变体 2xl ([8c412fc](https://github.com/meetqy/wcao.cc/commit/8c412fce188ce9d271db2c714b819aa296acc26c))
+* 减小google font图标请求大小 ([fbd6284](https://github.com/meetqy/wcao.cc/commit/fbd6284bf68a4313678a9849a5f2ae86e1fdc915))
+* 图片加载优化 close [#65](https://github.com/meetqy/wcao.cc/issues/65) ([d4db2a2](https://github.com/meetqy/wcao.cc/commit/d4db2a29cb6a757803b9ba9c190096a847cb2ca8))
+* 移除模板中的图片loading ([c3bea5f](https://github.com/meetqy/wcao.cc/commit/c3bea5feecd555082acf751dcf074e0303bbd374))
+
 ### [2.1.10](https://github.com/meetqy/wcao.cc/compare/v2.1.9...v2.1.10) (2022-09-17)
 
 
