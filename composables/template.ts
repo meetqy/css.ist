@@ -139,10 +139,10 @@ export const templateMenu = {
 
 // 所有可使用主题
 export const allThemes = {
-  polar_dark_frost: "polar_dark_frost",
-  snow_night_frost: "snow_night_frost",
   light: "light",
   dark: "dark",
+  polar_dark_frost: "polar_dark_frost",
+  snow_night_frost: "snow_night_frost",
   cupcake: "cupcake",
   bumblebee: "bumblebee",
   emerald: "emerald",

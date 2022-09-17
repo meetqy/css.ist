@@ -17,6 +17,8 @@ module.exports = {
   ],
   daisyui: {
     themes: [
+      "light",
+      "dark",
       {
         polar_dark_frost: {
           primary: "#8fbcbb",
@@ -43,8 +45,6 @@ module.exports = {
           error: "#bf616a",
         },
       },
-      "light",
-      "dark",
       "cupcake",
       "bumblebee",
       "emerald",
