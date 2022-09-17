@@ -26,24 +26,19 @@
             </h1>
 
             <div class="w-full lg:w-1/3 flex justify-end mt-4 lg:mt-0">
-              <Swiper
-                :slides-per-view="4"
-                :space-between="12"
-                class="flex-1 bg-base-300"
-                @tap="onTap"
-              >
-                <SwiperSlide v-for="(item, i) in page.previews" :key="i">
+              <div class="flex-1 bg-base-300 overflow-x-scroll flex space-x-4">
+                <div
+                  v-for="(item, i) in page.previews"
+                  :key="i"
+                  class="flex-shrink-0 w-24 h-24 overflow-hidden flex justify-center items-center cursor-pointer hover:bg-primary/5 transition-all"
+                  @click="activePreviewIndex = i"
+                >
                   <img
                     v-lazy="vLazy(useCF(page._path, item, 'sm'))"
-                    class="w-full h-24 object-cover object-top !m-1 outline-4 outline"
-                    :class="
-                      activePreviewIndex === i
-                        ? 'outline-primary'
-                        : 'outline-base-100'
-                    "
+                    class="object-contain object-center !my-0"
                   />
-                </SwiperSlide>
-              </Swiper>
+                </div>
+              </div>
 
               <NuxtLink
                 :to="`${page._path.replace('introduce', 'template')}`"
@@ -155,9 +150,6 @@
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-
 const { page } = useContent();
 
 useHead({
@@ -189,11 +181,6 @@ const github = computed(() => {
 const activePreviewIndex = ref(0);
 const full = ref(false);
 const showImgPreview = ref(false);
-
-const onTap = (swiper) => {
-  activePreviewIndex.value = swiper.clickedIndex;
-  swiper.slideTo(swiper.clickedIndex);
-};
 
 const moreContent = ref([]);
 
