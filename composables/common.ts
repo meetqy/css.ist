@@ -10,7 +10,7 @@
 export const vLazy = (src: string) => {
   return {
     src,
-    loading: useCF("css.ist-logo", "sm"),
+    // loading: useCF("css.ist-logo", "w=600&h=200"),
   };
 };
 
