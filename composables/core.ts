@@ -5,17 +5,6 @@
 export const useProduction = () => process.env.NODE_ENV === "production";
 
 /**
- * 网站基础配置
- */
-export const websiteConfig: {
-  name: string;
-  asset: string;
-} = {
-  name: "css.ist",
-  asset: "https://strapi.wcao.cc",
-};
-
-/**
  * image cloudflare
  * @param path      nuxt-content path
  * @param filename  previews中的名称

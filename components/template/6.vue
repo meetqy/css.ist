@@ -48,7 +48,7 @@
                   class="btn capitalize btn-primary btn-sm btn-link mt-10"
                 >
                   <span class="text-base tracking-wide font-light mr-2">
-                    {{ templatePage[lang].read }}
+                    {{ $MockKeywords()[lang].read }}
                   </span>
                   <span class="material-symbols-outlined">
                     arrow_right_alt

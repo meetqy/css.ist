@@ -15,7 +15,7 @@
         >
           <div class="flex justify-center items-center font-seri">
             <img src="/logo.png" class="w-8 h-8 mr-2" />
-            {{ websiteConfig.name }}
+            {{ getWebConfig().title }}
           </div>
 
           <CoreDark />
@@ -74,7 +74,7 @@
               class="btn btn-ghost text-2xl normal-case hover:bg-transparent hidden lg:flex font-serif"
             >
               <img src="/logo.png" class="w-10 h-10 mr-2" />
-              {{ websiteConfig.name }}
+              {{ getWebConfig().title }}
             </NuxtLink>
 
             <input
