@@ -8,6 +8,7 @@
 
 <script setup>
 useHead({
+  title: "about - css.ist",
   meta: [
     {
       name: "description",

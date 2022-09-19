@@ -31,3 +31,14 @@
 - 基于 daisyui，所以支持大量主题，后期也能根据自己的喜欢自定义主题
 - 纯 css 模板，不受框架限制
 - 以组件、模块、某一个效果为单位，便于复制粘贴
+
+## [🦑 技术栈]{.text-base-content}
+
+| [~~~~~]{.text-primary} | [*****]{.text-secondary} |
+| ---------------------- | ------------------------ |
+| `框架`                 | nuxt3                    |
+| `ui`                   | tailwindcss + daisyui    |
+| `cdn`                  | cloudflare               |
+| `image`                | cloudflare image         |
+| `dev_server`           | vercel                   |
+| `prod_server`          | misaka vps               |

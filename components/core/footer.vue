@@ -19,26 +19,26 @@
       <p>
         All right reserved by
         <a
-          href="https://wcao.cc"
+          href="https://css.ist"
           target="_blank"
           class="text-primary font-bold hover:underline"
         >
-          wcao.cc
+          css.ist
         </a>
       </p>
       <p>
         other website:
         <a
-          href="https://youweb.cc"
+          href="https://wcao.cc"
           target="_blank"
           class="text-secondary font-bold hover:underline"
         >
-          youweb.cc
+          wcao.cc
         </a>
       </p>
     </div>
     <div class="grid grid-flow-col gap-4">
-      <a href="https://github.com/meetqy/wcao.cc" target="_blank">
+      <a href="https://github.com/meetqy/css.ist" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="fill-current w-6 h-6"
