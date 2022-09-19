@@ -26,7 +26,10 @@
             </h1>
 
             <div class="w-full lg:w-1/3 flex justify-end mt-4 lg:mt-0">
-              <div class="flex-1 bg-base-300 overflow-x-scroll flex space-x-4">
+              <div
+                id="introduce-previews"
+                class="flex-1 bg-base-300 overflow-x-scroll flex space-x-4"
+              >
                 <div
                   v-for="(item, i) in page.previews"
                   :key="i"
