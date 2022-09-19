@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "css.ist 分享响应式、多主题模板和组件,基于tailwindcss、daisyui",
+      title: "css.ist",
       meta: [
         {
           name: "keywords",
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "css.ist 分享响应式、多主题模板和组件,基于tailwindcss、daisyui",
+            "css.ist - share reactive, multi-theme templates and components based on tailwindcss, daisyui.",
         },
         {
           name: "viewport",
