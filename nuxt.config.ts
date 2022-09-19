@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt/config";
 import eslintPlugin from "vite-plugin-eslint";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -17,6 +17,10 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/sitemap.xml"],
     },
+  },
+
+  components: {
+    dirs: ["~/components", "~/templates"],
   },
 
   content: {

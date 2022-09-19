@@ -13,7 +13,7 @@
         <NuxtPage />
       </NuxtLayout>
 
-      <NextImg />
+      <CoreNextImg />
     </main>
 
     <div
@@ -177,7 +177,6 @@
 </template>
 
 <script setup>
-import NextImg from "./components/core/next-img.vue";
 const router = useRouter();
 const show = ref(false);
 const clientHeight = ref(0);

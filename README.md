@@ -43,19 +43,21 @@
     - template                          # 模板展示 - 主题切换、语言切换等
 - components
     - core                              # 外部架子公用组件
-    - template                          # 模板
 - composables
     - core                              # 核心 hooks
     - template                          # 模板 mock类 hooks
     - common                            # 公用hooks
 - introduce                             # 模板介绍 markdown
 - content                               # 默认@nuxt/content 存放模板外的其他md页面
+- plugins
+    - mock.client.ts                    # mockjs 常用方法 中/英文
 - pages
     - template/[path]                   # 模板展示
     - tag/[name]                        # 标签分页
     - index                             # 首页
     - about                             # 关于我
     - [...slug].vue                     # 介绍详情
+- templates                             # 模板
 ```
 
 ### 🐰 Mock Data/多语言
