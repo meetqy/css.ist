@@ -3,7 +3,6 @@ tags:
   - animation
   - home
   - homepage
-  
   - leagueoflegends
 previews:
   - 3.png
@@ -13,3 +12,4 @@ previews:
   - 1.png
   - 5.png
 source: https://glaredb.com/
+template_folder: true

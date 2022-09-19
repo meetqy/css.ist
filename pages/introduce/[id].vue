@@ -82,8 +82,10 @@
           </template>
 
           <p class="flex items-center flex-wrap mt-6">
-            <span class="material-symbols-outlined mt-2"> sell </span>
-            <span class="ml-1 mt-2 uppercase">tags:</span>
+            <span class="material-symbols-outlined mt-2 text-primary/20">
+              sell
+            </span>
+            <span class="ml-2 mt-2 uppercase">tags:</span>
             <NuxtLink
               v-for="item in page.tags"
               :key="item"
@@ -95,28 +97,32 @@
           </p>
 
           <div v-if="page.source" class="mt-4 flex items-center">
-            <span class="material-symbols-outlined"> my_location </span>
-            <span class="ml-1 uppercase">source:</span>
+            <span class="material-symbols-outlined text-secondary/20">
+              emoji_nature
+            </span>
+            <span class="ml-2 uppercase">source of inspiration:</span>
             《<span class="line-clamp-1">
               <a
                 :href="page.source"
                 target="_blank"
                 class="text-primary uppercase"
-                >{{ page.source }}</a
-              > </span
+                >{{ page.source }}
+              </a> </span
             >》
           </div>
 
           <p class="mt-4 flex items-center">
-            <span class="material-symbols-outlined text-info"> code </span>
-            <span class="ml-1 uppercase">code:</span>
+            <span class="material-symbols-outlined text-accent/20"> code </span>
+            <span class="ml-2 uppercase">source code:</span>
             <span>
               <a
-                :href="github"
+                :href="`${github}${
+                  page.template_folder ? '/index.vue' : '.vue'
+                }`"
                 target="_blank"
-                class="ml-1 capitalize text-info"
+                class="ml-1 text-info"
               >
-                github
+                {{ page._path.replace("/introduce", "/template") }}
               </a>
             </span>
           </p>
@@ -174,7 +180,7 @@ const github = computed(() => {
     ? `https://github.com/meetqy/wcao.cc/blob/dev/components/template/${page.value._path.replace(
         "/introduce/",
         ""
-      )}.vue`
+      )}`
     : "";
 });
 
