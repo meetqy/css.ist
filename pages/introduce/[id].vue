@@ -81,7 +81,7 @@
             </div>
           </template>
 
-          <p class="flex items-center flex-wrap mt-6">
+          <p id="tags" class="flex items-center flex-wrap mt-6">
             <span class="material-symbols-outlined mt-2 text-primary/20">
               sell
             </span>
