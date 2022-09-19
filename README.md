@@ -116,6 +116,36 @@ const data = Mock.mock({
 
 - [League of Legends Wiki](https://leagueoflegends.fandom.com/wiki/List_of_champions)
 
+## 🦋 introduce/\*.yml 参数说明
+
+| 参数            | 说明                                    | 类型      | 必填           |
+| --------------- | --------------------------------------- | --------- | -------------- |
+| title           | 标题                                    | `boolean` | true           |
+| tags            | 标签                                    | `array`   | ture, 最少一项 |
+| previews        | 预览图                                  | `array`   | true, 6 张     |
+| source          | 灵感来源                                | `string`  | false          |
+| template_folder | 模板是否为文件夹格式，定位跳转到 github | `boolean` | false          |
+
+### 实例
+
+```yml
+title: "Aphelios the Weapon of the Faithful"
+tags:
+  - animation
+  - home
+  - homepage
+  - leagueoflegends
+previews:
+  - 3.png
+  - 2.gif
+  - 4.png
+  - 6.png
+  - 1.png
+  - 5.png
+source: https://glaredb.com/
+template_folder: true
+```
+
 ## 🐨 封面图、预览图
 
 ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac light`、`iphone dark`、`iphone light`
