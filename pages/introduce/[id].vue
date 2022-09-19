@@ -159,18 +159,18 @@
 <script setup>
 const { page } = useContent();
 
+const { title, tags } = page.value;
+
 useHead({
-  title: `【INTRODUCE】${page.value.title} - css.ist`,
+  title: `${title} › introduce`,
   meta: [
     {
       name: "description",
-      content: `【INTRODUCE】${page.value.title} on ${page.value.tags.join(
-        ","
-      )} - css.ist`,
+      content: `${title} are ${tags}, based on tailwindcss,daisyui. › introduce`,
     },
     {
       name: "keywords",
-      content: page.value.tags.join(","),
+      content: `${tags.join(",")},tailwindcss,daisyui`,
     },
   ],
 });
@@ -193,7 +193,7 @@ const moreContent = ref([]);
 
 onMounted(async () => {
   const res = await getContentByTag(
-    page.value.tags,
+    tags,
     {
       pageIndex: 1,
       pageSize: 12,

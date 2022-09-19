@@ -83,12 +83,17 @@ nextList.value = await getContentByTag(name.value, {
   pageIndex: pageIndex.value + 1,
 });
 
+const allTagList = ref([]);
+allTagList.value = await getContentByTag(name.value, {
+  pageSize: 99999999,
+});
+
 useHead({
-  title: `【TAG ${pageIndex.value}】${name.value} - css.ist`,
+  title: `css.ist › ${name.value} › ${pageIndex.value}`,
   meta: [
     {
       name: "description",
-      content: `【TAG】${name.value} - css.ist ${getWebConfig().subtitle}`,
+      content: `${allTagList.value.length} ${name.value} templates, based on tailwindcss,daisyui.`,
     },
   ],
 });

@@ -11,15 +11,15 @@ const { path } = route.params;
 const { title, tags } = await queryContent("introduce", path).findOne();
 
 useHead({
-  title: `【TEMPLATE】${title} - css.ist`,
+  title: `${title} › template`,
   meta: [
     {
       name: "description",
-      content: `【TEMPLATE】${title} on ${tags} - css.ist`,
+      content: `${title} are ${tags}, based on tailwindcss,daisyui. › template`,
     },
     {
       name: "keywords",
-      content: tags.join(","),
+      content: `${tags.join(",")},tailwindcss,daisyui`,
     },
   ],
 });

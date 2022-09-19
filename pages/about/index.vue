@@ -5,15 +5,3 @@
     <ContentDoc path="/introduce/about" />
   </main>
 </template>
-
-<script setup>
-useHead({
-  title: "about - css.ist",
-  meta: [
-    {
-      name: "description",
-      content: getWebConfig().subtitle,
-    },
-  ],
-});
-</script>

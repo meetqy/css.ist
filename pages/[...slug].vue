@@ -18,7 +18,7 @@
       <div
         class="text-base-content/80 font-medium text-2xl tracking-widest font-serif"
       >
-        wcao.cc...
+        css.ist...
       </div>
       <div
         class="text-base-content/40 text-sm mb-8 font-serif line-clamp-2 w-96"

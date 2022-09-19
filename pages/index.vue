@@ -91,7 +91,7 @@ const { data: list } = useAsyncData(`page/${pageIndex.value}`, () =>
 const nextList = await getData(pageIndex.value + 1);
 
 useHead({
-  title: getWebConfig().title + " - " + getWebConfig().subtitle,
+  title: getWebConfig().title,
   meta: [
     {
       name: "description",
