@@ -143,5 +143,12 @@ drawerContentScroll.value = useScroll(drawerContentElement);
 
 const res = await queryContent("introduce").only(["tags"]).find();
 
-const navs = [...new Set(res.map((item) => item.tags).flat(1))];
+const navs = [
+  ...new Set(
+    res
+      .map((item) => item.tags)
+      .filter((item) => !!item)
+      .flat(1)
+  ),
+];
 </script>
