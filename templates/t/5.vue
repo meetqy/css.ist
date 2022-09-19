@@ -220,7 +220,7 @@
               <p class="text-base-content/70 text-xs md:text-base mt-2">
                 {{ baseInfo[lang].subtitle }}
                 <a class="btn btn-link btn-success p-0 inline mt-2 normal-case">
-                  wcao.cc
+                  css.ist
                 </a>
               </p>
             </div>
@@ -289,13 +289,13 @@ const data = ref(null);
 
 const page = {
   en: {
-    subscribe: "Subscribe to WCAO.CC",
+    subscribe: "Subscribe to css.ist",
     desc: "Get the latest posts delivered right to your inbox",
     btn: "subscribe",
     more: "read more",
   },
   zh: {
-    subscribe: "订阅WCAO.CC",
+    subscribe: "订阅css.ist",
     desc: "最新的文章会第一时间发送到你的邮箱",
     btn: "订阅",
     more: "更多",

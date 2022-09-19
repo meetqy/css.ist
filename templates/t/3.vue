@@ -203,7 +203,7 @@ const init = (lang) => {
 
   page.value = {
     en: {
-      title: "wcao.cc",
+      title: "css.ist",
       slogen: $Mock.mock("@sentence"),
       sub: $Mock.mock("@title(1,3)"),
       bottomTitle: $Mock.mock("@title(1)"),
@@ -213,7 +213,7 @@ const init = (lang) => {
       name: $Mock.mock("@name"),
     },
     zh: {
-      title: "卧槽 - 表示惊讶",
+      title: "css.ist",
       slogen: $Mock.mock("@csentence"),
       sub: $Mock.mock("@ctitle(1,3)"),
       bottomTitle: $Mock.mock("@ctitle"),

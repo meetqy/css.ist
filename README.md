@@ -6,8 +6,8 @@
   
 # css.ist
   
- ![version](https://img.shields.io/github/package-json/v/meetqy/wcao.cc) ![all templates](https://img.shields.io/github/directory-file-count/meetqy/css.ist/templates/t?color=red&label=all%20templates) 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![MIT](https://img.shields.io/github/license/meetqy/wcao.cc) ![Vercel](https://vercelbadge.vercel.app/api/meetqy/wcao.cc) 
+ ![version](https://img.shields.io/github/package-json/v/meetqy/css.ist) ![all templates](https://img.shields.io/github/directory-file-count/meetqy/css.ist/templates/t?color=red&label=all%20templates) 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![MIT](https://img.shields.io/github/license/meetqy/css.ist) ![Vercel](https://vercelbadge.vercel.app/api/meetqy/css.ist) 
   
 **css.ist** 分享**响应式**、**多主题**模板和组件，基于 tailwindcss、daisyui
   

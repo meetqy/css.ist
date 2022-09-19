@@ -54,7 +54,7 @@
             <div
               class="md:text-[12rem] text-6xl my-8 text-neutral-content font-serif tracking-wider"
             >
-              wcao.cc
+              css.ist
             </div>
             <div class="max-w-xl mx-auto">
               <p class="text-neutral-content/50 md:text-xl text-sm">

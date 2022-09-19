@@ -38,7 +38,7 @@
                 </button>
                 <input
                   type="text"
-                  placeholder="wcao.cc"
+                  placeholder="css.ist"
                   class="input focus:outline-none"
                 />
               </label>
