@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.12](https://github.com/meetqy/css.ist/compare/v2.1.11...v2.1.12) (2022-09-20)
+
+
+### 🐛 修复bug
+
+* 源码文件跳转404 close [#75](https://github.com/meetqy/css.ist/issues/75),[#74](https://github.com/meetqy/css.ist/issues/74) ([fe18cd0](https://github.com/meetqy/css.ist/commit/fe18cd0c4beeab8e50b50c5dfadd305e67d01f40))
+
+
+### ⚒️ 管理与维护
+
+* 调整模板文件结构 close [#73](https://github.com/meetqy/css.ist/issues/73) ([cd8faa9](https://github.com/meetqy/css.ist/commit/cd8faa953929effdf8f956fba84d4ca104ef2a2a))
+
+
+### 📜 新模板
+
+* add template 16 ([92d1c31](https://github.com/meetqy/css.ist/commit/92d1c31ba0fd886cde50ad1903a3e5c3ff6c265a))
+
+
+### 🚀 优化现有功能和UI
+
+* image alt ([98fdd56](https://github.com/meetqy/css.ist/commit/98fdd56e4e02930ddd47280513284eb2264f94b1))
+* img add alt ([f8aabb3](https://github.com/meetqy/css.ist/commit/f8aabb34368c342dbd47c76dccdb8be45d8514cc))
+
+
+### 📃 文档
+
+* 完善 yml previews 规则 ([26c41a8](https://github.com/meetqy/css.ist/commit/26c41a8f1789a417a7aa6d4571f19f42a941eddc))
+* introduce/*.yml 参数说明 ([5b799f0](https://github.com/meetqy/css.ist/commit/5b799f092af83d512a2405cd46b946c1991a1779))
+
 ### [2.1.11](https://github.com/meetqy/wcao.cc/compare/v2.1.10...v2.1.11) (2022-09-17)
 
 
