@@ -207,12 +207,18 @@ export default defineNuxtPlugin(() => {
             previous: "previous",
             next: "next",
             welcome: "welcome to",
+            signUp: "sign up",
+            name: "name",
+            email: "e-mail",
           },
           zh: {
             readMore: "查看更多",
             previous: "上一页",
             next: "下一页",
             welcome: "欢迎来到",
+            signUp: "注册",
+            name: "姓名",
+            email: "邮箱",
           },
         };
       },
