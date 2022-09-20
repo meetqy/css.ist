@@ -13,8 +13,7 @@
 ![all templates](https://img.shields.io/github/directory-file-count/meetqy/css.ist/templates/t?color=red&label=all%20templates)
 ![commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
-![MIT](https://img.shields.io/github/license/meetqy/wcao.cc)
-![Vercel](https://vercelbadge.vercel.app/api/meetqy/wcao.cc)
+![MIT](https://img.shields.io/github/license/meetqy/css.ist)
 ]{.flex.justify-center}
 
 **css.ist** 分享**响应式**、**多主题**模板和组件，基于 tailwindcss、daisyui。
