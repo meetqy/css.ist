@@ -120,13 +120,13 @@ const data = Mock.mock({
 
 ## 🦋 introduce/\*.yml 参数说明
 
-| 参数            | 说明                                    | 类型      | 必填           |
-| --------------- | --------------------------------------- | --------- | -------------- |
-| title           | 标题                                    | `boolean` | true           |
-| tags            | 标签                                    | `array`   | ture, 最少一项 |
-| previews        | 预览图                                  | `array`   | true, 6 张     |
-| source          | 灵感来源                                | `string`  | false          |
-| template_folder | 模板是否为文件夹格式，定位跳转到 github | `boolean` | false          |
+| 参数            | 说明                                    | 类型                                   | 必填           |
+| --------------- | --------------------------------------- | -------------------------------------- | -------------- |
+| title           | 标题                                    | `boolean`                              | true           |
+| tags            | 标签                                    | `array`                                | ture, 最少一项 |
+| previews        | 预览图                                  | `array` [url, theme, divice, language] | true, 6 张     |
+| source          | 灵感来源                                | `string`                               | false          |
+| template_folder | 模板是否为文件夹格式，定位跳转到 github | `boolean`                              | false          |
 
 ### 实例
 
@@ -138,12 +138,12 @@ tags:
   - homepage
   - leagueoflegends
 previews:
-  - 3.png
-  - 2.gif
-  - 4.png
-  - 6.png
-  - 1.png
-  - 5.png
+  - 1.png light macbook en
+  - 2.png dark macbook zh
+  - 3.png snow_night_frost ipad en
+  - 4.png snow_dark_frost ipad en
+  - 5.png corporate iphone zh
+  - 6.png black iphone zh
 source: https://glaredb.com/
 template_folder: true
 ```
