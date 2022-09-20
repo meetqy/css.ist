@@ -16,9 +16,14 @@
           <img
             v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
             class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
-            :alt="`${title} template in ${item.tags.join(
-              '/'
-            )}, based on tailwindcss,daisyui. tag › ${name} › sm`"
+            :alt="
+              useImgAltContent(
+                item.title,
+                item.tags,
+                item.previews[0],
+                `tag › ${name} › sm`
+              )
+            "
           />
         </NuxtLink>
 

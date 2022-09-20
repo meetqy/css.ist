@@ -39,9 +39,14 @@
                   <img
                     v-lazy="useCFContentVLazy(page._path, item, 'sm')"
                     class="object-contain object-center !my-0"
-                    :alt="`${title} template in ${tags.join(
-                      '/'
-                    )}, based on tailwindcss,daisyui. introduce › previews › sm`"
+                    :alt="
+                      useImgAltContent(
+                        title,
+                        tags,
+                        item,
+                        'introduce › previews › sm'
+                      )
+                    "
                   />
                 </div>
               </div>
@@ -81,9 +86,14 @@
                   full ? 'w-full' : 'lg:w-1/3 w-full',
                   showImgPreview ? ' opacity-100' : ' opacity-0',
                 ]"
-                :alt="`${title} template in ${tags.join(
-                  '/'
-                )}, based on tailwindcss,daisyui. introduce › detail › 2xl`"
+                :alt="
+                  useImgAltContent(
+                    title,
+                    tags,
+                    item,
+                    'introduce › detail › 2xl'
+                  )
+                "
                 @click="full = !full"
               />
               <div class="w-full h-14"></div>
@@ -155,9 +165,14 @@
               <img
                 v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
                 class="w-full aspect-video object-contain rounded-box border border-base-200 shadow bg-base-200/20"
-                :alt="`${item.title} template in ${item.tags.join(
-                  '/'
-                )}, based on tailwindcss,daisyui. introduce › list › sm`"
+                :alt="
+                  useImgAltContent(
+                    item.title,
+                    item.tags,
+                    item.previews[0],
+                    'introduce › list › sm'
+                  )
+                "
               />
               <p class="px-2">{{ item.title }}</p>
             </nuxt-link>

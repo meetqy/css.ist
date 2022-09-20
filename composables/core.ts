@@ -24,10 +24,34 @@ export const useCFContentVLazy = (
   url: string,
   type: "public" | "sm" | "2xl"
 ) => {
+  const _url = url.includes(" ") ? url.split(" ")[0] : url;
+
   return {
-    src: useCFContent(path, url, type),
-    loading: useCFContent(path, url, "smplaceholder"),
+    src: useCFContent(path, _url, type),
+    loading: useCFContent(path, _url, "smplaceholder"),
   };
+};
+
+/**
+ * 处理 content image alt
+ * @param title 标题
+ * @param tags  标签
+ * @param src   链接 => 1.png light macbook en 需要兼容 -> 1.png
+ */
+export const useImgAltContent = (
+  title: string,
+  tags: string[],
+  src: string,
+  suffix: string
+): string => {
+  if (src.includes(" ")) {
+    const type = src.split(" ");
+    return `${title} template. theme/${type[1]}, device/${type[2]}, language/${type[3]}`;
+  } else {
+    return `${title} template in ${tags.join(
+      "/"
+    )}, based on tailwindcss,daisyui. ${suffix}`;
+  }
 };
 
 /**
