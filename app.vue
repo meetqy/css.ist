@@ -3,9 +3,7 @@
     <main
       class="font-mono wcao bg-base-100"
       :style="{
-        opacity:
-          scrollTop >= 0 &&
-          1 - (scrollTop < temp ? Math.abs((scrollTop - temp) / temp) : 0),
+        opacity: !openAnimation ? 1 : calcOpacity(scrollTop, temp),
       }"
     >
       <NuxtLoadingBar ref="loadingRef" />
@@ -17,6 +15,7 @@
     </main>
 
     <div
+      v-if="openAnimation"
       class="h-[200vh] w-full fixed top-0 left-0"
       :style="{ zIndex: !show ? 999 : -999 }"
     >
@@ -181,8 +180,17 @@ const router = useRouter();
 const show = ref(false);
 const clientHeight = ref(0);
 
+const openAnimation = !["slug"].includes(useRoute().name);
+
 const scrollTop = ref(0);
 const temp = ref(0);
+
+const calcOpacity = (scrollTop, temp) => {
+  return (
+    scrollTop >= 0 &&
+    1 - (scrollTop < temp ? Math.abs((scrollTop - temp) / temp) : 0)
+  );
+};
 
 onMounted(() => {
   const el = document.documentElement;
