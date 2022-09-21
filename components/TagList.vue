@@ -53,7 +53,9 @@
       <div>
         <nuxt-link
           :class="{ 'btn-disabled bg-transparent': pageIndex <= 1 }"
-          :to="`/tag/${name}/${pageIndex - 1}`"
+          :to="
+            pageIndex <= 1 ? 'javascript:;' : `/tag/${name}/${pageIndex - 1}`
+          "
           class="ml-2 font-serif capitalize btn btn-sm btn-ghost"
         >
           prev
@@ -65,7 +67,11 @@
 
         <nuxt-link
           :class="{ 'btn-disabled bg-transparent': nextList.length < 1 }"
-          :to="`/tag/${name}/${pageIndex + 1}`"
+          :to="
+            nextList.length < 1
+              ? 'javascript:;'
+              : `/tag/${name}/${pageIndex + 1}`
+          "
           class="font-serif capitalize btn btn-sm btn-ghost mr-2"
         >
           next
