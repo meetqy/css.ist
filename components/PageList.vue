@@ -101,9 +101,7 @@ const { data: list } = await useAsyncData(`page/${pageIndex.value}`, () =>
 );
 
 if (list.value.length < 1) {
-  navigateTo("/404", {
-    replace: true,
-  });
+  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
 }
 
 const nextList = ref([]);
