@@ -95,7 +95,7 @@
             class="bg-base-100 border-r border-base-200 p-4 font-serif"
             style="height: calc(100% - 64px)"
           >
-            <ul class="menu rounded-box p-2 capitalize">
+            <ul class="menu rounded-box p-2 capitalize w-full">
               <li class="border-b border-base-200 pb-2">
                 <NuxtLink to="/">
                   <span class="material-symbols-outlined"> home </span>
