@@ -137,7 +137,6 @@ export const nextImgProps = ref<{
 }>();
 
 // 跳转介绍界面动画
-//
 export const toIntroduce = (
   e: Event,
   query?: { _path: string; offsetLeft: number }

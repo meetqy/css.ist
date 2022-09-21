@@ -76,8 +76,7 @@
           </div>
           <div class="max-w-xl mx-auto">
             <p class="text-neutral-content/50 md:text-xl text-sm">
-              Share reactive, multi-theme templates and components based on
-              TailwindCSS, DaisyUI.
+              {{ getWebConfig().subtitle }}
             </p>
           </div>
         </div>

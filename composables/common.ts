@@ -32,11 +32,11 @@ export const baseInfo = {
     title: "css.ist",
     time: "25 May, 2022",
     subtitle:
-      "share reactive, multi-theme templates and components based on tailwindcss, daisyui.",
+      "share responsive design, multi-theme templates and components based on tailwindcss, daisyui.",
   },
   zh: {
     title: "css.ist",
     time: "2022年5月25日",
-    subtitle: "分享响应式、多主题模板和组件，基于 tailwindcss、daisyui。",
+    subtitle: "分享响应式、多主题模板/组件，基于tailwindcss、daisyui。",
   },
 };
