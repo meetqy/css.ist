@@ -6,7 +6,9 @@
       {{ name }}
     </h1>
 
-    <div class="2xl:columns-3 lg:columns-2 lg:gap-8 columns-1 gap-2 mt-8">
+    <div
+      class="grid 2xl:grid-cols-3 lg:grid-cols-2 lg:gap-8 grid-cols-1 gap-2 mt-8"
+    >
       <div
         v-for="item in list"
         :key="item._id"
@@ -78,7 +80,7 @@
 const pageIndex = computed(() => +useRoute().params.pageIndex || 1);
 const name = computed(() => useRoute().params.name);
 
-const { data: list } = useAsyncData(
+const { data: list } = await useAsyncData(
   `tag/${name.value}/${pageIndex.value}`,
   () =>
     getContentByTag(name.value, {

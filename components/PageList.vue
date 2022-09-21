@@ -8,16 +8,18 @@
       </span>
       news
     </h1>
-    <div class="2xl:columns-3 lg:columns-2 lg:gap-8 columns-1 gap-2 mt-8">
+    <div
+      class="grid 2xl:grid-cols-3 lg:grid-cols-2 lg:gap-8 grid-cols-1 gap-2 mt-8"
+    >
       <div
         v-for="item in list"
         :key="item._id"
-        class="mb-8 w-full overflow-hidden"
+        class="w-full overflow-hidden mb-8"
       >
         <NuxtLink :to="item._path" @click="(e) => toIntroduce(e)">
           <img
             v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
-            class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
+            class="bg-base-200/20 min-h-[300px] border border-base-300 object-contain object-center rounded-box cursor-zoom-in"
             :alt="
               useImgAltContent(
                 item.title,
