@@ -52,12 +52,13 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "keywords",
-          content: "web,tailwindcss,daisyui,template,blog,responsive sites",
+          content:
+            "web,tailwindcss,daisyui,template,blog,responsive sites,responsive web design",
         },
         {
           name: "description",
           content:
-            "css.ist - share reactive, multi-theme templates and components based on tailwindcss, daisyui.",
+            "css.ist - share responsive web design and many themes templates/components/web pages. based on tailwindcss, daisyui.",
         },
         {
           name: "viewport",
