@@ -16,7 +16,7 @@ export const useCF = (
   format?: "webp" | "avif" | "json"
 ): string => {
   const baseURL =
-    "https://image.css.ist/cdn-cgi/imagedelivery/C1c8i0JtRURCOUA0iRLBpQ";
+    "https://css.ist/cdn-cgi/imagedelivery/C1c8i0JtRURCOUA0iRLBpQ";
   return `${baseURL}/${id}/${type}?format=${format || "webp"}`;
 };
 
