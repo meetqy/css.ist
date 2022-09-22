@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.13](https://github.com/meetqy/css.ist/compare/v2.1.12...v2.1.13) (2022-09-22)
+
+
+### 🐛 修复bug
+
+* 分页问题 [#83](https://github.com/meetqy/css.ist/issues/83) ([7d201ed](https://github.com/meetqy/css.ist/commit/7d201ed4768de3c62b7f88b2c7ea765b5f3c81d5))
+
+
+### 🚀 优化现有功能和UI
+
+* 开屏动画 404 页面不显示 ([7ddecbb](https://github.com/meetqy/css.ist/commit/7ddecbbe0eb1520a1da2f3504552ffeb5fcbdd7e))
+* 列表ui优化 ([860bf7d](https://github.com/meetqy/css.ist/commit/860bf7d13fa473d31627a56be28ce1cdaf402b49))
+* 异常处理逻辑调整 ([23cff2f](https://github.com/meetqy/css.ist/commit/23cff2f8ae6f4e00d1a114aea94247268d45b83f))
+
+
+### 📃 文档
+
+* 单词修改 ([467d24b](https://github.com/meetqy/css.ist/commit/467d24baad4d3952a8e40418784cc5b5c5fc92e2))
+
+
+### ⚒️ 管理与维护
+
+* 升级 nuxt v3.0.0-rc.11 ([9871fd3](https://github.com/meetqy/css.ist/commit/9871fd3784651adc04dbb4a42f76ed976930087c))
+* iusses 模板 ([7071f33](https://github.com/meetqy/css.ist/commit/7071f33dcb79b517f29000b818ddb37eb07d86de))
+
 ### [2.1.12](https://github.com/meetqy/css.ist/compare/v2.1.11...v2.1.12) (2022-09-20)
 
 
