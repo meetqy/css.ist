@@ -71,7 +71,9 @@
             >
               <div class="sticky left-0 top-0 pt-2 pl-2">
                 <a
-                  :href="github"
+                  :href="`${github}${
+                    page.template_folder ? '/index.vue' : '.vue'
+                  }`"
                   target="_blank"
                   class="btn btn-square btn-ghost !no-underline"
                 >
@@ -204,7 +206,7 @@ useHead({
 
 const github = computed(() => {
   return page
-    ? `https://github.com/meetqy/wcao.cc/blob/dev/components/template/${page.value._path.replace(
+    ? `https://github.com/meetqy/wcao.cc/blob/dev/templates/t/${page.value._path.replace(
         "/introduce/",
         ""
       )}`
