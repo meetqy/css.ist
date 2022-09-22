@@ -210,6 +210,7 @@ export default defineNuxtPlugin(() => {
             signUp: "sign up",
             name: "name",
             email: "e-mail",
+            detail: "detail",
           },
           zh: {
             readMore: "查看更多",
@@ -219,6 +220,7 @@ export default defineNuxtPlugin(() => {
             signUp: "注册",
             name: "姓名",
             email: "邮箱",
+            detail: "详情",
           },
         };
       },
