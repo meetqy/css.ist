@@ -15,8 +15,7 @@ export const useCF = (
   type: "public" | "sm" | "2xl" | string,
   format?: "webp" | "avif" | "json"
 ): string => {
-  const baseURL =
-    "https://css.ist/cdn-cgi/imagedelivery/C1c8i0JtRURCOUA0iRLBpQ";
+  const baseURL = "https://img.css.ist";
   return `${baseURL}/${id}/${type}?format=${format || "webp"}`;
 };
 
