@@ -44,6 +44,7 @@
     "daisyui": "^2.20.0",
     "mockjs": "^1.1.0",
     "postcss-custom-properties": "^12.1.8",
+    "simplebar": "^5.3.8",
     "vue3-lazyload": "^0.3.6"
   },
   "lint-staged": {

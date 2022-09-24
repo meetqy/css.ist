@@ -6,7 +6,7 @@
       <div
         id="drawer-content"
         ref="drawerContent"
-        class="drawer-content scroll-smooth"
+        class="drawer-content scroll-smooth !h-full"
       >
         <!-- mobile navbar -->
         <label
@@ -65,11 +65,11 @@
       <div
         id="drawer-side"
         ref="drawerSide"
-        class="drawer-side overflow-x-hidden"
+        class="drawer-side overflow-x-hidden w-80"
       >
         <label for="my-drawer-2" class="drawer-overlay" />
 
-        <aside class="w-80 bg-base-100">
+        <aside class="bg-base-100">
           <div
             class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
           >
@@ -129,6 +129,9 @@
 </template>
 
 <script setup>
+import SimpleBar from "simplebar";
+import "simplebar/dist/simplebar.css";
+
 import { useInfiniteScroll, useScroll, useStorage } from "@vueuse/core";
 const storage = useStorage("tag-list-data", []);
 
@@ -141,6 +144,7 @@ watch(drawerContent, (e) => {
 
 watch(drawerSide, (e) => {
   drawerSideElement.value = e;
+  new SimpleBar(drawerSideElement.value);
 });
 
 useInfiniteScroll(drawerContentElement, () => drawerContentPullUpEnd.value++, {
