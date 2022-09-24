@@ -65,11 +65,11 @@
       <div
         id="drawer-side"
         ref="drawerSide"
-        class="drawer-side overflow-x-hidden w-80"
+        class="drawer-side !overflow-y-hidden"
       >
         <label for="my-drawer-2" class="drawer-overlay" />
 
-        <aside class="bg-base-100">
+        <aside ref="drawerSideContent" class="bg-base-100 w-80 h-screen">
           <div
             class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
           >
@@ -137,6 +137,11 @@ const storage = useStorage("tag-list-data", []);
 
 const drawerContent = ref(null);
 const drawerSide = ref(null);
+const drawerSideContent = ref(null);
+
+watch(drawerSideContent, (e) => {
+  new SimpleBar(e);
+});
 
 watch(drawerContent, (e) => {
   drawerContentElement.value = e;
@@ -144,7 +149,6 @@ watch(drawerContent, (e) => {
 
 watch(drawerSide, (e) => {
   drawerSideElement.value = e;
-  new SimpleBar(drawerSideElement.value);
 });
 
 useInfiniteScroll(drawerContentElement, () => drawerContentPullUpEnd.value++, {
