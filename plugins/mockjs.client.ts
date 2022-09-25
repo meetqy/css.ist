@@ -200,6 +200,7 @@ export default defineNuxtPlugin(() => {
         return Mock.mock(json).array;
       },
 
+      // keywords
       MockKeywords: () => {
         return {
           en: {
@@ -211,6 +212,7 @@ export default defineNuxtPlugin(() => {
             name: "name",
             email: "e-mail",
             detail: "detail",
+            submit: "submit",
           },
           zh: {
             readMore: "查看更多",
@@ -221,7 +223,16 @@ export default defineNuxtPlugin(() => {
             name: "姓名",
             email: "邮箱",
             detail: "详情",
+            submit: "提交",
           },
+        };
+      },
+
+      // name
+      MockName: () => {
+        return {
+          en: Mock.mock("@name"),
+          zh: Mock.mock("@cname"),
         };
       },
     },
