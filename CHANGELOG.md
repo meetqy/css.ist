@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.14](https://github.com/meetqy/css.ist/compare/v2.1.13...v2.1.14) (2022-09-25)
+
+
+### 🚀 优化现有功能和UI
+
+* 菜单栏滚动条优化 ([9f02e6d](https://github.com/meetqy/css.ist/commit/9f02e6d0f2029508bf30f0e460cc85e55c98ccac))
+* cdn image cache ([8f3d8ce](https://github.com/meetqy/css.ist/commit/8f3d8cea76e69e56e743702305798510cebd8365))
+
+
+### 📜 新模板
+
+* 18 Caitlyn the Sheriff of Piltover ([16530b5](https://github.com/meetqy/css.ist/commit/16530b57512a2e232c5edb5280b92a4a70d9046b))
+* braum the Heart of the Freljord ([1d1fd2a](https://github.com/meetqy/css.ist/commit/1d1fd2a740c3e389d09f9f57eed48be3d0efea53))
+
 ### [2.1.13](https://github.com/meetqy/css.ist/compare/v2.1.12...v2.1.13) (2022-09-22)
 
 
