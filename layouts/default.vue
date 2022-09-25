@@ -3,11 +3,7 @@
     <slot name="outside" />
     <div class="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div
-        id="drawer-content"
-        ref="drawerContent"
-        class="drawer-content scroll-smooth !h-full"
-      >
+      <div id="drawer-content" ref="drawerContent" class="drawer-content">
         <!-- mobile navbar -->
         <label
           for="my-drawer-2"
@@ -69,7 +65,7 @@
       >
         <label for="my-drawer-2" class="drawer-overlay" />
 
-        <aside ref="drawerSideContent" class="bg-base-100 w-80 h-screen">
+        <aside ref="drawerSideWrapper" class="bg-base-100 w-80 h-screen">
           <div
             class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
           >
@@ -135,27 +131,20 @@ import "simplebar/dist/simplebar.css";
 import { useInfiniteScroll, useScroll, useStorage } from "@vueuse/core";
 const storage = useStorage("tag-list-data", []);
 
-const drawerContent = ref(null);
-const drawerSide = ref(null);
-const drawerSideContent = ref(null);
+// 直接使用 drawerContentElement 无效
+const drawerContent = drawerContentElement;
+const drawerSide = drawerSideElement;
+const drawerSideWrapper = ref(null);
 
-watch(drawerSideContent, (e) => {
+watch(drawerSideWrapper, (e) => {
   new SimpleBar(e);
 });
 
-watch(drawerContent, (e) => {
-  drawerContentElement.value = e;
-});
-
-watch(drawerSide, (e) => {
-  drawerSideElement.value = e;
-});
-
-useInfiniteScroll(drawerContentElement, () => drawerContentPullUpEnd.value++, {
+useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
   distance: 100,
 });
 
-drawerContentScroll.value = useScroll(drawerContentElement);
+drawerContentScroll.value = useScroll(drawerContent);
 
 const res = await queryContent("introduce").only(["tags"]).find();
 

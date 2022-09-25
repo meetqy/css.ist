@@ -179,6 +179,7 @@ const router = useRouter();
 const show = ref(false);
 const clientHeight = ref(0);
 
+// 不需要开屏动画的route
 const openAnimation = !["slug"].includes(useRoute().name);
 
 const scrollTop = ref(0);
