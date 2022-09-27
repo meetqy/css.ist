@@ -175,6 +175,8 @@
                     'introduce › list › sm'
                   )
                 "
+                width="364"
+                height="205"
               />
               <p class="px-2">{{ item.title }}</p>
             </nuxt-link>

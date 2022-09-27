@@ -18,6 +18,8 @@
           <img
             v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
             class="bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
+            width="473"
+            height="298"
             :alt="
               useImgAltContent(
                 item.title,
