@@ -22,6 +22,7 @@
             class="bg-base-200/20 min-h-[300px] border border-base-300 object-contain object-center rounded-box cursor-zoom-in"
             width="473"
             height="298"
+            sizes="sm:100vw md:473"
             :alt="
               useImgAltContent(
                 item.title,

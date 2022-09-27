@@ -177,6 +177,7 @@
                 "
                 width="364"
                 height="205"
+                sizes="sm:100vw md:364"
               />
               <p class="px-2">{{ item.title }}</p>
             </nuxt-link>
