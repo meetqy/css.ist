@@ -21,11 +21,16 @@
             v-if="page.previews"
             class="shadow flex items-center justify-between bg-base-100 overflow-hidden rounded-box flex-col lg:flex-row lg:pl-4 pt-4 lg:pt-0"
           >
-            <h1 class="!m-0 px-4 text-lg font-semibold">
+            <h1
+              class="!m-0 px-4 lg:text-lg text-base font-semibold pb-4 lg:pb-0"
+            >
               {{ page.title }}
             </h1>
 
-            <div class="w-full lg:w-1/3 flex justify-end mt-4 lg:mt-0">
+            <!-- pc端显示 -->
+            <div
+              class="w-full lg:w-1/3 lg:flex hidden justify-end mt-4 lg:mt-0"
+            >
               <div
                 id="introduce-previews"
                 class="flex-1 bg-base-300 overflow-x-scroll flex space-x-4"
@@ -62,32 +67,58 @@
             </div>
           </div>
 
-          <template v-for="(item, i) in page.previews">
-            <div
-              v-if="page.previews"
-              v-show="activePreviewIndex === i"
-              :key="i"
-              class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
-            >
-              <div class="sticky left-0 top-0 pt-2 pl-2">
-                <a
-                  :href="`${github}${
-                    page.template_folder ? '/index.vue' : '.vue'
-                  }`"
-                  target="_blank"
-                  class="btn btn-square btn-ghost !no-underline"
-                >
-                  <span class="material-symbols-outlined"> code </span>
-                </a>
+          <!-- pc端显示 -->
+          <div class="lg:block hidden">
+            <template v-for="(item, i) in page.previews">
+              <div
+                v-if="page.previews"
+                v-show="activePreviewIndex === i"
+                :key="i"
+                class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
+              >
+                <div class="sticky left-0 top-0 pt-2 pl-2">
+                  <a
+                    :href="`${github}${
+                      page.template_folder ? '/index.vue' : '.vue'
+                    }`"
+                    target="_blank"
+                    class="btn btn-square btn-ghost !no-underline"
+                  >
+                    <span class="material-symbols-outlined"> code </span>
+                  </a>
+                </div>
+                <img
+                  id="img-preview"
+                  v-lazy="useCFContentVLazy(page._path, item, '2xl')"
+                  class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
+                  :class="[
+                    full ? 'w-full' : 'lg:w-1/3 w-full',
+                    showImgPreview ? ' opacity-100' : ' opacity-0',
+                  ]"
+                  :alt="
+                    useImgAltContent(
+                      title,
+                      tags,
+                      item,
+                      'introduce › detail › 2xl'
+                    )
+                  "
+                  @click="full = !full"
+                />
+                <div class="w-full h-14"></div>
               </div>
+            </template>
+          </div>
+
+          <!-- mobile ipad 显示 -->
+          <div class="grid lg:hidden">
+            <div v-for="(item, i) in page.previews" :key="i">
+              <p class="py-4">{{ item.replace(/png /, "") }}</p>
               <img
-                id="img-preview"
-                v-lazy="useCFContentVLazy(page._path, item, '2xl')"
-                class="transition-all object-contain duration-300 ease-in-out m-auto cursor-zoom-out !my-0 min-h-[368px]"
-                :class="[
-                  full ? 'w-full' : 'lg:w-1/3 w-full',
-                  showImgPreview ? ' opacity-100' : ' opacity-0',
-                ]"
+                v-lazy="useCFContentVLazy(page._path, item, 'public')"
+                class="m-auto"
+                width="788"
+                height="484"
                 :alt="
                   useImgAltContent(
                     title,
@@ -96,57 +127,77 @@
                     'introduce › detail › 2xl'
                   )
                 "
-                @click="full = !full"
+                sizes="sm:100vw md:80vw"
               />
-              <div class="w-full h-14"></div>
             </div>
-          </template>
+          </div>
 
-          <p id="tags" class="flex items-center flex-wrap mt-6">
-            <span class="material-symbols-outlined mt-2 text-primary/20">
-              sell
-            </span>
-            <span class="ml-2 mt-2 uppercase">tags:</span>
-            <NuxtLink
-              v-for="item in page.tags"
-              :key="item"
-              :to="`/tag/${item}`"
-              class="btn mt-2 btn-primary btn-xs ml-2 !no-underline !text-primary-content"
+          <section class="space-y-8 mt-8">
+            <!-- tags -->
+            <div
+              id="tags"
+              class="flex items-center flex-wrap lg:flex-row flex-col"
             >
-              {{ item }}
-            </NuxtLink>
-          </p>
+              <div class="w-full lg:w-auto flex items-center justify-start">
+                <span class="material-symbols-outlined mt-2 text-primary/20">
+                  sell
+                </span>
+                <span class="ml-2 mt-2 uppercase">tags:</span>
+              </div>
+              <div class="flex-1">
+                <NuxtLink
+                  v-for="item in page.tags"
+                  :key="item"
+                  :to="`/tag/${item}`"
+                  class="btn mt-2 btn-primary btn-xs ml-2 !no-underline !text-primary-content"
+                >
+                  {{ item }}
+                </NuxtLink>
+              </div>
+            </div>
 
-          <div v-if="page.source" class="mt-4 flex items-center">
-            <span class="material-symbols-outlined text-secondary/20">
-              emoji_nature
-            </span>
-            <span class="ml-2 uppercase">source of inspiration:</span>
-            《<span class="line-clamp-1">
+            <!-- 灵感 -->
+            <div
+              v-if="page.source"
+              class="flex items-center lg:flex-row flex-col"
+            >
+              <div class="flex items-center lg:w-auto w-full">
+                <span class="material-symbols-outlined text-secondary/20">
+                  emoji_nature
+                </span>
+                <span class="ml-2 uppercase">source of inspiration:</span>
+              </div>
               <a
                 :href="page.source"
                 target="_blank"
-                class="text-primary uppercase"
-                >{{ page.source }}
-              </a> </span
-            >》
-          </div>
+                class="text-primary normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
+              >
+                {{ source.hostname }}
+              </a>
+            </div>
 
-          <p class="mt-4 flex items-center">
-            <span class="material-symbols-outlined text-accent/20"> code </span>
-            <span class="ml-2 uppercase">source code:</span>
-            <span>
+            <!-- 源码 -->
+            <div
+              v-if="page.source"
+              class="flex items-center lg:flex-row flex-col"
+            >
+              <div class="flex items-center lg:w-auto w-full">
+                <span class="material-symbols-outlined text-secondary/20">
+                  code
+                </span>
+                <span class="ml-2 uppercase">source code:</span>
+              </div>
               <a
                 :href="`${github}${
                   page.template_folder ? '/index.vue' : '.vue'
                 }`"
                 target="_blank"
-                class="ml-1 text-info"
+                class="text-info normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
               >
                 {{ page._path.replace("/introduce", "/template") }}
               </a>
-            </span>
-          </p>
+            </div>
+          </section>
 
           <h2 class="capitalize">more</h2>
           <div
@@ -193,6 +244,11 @@ const { page } = useContent();
 
 const { title, tags } = page.value;
 
+const source = computed(() => {
+  const url = page.value.source;
+  return new URL(url);
+});
+
 useHead({
   title: `${title} › introduce`,
   meta: [
@@ -235,9 +291,9 @@ onMounted(async () => {
 
   moreContent.value = res.filter((item) => item._id !== page.value._id);
 
-  const imgPreview = document.getElementById("img-preview");
-
   toTop();
+
+  const imgPreview = document.getElementById("img-preview");
 
   if (nextImgProps.value) {
     setTimeout(() => {

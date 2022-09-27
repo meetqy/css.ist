@@ -11,7 +11,9 @@
         <NuxtPage />
       </NuxtLayout>
 
-      <CoreNextImg />
+      <div class="hiddle lg:block">
+        <CoreNextImg />
+      </div>
     </main>
 
     <div

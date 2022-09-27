@@ -1,8 +1,13 @@
+import { useMediaQuery } from "@vueuse/core";
+
 /**
  * 生产环境?
  * @returns boolean
  */
 export const useProduction = () => process.env.NODE_ENV === "production";
+
+// 是否是移动端
+export const isMobile = () => useMediaQuery("(max-width: 1024px)").value;
 
 /**
  * cloudflare image
@@ -142,12 +147,15 @@ export const toIntroduce = (
   e: Event,
   query?: { _path: string; offsetLeft: number }
 ) => {
+  // 移动端不需要动画
+  if (isMobile()) return;
+
   const target = e.target as HTMLImageElement;
   const contentTarget = drawerContentElement.value;
   if (!contentTarget) return;
 
   if (query?._path) {
-    navigateTo(query?._path);
+    return navigateTo(query?._path);
   }
 
   nextImgProps.value = {
