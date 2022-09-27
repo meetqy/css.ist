@@ -22,9 +22,18 @@
             class="shadow flex items-center justify-between bg-base-100 overflow-hidden rounded-box flex-col lg:flex-row lg:pl-4 pt-4 lg:pt-0"
           >
             <h1
-              class="!m-0 px-4 lg:text-lg text-base font-semibold pb-4 lg:pb-0"
+              class="!m-0 px-4 lg:px-4 lg:text-lg text-base font-semibold lg:pb-0 flex items-center pb-4"
             >
               {{ page.title }}
+
+              <NuxtLink
+                :to="`${page._path.replace('introduce', 'template')}`"
+                class="btn btn-circle btn-md lg:hidden !no-underline flex-shrink-0 ml-4"
+              >
+                <span class="material-symbols-outlined text-primary-content">
+                  fullscreen
+                </span>
+              </NuxtLink>
             </h1>
 
             <!-- pc端显示 -->
