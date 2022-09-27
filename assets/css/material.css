@@ -5,6 +5,7 @@
   font-weight: 100 700;
   src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v57/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2)
     format("woff2");
+  font-display: swap;
 }
 
 /* https://fonts.gstatic.com/s/materialsymbolsoutlined/v39/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsLjBuVY.woff2 */
