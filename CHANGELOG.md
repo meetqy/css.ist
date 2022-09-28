@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.15](https://github.com/meetqy/css.ist/compare/v2.1.14...v2.1.15) (2022-09-28)
+
+
+### 🚀 优化现有功能和UI
+
+* 移动端about优化 ([6ace6f7](https://github.com/meetqy/css.ist/commit/6ace6f71ca7543144b9c7fa7f641c1c5644fc6c9))
+* 移动端ui优化 ([8e6255c](https://github.com/meetqy/css.ist/commit/8e6255c003b787c8a873cbfe88a448013a245893))
+
+
+### 📜 新模板
+
+* add Camille the Steel Shadow ([3aab2f1](https://github.com/meetqy/css.ist/commit/3aab2f18739c4baf264109246d31a97903753e17))
+
 ### [2.1.14](https://github.com/meetqy/css.ist/compare/v2.1.13...v2.1.14) (2022-09-25)
 
 
