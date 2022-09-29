@@ -1,11 +1,7 @@
 # [css.ist&nbsp;›&nbsp;about]{.hidden}
 
-<p align="center">
-<img width='125' src="https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/35605933-f760-4275-a17c-1ccd36186400/sm"/>
-</p>
-
 <div align='center'>
-  
+
 # css.ist
 
 [
@@ -22,7 +18,7 @@
 
 </div>
 
----
+![css.ist previews](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/6c4643c8-95a5-4f8a-70c7-fe1ed0a23b00/public)
 
 ## [🐹 特点]{.text-base-content}
 
