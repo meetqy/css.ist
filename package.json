@@ -5,7 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "build:cloudflare": "NITRO_PRESET=cloudflare yarn build",
-    "dev": "nuxt dev -p 4000",
+    "dev": "nuxt dev -p 5000",
     "generate": "nuxt generate",
     "preview": "export PORT=4000 && nuxt preview",
     "lint": "eslint",
