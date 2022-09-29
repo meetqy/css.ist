@@ -18,7 +18,7 @@ export const vLazy = (src: string) => {
 export const usePicsum = (opts: string) => {
   const url = `https://picsum.photos${opts}`;
 
-  return `https://css.ist/api/picsum?url=${url}`;
+  return `https://css.ist/api/picsum?url=${url}&t=${Math.random()}`;
 };
 
 export const getWebConfig = (lang?: "en" | "zh") => {

@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
     responseType: "arrayBuffer",
   });
 
-  const contentType = response.headers.get("Content-Type");
+  const contentType = response.headers.get("Content-Type") || "image/jpeg";
 
-  return send(event, Buffer.from(response._data), contentType);
+  return send(event, Buffer.from(response._data as ArrayBuffer), contentType);
 });
