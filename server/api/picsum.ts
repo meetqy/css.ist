@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
 
   if (!url) return event.res.end("url error");
 
-  const response = await $fetch.raw(`${url}?random=${Math.random()}`, {
+  const response = await $fetch.raw(url, {
     responseType: "arrayBuffer",
   });
 
