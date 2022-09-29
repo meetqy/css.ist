@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
   const query = useQuery(event);
 
-  const response = await $fetch.raw(query.url + `?random=${Math.random()}`, {
+  const response = await $fetch.raw(query.url + `?t=${Math.random()}`, {
     responseType: "arrayBuffer",
   });
 
