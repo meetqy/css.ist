@@ -41,8 +41,8 @@
 
 - [关于项目](#star2-关于项目)
   * [截图](#camera-截图)
-  * [技术栈](#space_invader-技术栈)
   * [特点](#dart-特点)
+  * [技术栈](#space_invader-技术栈)
 - [本地运行](#running-本地运行)
 - [感谢](#gem-感谢)
 
@@ -51,6 +51,14 @@
 ### :camera: 截图
 
 ![css.ist previews](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/6c4643c8-95a5-4f8a-70c7-fe1ed0a23b00/public)
+
+
+### :dart: 特点
+
+- **mockjs**生成无序的随机数据，专注于模板本身的效果。
+- 模板支持**语言切换**，减少因为语言原因导致的UI问题。
+- **响应式**，默认兼容`mac`、`ipad`、`iphone`。
+- **daisyui**，默认支持29中主题，也可以[自定义主题](https://daisyui.com/theme-generator/)，无需修改模板代码。
 
 ### :space_invader: 技术栈
 
@@ -76,12 +84,6 @@
   </ul>
 </details>
 
-## :dart: 特点
-
-- **mockjs**生成无序的随机数据，专注于模板本身的效果。
-- 模板支持**语言切换**，减少因为语言原因导致的UI问题。
-- **响应式**，默认兼容`mac`、`ipad`、`iphone`。
-- **daisyui**，默认支持29中主题，也可以[自定义主题](https://daisyui.com/theme-generator/)，无需二次修改。
 
 ## :running: 本地运行
 
