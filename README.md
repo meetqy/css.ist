@@ -1,164 +1,117 @@
-<div align='center'>
+<div align="center">
+
+  <img src="https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/35605933-f760-4275-a17c-1ccd36186400/sm" alt="logo" width="64" height="auto" />
+  <h1>css.ist</h1>
   
-# css.ist
+  <p>
+     分享响应式、多主题模板/组件/网页，基于 tailwindcss、daisyui。
+  </p>
   
- ![version](https://img.shields.io/github/package-json/v/meetqy/css.ist) ![all templates](https://img.shields.io/github/directory-file-count/meetqy/css.ist/templates/t?color=red&label=all%20templates) 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![MIT](https://img.shields.io/github/license/meetqy/css.ist) 
   
-**css.ist** 分享**响应式**、**多主题**模板/组件/网页，基于 tailwindcss、daisyui。
-  
-🦇 [css.ist ](https://css.ist) · 🐺 [wcao.cc](https://wcao.cc)
-  
+<!-- Badges -->
+<p>
+  <a href="https://github.com/meetqy/css.ist/releases">
+    <img src="https://img.shields.io/github/package-json/v/meetqy/css.ist" alt="version" />
+  </a>
+  <a href="https://github.com/meetqy/css.ist/tree/dev/templates/t">
+    <img src="https://img.shields.io/github/directory-file-count/meetqy/css.ist/templates/t?color=red&label=all%20templates" alt="all templates" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="commitizen-friendly" />
+  </a>
+  <a href="#/">
+    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="code prettier" />
+  </a>
+  <a href="https://github.com/meetqy/css.ist/blob/dev/LICENSE">
+    <img src="https://img.shields.io/github/license/meetqy/css.ist" alt="license" />
+  </a>
+</p>
+   
+<h4>
+    <a href="https://css.ist">CSS.IST</a>
+  <span> · </span>
+    <a href="https://github.com/meetqy/css.ist/issues/new/choose">提 Bug</a>
 </div>
+
+
+<br />
+
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: 目录
+
+- [关于项目](#star2-关于项目)
+  * [截图](#camera-截图)
+  * [技术栈](#space_invader-技术栈)
+  * [特点](#dart-特点)
+- [本地运行](#running-本地运行)
+- [感谢](#gem-感谢)
+
+## :star2: 关于项目
+
+### :camera: 截图
 
 ![css.ist previews](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/6c4643c8-95a5-4f8a-70c7-fe1ed0a23b00/public)
 
-## 🐹 模板特点
+### :space_invader: 技术栈
 
-- 使用`mockjs`生成随机数据，可以覆盖 80%的场景，比如段落过长、过短等
-- 中/英文切换展示，减少因为语言问题，导致**UI 效果**偏差较大
-- 响应式，所有模板最少能够适配 `mac`、`ipad`、`iphone`
-- 基于 daisyui，所以支持大量主题，后期也能根据自己的喜欢自定义主题
-- 纯 css 模板，不受框架限制
-- 以组件、模块、某一个效果为单位，便于复制粘贴
 
-## 🐶 模板中公用资源、方法
+<details>
+  <summary>基础</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://v3.nuxtjs.org/">Nuxt.js</a></li>
+    <li><a href="https://vuejs.org/">Vue3</a></li>
+    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+  </ul>
+</details>
 
-- [color-mode](https://color-mode.nuxtjs.org/)
-- [nuxt tailwindcss](https://tailwindcss.nuxtjs.org/examples/daisyui)
-- [material-icons](https://fonts.google.com/icons)
-- [picsum.photos](https://picsum.photos/)
-- [mockjs](http://mockjs.com)
-- [unsplash](https://unsplash.com)
 
-## 🐭 目录
+<details>
+  <summary>插件/UI</summary>
+  <ul>
+    <li><a href="https://daisyui.com/">DaisyUI</a></li>
+    <li><a href="https://github.com/nuysoft/Mock">MockJS</a></li>
+    <li><a href="https://picsum.photos">Picsum Photos</a></li>
+    <li><a href="https://fonts.google.com/icons">Google Icons</a></li>
+  </ul>
+</details>
 
-```tree
-- layouts
-    - default                           # 默认框架
-    - template                          # 模板展示 - 主题切换、语言切换等
-- components
-    - core                              # 外部架子公用组件
-- composables
-    - core                              # 核心 hooks
-    - template                          # 模板 mock类 hooks
-    - common                            # 公用hooks
-- introduce                             # 模板介绍 markdown
-- content                               # 默认@nuxt/content 存放模板外的其他md页面
-- plugins
-    - mock.client.ts                    # mockjs 常用方法 中/英文
-- pages
-    - template/[path]                   # 模板展示
-    - tag/[name]                        # 标签分页
-    - index                             # 首页
-    - about                             # 关于我
-    - [...slug].vue                     # 介绍详情
-- templates                             # 模板
+## :dart: 特点
+
+- **mockjs**生成无序的随机数据，专注于模板本身的效果。
+- 模板支持**语言切换**，减少因为语言原因导致的UI问题。
+- **响应式**，默认兼容`mac`、`ipad`、`iphone`。
+- **daisyui**，默认支持29中主题，也可以[自定义主题](https://daisyui.com/theme-generator/)，无需二次修改。
+
+## :running: 本地运行
+
+克隆项目
+
+```bash
+  git clone https://github.com/meetqy/css.ist.git
 ```
 
-### 🐰 Mock Data/多语言
+进入项目目录
 
-```js
-const { lang = "en" } = useRoute().query;
-
-const data = Mock.mock({
-  "en|4-15": [
-    {
-      "id|+1": 1,
-      title: "@title",
-      paragraph: "@paragraph(1,5)",
-      "tags|1-5": ["@word"],
-      "image|0-1": [useSplash("/random/800x600")],
-    },
-  ],
-  zh: [
-    {
-      "id|+1": 1,
-      title: "@ctitle",
-      paragraph: "@cparagraph(1,5)",
-      "tags|1-5": ["@cword"],
-      "image|0-1": [useSplash("/random/800x600")],
-    },
-  ],
-})[lang];
+```bash
+  cd css.ist
 ```
 
-### 🐺 Material Icons 使用
+安装依赖
 
-```html
-<!-- outlined icon -->
-<span class="material-symbols-outlined">settings</span>
-
-<!-- fill icon -->
-<span class="material-symbols-outlined" :style="iconFill">settings</span>
+```bash
+  yarn install
 ```
 
-## 🐸 规范
+启动服务
 
-- 每个模板预览图使用**dark**模式 pc 端**全屏图 1920x1080**
-- 模板中图片资源 `usePicsum`
-- 基本信息使用 `baseInfo`
-- 菜单、导航 `templateMenu`
-- 联系方式 svg `templateContacts`
-
-模板中不要使用 document.xxx 去获取元素，使用 `ref`
-
-### 🐧 图片资源尺寸
-
-- 使用常用的 整数 `100x100` `200x200` `300x300`
-- 不要使用 `193x193` `290x290` 这种不常用的资源宽高，会导致图片加载变得非常慢
-
-## 🐯 命名
-
-模板太多，命名就有点困难，所以用以下游戏角色名字，代替。
-
-- [League of Legends Wiki](https://leagueoflegends.fandom.com/wiki/List_of_champions)
-
-## 🦋 introduce/\*.yml 参数说明
-
-| 参数            | 说明                                    | 类型                                   | 必填           |
-| --------------- | --------------------------------------- | -------------------------------------- | -------------- |
-| title           | 标题                                    | `boolean`                              | true           |
-| tags            | 标签                                    | `array`                                | ture, 最少一项 |
-| previews        | 预览图                                  | `array` [url, theme, divice, language] | true, 6 张     |
-| source          | 灵感来源                                | `string`                               | false          |
-| template_folder | 模板是否为文件夹格式，定位跳转到 github | `boolean`                              | false          |
-
-### 实例
-
-```yml
-title: "Aphelios the Weapon of the Faithful"
-tags:
-  - animation
-  - home
-  - homepage
-  - leagueoflegends
-previews:
-  - 1.png light macbook en
-  - 2.png dark macbook zh
-  - 3.png snow_night_frost ipad en
-  - 4.png snow_dark_frost ipad en
-  - 5.png corporate iphone zh
-  - 6.png black iphone zh
-source: https://glaredb.com/
-template_folder: true
+```bash
+  yarn dev
 ```
 
-## 🐨 封面图、预览图
+## :gem: 感谢
 
-ishot 带壳截图，最低规格 `ipad dark`、`ipad light`、`mac dark`、`mac light`、`iphone dark`、`iphone light`
-
-## 🐻‍❄️ 版本管理及维护
-
-1. iusses 中创建分支
-2. 完成之后合并到 dev
-3. 触发 vercel 发布 dev 版本
-4. [dev 分支] `yarn dry-run` 查看自动生成 version
-5. [dev 分支] `yarn release` 升级版本
-6. 合并到 main 分支
-7. 触发 vercel 发布稳定版
-
-### 🐮 域名
-
-- _vercel_development_: [dev.wcao.cc](https://dev.wcao.cc), [dev.css.ist](https://dev.css.ist)
-- _vps_: [wcao.cc](https://wcao.cc), [css.ist](https://css.ist)
+ - [Shields.io](https://shields.io/)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
+ - [Readme Template](https://github.com/othneildrew/Best-README-Template)
