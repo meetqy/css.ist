@@ -30,7 +30,7 @@
                 item.title,
                 item.tags,
                 item.previews[0],
-                `index › ${name} › sm`
+                `index › ${item.title} › sm`
               )
             "
           />
