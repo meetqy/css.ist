@@ -1,5 +1,9 @@
+body {
+  overflow-x: hidden;
+}
+
 .home-header-sticky-container {
-  @apply sticky top-0 overflow-hidden h-screen;
+  @apply sticky top-0 h-screen;
   backface-visibility: hidden;
 }
 

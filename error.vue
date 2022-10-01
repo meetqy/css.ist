@@ -154,7 +154,7 @@ onMounted(() => {
 });
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 body {
   @apply overflow-hidden;
 }
