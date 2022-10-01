@@ -12,7 +12,7 @@
       class="grid 2xl:grid-cols-3 lg:grid-cols-2 lg:gap-8 grid-cols-1 gap-2 mt-8"
     >
       <div
-        v-for="item in list"
+        v-for="(item, i) in list"
         :key="item._id"
         class="w-full overflow-hidden mb-8"
       >
@@ -23,7 +23,8 @@
             width="473"
             height="298"
             sizes="sm:100vw md:473"
-            preload
+            :preload="i < 6"
+            loading="lazy"
             :alt="
               useImgAltContent(
                 item.title,

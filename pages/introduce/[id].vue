@@ -138,7 +138,8 @@
                   )
                 "
                 sizes="sm:100vw md:80vw"
-                preload
+                :preload="i < 3"
+                loading="lazy"
               />
             </div>
           </div>
@@ -260,6 +261,7 @@
                 width="364"
                 height="205"
                 sizes="sm:100vw md:364"
+                loading="lazy"
               />
               <p class="px-2">{{ item.title }}</p>
             </nuxt-link>
