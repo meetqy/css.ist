@@ -148,7 +148,7 @@
               class="flex items-center flex-wrap lg:flex-row flex-col"
             >
               <div class="w-full lg:w-auto flex items-center justify-start">
-                <span class="material-symbols-outlined mt-2 text-primary/20">
+                <span class="material-symbols-outlined mt-2 text-accent">
                   sell
                 </span>
                 <span class="ml-2 mt-2 uppercase">tags:</span>
@@ -171,7 +171,7 @@
               class="flex items-center lg:flex-row flex-col"
             >
               <div class="flex items-center lg:w-auto w-full">
-                <span class="material-symbols-outlined text-secondary/20">
+                <span class="material-symbols-outlined text-secondary">
                   emoji_nature
                 </span>
                 <span class="ml-2 uppercase">source of inspiration:</span>
@@ -191,7 +191,7 @@
               class="flex items-center lg:flex-row flex-col"
             >
               <div class="flex items-center lg:w-auto w-full">
-                <span class="material-symbols-outlined text-secondary/20">
+                <span class="material-symbols-outlined text-secondary">
                   code
                 </span>
                 <span class="ml-2 uppercase">source code:</span>
@@ -204,6 +204,26 @@
                 class="text-info normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
               >
                 {{ page._path.replace("/introduce", "/template") }}
+              </a>
+            </div>
+
+            <!-- 开发记录 -->
+            <div
+              v-if="page.development_record"
+              class="flex items-center lg:flex-row flex-col"
+            >
+              <div class="flex items-center lg:w-auto w-full">
+                <span class="material-symbols-outlined">
+                  radio_button_checked
+                </span>
+                <span class="ml-2 uppercase">development record</span>:
+              </div>
+              <a
+                :href="page.development_record.url"
+                target="_blank"
+                class="text-info normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
+              >
+                {{ page.development_record.name }}
               </a>
             </div>
           </section>

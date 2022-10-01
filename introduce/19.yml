@@ -5,6 +5,8 @@ tags:
   - blog
   - leagueoflegends
 previews:
+  - 7.png theme device lang
+  - 8.png theme device lang
   - 1.png light macbook en
   - 2.png dark macbook en
   - 3.png cupcake ipad zh
@@ -12,4 +14,7 @@ previews:
   - 5.png garden iphone zh
   - 6.png black iphone en
 source: https://themes.pixelwars.org/theblogger/milo/
+development_record: 
+  url: https://www.bilibili.com/video/BV1RW4y1Y75e/?vd_source=8198960d64860de72ecf734748577640
+  name: 19 - 响应式、多主题页面开发记录，基于tailwindcss/daisyui. 2倍速度
 template_folder: false  
