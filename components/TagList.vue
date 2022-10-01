@@ -15,8 +15,8 @@
         class="mb-8 w-full overflow-hidden"
       >
         <NuxtLink :to="item._path" @click="(e) => toIntroduce(e)">
-          <img
-            v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
+          <nuxt-img
+            :src="useCFContentVLazy(item._path, item.previews[0], 'sm').src"
             class="md:w-full m-auto bg-base-200/20 border border-base-300 min-h-[300px] object-contain object-center rounded-box cursor-zoom-in"
             width="473"
             height="298"

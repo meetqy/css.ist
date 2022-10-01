@@ -24,6 +24,14 @@
             height="298"
             sizes="sm:100vw md:473"
             preload
+            :alt="
+              useImgAltContent(
+                item.title,
+                item.tags,
+                item.previews[0],
+                `index › ${name} › sm`
+              )
+            "
           />
         </NuxtLink>
 

@@ -51,7 +51,7 @@
                   @click="activePreviewIndex = i"
                 >
                   <img
-                    v-lazy="useCFContentVLazy(page._path, item, 'sm')"
+                    :src="useCFContentVLazy(page._path, item, 'sm').src"
                     class="object-contain object-center !my-0"
                     :alt="
                       useImgAltContent(
@@ -61,6 +61,7 @@
                         'introduce › previews › sm'
                       )
                     "
+                    preload
                   />
                 </div>
               </div>
@@ -123,8 +124,8 @@
           <div class="grid lg:hidden">
             <div v-for="(item, i) in page.previews" :key="i">
               <p class="py-4">{{ item.replace(/png /, "") }}</p>
-              <img
-                v-lazy="useCFContentVLazy(page._path, item, 'public')"
+              <nuxt-img
+                :src="useCFContentVLazy(page._path, item, 'public').src"
                 class="m-auto"
                 width="788"
                 height="484"
@@ -137,6 +138,7 @@
                   )
                 "
                 sizes="sm:100vw md:80vw"
+                preload
               />
             </div>
           </div>
@@ -245,7 +247,7 @@
               "
             >
               <img
-                v-lazy="useCFContentVLazy(item._path, item.previews[0], 'sm')"
+                :src="useCFContentVLazy(item._path, item.previews[0], 'sm').src"
                 class="w-full aspect-video object-contain rounded-box border border-base-200 shadow bg-base-200/20"
                 :alt="
                   useImgAltContent(
