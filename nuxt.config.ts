@@ -4,7 +4,7 @@ import eslintPlugin from "vite-plugin-eslint";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "@nuxt/image-edge"],
 
   runtimeConfig: {
     public: {
@@ -35,11 +35,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  css: [
-    "~/assets/css/page.css",
-    "~/assets/css/material.css",
-    "~/assets/css/normal.css",
-  ],
+  css: ["~/assets/css/material.css"],
 
   typescript: {
     shim: false,
