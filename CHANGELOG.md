@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/meetqy/css.ist/compare/v2.1.15...v2.2.0) (2022-10-01)
+
+
+### 🐛 修复bug
+
+* 【🐛 Bug】usePicsum国内无法访问图片 close [#91](https://github.com/meetqy/css.ist/issues/91) ([efa51eb](https://github.com/meetqy/css.ist/commit/efa51eba1097aa9120a898df868df9f75d1e69c4))
+
+
+### 💡 新功能
+
+* 新增开发记录展示i ([422966a](https://github.com/meetqy/css.ist/commit/422966a8525ed9e7f846c74e256479e18b91735b))
+
+
+### 🚀 优化现有功能和UI
+
+* google icon优化 ([5c90cad](https://github.com/meetqy/css.ist/commit/5c90cad20bc8c6a325256bc7174698d09b8e6604))
+
+
+### 📃 文档
+
+* readme 优化 ([8d47334](https://github.com/meetqy/css.ist/commit/8d4733419b910a0abd09aa85b6e2ef380ed51599))
+* test ([8a85387](https://github.com/meetqy/css.ist/commit/8a8538766af534fb5a149cd267e900f900b4fac9))
+
 ### [2.1.15](https://github.com/meetqy/css.ist/compare/v2.1.14...v2.1.15) (2022-09-28)
 
 
