@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "build:cloudflare": "NITRO_PRESET=cloudflare yarn build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "export PORT=4000 && nuxt preview",
