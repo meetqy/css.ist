@@ -33,16 +33,16 @@
     <a href="https://github.com/meetqy/css.ist/issues/new/choose">提 Bug</a>
 </div>
 
-
 <br />
 
 <!-- Table of Contents -->
+
 # :notebook_with_decorative_cover: 目录
 
 - [关于项目](#star2-关于项目)
-  * [截图](#camera-截图)
-  * [特点](#dart-特点)
-  * [技术栈](#space_invader-技术栈)
+  - [截图](#camera-截图)
+  - [特点](#dart-特点)
+  - [技术栈](#space_invader-技术栈)
 - [本地运行](#running-本地运行)
 - [感谢](#gem-感谢)
 
@@ -52,16 +52,14 @@
 
 ![css.ist previews](https://imagedelivery.net/C1c8i0JtRURCOUA0iRLBpQ/6c4643c8-95a5-4f8a-70c7-fe1ed0a23b00/public)
 
-
 ### :dart: 特点
 
 - **mockjs**生成无序的随机数据，专注于模板本身的效果。
-- 模板支持**语言切换**，减少因为语言原因导致的UI问题。
+- 模板支持**语言切换**，减少因为语言原因导致的 UI 问题。
 - **响应式**，默认兼容`mac`、`ipad`、`iphone`。
-- **daisyui**，默认支持29中主题，也可以[自定义主题](https://daisyui.com/theme-generator/)，无需修改模板代码。
+- **daisyui**，默认支持 29 中主题，也可以[自定义主题](https://daisyui.com/theme-generator/)，无需修改模板代码。
 
 ### :space_invader: 技术栈
-
 
 <details>
   <summary>基础</summary>
@@ -73,7 +71,6 @@
   </ul>
 </details>
 
-
 <details>
   <summary>插件/UI</summary>
   <ul>
@@ -84,8 +81,9 @@
   </ul>
 </details>
 
+## :toolbox: 准备开始
 
-## :running: 本地运行
+### :running: 本地运行
 
 克隆项目
 
@@ -111,9 +109,17 @@
   yarn dev
 ```
 
+### :gear: 新建模板
+
+使用命令新增一个模板基础
+
+```bash
+  yarn new:template
+```
+
 ## :gem: 感谢
 
- - [Shields.io](https://shields.io/)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
- - [Readme Template](https://github.com/othneildrew/Best-README-Template)
+- [Shields.io](https://shields.io/)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
+- [Readme Template](https://github.com/othneildrew/Best-README-Template)

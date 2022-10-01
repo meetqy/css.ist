@@ -8,6 +8,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "export PORT=4000 && nuxt preview",
+    "new:template": "node scripts/createTemplate.js",
     "lint": "eslint",
     "line:fix": "prettier . --write",
     "cz": "cz",
