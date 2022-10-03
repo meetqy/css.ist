@@ -29,12 +29,14 @@ export const getWebConfig = (lang?: "en" | "zh") => {
 // 基本信息
 export const baseInfo = {
   en: {
+    logo: useCF("css.ist-logo", "sm"),
     title: "css.ist",
     time: "25 May, 2022",
     subtitle:
       "share responsive web design and many themes templates/components/web pages. based on tailwindcss, daisyui.",
   },
   zh: {
+    logo: useCF("css.ist-logo", "sm"),
     title: "css.ist",
     time: "2022年5月25日",
     subtitle: "分享响应式、多主题模板/组件/网页，基于tailwindcss、daisyui。",
