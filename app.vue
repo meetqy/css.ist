@@ -1,14 +1,14 @@
 <template>
   <div>
-    <main class="font-mono wcao bg-base-100">
+    <main class="bg-base-100 font-mono">
       <NuxtLoadingBar ref="loadingRef" />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
 
-      <div class="hiddle lg:block">
+      <!-- <div class="hiddle lg:block">
         <CoreNextImg />
-      </div>
+      </div> -->
     </main>
   </div>
 </template>
@@ -40,6 +40,13 @@ img[lazy="loaded"] {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.drawer-mobile > .drawer-toggle ~ .drawer-side,
+.drawer-toggle ~ .drawer-content {
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>

@@ -1,127 +1,54 @@
 <template>
-  <main>
-    <slot name="outside" />
-    <div class="drawer drawer-mobile">
-      <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div id="drawer-content" ref="drawerContent" class="drawer-content">
-        <!-- mobile navbar -->
-        <label
-          for="my-drawer-2"
-          class="drawer-button lg:hidden flex justify-between pl-4 border-b border-base-200/50 sticky top-0 bg-base-100 z-20"
-        >
-          <div class="flex justify-center items-center font-seri">
-            <img
-              :src="useCF('css.ist-logo', 'sm')"
-              alt="css.ist logo"
-              class="w-8 h-8 mr-2"
-            />
-            {{ getWebConfig().title }}
-          </div>
+  <div class="drawer drawer-mobile">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+    <slot></slot>
 
-          <CoreDark />
-        </label>
+    <!-- aside -->
+    <div class="drawer-side !overflow-hidden border-r border-base-200">
+      <label for="my-drawer-2" class="drawer-overlay"></label>
 
-        <div class="sticky top-0 z-30 bg-base-100 text-base-content">
-          <!-- pc navbar -->
-          <div
-            class="navbar h-16 bg-base-100 pl-4 hidden lg:flex border-b border-base-200"
-          >
-            <div class="flex-1">
-              <div class="dropdown w-72">
-                <label tabindex="0" class="block my-2 bg-transparent">
-                  <input
-                    type="text"
-                    class="input w-full input-bordered h-10"
-                    placeholder="search here..."
-                  />
-                </label>
-                <div
-                  tabindex="0"
-                  class="dropdown-content card w-full shadow border bg-base-100"
-                >
-                  <ul class="menu w-full rounded-box">
-                    <li><a class="active">Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                    <li><a>Item 3</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flex-none">
-              <CoreDark />
-            </div>
-          </div>
-        </div>
-
-        <!-- Page content here -->
-        <slot />
-
-        <CoreFooter />
-      </div>
-      <div
-        id="drawer-side"
-        ref="drawerSide"
-        class="drawer-side !overflow-y-hidden"
-      >
-        <label for="my-drawer-2" class="drawer-overlay" />
-
-        <aside ref="drawerSideWrapper" class="bg-base-100 w-80 h-screen">
-          <div
-            class="z-20 sticky top-0 h-16 flex items-center justify-center border-b border-base-200 bg-base-100"
-          >
+      <aside ref="drawerSide" class="w-80 h-screen font-serif capitalize">
+        <ul class="menu rounded-box p-2 w-full">
+          <!-- <li>
             <NuxtLink
               to="/"
-              class="btn btn-ghost text-2xl normal-case hover:bg-transparent hidden lg:flex font-serif"
+              class="btn btn-ghost hover:bg-transparent focus:bg-transparent active:text-base-content p-0 normal-case"
             >
               <img
                 :src="useCF('css.ist-logo', 'sm')"
                 alt="css.ist logo"
-                class="w-10 h-10 mr-2"
+                class="w-10 h-10"
               />
-              {{ getWebConfig().title }}
+              <span class="text-2xl">{{ getWebConfig().title }}</span>
             </NuxtLink>
+          </li> -->
+          <!-- <li class="border-b border-base-200 pb-2">
+            <NuxtLink to="/">
+              <span class="material-symbols-outlined"> home </span>
+              home
+            </NuxtLink>
+            <NuxtLink to="/about">
+              <span class="material-symbols-outlined"> person </span>
+              about
+            </NuxtLink>
+          </li> -->
+          <li class="menu-title mt-2">
+            <a>tags</a>
+          </li>
+          <li v-for="item in navs" :key="item">
+            <NuxtLink :to="'/tag/' + item" @click="storage = []">
+              {{ item }}
+            </NuxtLink>
+          </li>
+        </ul>
 
-            <input
-              class="input input-bordered h-10 w-10/12 lg:hidden"
-              placeholder="search here ..."
-            />
-          </div>
-
-          <div
-            class="bg-base-100 border-r border-base-200 p-4 font-serif"
-            style="height: calc(100% - 64px)"
-          >
-            <ul class="menu rounded-box p-2 capitalize w-full">
-              <li class="border-b border-base-200 pb-2">
-                <NuxtLink to="/">
-                  <span class="material-symbols-outlined"> home </span>
-                  home
-                </NuxtLink>
-                <NuxtLink to="/about">
-                  <span class="material-symbols-outlined"> person </span>
-                  about
-                </NuxtLink>
-              </li>
-              <li class="menu-title mt-2">
-                <a>tags</a>
-              </li>
-              <li v-for="item in navs" :key="item">
-                <NuxtLink :to="'/tag/' + item" @click="storage = []">
-                  {{ item }}
-                </NuxtLink>
-              </li>
-            </ul>
-
-            <!-- ads -->
-            <img
-              class="w-72 h-72 rounded-box mx-auto mt-4"
-              :src="usePicsum('/300/300')"
-            />
-          </div>
-        </aside>
-      </div>
+        <img
+          class="w-72 h-72 rounded-box mx-auto mt-4"
+          :src="usePicsum('/300/300')"
+        />
+      </aside>
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup>
@@ -134,9 +61,8 @@ const storage = useStorage("tag-list-data", []);
 // 直接使用 drawerContentElement 无效
 const drawerContent = drawerContentElement;
 const drawerSide = drawerSideElement;
-const drawerSideWrapper = ref(null);
 
-watch(drawerSideWrapper, (e) => {
+watch(drawerSide, (e) => {
   new SimpleBar(e);
 });
 
