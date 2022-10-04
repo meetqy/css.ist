@@ -15,5 +15,5 @@ import SimpleBar from "simplebar";
 import "simplebar/dist/simplebar.css";
 const drawerContent = ref(null);
 
-watch(drawerContent, (e) => !isMobile && new SimpleBar(e));
+watch(drawerContent, (e) => !isMobile() && new SimpleBar(e));
 </script>
