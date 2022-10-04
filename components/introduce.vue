@@ -150,10 +150,10 @@
               class="flex items-center flex-wrap lg:flex-row flex-col"
             >
               <div class="w-full lg:w-auto flex items-center justify-start">
-                <span class="material-symbols-outlined mt-2 text-accent">
-                  sell
-                </span>
-                <span class="ml-2 mt-2 uppercase">tags:</span>
+                <span class="material-symbols-outlined mt-2"> sell </span>
+                <span class="ml-2 mt-2 capitalize !text-base-content/50"
+                  >tags:</span
+                >
               </div>
               <div class="flex-1">
                 <NuxtLink
@@ -173,15 +173,15 @@
               class="flex items-center lg:flex-row flex-col"
             >
               <div class="flex items-center lg:w-auto w-full">
-                <span class="material-symbols-outlined text-secondary">
-                  emoji_nature
-                </span>
-                <span class="ml-2 uppercase">source of inspiration:</span>
+                <span class="material-symbols-outlined"> emoji_nature </span>
+                <span class="ml-2 capitalize !text-base-content/50"
+                  >source of inspiration:</span
+                >
               </div>
               <a
                 :href="page.source"
                 target="_blank"
-                class="text-primary normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
+                class="!text-success tracking-widest normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
               >
                 {{ source.hostname }}
               </a>
@@ -193,17 +193,17 @@
               class="flex items-center lg:flex-row flex-col"
             >
               <div class="flex items-center lg:w-auto w-full">
-                <span class="material-symbols-outlined text-secondary">
-                  code
-                </span>
-                <span class="ml-2 uppercase">source code:</span>
+                <span class="material-symbols-outlined"> code </span>
+                <span class="ml-2 capitalize !text-base-content/50"
+                  >source code:</span
+                >
               </div>
               <a
                 :href="`${github}${
                   page.template_folder ? '/index.vue' : '.vue'
                 }`"
                 target="_blank"
-                class="text-info normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
+                class="!text-success tracking-widest normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
               >
                 {{ page._path.replace("/introduce", "/template") }}
               </a>
@@ -218,12 +218,14 @@
                 <span class="material-symbols-outlined">
                   radio_button_checked
                 </span>
-                <span class="ml-2 uppercase">development record</span>:
+                <span class="ml-2 capitalize !text-base-content/50"
+                  >development record:</span
+                >
               </div>
               <a
                 :href="page.development_record.url"
                 target="_blank"
-                class="text-info normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
+                class="!text-success tracking-widest normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
               >
                 {{ page.development_record.name }}
               </a>

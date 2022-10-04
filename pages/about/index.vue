@@ -1,11 +1,14 @@
 <template>
   <div ref="drawerContent" class="drawer-content">
     <CoreHeader />
-    <main
-      class="container px-4 prose prose-p:mt-0 prose-img:mr-1 prose-img:my-0 prose-a:no-underline prose-h2:border-b prose-h2:pb-2 prose-a:text-info"
-    >
-      <ContentDoc path="/introduce/about" />
+
+    <main class="lg:mb-24 my-12">
+      <ContentDoc
+        path="/introduce/about"
+        class="prose lg:shadow-md lg:border-t rounded-box border-base-200 max-w-screen-lg lg:p-8 p-4 pt-0 m-auto"
+      />
     </main>
+
     <CoreFooter />
   </div>
 </template>
@@ -17,3 +20,42 @@ const drawerContent = ref(null);
 
 watch(drawerContent, (e) => !isMobile() && new SimpleBar(e));
 </script>
+
+<style lang="postcss">
+.prose {
+  a {
+    @apply text-success no-underline inline-block hover:underline;
+
+    img {
+      @apply m-0;
+    }
+  }
+
+  h1,
+  h2 {
+    @apply border-b border-base-content/20 lg:pb-4 pb-2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    > a {
+      @apply hover:no-underline text-base-content;
+    }
+  }
+
+  li a {
+    @apply m-0;
+  }
+
+  pre {
+    &::before {
+      content: ">";
+      @apply text-success;
+    }
+  }
+}
+</style>

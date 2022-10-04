@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer footer-center p-10 bg-base-100">
+  <footer class="footer footer-center p-10 lg:pb-12 pb-36 bg-base-100">
     <div>
       <img
         :src="useCF('css.ist-logo', 'sm')"
@@ -13,17 +13,17 @@
         <a
           href="https://css.ist"
           target="_blank"
-          class="text-primary font-bold hover:underline"
+          class="underline font-serif text-base-content/80"
         >
           css.ist
         </a>
       </p>
       <p>
-        other website:
+        other website
         <a
           href="https://wcao.cc"
           target="_blank"
-          class="text-secondary font-bold hover:underline"
+          class="underline font-serif text-base-content/80"
         >
           wcao.cc
         </a>
