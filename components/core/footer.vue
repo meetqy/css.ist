@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer footer-center p-10">
+  <footer class="footer footer-center p-10 bg-base-100">
     <div>
       <img
         :src="useCF('css.ist-logo', 'sm')"

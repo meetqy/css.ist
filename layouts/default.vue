@@ -9,7 +9,7 @@
 
       <aside
         ref="drawerSide"
-        class="w-80 h-screen font-serif capitalize bg-base-100"
+        class="w-80 h-screen font-serif capitalize bg-base-200/50 pb-24"
       >
         <ul class="menu rounded-box p-2 w-full">
           <li class="lg:hidden">

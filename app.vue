@@ -40,4 +40,8 @@ img[lazy="loaded"] {
     display: none;
   }
 }
+
+.drawer-mobile > .drawer-toggle ~ .drawer-content {
+  height: 100vh;
+}
 </style>

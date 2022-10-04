@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-base-100/90 sticky w-full top-0 z-20">
+  <div class="bg-base-100/60 backdrop-blur sticky w-full top-0 z-20">
     <header class="navbar container m-auto">
       <div class="navbar-start">
         <label

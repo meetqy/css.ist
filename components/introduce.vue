@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="lg:mb-24 mb-12">
     <div class="fixed right-4 bottom-8 z-50 flex justify-center items-center">
       <div
         class="btn btn-primary btn-square btn-sm mr-2"
@@ -12,8 +12,8 @@
       </div>
     </div>
 
-    <div class="px-4 bg-info/5 pb-8 rounded-b">
-      <div class="lg:container m-auto">
+    <div class="px-4 pb-8 rounded-b bg-base-100 border-b border-base-200">
+      <div class="container m-auto">
         <article
           class="md:prose prose-sm prose-p:mb-0 prose-h2:mb-0 !max-w-full pt-4"
         >
