@@ -1,5 +1,5 @@
 <template>
-  <main class="container m-auto lg:mt-12 mt-4 min-h-screen relative">
+  <main class="container px-4 m-auto lg:mt-12 mt-4 min-h-screen relative">
     <h1
       class="capitalize text-xl font-semibold tracking-widest border-b border-base-200 pb-4"
     >

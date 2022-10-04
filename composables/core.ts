@@ -1,3 +1,8 @@
+import { useMediaQuery } from "@vueuse/core";
+
+// 是否是移动端
+export const isMobile = () => useMediaQuery("(max-width: 1024px)").value;
+
 /**
  * 生产环境?
  * @returns boolean

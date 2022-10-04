@@ -1,16 +1,7 @@
 <template>
-  <div
-    ref="drawerContent"
-    class="drawer-content flex flex-col items-center justify-center"
-  >
+  <div ref="drawerContent" class="drawer-content">
     <CoreHeader />
-
     <Introduce />
-
-    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
-      Open drawer
-    </label>
-
     <CoreFooter />
   </div>
 </template>
@@ -20,7 +11,5 @@ import SimpleBar from "simplebar";
 import "simplebar/dist/simplebar.css";
 const drawerContent = ref(null);
 
-watch(drawerContent, (e) => {
-  new SimpleBar(e);
-});
+watch(drawerContent, (e) => !isMobile && new SimpleBar(e));
 </script>

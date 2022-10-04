@@ -7,7 +7,10 @@
     <div class="drawer-side !overflow-hidden border-r border-base-200">
       <label for="my-drawer-2" class="drawer-overlay"></label>
 
-      <aside ref="drawerSide" class="w-80 h-screen font-serif capitalize">
+      <aside
+        ref="drawerSide"
+        class="w-80 h-screen font-serif capitalize bg-base-100"
+      >
         <ul class="menu rounded-box p-2 w-full">
           <li class="lg:hidden">
             <NuxtLink

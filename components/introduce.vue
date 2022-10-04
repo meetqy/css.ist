@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="container">
     <div class="fixed right-4 bottom-8 z-50 flex justify-center items-center">
       <div
         class="btn btn-primary btn-square btn-sm mr-2"
@@ -12,23 +12,25 @@
       </div>
     </div>
 
-    <div class="w-full bg-info/5 pb-8 rounded-b">
+    <div class="px-4 bg-info/5 pb-8 rounded-b">
       <div class="lg:container m-auto">
         <article
           class="md:prose prose-sm prose-p:mb-0 prose-h2:mb-0 !max-w-full pt-4"
         >
           <div
             v-if="page.previews"
-            class="shadow flex items-center justify-between bg-base-100 overflow-hidden rounded-box flex-col lg:flex-row lg:pl-4 pt-4 lg:pt-0"
+            class="shadow flex items-center justify-between bg-base-100 overflow-hidden rounded-box"
           >
             <h1
-              class="!m-0 px-4 lg:px-4 lg:text-lg text-base font-semibold lg:pb-0 flex items-center pb-4"
+              class="!m-0 lg:text-lg text-base font-semibold flex items-center justify-between w-full p-4"
             >
-              {{ page.title }}
+              <span class="flex-1">
+                {{ page.title }}
+              </span>
 
               <NuxtLink
                 :to="`${page._path.replace('introduce', 'template')}`"
-                class="btn btn-circle btn-md lg:hidden !no-underline flex-shrink-0 ml-4"
+                class="btn btn-primary btn-circle lg:hidden !no-underline flex-shrink-0 ml-4"
               >
                 <span class="material-symbols-outlined text-primary-content">
                   fullscreen
