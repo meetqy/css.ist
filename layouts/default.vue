@@ -9,7 +9,7 @@
 
       <aside ref="drawerSide" class="w-80 h-screen font-serif capitalize">
         <ul class="menu rounded-box p-2 w-full">
-          <!-- <li>
+          <li class="lg:hidden">
             <NuxtLink
               to="/"
               class="btn btn-ghost hover:bg-transparent focus:bg-transparent active:text-base-content p-0 normal-case"
@@ -21,8 +21,8 @@
               />
               <span class="text-2xl">{{ getWebConfig().title }}</span>
             </NuxtLink>
-          </li> -->
-          <!-- <li class="border-b border-base-200 pb-2">
+          </li>
+          <li class="border-b border-base-200 pb-2 lg:hidden">
             <NuxtLink to="/">
               <span class="material-symbols-outlined"> home </span>
               home
@@ -31,7 +31,7 @@
               <span class="material-symbols-outlined"> person </span>
               about
             </NuxtLink>
-          </li> -->
+          </li>
           <li class="menu-title mt-2">
             <a>tags</a>
           </li>
@@ -55,22 +55,8 @@
 import SimpleBar from "simplebar";
 import "simplebar/dist/simplebar.css";
 
-import { useInfiniteScroll, useScroll, useStorage } from "@vueuse/core";
-const storage = useStorage("tag-list-data", []);
-
-// 直接使用 drawerContentElement 无效
-const drawerContent = drawerContentElement;
-const drawerSide = drawerSideElement;
-
-watch(drawerSide, (e) => {
-  new SimpleBar(e);
-});
-
-useInfiniteScroll(drawerContent, () => drawerContentPullUpEnd.value++, {
-  distance: 100,
-});
-
-drawerContentScroll.value = useScroll(drawerContent);
+const drawerSide = ref(null);
+watch(drawerSide, (e) => new SimpleBar(e));
 
 const res = await queryContent("introduce").only(["tags"]).find();
 

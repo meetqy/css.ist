@@ -5,10 +5,6 @@
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-
-      <!-- <div class="hiddle lg:block">
-        <CoreNextImg />
-      </div> -->
     </main>
   </div>
 </template>
@@ -20,12 +16,7 @@ const loadingRef = ref(null);
 
 router.beforeEach((_to, _from, next) => {
   loadingRef.value.start();
-
-  if (_to.name.includes("introduce")) {
-    setTimeout(next, 300);
-  } else {
-    next();
-  }
+  next();
 });
 </script>
 

@@ -1,13 +1,8 @@
-import { useMediaQuery } from "@vueuse/core";
-
 /**
  * 生产环境?
  * @returns boolean
  */
 export const useProduction = () => process.env.NODE_ENV === "production";
-
-// 是否是移动端
-export const isMobile = () => useMediaQuery("(max-width: 1024px)").value;
 
 /**
  * cloudflare image
@@ -117,17 +112,6 @@ export const getContentByTag = (
     .limit(pageSize)
     .find();
 };
-
-// drawer-content 触底
-export const drawerContentPullUpEnd = ref<number>(0);
-
-// drawer-content 滚动距离
-export const drawerContentScroll = ref();
-
-// drawer-content 元素
-export const drawerContentElement = ref<HTMLInputElement | null>(null);
-// drawer-side 元素
-export const drawerSideElement = ref<HTMLImageElement | null>(null);
 
 export type Position = {
   left: number | string;
