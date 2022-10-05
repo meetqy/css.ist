@@ -3,6 +3,8 @@
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
     <slot></slot>
 
+    <CoreHeader />
+
     <!-- aside -->
     <div class="drawer-side !overflow-hidden border-r border-base-200">
       <label for="my-drawer-2" class="drawer-overlay"></label>
@@ -12,19 +14,7 @@
         class="w-80 h-screen lg:overflow-y-visible overflow-y-auto font-serif capitalize lg:bg-base-200/50 bg-base-100/80 backdrop-blur pb-24"
       >
         <ul class="menu rounded-box p-2 w-full">
-          <li class="lg:hidden">
-            <NuxtLink
-              to="/"
-              class="btn btn-ghost hover:bg-transparent focus:bg-transparent active:text-base-content p-0 normal-case"
-            >
-              <img
-                :src="useCF('css.ist-logo', 'sm')"
-                alt="css.ist logo"
-                class="w-10 h-10"
-              />
-              <span class="text-2xl">{{ getWebConfig().title }}</span>
-            </NuxtLink>
-          </li>
+          <li class="lg:hidden h-10 bg-transparent"></li>
           <li class="border-b border-base-200 pb-2 lg:hidden">
             <NuxtLink to="/">
               <span class="material-symbols-outlined"> home </span>

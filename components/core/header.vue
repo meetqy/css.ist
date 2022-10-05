@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-base-100/60 backdrop-blur sticky w-full top-0 z-20">
+  <div
+    class="bg-base-100/60 backdrop-blur fixed lg:w-[calc(100vw-20rem)] top-0 lg:left-80 w-full z-20"
+  >
     <header class="navbar container m-auto">
       <div class="navbar-start">
         <label

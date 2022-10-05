@@ -44,4 +44,8 @@ img[lazy="loaded"] {
 .drawer-mobile > .drawer-toggle ~ .drawer-content {
   height: 100vh;
 }
+
+.drawer-content {
+  @apply pt-16;
+}
 </style>

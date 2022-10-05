@@ -1,6 +1,5 @@
 <template>
   <div ref="drawerContent" class="drawer-content">
-    <CoreHeader />
     <TagList />
     <CoreFooter />
   </div>
