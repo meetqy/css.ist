@@ -89,54 +89,6 @@ export const templateIcons = (
   );
 };
 
-// 菜单合计 mock
-export const templateMenu = {
-  en: [
-    {
-      icon: "home",
-      text: "home",
-    },
-    {
-      icon: "person",
-      text: "About",
-    },
-    {
-      icon: "content_copy",
-      text: "Categories",
-    },
-    {
-      icon: "search",
-      text: "Search",
-    },
-    {
-      icon: "collections_bookmark",
-      text: "Archive",
-    },
-  ],
-  zh: [
-    {
-      icon: "home",
-      text: "主页",
-    },
-    {
-      icon: "person",
-      text: "关于我",
-    },
-    {
-      icon: "content_copy",
-      text: "分类",
-    },
-    {
-      icon: "search",
-      text: "搜索",
-    },
-    {
-      icon: "collections_bookmark",
-      text: "归档",
-    },
-  ],
-};
-
 // 所有可使用主题
 export const allThemes = {
   light: "light",

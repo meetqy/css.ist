@@ -9,7 +9,7 @@
       <div class="w-full h-16 justify-center md:flex hidden">
         <ul class="inline-flex">
           <li
-            v-for="(item, i) in templateMenu[lang]"
+            v-for="(item, i) in $MockKeywords()[lang].menu[lang]"
             :key="item.text"
             class="h-16 px-5 relative flex items-center justify-center"
           >

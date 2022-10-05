@@ -215,6 +215,28 @@ export default defineNuxtPlugin(() => {
             email: "e-mail",
             detail: "detail",
             submit: "submit",
+            menu: [
+              {
+                icon: "home",
+                text: "home",
+              },
+              {
+                icon: "person",
+                text: "About",
+              },
+              {
+                icon: "content_copy",
+                text: "Categories",
+              },
+              {
+                icon: "search",
+                text: "Search",
+              },
+              {
+                icon: "collections_bookmark",
+                text: "Archive",
+              },
+            ],
           },
           zh: {
             readMore: "查看更多",
@@ -226,6 +248,28 @@ export default defineNuxtPlugin(() => {
             email: "邮箱",
             detail: "详情",
             submit: "提交",
+            menu: [
+              {
+                icon: "home",
+                text: "主页",
+              },
+              {
+                icon: "person",
+                text: "关于我",
+              },
+              {
+                icon: "content_copy",
+                text: "分类",
+              },
+              {
+                icon: "search",
+                text: "搜索",
+              },
+              {
+                icon: "collections_bookmark",
+                text: "归档",
+              },
+            ],
           },
         };
       },

@@ -15,7 +15,13 @@
           <div class="navbar-start">
             <img class="w-12 h-12" :src="baseInfo[lang].logo" />
             <ul class="menu menu-horizontal ml-10 uppercase">
-              <li v-for="(item, i) in templateMenu[lang].slice(0, 3)" :key="i">
+              <li
+                v-for="(item, i) in $MockKeywords()[lang].menu[lang].slice(
+                  0,
+                  3
+                )"
+                :key="i"
+              >
                 <a href="javascript:;">{{ item.text }}</a>
               </li>
             </ul>
@@ -23,7 +29,13 @@
 
           <div class="navbar-end">
             <ul class="menu menu-horizontal ml-10 uppercase">
-              <li v-for="(item, i) in templateMenu[lang].slice(3, 5)" :key="i">
+              <li
+                v-for="(item, i) in $MockKeywords()[lang].menu[lang].slice(
+                  3,
+                  5
+                )"
+                :key="i"
+              >
                 <a href="javascript:;">{{ item.text }}</a>
               </li>
             </ul>

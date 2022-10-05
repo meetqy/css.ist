@@ -19,7 +19,7 @@
         <!-- menus -->
         <div class="navbar-center hidden lg:block">
           <nav class="menu bg-neutral menu-horizontal capitalize font-serif">
-            <li v-for="(item, i) in templateMenu[lang]" :key="i">
+            <li v-for="(item, i) in $MockKeywords()[lang].menu[lang]" :key="i">
               <a
                 href="javascript:;"
                 :class="{ active: i === menuActive }"
