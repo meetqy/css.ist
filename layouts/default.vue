@@ -9,7 +9,7 @@
 
       <aside
         ref="drawerSide"
-        class="w-80 h-screen overflow-y-auto font-serif capitalize lg:bg-base-200/50 bg-base-100/80 backdrop-blur pb-24"
+        class="w-80 h-screen lg:overflow-y-visible overflow-y-auto font-serif capitalize lg:bg-base-200/50 bg-base-100/80 backdrop-blur pb-24"
       >
         <ul class="menu rounded-box p-2 w-full">
           <li class="lg:hidden">
