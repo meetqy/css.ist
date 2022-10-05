@@ -143,12 +143,7 @@
           <h2 class="capitalize">base info</h2>
 
           <ul class="menu w-full overflow-hidden">
-            <li class="active:bg-transparent">
-              <a :href="page.source" target="_blank">
-                <span class="material-symbols-outlined"> emoji_nature </span>
-                {{ source.hostname }}
-              </a>
-            </li>
+            <!-- 源码 -->
             <li>
               <a
                 :href="`${github}${
@@ -160,7 +155,17 @@
                 {{ page._path.replace("/introduce", "/template") }}
               </a>
             </li>
-            <li>
+
+            <!-- 灵感 -->
+            <li v-if="page.source">
+              <a :href="page.source" target="_blank">
+                <span class="material-symbols-outlined"> emoji_nature </span>
+                {{ source.hostname }}
+              </a>
+            </li>
+
+            <!-- 开发记录 -->
+            <li v-if="page.development_record">
               <a :href="page.development_record.url" target="_blank">
                 <span class="material-symbols-outlined">
                   radio_button_checked
