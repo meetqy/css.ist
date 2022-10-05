@@ -5,7 +5,7 @@
     <main class="lg:mb-24 my-12">
       <ContentDoc
         path="/introduce/about"
-        class="prose lg:shadow-md lg:border-t rounded-box border-base-200 max-w-screen-lg lg:p-8 p-4 pt-0 m-auto"
+        class="prose-about prose lg:shadow-md lg:border-t rounded-box border-base-200 max-w-screen-lg lg:p-8 p-4 pt-0 m-auto"
       />
     </main>
 
@@ -22,7 +22,7 @@ watch(drawerContent, (e) => !isMobile() && new SimpleBar(e));
 </script>
 
 <style lang="postcss">
-.prose {
+.prose-about.prose {
   a {
     @apply text-success no-underline inline-block hover:underline;
 

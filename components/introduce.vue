@@ -1,22 +1,8 @@
 <template>
   <div class="lg:mb-24 mb-12">
-    <div class="fixed right-4 bottom-8 z-50 flex justify-center items-center">
-      <div
-        class="btn btn-primary btn-square btn-sm mr-2"
-        @click="$router.back()"
-      >
-        <span class="material-symbols-outlined"> chevron_left </span>
-      </div>
-      <div class="btn btn-circle btn-sm" @click="toTop">
-        <span class="material-symbols-outlined !text-lg"> rocket </span>
-      </div>
-    </div>
-
     <div class="px-4 pb-8 rounded-b bg-base-100 border-b border-base-200">
       <div class="container m-auto">
-        <article
-          class="md:prose prose-sm prose-p:mb-0 prose-h2:mb-0 !max-w-full pt-4"
-        >
+        <article class="w-full introduce-wrapper">
           <div
             v-if="page.previews"
             class="shadow flex items-center justify-between bg-base-100 overflow-hidden rounded-box"
@@ -86,7 +72,7 @@
                 v-if="page.previews"
                 v-show="activePreviewIndex === i"
                 :key="i"
-                class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all mt-8 lg:shadow"
+                class="w-full relative flex-shrink-0 lg:rounded-box lg:bg-base-200 max-h-[80vh] overflow-y-auto transition-all lg:shadow"
               >
                 <div class="sticky left-0 top-0 pt-2 pl-2">
                   <a
@@ -143,104 +129,56 @@
             </div>
           </div>
 
-          <section class="space-y-8 mt-8">
-            <!-- tags -->
-            <div
-              id="tags"
-              class="flex items-center flex-wrap lg:flex-row flex-col"
+          <div class="flex">
+            <NuxtLink
+              v-for="item in page.tags"
+              :key="item"
+              :to="`/tag/${item}`"
+              class="btn mt-2 btn-primary btn-xs ml-2 !no-underline !text-primary-content"
             >
-              <div class="w-full lg:w-auto flex items-center justify-start">
-                <span class="material-symbols-outlined mt-2"> sell </span>
-                <span class="ml-2 mt-2 capitalize !text-base-content/50"
-                  >tags:</span
-                >
-              </div>
-              <div class="flex-1">
-                <NuxtLink
-                  v-for="item in page.tags"
-                  :key="item"
-                  :to="`/tag/${item}`"
-                  class="btn mt-2 btn-primary btn-xs ml-2 !no-underline !text-primary-content"
-                >
-                  {{ item }}
-                </NuxtLink>
-              </div>
-            </div>
+              {{ item }}
+            </NuxtLink>
+          </div>
 
-            <!-- 灵感 -->
-            <div
-              v-if="page.source"
-              class="flex items-center lg:flex-row flex-col"
-            >
-              <div class="flex items-center lg:w-auto w-full">
+          <h2 class="capitalize">base info</h2>
+
+          <ul class="menu w-full overflow-hidden">
+            <li class="active:bg-transparent">
+              <a :href="page.source" target="_blank">
                 <span class="material-symbols-outlined"> emoji_nature </span>
-                <span class="ml-2 capitalize !text-base-content/50"
-                  >source of inspiration:</span
-                >
-              </div>
-              <a
-                :href="page.source"
-                target="_blank"
-                class="!text-success tracking-widest normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
-              >
                 {{ source.hostname }}
               </a>
-            </div>
-
-            <!-- 源码 -->
-            <div
-              v-if="page.source"
-              class="flex items-center lg:flex-row flex-col"
-            >
-              <div class="flex items-center lg:w-auto w-full">
-                <span class="material-symbols-outlined"> code </span>
-                <span class="ml-2 capitalize !text-base-content/50"
-                  >source code:</span
-                >
-              </div>
+            </li>
+            <li>
               <a
                 :href="`${github}${
                   page.template_folder ? '/index.vue' : '.vue'
                 }`"
                 target="_blank"
-                class="!text-success tracking-widest normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
               >
+                <span class="material-symbols-outlined"> code </span>
                 {{ page._path.replace("/introduce", "/template") }}
               </a>
-            </div>
-
-            <!-- 开发记录 -->
-            <div
-              v-if="page.development_record"
-              class="flex items-center lg:flex-row flex-col"
-            >
-              <div class="flex items-center lg:w-auto w-full">
+            </li>
+            <li>
+              <a :href="page.development_record.url" target="_blank">
                 <span class="material-symbols-outlined">
                   radio_button_checked
                 </span>
-                <span class="ml-2 capitalize !text-base-content/50"
-                  >development record:</span
-                >
-              </div>
-              <a
-                :href="page.development_record.url"
-                target="_blank"
-                class="!text-success tracking-widest normal-case line-clamp-1 text-center lg:text-left inline-block lg:ml-2 mt-2 lg:mt-0"
-              >
                 {{ page.development_record.name }}
               </a>
-            </div>
-          </section>
+            </li>
+          </ul>
 
           <h2 class="capitalize">more</h2>
           <div
-            class="grid transition-all xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4"
+            class="grid transition-all xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-8"
           >
             <nuxt-link
               v-for="item in moreContent"
               :key="item._id"
               :to="item._path"
-              class="cursor-zoom-in"
+              class="cursor-zoom-in group"
             >
               <img
                 :src="useCFContentVLazy(item._path, item.previews[0], 'sm').src"
@@ -258,7 +196,7 @@
                 sizes="sm:100vw md:364"
                 loading="lazy"
               />
-              <p class="px-2">{{ item.title }}</p>
+              <p class="px-2 mt-4 group-hover:font-bold">{{ item.title }}</p>
             </nuxt-link>
           </div>
         </article>
@@ -319,3 +257,32 @@ onMounted(async () => {
   moreContent.value = res.filter((item) => item._id !== page.value._id);
 });
 </script>
+
+<style lang="postcss" scoped>
+.introduce-wrapper {
+  @apply space-y-8 mt-8;
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl font-bold lg:text-base-content/80 text-primary/80;
+
+    &:before {
+      content: "#";
+      @apply text-base mr-2 text-base-300;
+    }
+  }
+
+  li {
+    a {
+      @apply hover:bg-transparent font-bold active:text-primary active:bg-transparent focus:bg-transparent;
+
+      span {
+        @apply !text-base-300;
+      }
+    }
+  }
+}
+</style>
