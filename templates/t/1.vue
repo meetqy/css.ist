@@ -29,7 +29,7 @@
                 tabindex="0"
                 class="dropdown-content xl:menu-horizontal xl:w-auto xl:min-w-max menu uppercase shadow xl:bg-transparent xl:shadow-none rounded-box md:w-96 w-72 xl:text-primary-content/80 md:bg-base-100"
               >
-                <li v-for="item in templateMenu[lang]" :key="item.text">
+                <li v-for="item in $MockKeywords()[lang].menu" :key="item.text">
                   <a>{{ item.text }}</a>
                 </li>
               </ul>
@@ -618,7 +618,7 @@ const lang = ref("en");
 const page = ref({});
 
 watch(route, (v) => {
-  lang.value = v.query.lang;
+  lang.value = v.query.lang || "en";
   init(lang.value);
 });
 

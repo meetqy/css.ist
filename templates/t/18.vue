@@ -37,7 +37,7 @@
         <!-- nav -->
         <div class="space-x-4 space-y-4">
           <button
-            v-for="(item, i) in templateMenu[lang]"
+            v-for="(item, i) in $MockKeywords()[lang].menu[lang]"
             :key="i"
             class="btn btn-sm lg:btn-md lg:px-8 capitalize"
             :class="activeIndex === i ? 'btn-active' : 'btn-outline'"

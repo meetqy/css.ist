@@ -14,7 +14,7 @@
           <ul
             class="menu lg:menu-horizontal menu-vertical bg-base-100 w-56 lg:w-full rounded-box shadow lg:shadow-none"
           >
-            <li v-for="item in templateMenu[lang]" :key="item">
+            <li v-for="item in $MockKeywords()[lang].menu" :key="item">
               <a class="hover:bg-transparent hover:underline">{{
                 item.text
               }}</a>

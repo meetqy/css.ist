@@ -402,7 +402,10 @@
                 class="w-full max-w-full mt-0 shrink-0 lg:w-1/2 lg:flex-none"
               >
                 <ul class="flex flex-wrap justify-center lg:justify-end">
-                  <li v-for="(item, i) in templateMenu[lang]" :key="i">
+                  <li
+                    v-for="(item, i) in $MockKeywords()[lang].menu[lang]"
+                    :key="i"
+                  >
                     <a
                       class="block px-4 font-normal transition-colors ease-soft-in-out text-sm text-base-content/50"
                     >
