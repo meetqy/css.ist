@@ -8677,6 +8677,11 @@ vue-eslint-parser@^9.0.1:
     lodash "^4.17.21"
     semver "^7.3.6"
 
+vue-gtag-next@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.npmjs.org/vue-gtag-next/-/vue-gtag-next-1.14.0.tgz#793aef0b90dff4213b9f3a79827cd99b06e678dd"
+  integrity sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==
+
 vue-router@^4.1.5:
   version "4.1.5"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.1.5.tgz"
