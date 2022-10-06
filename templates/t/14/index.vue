@@ -16,7 +16,7 @@
             class="menu menu-vertical lg:menu-horizontal bg-transparent hidden lg:flex"
           >
             <li
-              v-for="(item, i) in $MockKeywords()[lang].menu[lang]"
+              v-for="(item, i) in $MockKeywords()[lang].menu"
               :key="i"
               class="capitalize"
             >

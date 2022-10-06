@@ -35,7 +35,7 @@
                   class="list-reset flex justify-between flex-1 md:flex-none items-center"
                 >
                   <li
-                    v-for="item in $MockKeywords()[lang].menu[lang]"
+                    v-for="item in $MockKeywords()[lang].menu"
                     :key="item.text"
                     class="mr-2"
                   >
@@ -257,10 +257,7 @@
               <ul
                 class="list-reset flex justify-center flex-1 md:flex-none items-center"
               >
-                <li
-                  v-for="item in $MockKeywords()[lang].menu[lang]"
-                  :key="item.text"
-                >
+                <li v-for="item in $MockKeywords()[lang].menu" :key="item.text">
                   <a
                     class="btn btn-link text-neutral-content/30 capitalize btn-xs"
                   >

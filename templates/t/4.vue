@@ -215,6 +215,6 @@ const init = (lang) => {
     ],
   })[lang];
 
-  menu.value = $MockKeywords()[lang].menu[lang];
+  menu.value = $MockKeywords()[lang].menu;
 };
 </script>

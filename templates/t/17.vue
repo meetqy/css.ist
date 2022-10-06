@@ -16,10 +16,7 @@
                 tabindex="0"
                 class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li
-                  v-for="(item, i) in $MockKeywords()[lang].menu[lang]"
-                  :key="i"
-                >
+                <li v-for="(item, i) in $MockKeywords()[lang].menu" :key="i">
                   <a>{{ item.text }}</a>
                 </li>
               </ul>
@@ -36,10 +33,7 @@
               {{ baseInfo[lang].title }}
             </a>
             <ul class="menu menu-horizontal p-0 capitalize lg:flex hidden">
-              <li
-                v-for="(item, i) in $MockKeywords()[lang].menu[lang]"
-                :key="i"
-              >
+              <li v-for="(item, i) in $MockKeywords()[lang].menu" :key="i">
                 <a>{{ item.text }}</a>
               </li>
             </ul>

@@ -16,10 +16,7 @@
             <img class="w-12 h-12" :src="baseInfo[lang].logo" />
             <ul class="menu menu-horizontal ml-10 uppercase">
               <li
-                v-for="(item, i) in $MockKeywords()[lang].menu[lang].slice(
-                  0,
-                  3
-                )"
+                v-for="(item, i) in $MockKeywords()[lang].menu.slice(0, 3)"
                 :key="i"
               >
                 <a href="javascript:;">{{ item.text }}</a>
@@ -30,10 +27,7 @@
           <div class="navbar-end">
             <ul class="menu menu-horizontal ml-10 uppercase">
               <li
-                v-for="(item, i) in $MockKeywords()[lang].menu[lang].slice(
-                  3,
-                  5
-                )"
+                v-for="(item, i) in $MockKeywords()[lang].menu.slice(3, 5)"
                 :key="i"
               >
                 <a href="javascript:;">{{ item.text }}</a>
