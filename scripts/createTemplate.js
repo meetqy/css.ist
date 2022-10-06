@@ -36,8 +36,12 @@ template_folder: false`;
 // 创建模板
 function createTemplate() {
   const vue = `<template>
-  <div class="w-screen h-screen">${newTempIndex}</div>
+  <div class="w-screen h-screen">21</div>
 </template>
+<script setup>
+const lang = computed(() => useRoute().query.lang || "en");
+</script>
+  
   `;
 
   fs.writeFile(join(cwd, `./templates/t/${newTempIndex}.vue`), vue, () => {
