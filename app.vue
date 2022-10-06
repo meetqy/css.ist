@@ -3,6 +3,19 @@
     <main class="bg-base-100 font-mono text-base">
       <NuxtLoadingBar ref="loadingRef" />
       <NuxtLayout>
+        <Head>
+          <!-- Google tag (gtag.js) -->
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZW1HWRQZQ8"
+          ></Script>
+          <Style chi></Style>
+          <Script
+            children="window.dataLayer = window.dataLayer || []; function
+            gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+            gtag('config', 'G-ZW1HWRQZQ8');"
+          />
+        </Head>
         <NuxtPage />
       </NuxtLayout>
     </main>

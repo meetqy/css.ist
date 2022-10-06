@@ -39,8 +39,7 @@
     "sitemap": "^7.1.1",
     "standard-version": "^9.5.0",
     "typescript": "^4.7.4",
-    "vite-plugin-eslint": "^1.7.0",
-    "vue-gtag-next": "^1.14.0"
+    "vite-plugin-eslint": "^1.7.0"
   },
   "dependencies": {
     "@vueuse/core": "^9.0.0",
