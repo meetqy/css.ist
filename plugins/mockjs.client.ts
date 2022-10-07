@@ -4,15 +4,27 @@ type language = "zh" | "en";
 
 type Template = { [key in language]: object | string };
 
+const _multiple = {
+  // mock 英文:中文， 1:3
+  zh: 3,
+};
+
+const handleMultiple = (lang: "zh", num?: number) => {
+  return num ? num * _multiple[lang] : undefined;
+};
+
 export default defineNuxtPlugin(() => {
   return {
     provide: {
       Mock,
       // 标题
-      MockTitle: (min?: number | undefined, max?: number | undefined) => {
+      MockTitle: (min?: number, max?: number) => {
         return {
           en: Mock.Random.title(min, max),
-          zh: Mock.Random.ctitle(min, max),
+          zh: Mock.Random.ctitle(
+            handleMultiple("zh", min),
+            handleMultiple("zh", max)
+          ),
         };
       },
 
