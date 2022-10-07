@@ -1,6 +1,8 @@
 <template>
   <div class="lg:mb-24 mb-12">
-    <div class="px-4 pb-8 rounded-b bg-base-100 border-b border-base-200">
+    <div
+      class="lg:px-14 px-4 pb-8 rounded-b bg-base-100 border-b border-base-200"
+    >
       <div class="container m-auto">
         <article class="w-full introduce-wrapper">
           <div

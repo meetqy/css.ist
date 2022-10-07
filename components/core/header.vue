@@ -2,7 +2,7 @@
   <div
     class="bg-base-100/60 backdrop-blur fixed lg:w-[calc(100vw-20rem)] top-0 lg:left-80 w-full z-20"
   >
-    <header class="navbar container m-auto">
+    <header class="navbar container m-auto lg:px-10 px-4">
       <div class="navbar-start">
         <label
           for="my-drawer-2"
