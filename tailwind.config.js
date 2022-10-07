@@ -17,10 +17,23 @@ module.exports = {
     require("@tailwindcss/line-clamp"),
     require("daisyui"),
   ],
+
   daisyui: {
     themes: [
-      "light",
-      "dark",
+      {
+        light: {
+          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+          fontFamily:
+            'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;',
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
+          fontFamily:
+            'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;',
+        },
+      },
       {
         polar_dark_frost: {
           primary: "#8fbcbb",

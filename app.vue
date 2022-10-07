@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="bg-base-100 font-mono text-base">
+    <main class="bg-base-100 text-base">
       <NuxtLoadingBar ref="loadingRef" />
       <NuxtLayout>
         <Head>

@@ -45,7 +45,9 @@
           </li>
         </ul>
 
-        <CoreDark />
+        <div class="mx-2 w-[1px] text-primary/30">|</div>
+
+        <CoreMode />
       </div>
     </header>
   </div>
