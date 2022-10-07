@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/meetqy/css.ist/compare/v2.2.0...v2.2.1) (2022-10-07)
+
+
+### 🚀 优化现有功能和UI
+
+* 【优化】templateMenu 移动到 plugins/mock中 ([f57e493](https://github.com/meetqy/css.ist/commit/f57e49344572dcdc6f322a83593a0d571d92a7a0)), closes [#96](https://github.com/meetqy/css.ist/issues/96)
+* 滚动条问题 ([18dcb7b](https://github.com/meetqy/css.ist/commit/18dcb7b83ef30adea513948a2a8e655a9dec3ad4))
+* 介绍页面基础信息展示优化 ([e7c006f](https://github.com/meetqy/css.ist/commit/e7c006f7cf016266058fa2eb9db9276084b65479))
+* 新增模板步骤过于繁琐 ([1d49f78](https://github.com/meetqy/css.ist/commit/1d49f787853ad615e32f9f3361374a3795ea372b)), closes [#97](https://github.com/meetqy/css.ist/issues/97)
+* issues模板 support ([2091c35](https://github.com/meetqy/css.ist/commit/2091c3531301b5376c48ef77fdaf32ff80876e39))
+
+
+### ⚒️ 管理与维护
+
+* 优化快捷创建模板 ([90517a3](https://github.com/meetqy/css.ist/commit/90517a30ffcb63a702443ec76526ab8d8f411ef2))
+
+
+### 📜 新模板
+
+* add Cassiopeia the Serpent's Embrace ([5992de3](https://github.com/meetqy/css.ist/commit/5992de389018b2b2c698adbfa346048da4ba88f3))
+* cho'Gath the Terror of the Void ([c14bcfe](https://github.com/meetqy/css.ist/commit/c14bcfeb7afc8fc9f8b26e765b916b2473c677bd))
+
+
+### 📃 文档
+
+* 更新模板20介绍 ([d587dae](https://github.com/meetqy/css.ist/commit/d587daeffa264bb053c86f1e8669917fea5fd06b))
+* yml ([6ffc5f4](https://github.com/meetqy/css.ist/commit/6ffc5f4627efe0e28f03e95ca9259c15ba16c59d))
+
 ## [2.2.0](https://github.com/meetqy/css.ist/compare/v2.1.15...v2.2.0) (2022-10-01)
 
 
