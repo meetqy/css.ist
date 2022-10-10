@@ -6,12 +6,10 @@ tags:
 previews:
     - 7.png theme device lang
     - 8.png theme device lang
-    - 1.png light macbook en
-    - 2.png dark macbook en
-    - 3.png cupcake ipad zh
-    - 4.png halloween ipad zh
+    - 1.png synthware ipad zh
+    - 2.png halloween ipad en
     - 5.png garden iphone zh
-    - 6.png black iphone en
+    - 6.png emerald iphone zh
 source: https://tailwindcomponents.com/component/login-9
 # development_record: 
 #     url: xxx

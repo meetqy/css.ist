@@ -3,13 +3,14 @@
     <div
       class="bg-primary absolute top-0 left-0 bg-gradient-to-b from-neutral via-neutral-focus to-primary bottom-0 leading-5 h-full w-full overflow-hidden"
     ></div>
+
     <div
-      class="relative min-h-screen sm:flex sm:flex-row justify-center bg-transparent rounded-3xl shadow-xl"
+      class="relative w-full h-full flex lg:flex-row flex-col justify-center rounded-3xl shadow-xl m-auto"
     >
       <div
-        class="flex-col flex self-center lg:px-14 sm:max-w-4xl xl:max-w-md z-10"
+        class="flex-col self-center z-10 lg:w-1/3 w-2/3 text-center hidden lg:flex"
       >
-        <div class="self-start hidden lg:flex flex-col text-neutral-content">
+        <div class="flex flex-col text-neutral-content">
           <h1 class="my-3 font-semibold text-4xl">
             {{ baseInfo[lang].title }}
           </h1>
@@ -18,8 +19,9 @@
           </p>
         </div>
       </div>
-      <div class="flex justify-center self-center z-10">
-        <div class="p-12 bg-base-100 mx-auto rounded-3xl w-96">
+
+      <div class="flex justify-center self-center z-10 lg:ml-20">
+        <div class="p-12 bg-base-100 mx-auto rounded-3xl md:w-96">
           <div class="mb-7">
             <h3 class="font-semibold text-2xl text-base-content capitalize">
               {{ $MockKeywords()[lang].signIn }}
