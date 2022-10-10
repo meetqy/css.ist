@@ -4,12 +4,12 @@ tags:
     - form
     - page
 previews:
-    - 7.png theme device lang
-    - 8.png theme device lang
+    - 6.png theme device lang
+    - 5.png theme device lang
     - 1.png synthware ipad zh
     - 2.png halloween ipad en
-    - 5.png garden iphone zh
-    - 6.png emerald iphone zh
+    - 3.png garden iphone zh
+    - 4.png emerald iphone zh
 source: https://tailwindcomponents.com/component/login-9
 # development_record: 
 #     url: xxx
