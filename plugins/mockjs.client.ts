@@ -223,10 +223,14 @@ export default defineNuxtPlugin(() => {
             next: "next",
             welcome: "welcome to",
             signUp: "sign up",
+            signIn: "sign in",
             name: "name",
+            pwd: "password",
+            forgetPwd: "forgot your password?",
             email: "e-mail",
             detail: "detail",
             submit: "submit",
+            noAccount: "Don'thave an account?",
             menu: [
               {
                 icon: "home",
@@ -256,10 +260,14 @@ export default defineNuxtPlugin(() => {
             next: "下一页",
             welcome: "欢迎来到",
             signUp: "注册",
+            signIn: "登录",
             name: "姓名",
+            pwd: "密码",
+            forgetPwd: "忘记密码？",
             email: "邮箱",
             detail: "详情",
             submit: "提交",
+            noAccount: "没有账号？",
             menu: [
               {
                 icon: "home",
