@@ -117,16 +117,3 @@ export const getContentByTag = (
     .limit(pageSize)
     .find();
 };
-
-export type Position = {
-  left: number | string;
-  top: number | string;
-  width: number | string;
-  height: number | string;
-};
-export const nextImgProps = ref<{
-  start: Position;
-  end: Position;
-  src: string;
-  status: "target-to-full" | "full-to-target" | "waiting";
-}>();
