@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  css: ["~/assets/css/material.css"],
+  css: ["~/assets/css/material.css", "~/assets/css/theme.css"],
 
   typescript: {
     shim: false,
