@@ -1,8 +1,9 @@
-title: Darius the Hand of Noxus
+title: Corki the Daring Bombardier
 tags:
     - leagueoflegends
     - form
     - page
+    - login
 previews:
     - 6.png theme device lang
     - 5.png theme device lang
@@ -10,7 +11,7 @@ previews:
     - 2.png halloween ipad en
     - 3.png garden iphone zh
     - 4.png emerald iphone zh
-source: https://tailwindcomponents.com/component/sign-up-page-with-side-image/landing
+source: https://tailwindcomponents.com/component/login-9
 # development_record: 
 #     url: xxx
 #     name: xxx
