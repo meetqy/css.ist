@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.2](https://github.com/meetqy/css.ist/compare/v2.2.1...v2.2.2) (2022-10-14)
+
+
+### 🚀 优化现有功能和UI
+
+* 整体间距优化 ([e532b5a](https://github.com/meetqy/css.ist/commit/e532b5aeb7ccae0509f2c25fdb9e1ad502edc912))
+* 主题切换并切换字体 ([ce6974f](https://github.com/meetqy/css.ist/commit/ce6974faaf56381f59e39025a49b4a85ba522f69))
+* 主题切换优化 ([441f281](https://github.com/meetqy/css.ist/commit/441f2812c725498e7774989be83c6e5aa54fba82))
+
+
+### 📜 新模板
+
+* add Darius the Hand of Noxus ([f6cad9a](https://github.com/meetqy/css.ist/commit/f6cad9acfb5f05dfa80137238763ffb3a71bfcd9))
+* corki the Daring Bombardier ([5eb0ffc](https://github.com/meetqy/css.ist/commit/5eb0ffc91a843794221112789819a0a6cd0284ce))
+* **corki the daring bombardier:** corki the Daring Bombardier ([f7a4d07](https://github.com/meetqy/css.ist/commit/f7a4d0787e639aad3db955c51da59eb53c263afc))
+
+
+### 📃 文档
+
+* 更新模板21介绍 ([a224509](https://github.com/meetqy/css.ist/commit/a224509dc0035ad53222d7dfaeb2b460bf1ea6ff))
+* google字体替换为科大源 ([3b21aab](https://github.com/meetqy/css.ist/commit/3b21aabe6c0a72a71984ec88a256b1d2ac84c3b0))
+
 ### [2.2.1](https://github.com/meetqy/css.ist/compare/v2.2.0...v2.2.1) (2022-10-07)
 
 
