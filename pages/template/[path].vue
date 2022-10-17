@@ -52,5 +52,6 @@ const templates = {
   21: resolveComponent("T21"),
   22: resolveComponent("T22"),
   23: resolveComponent("T23"),
+  24: resolveComponent("T24"),
 };
 </script>
